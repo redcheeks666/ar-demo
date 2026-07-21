@@ -1,0 +1,8 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/prepare_helmet_references_v3.py",
+  "elapsed_seconds": 1.8286,
+  "output_measurements": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/reference_measurements.json",
+  "derived_reference_dir": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3",
+  "crop_count": 12,
+  "mask_count": 8
+}

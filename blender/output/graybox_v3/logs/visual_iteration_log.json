@@ -1,0 +1,40 @@
+{
+  "project": "AEGIS-R7 graybox v3",
+  "iterations": [
+    {
+      "iteration": 1,
+      "scope": "reference-driven master envelope",
+      "observed": "The numeric silhouette gate passed, but the unpanelled front and 3/4 reads were still too egg-like and lacked a stable temple side wall.",
+      "changes": "Built the initial 27x48 multi-section superellipse loft from front width and averaged side-depth samples; excluded front-mask ear-pod contamination.",
+      "result": "Front IoU 0.926523; worst side IoU 0.873852. Numeric pass, visual hold."
+    },
+    {
+      "iteration": 2,
+      "scope": "master envelope profile conditioning",
+      "observed": "Reference overlays showed the crown/jaw taper was sound, while the measured ear region still made the mid-body look circular.",
+      "changes": "Added measured-profile temple and side-depth plateaus and increased crown/mid/lower superellipse exponents without returning to ellipsoid radii.",
+      "result": "Front IoU 0.927858; worst side IoU 0.874787. Numeric pass and the reference-consistent master was accepted for part extraction."
+    },
+    {
+      "iteration": 3,
+      "scope": "first complete part extraction",
+      "observed": "The first 21-part build was rejected: faceplate nearly rectangular, cell-selected edges visibly stepped, eyes buried, ear covers button-like, and neck entry too shelf-like.",
+      "changes": "Raised cage sampling to 55x96, narrowed the faceplate, separated panel bands, moved eye geometry outside the faceplate, added stepped embedded ear covers and cyan emitters, and tightened the neck ribbon.",
+      "result": "The 23-part hierarchy and power-helmet divisions became readable, but selected-cell faceplate and crown borders still failed the edge-quality gate."
+    },
+    {
+      "iteration": 4,
+      "scope": "continuous faceplate and brow topology",
+      "observed": "Higher sampling reduced but did not remove staircase borders; bevel miters also produced spikes on the open curved faceplate rim.",
+      "changes": "Replaced cell selection for Faceplate and CrownFront with analytic continuous UV patches, variable brow/lower boundaries, and removed the faceplate rim bevel while retaining thickness.",
+      "result": "Smooth reference-shaped brow, lower taper, side wrap, U-frame, and embedded ear/side structure passed the main visual gate."
+    },
+    {
+      "iteration": 5,
+      "scope": "final shading, fit, reference-empty, and eye-seat repair",
+      "observed": "Remaining checks found mild faceplate highlight breakup, an 8.3 mm InnerShell nose penetration, Blender 5.2 Image Empty API incompatibility, and eyes sitting too proud of the armor.",
+      "changes": "Added one controlled faceplate subdivision level, formed a localized inner nose support cavity, tuned top/side/rear clearances, created true Image Empties, and seated housing/lenses at approximately 3.2/2.2 mm from the sampled faceplate surface.",
+      "result": "Final front IoU 0.955171, worst side IoU 0.886771, front/side mean errors 0.9881%/2.7685%; minimum proxy clearance 4.705 mm with no sampled penetration. Visual and numeric gates passed."
+    }
+  ]
+}

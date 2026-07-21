@@ -1,0 +1,60 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/compare_helmet_v3.py",
+  "iteration": 5,
+  "final": true,
+  "elapsed_seconds": 0.4177,
+  "metrics": {
+    "front": {
+      "iou": 0.955171,
+      "mean_contour_distance_px": 4.6244,
+      "mean_contour_distance_percent_height": 0.9881,
+      "maximum_contour_error_px": 28.1603,
+      "maximum_error_location_yx": [
+        167,
+        99
+      ],
+      "reference_area_px": 154873,
+      "model_area_px": 151602
+    },
+    "right": {
+      "iou": 0.886771,
+      "mean_contour_distance_px": 12.9567,
+      "mean_contour_distance_percent_height": 2.7685,
+      "maximum_contour_error_px": 64.1327,
+      "maximum_error_location_yx": [
+        483,
+        356
+      ],
+      "reference_area_px": 163045,
+      "model_area_px": 161955
+    },
+    "left": {
+      "iou": 0.888146,
+      "mean_contour_distance_px": 12.8257,
+      "mean_contour_distance_percent_height": 2.7405,
+      "maximum_contour_error_px": 68.0294,
+      "maximum_error_location_yx": [
+        483,
+        155
+      ],
+      "reference_area_px": 160511,
+      "model_area_px": 161939
+    }
+  },
+  "thresholds": {
+    "front_iou_min": 0.82,
+    "side_iou_min": 0.78,
+    "front_mean_error_percent_max": 3.5,
+    "side_mean_error_percent_max": 5.0
+  },
+  "outputs": [
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_front.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_right.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_left.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_front.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_side.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_front_3q.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_contact_sheet.png"
+  ],
+  "passes_numeric_gate": true
+}

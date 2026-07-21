@@ -1,0 +1,56 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/compare_helmet_v3.py",
+  "iteration": 1,
+  "final": false,
+  "elapsed_seconds": 0.0835,
+  "metrics": {
+    "front": {
+      "iou": 0.926523,
+      "mean_contour_distance_px": 7.4153,
+      "mean_contour_distance_percent_height": 1.5845,
+      "maximum_contour_error_px": 31.3209,
+      "maximum_error_location_yx": [
+        251,
+        74
+      ],
+      "reference_area_px": 154873,
+      "model_area_px": 143767
+    },
+    "right": {
+      "iou": 0.873852,
+      "mean_contour_distance_px": 13.8824,
+      "mean_contour_distance_percent_height": 2.9663,
+      "maximum_contour_error_px": 51.6236,
+      "maximum_error_location_yx": [
+        429,
+        108
+      ],
+      "reference_area_px": 163045,
+      "model_area_px": 151749
+    },
+    "left": {
+      "iou": 0.878967,
+      "mean_contour_distance_px": 13.1757,
+      "mean_contour_distance_percent_height": 2.8153,
+      "maximum_contour_error_px": 50.9608,
+      "maximum_error_location_yx": [
+        429,
+        402
+      ],
+      "reference_area_px": 160511,
+      "model_area_px": 151777
+    }
+  },
+  "thresholds": {
+    "front_iou_min": 0.82,
+    "side_iou_min": 0.78,
+    "front_mean_error_percent_max": 3.5,
+    "side_mean_error_percent_max": 5.0
+  },
+  "outputs": [
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/overlay_front.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/overlay_right.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/overlay_left.png"
+  ],
+  "passes_numeric_gate": true
+}

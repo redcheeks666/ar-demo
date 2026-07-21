@@ -1,0 +1,15 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/render_helmet_review_v3.py",
+  "mode": "master-silhouette",
+  "iteration": 1,
+  "engine": "BLENDER_EEVEE",
+  "elapsed_seconds": 2.2105,
+  "render_count": 5,
+  "outputs": [
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/front.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/right.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/left.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/top.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette_iterations/iteration_1/front_3q.png"
+  ]
+}

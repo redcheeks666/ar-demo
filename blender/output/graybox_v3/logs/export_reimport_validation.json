@@ -1,0 +1,482 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/export_helmet_graybox_v3.py",
+  "elapsed_seconds": 0.8076,
+  "glb_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/helmet_graybox_v3.glb",
+  "glb_size_bytes": 1441360,
+  "reimport": {
+    "success": true,
+    "imported_object_count": 24,
+    "imported_node_names": [
+      "Cheek_L",
+      "Cheek_R",
+      "Chin",
+      "CrownFront",
+      "CrownRear",
+      "EarCover_L",
+      "EarCover_R",
+      "EarEmitter_L",
+      "EarEmitter_R",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "Faceplate",
+      "HelmetRoot",
+      "InnerShell",
+      "Jaw_L",
+      "Jaw_R",
+      "NeckRingFront",
+      "NeckRingRear",
+      "RearShell_L",
+      "RearShell_R",
+      "Temple_L",
+      "Temple_R"
+    ],
+    "missing_required_nodes": [],
+    "forbidden_non_export_nodes": [],
+    "node_transforms": {
+      "HelmetRoot": {
+        "translation_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": false
+      },
+      "Cheek_L": {
+        "translation_m": [
+          -0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Cheek_R": {
+        "translation_m": [
+          0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Chin": {
+        "translation_m": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownFront": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownRear": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarCover_L": {
+        "translation_m": [
+          -0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarCover_R": {
+        "translation_m": [
+          0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarEmitter_L": {
+        "translation_m": [
+          -0.125497,
+          -0.006949,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarEmitter_R": {
+        "translation_m": [
+          0.125497,
+          -0.006949,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeHousing_L": {
+        "translation_m": [
+          -0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeHousing_R": {
+        "translation_m": [
+          0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeLens_L": {
+        "translation_m": [
+          -0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeLens_R": {
+        "translation_m": [
+          0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Faceplate": {
+        "translation_m": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "InnerShell": {
+        "translation_m": [
+          0.0,
+          0.0,
+          0.01
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Jaw_L": {
+        "translation_m": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Jaw_R": {
+        "translation_m": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "NeckRingFront": {
+        "translation_m": [
+          0.0,
+          -0.0364,
+          -0.124
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "NeckRingRear": {
+        "translation_m": [
+          0.0,
+          0.0364,
+          -0.124
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearShell_L": {
+        "translation_m": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearShell_R": {
+        "translation_m": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Temple_L": {
+        "translation_m": [
+          -0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Temple_R": {
+        "translation_m": [
+          0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      }
+    },
+    "movable_required_nodes_with_nonzero_translation": 20,
+    "movable_required_node_count": 20,
+    "all_movable_required_nodes_have_nonzero_translation": true
+  },
+  "geometry_totals": {
+    "non_manifold_edges": 0,
+    "degenerate_faces": 0,
+    "zero_normal_faces": 0,
+    "reversed_closed_objects": []
+  },
+  "triangle_count": 81104
+}

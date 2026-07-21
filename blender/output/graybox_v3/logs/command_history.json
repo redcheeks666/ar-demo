@@ -1,0 +1,142 @@
+{
+  "project": "AEGIS-R7 graybox v3",
+  "commands": [
+    {
+      "stage": "baseline",
+      "command": "git status --short",
+      "exit_code": 0,
+      "outcome": "clean working tree before v3 work"
+    },
+    {
+      "stage": "baseline",
+      "command": "git rev-parse HEAD",
+      "exit_code": 0,
+      "outcome": "684228c2b90f7246d15fa67a4b3b0ff4293160c5"
+    },
+    {
+      "stage": "reference_preprocessing",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/prepare_helmet_references_v3.py",
+      "exit_code": 0,
+      "outcome": "12 crops, 8 masks, and reference_measurements.json written"
+    },
+    {
+      "stage": "iteration_1_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 1 --envelope-only",
+      "exit_code": 0,
+      "outcome": "initial reference-driven master envelope"
+    },
+    {
+      "stage": "iteration_1_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python blender/scripts/render_helmet_review_v3.py -- --mode master-silhouette --iteration 1",
+      "exit_code": 0,
+      "outcome": "five master silhouette views"
+    },
+    {
+      "stage": "iteration_1_compare",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/compare_helmet_v3.py -- --iteration 1",
+      "exit_code": 0,
+      "outcome": "numeric pass; visual hold"
+    },
+    {
+      "stage": "iteration_2_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 2 --envelope-only",
+      "exit_code": 0,
+      "outcome": "profile-conditioned master envelope"
+    },
+    {
+      "stage": "iteration_2_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python blender/scripts/render_helmet_review_v3.py -- --mode master-silhouette --iteration 2",
+      "exit_code": 0,
+      "outcome": "five revised master silhouette views"
+    },
+    {
+      "stage": "iteration_2_compare",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/compare_helmet_v3.py -- --iteration 2",
+      "exit_code": 0,
+      "outcome": "numeric and visual master-envelope gate passed"
+    },
+    {
+      "stage": "first_full_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 2",
+      "exit_code": 0,
+      "outcome": "21-part first complete build"
+    },
+    {
+      "stage": "first_full_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 2",
+      "exit_code": 0,
+      "runtime_success": false,
+      "outcome": "stopped after clay views because zero-user DesignGunmetal had not persisted"
+    },
+    {
+      "stage": "material_persistence_rebuild",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 2",
+      "exit_code": 0,
+      "outcome": "review materials retained with fake users"
+    },
+    {
+      "stage": "iteration_2_full_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 2",
+      "exit_code": 0,
+      "outcome": "32 review images; visual build rejected"
+    },
+    {
+      "stage": "iteration_3_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 3",
+      "exit_code": 0,
+      "outcome": "23-part higher-resolution divided shell"
+    },
+    {
+      "stage": "iteration_3_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 3",
+      "exit_code": 0,
+      "outcome": "32 review images; cell-selected borders rejected"
+    },
+    {
+      "stage": "iteration_4_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 4",
+      "exit_code": 0,
+      "outcome": "continuous parametric faceplate and brow"
+    },
+    {
+      "stage": "iteration_4_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 4",
+      "exit_code": 0,
+      "outcome": "32 review images; rim bevel artifacts isolated"
+    },
+    {
+      "stage": "iteration_5_builds",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 5",
+      "exit_code": 0,
+      "execution_count": 8,
+      "outcome": "final bevel, subdivision, clearance, Reference Empty, eye seat, topology, and ear-normal repairs"
+    },
+    {
+      "stage": "iteration_5_review_renders",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 5",
+      "exit_code": 0,
+      "execution_count": 7,
+      "outcome": "visual denial checks, repair verification, and final topology-synchronized 32-image render"
+    },
+    {
+      "stage": "iteration_5_master_silhouette",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode master-silhouette --iteration 5",
+      "exit_code": 0,
+      "outcome": "five final master silhouette views"
+    },
+    {
+      "stage": "final_compare",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/compare_helmet_v3.py -- --iteration 5 --final",
+      "exit_code": 0,
+      "execution_count": 5,
+      "outcome": "final overlays and reference/v2/v3 contact sheets"
+    },
+    {
+      "stage": "export_audit_reimport",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/export_helmet_graybox_v3.py",
+      "exit_code": 0,
+      "execution_count": 7,
+      "outcome": "GLB export and clean-scene reimport passed; final pass has zero non-manifold/degenerate/reversed geometry and zero BVH seam intersections"
+    }
+  ]
+}

@@ -1,0 +1,1969 @@
+{
+  "project": "AEGIS-R7 graybox v3",
+  "git": {
+    "baseline_commit": "684228c2b90f7246d15fa67a4b3b0ff4293160c5",
+    "baseline_subject": "feat: refine helmet graybox assets",
+    "branch": "main"
+  },
+  "blender": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "version": "5.2.0 LTS",
+    "version_tuple": [
+      5,
+      2,
+      0
+    ],
+    "build_hash": "fbe6228777e7"
+  },
+  "host": {
+    "system": "Darwin",
+    "release": "25.2.0",
+    "machine": "arm64"
+  },
+  "actual_commands": [
+    {
+      "stage": "baseline",
+      "command": "git status --short",
+      "exit_code": 0,
+      "outcome": "clean working tree before v3 work"
+    },
+    {
+      "stage": "baseline",
+      "command": "git rev-parse HEAD",
+      "exit_code": 0,
+      "outcome": "684228c2b90f7246d15fa67a4b3b0ff4293160c5"
+    },
+    {
+      "stage": "reference_preprocessing",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/prepare_helmet_references_v3.py",
+      "exit_code": 0,
+      "outcome": "12 crops, 8 masks, and reference_measurements.json written"
+    },
+    {
+      "stage": "iteration_1_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 1 --envelope-only",
+      "exit_code": 0,
+      "outcome": "initial reference-driven master envelope"
+    },
+    {
+      "stage": "iteration_1_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python blender/scripts/render_helmet_review_v3.py -- --mode master-silhouette --iteration 1",
+      "exit_code": 0,
+      "outcome": "five master silhouette views"
+    },
+    {
+      "stage": "iteration_1_compare",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/compare_helmet_v3.py -- --iteration 1",
+      "exit_code": 0,
+      "outcome": "numeric pass; visual hold"
+    },
+    {
+      "stage": "iteration_2_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 2 --envelope-only",
+      "exit_code": 0,
+      "outcome": "profile-conditioned master envelope"
+    },
+    {
+      "stage": "iteration_2_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python blender/scripts/render_helmet_review_v3.py -- --mode master-silhouette --iteration 2",
+      "exit_code": 0,
+      "outcome": "five revised master silhouette views"
+    },
+    {
+      "stage": "iteration_2_compare",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/compare_helmet_v3.py -- --iteration 2",
+      "exit_code": 0,
+      "outcome": "numeric and visual master-envelope gate passed"
+    },
+    {
+      "stage": "first_full_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 2",
+      "exit_code": 0,
+      "outcome": "21-part first complete build"
+    },
+    {
+      "stage": "first_full_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 2",
+      "exit_code": 0,
+      "runtime_success": false,
+      "outcome": "stopped after clay views because zero-user DesignGunmetal had not persisted"
+    },
+    {
+      "stage": "material_persistence_rebuild",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 2",
+      "exit_code": 0,
+      "outcome": "review materials retained with fake users"
+    },
+    {
+      "stage": "iteration_2_full_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 2",
+      "exit_code": 0,
+      "outcome": "32 review images; visual build rejected"
+    },
+    {
+      "stage": "iteration_3_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 3",
+      "exit_code": 0,
+      "outcome": "23-part higher-resolution divided shell"
+    },
+    {
+      "stage": "iteration_3_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 3",
+      "exit_code": 0,
+      "outcome": "32 review images; cell-selected borders rejected"
+    },
+    {
+      "stage": "iteration_4_build",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 4",
+      "exit_code": 0,
+      "outcome": "continuous parametric faceplate and brow"
+    },
+    {
+      "stage": "iteration_4_render",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 4",
+      "exit_code": 0,
+      "outcome": "32 review images; rim bevel artifacts isolated"
+    },
+    {
+      "stage": "iteration_5_builds",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v3.py -- --iteration 5",
+      "exit_code": 0,
+      "execution_count": 8,
+      "outcome": "final bevel, subdivision, clearance, Reference Empty, eye seat, topology, and ear-normal repairs"
+    },
+    {
+      "stage": "iteration_5_review_renders",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode all --iteration 5",
+      "exit_code": 0,
+      "execution_count": 7,
+      "outcome": "visual denial checks, repair verification, and final topology-synchronized 32-image render"
+    },
+    {
+      "stage": "iteration_5_master_silhouette",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/render_helmet_review_v3.py -- --mode master-silhouette --iteration 5",
+      "exit_code": 0,
+      "outcome": "five final master silhouette views"
+    },
+    {
+      "stage": "final_compare",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/compare_helmet_v3.py -- --iteration 5 --final",
+      "exit_code": 0,
+      "execution_count": 5,
+      "outcome": "final overlays and reference/v2/v3 contact sheets"
+    },
+    {
+      "stage": "export_audit_reimport",
+      "command": "/Applications/Blender.app/Contents/MacOS/Blender --background blender/work/helmet_graybox_v3.blend --python-exit-code 1 --python blender/scripts/export_helmet_graybox_v3.py",
+      "exit_code": 0,
+      "execution_count": 7,
+      "outcome": "GLB export and clean-scene reimport passed; final pass has zero non-manifold/degenerate/reversed geometry and zero BVH seam intersections"
+    }
+  ],
+  "reference_preprocessing": {
+    "measurements_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/reference_measurements.json",
+    "derived_reference_directory": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3",
+    "view_count": 12,
+    "warnings": [],
+    "reference_empty_warnings": []
+  },
+  "silhouette_validation": {
+    "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/compare_helmet_v3.py",
+    "iteration": 5,
+    "final": true,
+    "elapsed_seconds": 0.4177,
+    "metrics": {
+      "front": {
+        "iou": 0.955171,
+        "mean_contour_distance_px": 4.6244,
+        "mean_contour_distance_percent_height": 0.9881,
+        "maximum_contour_error_px": 28.1603,
+        "maximum_error_location_yx": [
+          167,
+          99
+        ],
+        "reference_area_px": 154873,
+        "model_area_px": 151602
+      },
+      "right": {
+        "iou": 0.886771,
+        "mean_contour_distance_px": 12.9567,
+        "mean_contour_distance_percent_height": 2.7685,
+        "maximum_contour_error_px": 64.1327,
+        "maximum_error_location_yx": [
+          483,
+          356
+        ],
+        "reference_area_px": 163045,
+        "model_area_px": 161955
+      },
+      "left": {
+        "iou": 0.888146,
+        "mean_contour_distance_px": 12.8257,
+        "mean_contour_distance_percent_height": 2.7405,
+        "maximum_contour_error_px": 68.0294,
+        "maximum_error_location_yx": [
+          483,
+          155
+        ],
+        "reference_area_px": 160511,
+        "model_area_px": 161939
+      }
+    },
+    "thresholds": {
+      "front_iou_min": 0.82,
+      "side_iou_min": 0.78,
+      "front_mean_error_percent_max": 3.5,
+      "side_mean_error_percent_max": 5.0
+    },
+    "outputs": [
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_side.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_contact_sheet.png"
+    ],
+    "passes_numeric_gate": true
+  },
+  "helmet_geometry": {
+    "overall_bounding_box_m": {
+      "minimum": [
+        -0.127247,
+        -0.145197,
+        -0.13424
+      ],
+      "maximum": [
+        0.127247,
+        0.130676,
+        0.154962
+      ],
+      "width_x": 0.254494,
+      "depth_y": 0.275873,
+      "height_z": 0.289202
+    },
+    "evaluated_triangle_count": 81104,
+    "under_100k_triangle_target": true,
+    "object_health": {
+      "InnerShell": {
+        "vertices": 11576,
+        "triangles": 23148,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.000592913,
+        "reversed_closed_volume": false
+      },
+      "CrownFront": {
+        "vertices": 2060,
+        "triangles": 4116,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 8.58592e-05,
+        "reversed_closed_volume": false
+      },
+      "CrownRear": {
+        "vertices": 1668,
+        "triangles": 3332,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.0001025643,
+        "reversed_closed_volume": false
+      },
+      "RearShell_L": {
+        "vertices": 2130,
+        "triangles": 4256,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.0001211874,
+        "reversed_closed_volume": false
+      },
+      "RearShell_R": {
+        "vertices": 2130,
+        "triangles": 4256,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.0001212009,
+        "reversed_closed_volume": false
+      },
+      "Temple_L": {
+        "vertices": 660,
+        "triangles": 1316,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.4879e-05,
+        "reversed_closed_volume": false
+      },
+      "Temple_R": {
+        "vertices": 660,
+        "triangles": 1316,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.48795e-05,
+        "reversed_closed_volume": false
+      },
+      "Cheek_L": {
+        "vertices": 736,
+        "triangles": 1468,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.42828e-05,
+        "reversed_closed_volume": false
+      },
+      "Cheek_R": {
+        "vertices": 736,
+        "triangles": 1468,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.42821e-05,
+        "reversed_closed_volume": false
+      },
+      "Jaw_L": {
+        "vertices": 656,
+        "triangles": 1308,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.84872e-05,
+        "reversed_closed_volume": false
+      },
+      "Jaw_R": {
+        "vertices": 656,
+        "triangles": 1308,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.8483e-05,
+        "reversed_closed_volume": false
+      },
+      "Chin": {
+        "vertices": 296,
+        "triangles": 588,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 6.8587e-06,
+        "reversed_closed_volume": false
+      },
+      "Faceplate": {
+        "vertices": 14098,
+        "triangles": 28192,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 8.10752e-05,
+        "reversed_closed_volume": false
+      },
+      "EarCover_L": {
+        "vertices": 480,
+        "triangles": 956,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 3.39797e-05,
+        "reversed_closed_volume": false
+      },
+      "EarEmitter_L": {
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 3.393e-07,
+        "reversed_closed_volume": false
+      },
+      "EyeHousing_L": {
+        "vertices": 236,
+        "triangles": 472,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.825e-07,
+        "reversed_closed_volume": false
+      },
+      "EyeLens_L": {
+        "vertices": 112,
+        "triangles": 220,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.388e-07,
+        "reversed_closed_volume": false
+      },
+      "EarCover_R": {
+        "vertices": 480,
+        "triangles": 956,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 3.39797e-05,
+        "reversed_closed_volume": false
+      },
+      "EarEmitter_R": {
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 3.393e-07,
+        "reversed_closed_volume": false
+      },
+      "EyeHousing_R": {
+        "vertices": 240,
+        "triangles": 480,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.873e-07,
+        "reversed_closed_volume": false
+      },
+      "EyeLens_R": {
+        "vertices": 112,
+        "triangles": 220,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.268e-07,
+        "reversed_closed_volume": false
+      },
+      "NeckRingFront": {
+        "vertices": 380,
+        "triangles": 756,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.57763e-05,
+        "reversed_closed_volume": false
+      },
+      "NeckRingRear": {
+        "vertices": 380,
+        "triangles": 756,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.57763e-05,
+        "reversed_closed_volume": false
+      }
+    },
+    "totals": {
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0,
+      "zero_normal_faces": 0,
+      "reversed_closed_objects": []
+    },
+    "master_envelope_bounding_box_m": {
+      "minimum": [
+        -0.111886,
+        -0.134835,
+        -0.133
+      ],
+      "maximum": [
+        0.111886,
+        0.122923,
+        0.150963
+      ],
+      "width_x": 0.223771,
+      "depth_y": 0.257758,
+      "height_z": 0.283963
+    }
+  },
+  "head_proxy_clearance": {
+    "samples_m": {
+      "top": 0.017,
+      "temple_side": 0.017272,
+      "rear": 0.009576,
+      "nose": 0.004705,
+      "ear": 0.009772
+    },
+    "faceplate_nose_clearance_m": 0.010251,
+    "inner_nose_surface_y_m": -0.133705,
+    "faceplate_nose_surface_y_m": -0.139251,
+    "minimum_sample_m": 0.004705,
+    "penetration_detected": false,
+    "target_general_m": [
+      0.008,
+      0.018
+    ],
+    "target_local_minimum_m": 0.004
+  },
+  "faceplate_curvature": {
+    "forehead": {
+      "t_from_top": 0.24,
+      "z_m": 0.084802,
+      "center_y_m": -0.12222,
+      "edge_average_y_m": -0.110472,
+      "center_forward_of_edges_m": 0.011749
+    },
+    "eye_line": {
+      "t_from_top": 0.43,
+      "z_m": 0.028819,
+      "center_y_m": -0.14336,
+      "edge_average_y_m": -0.1248,
+      "center_forward_of_edges_m": 0.018559
+    },
+    "nose_mouth": {
+      "t_from_top": 0.63,
+      "z_m": -0.029934,
+      "center_y_m": -0.135279,
+      "edge_average_y_m": -0.12229,
+      "center_forward_of_edges_m": 0.012989
+    },
+    "chin": {
+      "t_from_top": 0.81,
+      "z_m": -0.080896,
+      "center_y_m": -0.113744,
+      "edge_average_y_m": -0.110173,
+      "center_forward_of_edges_m": 0.003572
+    }
+  },
+  "seam_validation": {
+    "CrownFront__Faceplate": {
+      "minimum_surface_distance_m": 0.007362,
+      "minimum_surface_distance_mm": 7.362,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "mechanical_slot_5_to_8_mm"
+    },
+    "CrownFront__CrownRear": {
+      "minimum_surface_distance_m": 0.002956,
+      "minimum_surface_distance_mm": 2.956,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "nominal_2_to_5_mm"
+    },
+    "Faceplate__Temple_L": {
+      "minimum_surface_distance_m": 0.001128,
+      "minimum_surface_distance_mm": 1.128,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "tight_contact_under_1_5_mm"
+    },
+    "Faceplate__Temple_R": {
+      "minimum_surface_distance_m": 0.001128,
+      "minimum_surface_distance_mm": 1.128,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "tight_contact_under_1_5_mm"
+    },
+    "Faceplate__Cheek_L": {
+      "minimum_surface_distance_m": 0.000266,
+      "minimum_surface_distance_mm": 0.266,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "tight_contact_under_1_5_mm"
+    },
+    "Faceplate__Cheek_R": {
+      "minimum_surface_distance_m": 0.000266,
+      "minimum_surface_distance_mm": 0.266,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "tight_contact_under_1_5_mm"
+    },
+    "Cheek_L__Jaw_L": {
+      "minimum_surface_distance_m": 0.005897,
+      "minimum_surface_distance_mm": 5.897,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "mechanical_slot_5_to_8_mm"
+    },
+    "Cheek_R__Jaw_R": {
+      "minimum_surface_distance_m": 0.005897,
+      "minimum_surface_distance_mm": 5.897,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "mechanical_slot_5_to_8_mm"
+    },
+    "Jaw_L__Chin": {
+      "minimum_surface_distance_m": 0.002956,
+      "minimum_surface_distance_mm": 2.956,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "nominal_2_to_5_mm"
+    },
+    "Jaw_R__Chin": {
+      "minimum_surface_distance_m": 0.002956,
+      "minimum_surface_distance_mm": 2.956,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "nominal_2_to_5_mm"
+    },
+    "Temple_L__RearShell_L": {
+      "minimum_surface_distance_m": 0.002993,
+      "minimum_surface_distance_mm": 2.993,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "nominal_2_to_5_mm"
+    },
+    "Temple_R__RearShell_R": {
+      "minimum_surface_distance_m": 0.002993,
+      "minimum_surface_distance_mm": 2.993,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "nominal_2_to_5_mm"
+    },
+    "RearShell_L__CrownRear": {
+      "minimum_surface_distance_m": 0.010789,
+      "minimum_surface_distance_mm": 10.789,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "large_service_opening"
+    },
+    "RearShell_R__CrownRear": {
+      "minimum_surface_distance_m": 0.010789,
+      "minimum_surface_distance_mm": 10.789,
+      "intersecting_triangle_pair_count": 0,
+      "geometry_intersection_detected": false,
+      "classification": "large_service_opening"
+    }
+  },
+  "symmetry_validation": {
+    "RearShell_L__RearShell_R": {
+      "mean_mirror_error_m": 0.0,
+      "maximum_mirror_error_m": 1.23e-06,
+      "passes_0_5_mm_mean": true
+    },
+    "Temple_L__Temple_R": {
+      "mean_mirror_error_m": 8e-08,
+      "maximum_mirror_error_m": 6.48e-06,
+      "passes_0_5_mm_mean": true
+    },
+    "Cheek_L__Cheek_R": {
+      "mean_mirror_error_m": 5.5e-07,
+      "maximum_mirror_error_m": 6.969e-05,
+      "passes_0_5_mm_mean": true
+    },
+    "Jaw_L__Jaw_R": {
+      "mean_mirror_error_m": 0.0,
+      "maximum_mirror_error_m": 2e-08,
+      "passes_0_5_mm_mean": true
+    },
+    "EarCover_L__EarCover_R": {
+      "mean_mirror_error_m": 0.0,
+      "maximum_mirror_error_m": 0.0,
+      "passes_0_5_mm_mean": true
+    },
+    "EarEmitter_L__EarEmitter_R": {
+      "mean_mirror_error_m": 0.0,
+      "maximum_mirror_error_m": 0.0,
+      "passes_0_5_mm_mean": true
+    },
+    "EyeHousing_L__EyeHousing_R": {
+      "mean_mirror_error_m": 0.00024707,
+      "maximum_mirror_error_m": 0.0015634,
+      "passes_0_5_mm_mean": true
+    },
+    "EyeLens_L__EyeLens_R": {
+      "mean_mirror_error_m": 0.00017041,
+      "maximum_mirror_error_m": 0.00021001,
+      "passes_0_5_mm_mean": true
+    }
+  },
+  "floating_component_validation": {
+    "objects": {
+      "CrownFront": {
+        "minimum_distance_to_master_m": 0.001459,
+        "floating_over_20_mm": false
+      },
+      "CrownRear": {
+        "minimum_distance_to_master_m": 0.001516,
+        "floating_over_20_mm": false
+      },
+      "RearShell_L": {
+        "minimum_distance_to_master_m": 0.00162,
+        "floating_over_20_mm": false
+      },
+      "RearShell_R": {
+        "minimum_distance_to_master_m": 0.00162,
+        "floating_over_20_mm": false
+      },
+      "Temple_L": {
+        "minimum_distance_to_master_m": 0.001499,
+        "floating_over_20_mm": false
+      },
+      "Temple_R": {
+        "minimum_distance_to_master_m": 0.001499,
+        "floating_over_20_mm": false
+      },
+      "Cheek_L": {
+        "minimum_distance_to_master_m": 0.001211,
+        "floating_over_20_mm": false
+      },
+      "Cheek_R": {
+        "minimum_distance_to_master_m": 0.001211,
+        "floating_over_20_mm": false
+      },
+      "Jaw_L": {
+        "minimum_distance_to_master_m": 0.001027,
+        "floating_over_20_mm": false
+      },
+      "Jaw_R": {
+        "minimum_distance_to_master_m": 0.001027,
+        "floating_over_20_mm": false
+      },
+      "Chin": {
+        "minimum_distance_to_master_m": 0.000905,
+        "floating_over_20_mm": false
+      },
+      "Faceplate": {
+        "minimum_distance_to_master_m": 0.000302,
+        "floating_over_20_mm": false
+      },
+      "EarCover_L": {
+        "minimum_distance_to_master_m": 0.00047,
+        "floating_over_20_mm": false
+      },
+      "EarEmitter_L": {
+        "minimum_distance_to_master_m": 0.012119,
+        "floating_over_20_mm": false
+      },
+      "EyeHousing_L": {
+        "minimum_distance_to_master_m": 0.004123,
+        "floating_over_20_mm": false
+      },
+      "EyeLens_L": {
+        "minimum_distance_to_master_m": 0.003226,
+        "floating_over_20_mm": false
+      },
+      "EarCover_R": {
+        "minimum_distance_to_master_m": 0.00047,
+        "floating_over_20_mm": false
+      },
+      "EarEmitter_R": {
+        "minimum_distance_to_master_m": 0.012119,
+        "floating_over_20_mm": false
+      },
+      "EyeHousing_R": {
+        "minimum_distance_to_master_m": 0.003851,
+        "floating_over_20_mm": false
+      },
+      "EyeLens_R": {
+        "minimum_distance_to_master_m": 0.003023,
+        "floating_over_20_mm": false
+      }
+    },
+    "floating_objects": []
+  },
+  "pivot_origin_validation": {
+    "object_transforms": {
+      "HelmetRoot": {
+        "translation_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": false
+      },
+      "InnerShell": {
+        "translation_m": [
+          0.0,
+          0.0,
+          0.01
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownFront": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownRear": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearShell_L": {
+        "translation_m": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearShell_R": {
+        "translation_m": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Temple_L": {
+        "translation_m": [
+          -0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Temple_R": {
+        "translation_m": [
+          0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Cheek_L": {
+        "translation_m": [
+          -0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Cheek_R": {
+        "translation_m": [
+          0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Jaw_L": {
+        "translation_m": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Jaw_R": {
+        "translation_m": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Chin": {
+        "translation_m": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Faceplate": {
+        "translation_m": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarCover_L": {
+        "translation_m": [
+          -0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarEmitter_L": {
+        "translation_m": [
+          -0.125497,
+          -0.006949,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeHousing_L": {
+        "translation_m": [
+          -0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeLens_L": {
+        "translation_m": [
+          -0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarCover_R": {
+        "translation_m": [
+          0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarEmitter_R": {
+        "translation_m": [
+          0.125497,
+          -0.006949,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeHousing_R": {
+        "translation_m": [
+          0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeLens_R": {
+        "translation_m": [
+          0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "NeckRingFront": {
+        "translation_m": [
+          0.0,
+          -0.0364,
+          -0.124
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "NeckRingRear": {
+        "translation_m": [
+          0.0,
+          0.0364,
+          -0.124
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      }
+    },
+    "movable_mesh_count": 22,
+    "movable_meshes_with_nonzero_translation": 22,
+    "all_movable_meshes_have_nonzero_translation": true,
+    "nonzero_translation_nodes": [
+      "CrownFront",
+      "CrownRear",
+      "RearShell_L",
+      "RearShell_R",
+      "Temple_L",
+      "Temple_R",
+      "Cheek_L",
+      "Cheek_R",
+      "Jaw_L",
+      "Jaw_R",
+      "Chin",
+      "Faceplate",
+      "EarCover_L",
+      "EarEmitter_L",
+      "EyeHousing_L",
+      "EyeLens_L",
+      "EarCover_R",
+      "EarEmitter_R",
+      "EyeHousing_R",
+      "EyeLens_R",
+      "NeckRingFront",
+      "NeckRingRear"
+    ],
+    "negative_scale_nodes": [],
+    "non_unit_scale_nodes": []
+  },
+  "nodes_and_materials": {
+    "export_object_count": 24,
+    "export_node_names": [
+      "Cheek_L",
+      "Cheek_R",
+      "Chin",
+      "CrownFront",
+      "CrownRear",
+      "EarCover_L",
+      "EarCover_R",
+      "EarEmitter_L",
+      "EarEmitter_R",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "Faceplate",
+      "HelmetRoot",
+      "InnerShell",
+      "Jaw_L",
+      "Jaw_R",
+      "NeckRingFront",
+      "NeckRingRear",
+      "RearShell_L",
+      "RearShell_R",
+      "Temple_L",
+      "Temple_R"
+    ],
+    "required_node_names": [
+      "HelmetRoot",
+      "InnerShell",
+      "CrownFront",
+      "CrownRear",
+      "RearShell_L",
+      "RearShell_R",
+      "Temple_L",
+      "Temple_R",
+      "EarCover_L",
+      "EarCover_R",
+      "Cheek_L",
+      "Cheek_R",
+      "Jaw_L",
+      "Jaw_R",
+      "Chin",
+      "Faceplate",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "NeckRingFront",
+      "NeckRingRear"
+    ],
+    "missing_required_nodes": [],
+    "material_count": 6,
+    "material_names": [
+      "ClayArmorA",
+      "ClayArmorB",
+      "ClayFaceplate",
+      "ClayHousing",
+      "ClayInner",
+      "ClayLens"
+    ],
+    "configured_review_material_count": 13,
+    "configured_review_material_names": [
+      "ClayArmorA",
+      "ClayArmorB",
+      "ClayFaceplate",
+      "ClayHousing",
+      "ClayInner",
+      "ClayLens",
+      "DesignGold",
+      "DesignGunmetal",
+      "DesignLens",
+      "DesignRed",
+      "DesignRedDark",
+      "Proxy",
+      "Silhouette"
+    ]
+  },
+  "glb": {
+    "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/helmet_graybox_v3.glb",
+    "size_bytes": 1441360,
+    "clean_reimport": {
+      "success": true,
+      "imported_object_count": 24,
+      "imported_node_names": [
+        "Cheek_L",
+        "Cheek_R",
+        "Chin",
+        "CrownFront",
+        "CrownRear",
+        "EarCover_L",
+        "EarCover_R",
+        "EarEmitter_L",
+        "EarEmitter_R",
+        "EyeHousing_L",
+        "EyeHousing_R",
+        "EyeLens_L",
+        "EyeLens_R",
+        "Faceplate",
+        "HelmetRoot",
+        "InnerShell",
+        "Jaw_L",
+        "Jaw_R",
+        "NeckRingFront",
+        "NeckRingRear",
+        "RearShell_L",
+        "RearShell_R",
+        "Temple_L",
+        "Temple_R"
+      ],
+      "missing_required_nodes": [],
+      "forbidden_non_export_nodes": [],
+      "node_transforms": {
+        "HelmetRoot": {
+          "translation_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": false
+        },
+        "Cheek_L": {
+          "translation_m": [
+            -0.086,
+            -0.055,
+            -0.042
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "Cheek_R": {
+          "translation_m": [
+            0.086,
+            -0.055,
+            -0.042
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "Chin": {
+          "translation_m": [
+            0.0,
+            -0.105,
+            -0.105
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "CrownFront": {
+          "translation_m": [
+            0.0,
+            -0.035,
+            0.112
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "CrownRear": {
+          "translation_m": [
+            0.0,
+            0.045,
+            0.112
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EarCover_L": {
+          "translation_m": [
+            -0.112297,
+            -0.006449,
+            0.009
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EarCover_R": {
+          "translation_m": [
+            0.112297,
+            -0.006449,
+            0.009
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EarEmitter_L": {
+          "translation_m": [
+            -0.125497,
+            -0.006949,
+            0.009
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EarEmitter_R": {
+          "translation_m": [
+            0.125497,
+            -0.006949,
+            0.009
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EyeHousing_L": {
+          "translation_m": [
+            -0.06952,
+            -0.128838,
+            0.028859
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EyeHousing_R": {
+          "translation_m": [
+            0.06952,
+            -0.128838,
+            0.028859
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EyeLens_L": {
+          "translation_m": [
+            -0.06952,
+            -0.128838,
+            0.028859
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "EyeLens_R": {
+          "translation_m": [
+            0.06952,
+            -0.128838,
+            0.028859
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "Faceplate": {
+          "translation_m": [
+            0.0,
+            -0.108,
+            0.082
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "InnerShell": {
+          "translation_m": [
+            0.0,
+            0.0,
+            0.01
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "Jaw_L": {
+          "translation_m": [
+            -0.077,
+            -0.04,
+            -0.086
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "Jaw_R": {
+          "translation_m": [
+            0.077,
+            -0.04,
+            -0.086
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "NeckRingFront": {
+          "translation_m": [
+            0.0,
+            -0.0364,
+            -0.124
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "NeckRingRear": {
+          "translation_m": [
+            0.0,
+            0.0364,
+            -0.124
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "RearShell_L": {
+          "translation_m": [
+            -0.085,
+            0.055,
+            0.025
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "RearShell_R": {
+          "translation_m": [
+            0.085,
+            0.055,
+            0.025
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "Temple_L": {
+          "translation_m": [
+            -0.093,
+            -0.02,
+            0.045
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        },
+        "Temple_R": {
+          "translation_m": [
+            0.093,
+            -0.02,
+            0.045
+          ],
+          "rotation_euler_rad": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "translation_is_nonzero": true
+        }
+      },
+      "movable_required_nodes_with_nonzero_translation": 20,
+      "movable_required_node_count": 20,
+      "all_movable_required_nodes_have_nonzero_translation": true
+    }
+  },
+  "review_outputs": {
+    "clay": {
+      "directory": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only",
+      "expected_count": 8,
+      "actual_count": 8,
+      "complete": true,
+      "files": [
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/back.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/bottom.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/front.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/front_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/left.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/rear_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/right.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/clay/helmet_only/top.png"
+      ]
+    },
+    "design_preview": {
+      "directory": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only",
+      "expected_count": 8,
+      "actual_count": 8,
+      "complete": true,
+      "files": [
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/back.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/bottom.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/front.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/front_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/left.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/rear_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/right.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/design_preview/helmet_only/top.png"
+      ]
+    },
+    "with_head_proxy": {
+      "directory": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy",
+      "expected_count": 8,
+      "actual_count": 8,
+      "complete": true,
+      "files": [
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/back.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/bottom.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/front.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/front_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/left.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/rear_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/right.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/with_head_proxy/top.png"
+      ]
+    },
+    "wireframe": {
+      "directory": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/wireframe",
+      "expected_count": 3,
+      "actual_count": 3,
+      "complete": true,
+      "files": [
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/wireframe/front.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/wireframe/front_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/wireframe/right.png"
+      ]
+    },
+    "silhouette": {
+      "directory": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette",
+      "expected_count": 4,
+      "actual_count": 4,
+      "complete": true,
+      "files": [
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette/front.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette/left.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette/right.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/silhouette/top.png"
+      ]
+    },
+    "exploded_sanity": {
+      "directory": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/exploded_sanity",
+      "expected_count": 1,
+      "actual_count": 1,
+      "complete": true,
+      "files": [
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/exploded_sanity/front_3q.png"
+      ]
+    },
+    "comparisons": {
+      "complete": true,
+      "files": [
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_front.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_side.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_front_3q.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/comparison_contact_sheet.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_front.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_right.png",
+        "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/overlay_left.png"
+      ]
+    }
+  },
+  "visual_iterations": [
+    {
+      "iteration": 1,
+      "scope": "reference-driven master envelope",
+      "observed": "The numeric silhouette gate passed, but the unpanelled front and 3/4 reads were still too egg-like and lacked a stable temple side wall.",
+      "changes": "Built the initial 27x48 multi-section superellipse loft from front width and averaged side-depth samples; excluded front-mask ear-pod contamination.",
+      "result": "Front IoU 0.926523; worst side IoU 0.873852. Numeric pass, visual hold."
+    },
+    {
+      "iteration": 2,
+      "scope": "master envelope profile conditioning",
+      "observed": "Reference overlays showed the crown/jaw taper was sound, while the measured ear region still made the mid-body look circular.",
+      "changes": "Added measured-profile temple and side-depth plateaus and increased crown/mid/lower superellipse exponents without returning to ellipsoid radii.",
+      "result": "Front IoU 0.927858; worst side IoU 0.874787. Numeric pass and the reference-consistent master was accepted for part extraction."
+    },
+    {
+      "iteration": 3,
+      "scope": "first complete part extraction",
+      "observed": "The first 21-part build was rejected: faceplate nearly rectangular, cell-selected edges visibly stepped, eyes buried, ear covers button-like, and neck entry too shelf-like.",
+      "changes": "Raised cage sampling to 55x96, narrowed the faceplate, separated panel bands, moved eye geometry outside the faceplate, added stepped embedded ear covers and cyan emitters, and tightened the neck ribbon.",
+      "result": "The 23-part hierarchy and power-helmet divisions became readable, but selected-cell faceplate and crown borders still failed the edge-quality gate."
+    },
+    {
+      "iteration": 4,
+      "scope": "continuous faceplate and brow topology",
+      "observed": "Higher sampling reduced but did not remove staircase borders; bevel miters also produced spikes on the open curved faceplate rim.",
+      "changes": "Replaced cell selection for Faceplate and CrownFront with analytic continuous UV patches, variable brow/lower boundaries, and removed the faceplate rim bevel while retaining thickness.",
+      "result": "Smooth reference-shaped brow, lower taper, side wrap, U-frame, and embedded ear/side structure passed the main visual gate."
+    },
+    {
+      "iteration": 5,
+      "scope": "final shading, fit, reference-empty, and eye-seat repair",
+      "observed": "Remaining checks found mild faceplate highlight breakup, an 8.3 mm InnerShell nose penetration, Blender 5.2 Image Empty API incompatibility, and eyes sitting too proud of the armor.",
+      "changes": "Added one controlled faceplate subdivision level, formed a localized inner nose support cavity, tuned top/side/rear clearances, created true Image Empties, and seated housing/lenses at approximately 3.2/2.2 mm from the sampled faceplate surface.",
+      "result": "Final front IoU 0.955171, worst side IoU 0.886771, front/side mean errors 0.9881%/2.7685%; minimum proxy clearance 4.705 mm with no sampled penetration. Visual and numeric gates passed."
+    }
+  ],
+  "algorithm_change_from_v2": [
+    "Measured front width and independent side depth profiles drive a multi-section superellipse loft instead of create_open_ellipsoid_shell().",
+    "Visible armor is sampled from one HelmetEnvelope_Master or analytic parameter patches on that surface instead of create_ellipsoid_patch() and create_prism().",
+    "Faceplate uses continuous surface parameters with variable brow, side wrap, lower taper, center bulge, thickness, and controlled subdivision; no fixed-Y plate is used.",
+    "Eyes sample the faceplate curvature, with a surface-conforming housing and relatively inset lens.",
+    "Jaw, cheek, crown, temple, and rear shell share the master cage; ear covers use an embedded stepped coaxial profile; the neck entry is a low rectangular elliptical ribbon rather than a torus.",
+    "Every movable mesh has local vertices, an explicit mechanical origin, and a nonzero transform parented under HelmetRoot."
+  ],
+  "known_issues": [
+    "The source is an internally inconsistent AI concept sheet; the largest remaining side-contour error is concentrated near the bottom/neck silhouette, while mean side error remains within the acceptance gate.",
+    "Rear-shell center-spine and internal mechanisms are deliberately simplified to major graybox divisions.",
+    "The faceplate is a pre-production continuous surface and may show mild highlight undulation before production retopology; the silhouette and wrap are stable.",
+    "No production UVs, textures, micro-fasteners, rig, animation, or Web/Face Landmarker integration are included."
+  ],
+  "files": {
+    "blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v3.blend",
+    "blend_size_bytes": 496161,
+    "glb": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/helmet_graybox_v3.glb",
+    "report": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/helmet_graybox_v3_report.json"
+  },
+  "export_and_validation_seconds": 0.8076
+}
