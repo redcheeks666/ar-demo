@@ -1,0 +1,949 @@
+/* MediaPipe Vision Demo — HUD 视觉语言移植自 ar-solar-system-demo/src/styles.css */
+
+:root {
+  color: #f6f7f9;
+  background: #050607;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #050607;
+}
+
+.preview-stage {
+  position: relative;
+  width: min(100vw, calc(100vh * 16 / 9));
+  max-height: 100vh;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #050607;
+}
+
+.camera-video,
+.landmark-canvas,
+.preview-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.camera-video {
+  z-index: 0;
+  object-fit: contain;
+  transform: scaleX(-1);
+  background: #050607;
+}
+
+.landmark-canvas {
+  z-index: 2;
+  pointer-events: none;
+}
+
+.preview-overlay {
+  --demo-hud-inline-inset: 32px;
+  --demo-hud-card-width: min(344px, calc(100% - 64px));
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ---- 开始页 / 加载页（与参考项目一致） ---- */
+
+.intro-panel {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: clamp(28px, 8vh, 88px);
+  width: min(520px, calc(100vw - 32px));
+  transform: translateX(-50%);
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(7, 10, 13, 0.76);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+  pointer-events: auto;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #93d7cb;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.intro-panel h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.status-text {
+  margin: 14px 0 20px;
+  max-width: 36rem;
+  color: rgba(246, 247, 249, 0.86);
+  font-size: 1rem;
+}
+
+.camera-privacy-note {
+  max-width: 36rem;
+  margin: -6px 0 16px;
+  color: rgba(246, 247, 249, 0.66);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.primary-action {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  color: #07100f;
+  background: #a9f3df;
+  cursor: pointer;
+  font-weight: 800;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.primary-action:hover {
+  background: #f2c46d;
+  transform: translateY(-1px);
+}
+
+.primary-action:disabled {
+  color: rgba(246, 247, 249, 0.66);
+  background: rgba(255, 255, 255, 0.14);
+  cursor: wait;
+  transform: none;
+}
+
+.loading-panel {
+  overflow: hidden;
+}
+
+.loading-stage {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  line-height: 1.15;
+}
+
+.loading-stage-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 16px;
+  font-size: 0.84rem;
+}
+
+.loading-stage-complete {
+  color: #93d7cb;
+}
+
+.loading-stage-active {
+  color: rgba(246, 247, 249, 0.84);
+}
+
+.loading-stage-active::before {
+  content: '';
+  display: inline-block;
+  width: 0.58em;
+  height: 0.58em;
+  margin-right: 0.48em;
+  border-radius: 50%;
+  background: #a9f3df;
+  box-shadow: 0 0 12px rgba(169, 243, 223, 0.72);
+  animation: loading-stage-pulse 1.1s ease-in-out infinite;
+}
+
+.loading-progress {
+  position: relative;
+  height: 5px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.loading-progress-bar {
+  position: absolute;
+  inset-block: 0;
+  left: -34%;
+  width: 34%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, #a9f3df, #f2c46d);
+  box-shadow: 0 0 18px rgba(169, 243, 223, 0.5);
+  animation: loading-progress-scan 1.25s ease-in-out infinite;
+}
+
+.loading-detail {
+  margin-bottom: 0;
+}
+
+.loading-panel.is-error .loading-stage-active,
+.loading-panel.is-error .loading-detail {
+  color: #ffd6bd;
+}
+
+.loading-panel.is-error .loading-stage-active::before {
+  background: #ff9c7c;
+  box-shadow: 0 0 12px rgba(255, 156, 124, 0.64);
+  animation: none;
+}
+
+.loading-panel.is-error .loading-progress-bar {
+  left: 0;
+  width: 100%;
+  background: rgba(255, 156, 124, 0.72);
+  animation: none;
+}
+
+@keyframes loading-stage-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes loading-progress-scan {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(394%);
+  }
+}
+
+/* ---- HUD 标签 ---- */
+
+@property --focus-action-progress {
+  syntax: "<number>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.model-hud-tag,
+.model-rail-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: rgba(94, 228, 255, 0.55);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
+    monospace;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.model-hud-tag::after,
+.model-rail-tag::after {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(94, 228, 255, 0.35), transparent);
+  content: "";
+}
+
+.model-rail-tag-secondary {
+  margin-top: 8px;
+}
+
+/* ---- 左侧：介绍卡 + 数据面板 ---- */
+
+.hud-left {
+  --hud-accent: 127, 216, 255;
+  position: absolute;
+  z-index: 4;
+  left: var(--demo-hud-inline-inset);
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(370px, calc(100% - 64px));
+  pointer-events: none;
+}
+
+.info-panel {
+  padding: 13px 15px;
+  border: 1px solid rgba(var(--hud-accent), 0.32);
+  border-radius: 3px;
+  background: rgba(10, 20, 30, 0.72);
+  box-shadow:
+    0 0 0 1px rgba(var(--hud-accent), 0.12),
+    0 0 24px rgba(var(--hud-accent), 0.14),
+    inset 0 0 24px rgba(var(--hud-accent), 0.06);
+  backdrop-filter: blur(10px);
+}
+
+.info-panel-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+
+.info-panel-title {
+  color: #ecf7ff;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow:
+    0 0 8px rgba(var(--hud-accent), 0.58),
+    0 0 18px rgba(var(--hud-accent), 0.26);
+}
+
+.info-panel-subtitle {
+  color: rgba(var(--hud-accent), 0.72);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+.info-panel-line {
+  margin: 6px 0 0;
+  color: rgba(236, 247, 255, 0.82);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.data-panel {
+  padding: 11px 15px 13px;
+  border: 1px solid rgba(var(--hud-accent), 0.26);
+  border-radius: 3px;
+  background: rgba(8, 14, 20, 0.7);
+  box-shadow: inset 0 0 20px rgba(var(--hud-accent), 0.05);
+  backdrop-filter: blur(10px);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
+    monospace;
+}
+
+.data-panel-tag {
+  margin: 0 0 8px;
+  color: rgba(94, 228, 255, 0.55);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+}
+
+.data-panel-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px 16px;
+}
+
+.data-panel-label {
+  color: rgba(var(--hud-accent), 0.55);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+}
+
+.data-panel-value {
+  overflow: hidden;
+  color: #ecf7ff;
+  font-size: 11.5px;
+  line-height: 1.5;
+  text-align: right;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 10px rgba(var(--hud-accent), 0.4);
+  white-space: nowrap;
+}
+
+/* ---- 右侧：模型卡列 ---- */
+
+.model-rail {
+  --hud-accent: 127, 216, 255;
+  --hud-accent-alt: 255, 212, 124;
+  position: absolute;
+  z-index: 4;
+  top: 30px;
+  right: var(--demo-hud-inline-inset);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: var(--demo-hud-card-width);
+  pointer-events: none;
+}
+
+/* ---- HUD 卡片（移植自参考项目 planet-focus-action-card，蓄力交互样式完全一致） ---- */
+
+.planet-focus-action-card {
+  --focus-action-progress: 0;
+  appearance: none;
+  position: relative;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  border: 1px solid rgba(var(--hud-accent), 0.52);
+  border-radius: 3px;
+  color: #ecf7ff;
+  background: rgba(10, 20, 30, 0.78);
+  box-shadow:
+    0 0 0 1px rgba(var(--hud-accent), 0.22),
+    0 0 14px rgba(var(--hud-accent), 0.48),
+    0 0 38px rgba(var(--hud-accent), 0.3),
+    0 0 72px rgba(var(--hud-accent), 0.14),
+    inset 0 0 30px rgba(var(--hud-accent), 0.11);
+  filter: drop-shadow(0 0 7px rgba(var(--hud-accent), 0.36));
+  transition:
+    --focus-action-progress 80ms linear,
+    border-color 180ms ease,
+    filter 180ms ease,
+    box-shadow 180ms ease;
+  cursor: pointer;
+  pointer-events: auto;
+  user-select: none;
+  touch-action: none;
+}
+
+.model-card {
+  grid-template-areas:
+    "reactor copy"
+    "reactor readout";
+  grid-template-columns: 42px minmax(0, 1fr);
+  column-gap: 12px;
+  row-gap: 5px;
+  padding: 10px 14px;
+}
+
+.model-card .planet-focus-action-card-reactor {
+  grid-area: reactor;
+  width: 42px;
+  height: 42px;
+}
+
+.model-card .planet-focus-action-card-copy {
+  grid-area: copy;
+  align-self: end;
+}
+
+.model-card .planet-focus-action-card-readout {
+  grid-area: readout;
+  display: flex;
+  align-items: center;
+  align-self: start;
+  gap: 10px;
+  text-align: left;
+}
+
+.model-card .planet-focus-action-card-state {
+  display: inline-block;
+  margin: 0;
+}
+
+/* 激活态：金色 HUD 主色，副标显示 ACTIVE。 */
+.planet-focus-action-card.is-active {
+  --hud-accent: 255, 212, 124;
+}
+
+/* 加载态：整卡降亮度，扫描线常亮提示在工作。 */
+.planet-focus-action-card.is-loading {
+  filter: saturate(0.6) brightness(0.82);
+}
+
+.planet-focus-action-card.is-loading .planet-focus-action-card-scan {
+  opacity: 1;
+}
+
+.planet-focus-action-card.is-loading .planet-focus-action-card-scan::before {
+  animation: planet-hud-scan 1.4s linear infinite;
+}
+
+/* 四角 L 形括号。按钮本体负责上方两角，corners 元素负责下方两角。 */
+.planet-focus-action-card::before,
+.planet-focus-action-card::after,
+.planet-focus-action-card-corners::before,
+.planet-focus-action-card-corners::after {
+  position: absolute;
+  z-index: 5;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(var(--hud-accent), 1);
+  filter: drop-shadow(0 0 7px rgba(var(--hud-accent), 0.95));
+  content: "";
+  pointer-events: none;
+}
+
+.planet-focus-action-card::before {
+  top: -2px;
+  left: -2px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.planet-focus-action-card::after {
+  top: -2px;
+  right: -2px;
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.planet-focus-action-card-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.planet-focus-action-card-corners::before {
+  bottom: -2px;
+  left: -2px;
+  border-top: 0;
+  border-right: 0;
+}
+
+.planet-focus-action-card-corners::after {
+  right: -2px;
+  bottom: -2px;
+  border-top: 0;
+  border-left: 0;
+}
+
+.planet-focus-action-card-edge {
+  position: absolute;
+  z-index: 2;
+  right: 16px;
+  bottom: 0;
+  left: 16px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(var(--hud-accent), 0.9),
+    transparent
+  );
+  box-shadow: 0 0 13px rgba(var(--hud-accent), 0.82);
+  pointer-events: none;
+}
+
+.planet-focus-action-card-fill {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: calc(var(--focus-action-progress) * 100%);
+  border-right: 1px solid rgba(var(--hud-accent), 0.4);
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--hud-accent), 0.14),
+    rgba(var(--hud-accent), 0.05)
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+.planet-focus-action-card-scan {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.planet-focus-action-card-scan::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -40%;
+  width: 34%;
+  background: linear-gradient(
+    105deg,
+    transparent,
+    rgba(var(--hud-accent), 0.12) 45%,
+    rgba(255, 255, 255, 0.14) 50%,
+    rgba(var(--hud-accent), 0.12) 55%,
+    transparent
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.planet-focus-action-card.is-charging {
+  border-color: rgb(var(--hud-accent));
+  box-shadow:
+    0 0 0 1px rgba(var(--hud-accent), 0.38),
+    0 0 18px rgba(var(--hud-accent), 0.78),
+    0 0 48px rgba(var(--hud-accent), 0.58),
+    0 0 84px rgba(var(--hud-accent), 0.3),
+    inset 0 0 38px rgba(var(--hud-accent), 0.2);
+  filter: drop-shadow(0 0 12px rgba(var(--hud-accent), 0.8));
+  animation: planet-hud-glow-pulse 1.05s ease-in-out infinite;
+}
+
+.planet-focus-action-card.is-charging::before,
+.planet-focus-action-card.is-charging::after,
+.planet-focus-action-card.is-charging
+  .planet-focus-action-card-corners::before,
+.planet-focus-action-card.is-charging
+  .planet-focus-action-card-corners::after {
+  filter: drop-shadow(0 0 8px rgba(var(--hud-accent), 0.95));
+}
+
+.planet-focus-action-card.is-charging .planet-focus-action-card-scan {
+  opacity: 1;
+}
+
+.planet-focus-action-card.is-charging .planet-focus-action-card-fill {
+  opacity: 1;
+}
+
+.planet-focus-action-card.is-charging .planet-focus-action-card-scan::before {
+  animation: planet-hud-scan 1.4s linear infinite;
+}
+
+@keyframes planet-hud-scan {
+  from {
+    left: -40%;
+  }
+
+  to {
+    left: 110%;
+  }
+}
+
+@keyframes planet-hud-glow-pulse {
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(var(--hud-accent), 0.48),
+      0 0 22px rgba(var(--hud-accent), 0.92),
+      0 0 60px rgba(var(--hud-accent), 0.7),
+      0 0 96px rgba(var(--hud-accent), 0.36),
+      inset 0 0 44px rgba(var(--hud-accent), 0.26);
+  }
+}
+
+/* 反应堆圆环：暗色分段底环常亮，亮环按 --focus-action-progress 从 12 点顺时针裁切。 */
+.planet-focus-action-card-reactor {
+  position: relative;
+  z-index: 3;
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(var(--hud-accent), 0.14),
+    rgba(var(--hud-accent), 0.035) 52%,
+    transparent 72%
+  );
+  box-shadow:
+    0 0 18px rgba(var(--hud-accent), 0.52),
+    inset 0 0 12px rgba(var(--hud-accent), 0.22);
+}
+
+.planet-focus-action-card-ring,
+.planet-focus-action-card-ring-progress {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 5px),
+    #000 calc(100% - 4px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 5px),
+    #000 calc(100% - 4px)
+  );
+}
+
+.planet-focus-action-card-ring {
+  background: repeating-conic-gradient(
+    rgba(var(--hud-accent), 0.52) 0 8deg,
+    transparent 8deg 12deg
+  );
+}
+
+.planet-focus-action-card-ring-progress {
+  background: repeating-conic-gradient(
+    rgb(var(--hud-accent)) 0 8deg,
+    transparent 8deg 12deg
+  );
+  -webkit-mask:
+    radial-gradient(
+      farthest-side,
+      transparent calc(100% - 5px),
+      #000 calc(100% - 4px)
+    ),
+    conic-gradient(
+      #000 0 calc(var(--focus-action-progress) * 360deg),
+      transparent 0 360deg
+    );
+  -webkit-mask-composite: source-in;
+  mask:
+    radial-gradient(
+      farthest-side,
+      transparent calc(100% - 5px),
+      #000 calc(100% - 4px)
+    ),
+    conic-gradient(
+      #000 0 calc(var(--focus-action-progress) * 360deg),
+      transparent 0 360deg
+    );
+  mask-composite: intersect;
+  filter: drop-shadow(0 0 8px rgba(var(--hud-accent), 1));
+}
+
+.planet-focus-action-card-icon {
+  position: relative;
+  z-index: 3;
+  width: 19px;
+  height: 19px;
+  color: rgb(var(--hud-accent));
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px rgba(var(--hud-accent), 1));
+}
+
+.planet-focus-action-card-copy {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  text-align: left;
+}
+
+.planet-focus-action-card-label {
+  min-width: 0;
+  overflow: hidden;
+  color: #ecf7ff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  text-shadow:
+    0 0 8px rgba(var(--hud-accent), 0.58),
+    0 0 18px rgba(var(--hud-accent), 0.26);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.planet-focus-action-card-hint {
+  overflow: hidden;
+  color: rgba(var(--hud-accent), 0.62);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
+    monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  line-height: 1.2;
+  text-shadow: 0 0 12px rgba(var(--hud-accent), 0.78);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.planet-focus-action-card-readout {
+  position: relative;
+  z-index: 3;
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
+    monospace;
+  text-align: right;
+}
+
+.planet-focus-action-card-duration {
+  display: inline-block;
+  padding: 4px 9px;
+  border: 1px solid rgba(var(--hud-accent), 0.68);
+  color: rgb(var(--hud-accent));
+  background: rgba(var(--hud-accent), 0.06);
+  box-shadow:
+    0 0 14px rgba(var(--hud-accent), 0.52),
+    inset 0 0 10px rgba(var(--hud-accent), 0.16);
+  text-shadow: 0 0 10px rgba(var(--hud-accent), 0.82);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.planet-focus-action-card-state {
+  display: block;
+  margin: 5px 2px 0 0;
+  color: rgba(236, 247, 255, 0.34);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.planet-focus-action-card-state-charging,
+.planet-focus-action-card-state-active {
+  display: none;
+}
+
+.planet-focus-action-card-state-charging {
+  color: rgba(var(--hud-accent), 0.8);
+  text-shadow: 0 0 10px rgba(var(--hud-accent), 0.62);
+}
+
+.planet-focus-action-card-state-active {
+  color: rgba(var(--hud-accent), 0.9);
+  text-shadow: 0 0 10px rgba(var(--hud-accent), 0.62);
+}
+
+.planet-focus-action-card.is-charging .planet-focus-action-card-state-ready,
+.planet-focus-action-card.is-charging .planet-focus-action-card-state-active {
+  display: none;
+}
+
+.planet-focus-action-card.is-charging .planet-focus-action-card-state-charging {
+  display: inline;
+}
+
+.planet-focus-action-card.is-active:not(.is-charging)
+  .planet-focus-action-card-state-ready {
+  display: none;
+}
+
+.planet-focus-action-card.is-active:not(.is-charging)
+  .planet-focus-action-card-state-active {
+  display: inline;
+}
+
+/* ---- 错误提示条 ---- */
+
+.error-banner {
+  position: absolute;
+  z-index: 7;
+  left: 50%;
+  bottom: 24px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  max-width: min(560px, calc(100vw - 32px));
+  transform: translateX(-50%);
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 156, 124, 0.55);
+  border-radius: 3px;
+  background: rgba(24, 10, 7, 0.88);
+  box-shadow: 0 0 24px rgba(255, 156, 124, 0.25);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.error-banner-text {
+  margin: 0;
+  color: #ffd6bd;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.error-banner-retry {
+  flex-shrink: 0;
+  min-height: 32px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 156, 124, 0.7);
+  border-radius: 3px;
+  color: #ffd6bd;
+  background: rgba(255, 156, 124, 0.12);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: background 160ms ease;
+}
+
+.error-banner-retry:hover {
+  background: rgba(255, 156, 124, 0.24);
+}
+
+/* ---- 响应式与降噪 ---- */
+
+@media (max-width: 960px) {
+  .preview-overlay {
+    --demo-hud-inline-inset: 16px;
+    --demo-hud-card-width: min(280px, calc(100% - 32px));
+  }
+
+  .model-rail {
+    top: 16px;
+    gap: 9px;
+  }
+
+  .hud-left {
+    top: 16px;
+    width: min(300px, calc(48% - 24px));
+  }
+
+  .info-panel-line {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .hud-left {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-stage-active::before,
+  .loading-progress-bar {
+    animation-duration: 3s;
+  }
+
+  .planet-focus-action-card.is-charging {
+    animation: none;
+  }
+
+  .planet-focus-action-card.is-charging .planet-focus-action-card-scan::before {
+    animation: none;
+  }
+
+  .planet-focus-action-card-fill,
+  .planet-focus-action-card-scan {
+    display: none;
+  }
+}
