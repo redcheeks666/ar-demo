@@ -1,0 +1,159 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/build_helmet_graybox_v5.py",
+  "iteration": 11,
+  "source_v4_blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v4.blend",
+  "v5_blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
+  "tuning": {
+    "label": "frozen faceplate XZ boundary with integrated upper and side returns",
+    "facet_depth_scale": 0.72,
+    "faceplate_global_offset_m": 0.0,
+    "bezel_projection_offset_m": 0.006,
+    "side_guard_rails": false,
+    "side_edge_inset_m": 0.006,
+    "eye_housing_recess_m": 0.0025,
+    "eye_lens_recess_m": 0.0018,
+    "bezel_width_m": 0.0038,
+    "mouth_bezel_scale": 0.66,
+    "mouth_cover_raise_m": 0.007,
+    "crown_seam_close_m": 0.007,
+    "lower_shell_raise_m": 0.0015,
+    "neck_xy_scale": 0.82,
+    "neck_raise_m": 0.022,
+    "panel_bevel_m": 0.00038,
+    "spine_scale": 0.93,
+    "cap_scale": [
+      1.1,
+      0.62,
+      0.55
+    ]
+  },
+  "master_contract": {
+    "hash_before": "d191a7da3fe2b3e86f55695361b397ca8507d86819b85e660079232f777b5cb0",
+    "hash_after": "d191a7da3fe2b3e86f55695361b397ca8507d86819b85e660079232f777b5cb0",
+    "unchanged": true
+  },
+  "node_contract": {
+    "expected_count": 55,
+    "actual_count": 55,
+    "names": [
+      "Cheek_L",
+      "Cheek_R",
+      "Chin",
+      "CrownFront",
+      "CrownRear",
+      "CrownSpine_01",
+      "CrownSpine_02",
+      "CrownSpine_03",
+      "CrownSpine_04",
+      "CrownSpine_Cap",
+      "EarCover_L",
+      "EarCover_R",
+      "EarEmitter_L",
+      "EarEmitter_R",
+      "EarRing_L_Inner",
+      "EarRing_L_Outer",
+      "EarRing_R_Inner",
+      "EarRing_R_Outer",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "Faceplate",
+      "FaceplateBezel",
+      "HelmetRoot",
+      "InnerShell",
+      "JawTrim_L",
+      "JawTrim_R",
+      "Jaw_L",
+      "Jaw_R",
+      "LowerUTrim",
+      "NeckRingFront",
+      "NeckRingRear",
+      "RearLayer_L_Lower",
+      "RearLayer_L_Upper",
+      "RearLayer_R_Lower",
+      "RearLayer_R_Upper",
+      "RearShell_L",
+      "RearShell_R",
+      "RearSpine_01",
+      "RearSpine_02",
+      "RearSpine_03",
+      "RearSpine_04",
+      "RearSpine_05",
+      "RearSpine_06",
+      "RearSpine_07",
+      "RearSpine_08",
+      "RearVent_L_Lower",
+      "RearVent_L_Upper",
+      "RearVent_R_Lower",
+      "RearVent_R_Upper",
+      "SideGroove_L",
+      "SideGroove_R",
+      "Temple_L",
+      "Temple_R"
+    ],
+    "parents_and_pivots_preserved": true
+  },
+  "faceplate": {
+    "surface_method": "ruled control cage with explicit capsule topology",
+    "topological_slot_health": {
+      "vertices": 300,
+      "edges": 850,
+      "faces": 548,
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "signed_volume": 8.359381779833041e-05
+    },
+    "slot_method": "explicit constrained topology with closed thickness walls",
+    "eye_slots": [
+      "L",
+      "R"
+    ]
+  },
+  "projection": {
+    "surface_hits": 275,
+    "ray_misses": [],
+    "edge_clamps": [
+      {
+        "view": "front",
+        "requested_x": -0.09299115044247788,
+        "clamped_x": -0.08712099351341927,
+        "v": 0.8451327433628318
+      }
+    ],
+    "hit_ratio": 1.0
+  },
+  "clearance": {
+    "samples_m": {
+      "top": 0.017,
+      "temple_side": 0.017272,
+      "rear": 0.009576,
+      "nose": 0.004705,
+      "ear": 0.009772
+    },
+    "faceplate_nose_clearance_m": 0.009323,
+    "inner_nose_surface_y_m": -0.133705,
+    "faceplate_nose_surface_y_m": -0.138323,
+    "minimum_sample_m": 0.004705,
+    "penetration_detected": false,
+    "target_general_m": [
+      0.008,
+      0.018
+    ],
+    "target_local_minimum_m": 0.004,
+    "v5_realized_faceplate_nose_surface_y_m": -0.137313,
+    "v5_realized_faceplate_nose_clearance_m": 0.008313,
+    "canonical_gate": {
+      "method": "protected v4 HeadProxy named samples against immutable InnerShell",
+      "minimum_required_m": 0.004,
+      "pass": true
+    }
+  },
+  "evaluated_triangle_count": 60736,
+  "triangle_limit_exclusive": 100000,
+  "elapsed_seconds": 0.5381,
+  "known_issues": [
+    "Craft-pass graybox only; small fasteners and production retopology remain out of scope.",
+    "No PBR, UV, rig, animation, or Web integration was performed."
+  ]
+}

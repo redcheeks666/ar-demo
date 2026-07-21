@@ -1,0 +1,962 @@
+{
+  "schema_version": "2.0",
+  "project": "AEGIS-R7 graybox v5 craft pass",
+  "inputs": {
+    "feature_curves": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_curves.json",
+    "feature_curves_sha256": "96a7388417b346abad232ed3e2ea16a0d81adf3d961d2484747aa3315f8b0303",
+    "blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
+    "blend_sha256": "af5ff576cf9f39cff8f724d9b46108e4480529b99df242808be966a41a0b831b",
+    "scene_iteration": 17,
+    "v4_validation": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_validation.json"
+  },
+  "measurement_method": {
+    "reference": "protected v4 raw crop-pixel feature measurements with protected v4 global registration",
+    "actual": "evaluated v5 mesh vertices projected through cameras stored in the final v5 blend",
+    "uses_build_parameters_as_actual": false
+  },
+  "registration": {
+    "method": "protected v4 single per-view helmet bbox height and center; fixed registration prevents the required v5 base-foot silhouette repair from shifting unchanged features",
+    "render_resolution": [
+      512,
+      512
+    ],
+    "current_v5_helmet_bboxes_px_diagnostic": {
+      "front": [
+        69.74814,
+        38.0036,
+        442.25186,
+        432.17281
+      ],
+      "left": [
+        61.78404,
+        38.00345,
+        456.9975,
+        432.17263
+      ],
+      "right": [
+        55.00325,
+        38.00345,
+        450.21619,
+        432.17263
+      ],
+      "back": [
+        69.74792,
+        38.0036,
+        442.25165,
+        432.17281
+      ],
+      "top": [
+        69.74814,
+        55.22922,
+        442.25186,
+        450.08553
+      ]
+    },
+    "protected_v4_registration_bboxes_px": {
+      "front": [
+        69.74814,
+        35.62387,
+        442.25186,
+        458.26202
+      ],
+      "left": [
+        61.65312,
+        35.62372,
+        476.2207,
+        458.26185
+      ],
+      "right": [
+        35.7922,
+        35.62372,
+        450.34689,
+        458.26185
+      ],
+      "back": [
+        69.74792,
+        35.62387,
+        442.25165,
+        458.26205
+      ],
+      "top": [
+        69.74814,
+        35.67184,
+        442.25186,
+        450.20803
+      ]
+    },
+    "final_cameras": {
+      "front": {
+        "name": "CameraV3_Front",
+        "type": "ORTHO",
+        "ortho_scale": 0.35499998927116394,
+        "lens_mm": 50.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "clip_start_m": 0.10000000149011612,
+        "clip_end_m": 1000.0,
+        "matrix_world": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -2e-07,
+          -1.0,
+          -1.0,
+          0.0,
+          1.0,
+          -2e-07,
+          0.006,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "left": {
+        "name": "CameraV3_Left",
+        "type": "ORTHO",
+        "ortho_scale": 0.35499998927116394,
+        "lens_mm": 50.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "clip_start_m": 0.10000000149011612,
+        "clip_end_m": 1000.0,
+        "matrix_world": [
+          -0.002,
+          -0.0,
+          -0.999998,
+          -1.0,
+          -0.999998,
+          -1e-07,
+          0.002,
+          0.0,
+          -1e-07,
+          1.0,
+          -0.0,
+          0.006,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "right": {
+        "name": "CameraV3_Right",
+        "type": "ORTHO",
+        "ortho_scale": 0.35499998927116394,
+        "lens_mm": 50.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "clip_start_m": 0.10000000149011612,
+        "clip_end_m": 1000.0,
+        "matrix_world": [
+          -0.002,
+          0.0,
+          0.999998,
+          1.0,
+          0.999998,
+          -1e-07,
+          0.002,
+          0.0,
+          1e-07,
+          1.0,
+          -0.0,
+          0.006,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "back": {
+        "name": "CameraV3_Back",
+        "type": "ORTHO",
+        "ortho_scale": 0.35499998927116394,
+        "lens_mm": 50.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "clip_start_m": 0.10000000149011612,
+        "clip_end_m": 1000.0,
+        "matrix_world": [
+          -1.0,
+          2e-07,
+          2e-07,
+          0.0,
+          2e-07,
+          2e-07,
+          1.0,
+          1.0,
+          2e-07,
+          1.0,
+          -2e-07,
+          0.006,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "top": {
+        "name": "CameraV3_Top",
+        "type": "ORTHO",
+        "ortho_scale": 0.35499998927116394,
+        "lens_mm": 50.0,
+        "shift_x": 0.0,
+        "shift_y": 0.0,
+        "clip_start_m": 0.10000000149011612,
+        "clip_end_m": 1000.0,
+        "matrix_world": [
+          -1.0,
+          2e-07,
+          0.0,
+          0.0,
+          -2e-07,
+          -0.999998,
+          0.0020109,
+          0.0,
+          0.0,
+          0.0020109,
+          0.999998,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "metrics": {
+    "eye_slit_center": {
+      "reference": {
+        "left": [
+          -0.224926,
+          0.38385
+        ],
+        "right": [
+          0.244838,
+          0.381268
+        ]
+      },
+      "actual": {
+        "left": [
+          -0.22092681607204206,
+          0.398080928687996
+        ],
+        "right": [
+          0.22092706879774474,
+          0.3980674981220822
+        ]
+      },
+      "error": 0.029223,
+      "error_percent": 2.9223,
+      "threshold_percent": 3.0,
+      "unit": "percent_reference_helmet_height_worst_side",
+      "pass": true,
+      "relative_to_feature": false,
+      "per_side": {
+        "left": {
+          "reference": {
+            "center_px": [
+              166.3333,
+              204.5
+            ],
+            "center_normalized_head_height": [
+              -0.224926,
+              0.38385
+            ],
+            "length_px": 81.0,
+            "length_head_height": 0.179204
+          },
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              128.96405,
+              199.45764,
+              196.29175,
+              208.27847
+            ],
+            "center_normalized_head_height": [
+              -0.22092681607204206,
+              0.398080928687996
+            ],
+            "width_normalized_head_height": 0.15930340825575318,
+            "height_normalized_head_height": 0.02087088280797208
+          },
+          "center_error_head_height": 0.01478217857463722,
+          "length_relative_error": 0.11104993049400028
+        },
+        "right": {
+          "reference": {
+            "center_px": [
+              378.6667,
+              203.3333
+            ],
+            "center_normalized_head_height": [
+              0.244838,
+              0.381268
+            ],
+            "length_px": 81.0,
+            "length_head_height": 0.179204
+          },
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              315.70792,
+              199.44626,
+              383.0365,
+              208.2785
+            ],
+            "center_normalized_head_height": [
+              0.22092706879774474,
+              0.3980674981220822
+            ],
+            "width_normalized_head_height": 0.15930550226871823,
+            "height_normalized_head_height": 0.02089788835448687
+          },
+          "center_error_head_height": 0.02922252159059563,
+          "length_relative_error": 0.11103824541462116
+        }
+      }
+    },
+    "eye_slit_length": {
+      "reference": {
+        "left": 0.179204,
+        "right": 0.179204
+      },
+      "actual": {
+        "left": 0.15930340825575318,
+        "right": 0.15930550226871823
+      },
+      "error": 0.11105,
+      "error_percent": 11.105,
+      "threshold_percent": 15.0,
+      "unit": "percent_feature_length_worst_side",
+      "pass": true,
+      "relative_to_feature": true
+    },
+    "ear_disc_center": {
+      "reference": {
+        "left": [
+          -0.042755,
+          0.501188
+        ],
+        "right": [
+          0.04646,
+          0.50885
+        ]
+      },
+      "actual": {
+        "left": [
+          -0.014498019810577252,
+          0.5160385385932509
+        ],
+        "right": [
+          0.014482746697382311,
+          0.5160385385932509
+        ]
+      },
+      "error": 0.032775,
+      "error_percent": 3.2775,
+      "threshold_percent": 4.0,
+      "unit": "percent_reference_helmet_height_worst_side",
+      "pass": true,
+      "relative_to_feature": false,
+      "per_side": {
+        "left": {
+          "reference_center": [
+            -0.042755,
+            0.501188
+          ],
+          "reference_radius": 0.21557,
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              179.01224,
+              169.92383,
+              346.60675,
+              337.51874
+            ],
+            "center_normalized_head_height": [
+              -0.014498019810577252,
+              0.5160385385932509
+            ],
+            "width_normalized_head_height": 0.39654375940820374,
+            "height_normalized_head_height": 0.39654469810371523
+          },
+          "actual_radius": 0.19827234905185762,
+          "center_error_head_height": 0.03192170775405139,
+          "radius_relative_error": 0.08024145729063596
+        },
+        "right": {
+          "reference_center": [
+            0.04646,
+            0.50885
+          ],
+          "reference_radius": 0.200786,
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              165.39325,
+              169.92383,
+              332.98776,
+              337.51874
+            ],
+            "center_normalized_head_height": [
+              0.014482746697382311,
+              0.5160385385932509
+            ],
+            "width_normalized_head_height": 0.39654375940820374,
+            "height_normalized_head_height": 0.39654469810371523
+          },
+          "actual_radius": 0.19827234905185762,
+          "center_error_head_height": 0.032775292765838585,
+          "radius_relative_error": 0.012519054855131216
+        }
+      }
+    },
+    "ear_disc_radius": {
+      "reference": {
+        "left": 0.21557,
+        "right": 0.200786
+      },
+      "actual": {
+        "left": 0.19827234905185762,
+        "right": 0.19827234905185762
+      },
+      "error": 0.080241,
+      "error_percent": 8.0241,
+      "threshold_percent": 15.0,
+      "unit": "percent_feature_radius_worst_side",
+      "pass": true,
+      "relative_to_feature": true
+    },
+    "faceplate_max_width": {
+      "reference": 0.743363,
+      "actual": 0.7204305566904111,
+      "error": 0.022932,
+      "error_percent": 2.2932,
+      "threshold_percent": 4.0,
+      "unit": "percent_reference_helmet_height",
+      "pass": true,
+      "relative_to_feature": false
+    },
+    "faceplate_chin_tip_height": {
+      "reference": 0.794248,
+      "actual": 0.7963632483248376,
+      "error": 0.002115,
+      "error_percent": 0.2115,
+      "threshold_percent": 3.0,
+      "unit": "percent_reference_helmet_height",
+      "pass": true,
+      "relative_to_feature": false
+    },
+    "crown_rear_spine_width": {
+      "reference": 0.160714,
+      "actual": 0.13616235300279117,
+      "error": 0.152766,
+      "error_percent": 15.2766,
+      "threshold_percent": 30.0,
+      "unit": "percent_feature_width",
+      "pass": true,
+      "relative_to_feature": true
+    }
+  },
+  "structural_checks": {
+    "eye_housing_and_lens_inside_faceplate_bbox_diagnostic": {
+      "pass": true,
+      "details": {
+        "L": {
+          "EyeHousing": {
+            "bbox_px": [
+              128.82446,
+              196.97079,
+              198.09386,
+              211.18073
+            ],
+            "inside_faceplate_bbox": true
+          },
+          "EyeLens": {
+            "bbox_px": [
+              128.96405,
+              199.45764,
+              196.29175,
+              208.27847
+            ],
+            "inside_faceplate_bbox": true
+          }
+        },
+        "R": {
+          "EyeHousing": {
+            "bbox_px": [
+              313.90616,
+              196.96912,
+              383.17606,
+              211.18039
+            ],
+            "inside_faceplate_bbox": true
+          },
+          "EyeLens": {
+            "bbox_px": [
+              315.70792,
+              199.44626,
+              383.0365,
+              208.2785
+            ],
+            "inside_faceplate_bbox": true
+          }
+        }
+      },
+      "gate_mode": "diagnostic_only; axis-aligned bbox is weaker than the rendered boundary mask",
+      "required": false
+    },
+    "eye_housing_and_lens_inside_actual_faceplate_boundary": {
+      "pass": true,
+      "details": {
+        "method": "separate current-blend front-camera alpha masks; Boolean slot holes filled from border-connected background; housing+lens must remain inside the actual outer faceplate region",
+        "camera": "CameraV3_Front",
+        "render_manifest": {
+          "faceplate": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_faceplate_mask.png",
+            "sha256": "da481dfe1fd1fe34f70325c3accfc4a114dbc4b8544e95efa206a1f5a3053531",
+            "camera": "CameraV3_Front",
+            "visible_objects": [
+              "Faceplate"
+            ],
+            "foreground_pixel_count": 48738,
+            "resolution_px": [
+              512,
+              512
+            ]
+          },
+          "eye_L": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_eye_L.png",
+            "sha256": "f7e2f52a1f794d905d12b8f2b242f95429d9ce53d5b353b59cc0813eb5284b96",
+            "camera": "CameraV3_Front",
+            "visible_objects": [
+              "EyeHousing_L",
+              "EyeLens_L"
+            ],
+            "foreground_pixel_count": 761,
+            "resolution_px": [
+              512,
+              512
+            ]
+          },
+          "eye_R": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_eye_R.png",
+            "sha256": "cf57331e7afb04e25c2d4c8926199cf08c4909ed78d12957dcc294044ce7296e",
+            "camera": "CameraV3_Front",
+            "visible_objects": [
+              "EyeHousing_R",
+              "EyeLens_R"
+            ],
+            "foreground_pixel_count": 762,
+            "resolution_px": [
+              512,
+              512
+            ]
+          }
+        },
+        "sides": {
+          "L": {
+            "eye_foreground_pixel_count": 761,
+            "outside_faceplate_boundary_pixel_count": 0,
+            "allowed_boundary_tolerance_px": 1,
+            "overlay": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_overlay_L.png",
+            "overlay_sha256": "eab8a4a322b558398a3c772b418400264432284fefd48d05310b6037b6ee39b5",
+            "pass": true
+          },
+          "R": {
+            "eye_foreground_pixel_count": 762,
+            "outside_faceplate_boundary_pixel_count": 0,
+            "allowed_boundary_tolerance_px": 1,
+            "overlay": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_overlay_R.png",
+            "overlay_sha256": "d6e4e838edbc21bc64b07e559ecf3615421af74325a40ba629d8cdbb494b298f",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "protected_side_depth_reference_sampling_integrity": {
+      "pass": true,
+      "counts": {
+        "left": 13,
+        "right": 13
+      },
+      "required_samples_per_side": 12,
+      "note": "reference-input integrity check; not a v5 geometry measurement"
+    },
+    "top_center_closed": {
+      "pass": true,
+      "closure_object": "CrownSpine_Cap",
+      "evaluated_mesh_health": {
+        "object_exists": true,
+        "type": "MESH",
+        "hide_render": false,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "signed_volume_m3": 6.259586354348588e-06,
+        "pass": true
+      }
+    },
+    "protected_final_camera_contract": {
+      "pass": true,
+      "details": {
+        "method": "actual final camera objects compared to protected v4 config; rotation tolerance 1e-3 rad for Blender save/load quaternion normalization",
+        "views": {
+          "front": {
+            "name": "CameraV3_Front",
+            "exists_as_camera": true,
+            "expected_type": "ORTHO",
+            "actual_type": "ORTHO",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.0,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          },
+          "back": {
+            "name": "CameraV3_Back",
+            "exists_as_camera": true,
+            "expected_type": "ORTHO",
+            "actual_type": "ORTHO",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.0,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          },
+          "left": {
+            "name": "CameraV3_Left",
+            "exists_as_camera": true,
+            "expected_type": "ORTHO",
+            "actual_type": "ORTHO",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.0,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          },
+          "right": {
+            "name": "CameraV3_Right",
+            "exists_as_camera": true,
+            "expected_type": "ORTHO",
+            "actual_type": "ORTHO",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.0,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          },
+          "top": {
+            "name": "CameraV3_Top",
+            "exists_as_camera": true,
+            "expected_type": "ORTHO",
+            "actual_type": "ORTHO",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.0,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          },
+          "bottom": {
+            "name": "CameraV3_Bottom",
+            "exists_as_camera": true,
+            "expected_type": "ORTHO",
+            "actual_type": "ORTHO",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.0,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          },
+          "front_3q": {
+            "name": "CameraV3_Front3Q",
+            "exists_as_camera": true,
+            "expected_type": "PERSP",
+            "actual_type": "PERSP",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.0,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          },
+          "rear_3q": {
+            "name": "CameraV3_Rear3Q",
+            "exists_as_camera": true,
+            "expected_type": "PERSP",
+            "actual_type": "PERSP",
+            "location_error_m": 0.0,
+            "rotation_error_radians": 0.000690534,
+            "projection_parameter_pass": true,
+            "zero_lens_shift_pass": true,
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "summary": {
+    "required_metrics": 7,
+    "passed_metrics": 7,
+    "failed_metrics": [],
+    "structural_failures": [],
+    "passes_all_required_gates": true
+  },
+  "silhouette_regression": {
+    "metrics": {
+      "front": {
+        "iou": 0.908604,
+        "mean_contour_distance_px": 10.4693,
+        "mean_contour_distance_percent_height": 2.237,
+        "maximum_contour_error_px": 38.2099,
+        "maximum_error_location_yx": [
+          356,
+          471
+        ],
+        "reference_area_px": 154873,
+        "model_area_px": 167912
+      },
+      "left": {
+        "iou": 0.880414,
+        "mean_contour_distance_px": 13.0584,
+        "mean_contour_distance_percent_height": 2.7902,
+        "maximum_contour_error_px": 67.1863,
+        "maximum_error_location_yx": [
+          480,
+          148
+        ],
+        "reference_area_px": 160511,
+        "model_area_px": 173616
+      },
+      "right": {
+        "iou": 0.881706,
+        "mean_contour_distance_px": 13.0462,
+        "mean_contour_distance_percent_height": 2.7876,
+        "maximum_contour_error_px": 63.2456,
+        "maximum_error_location_yx": [
+          480,
+          364
+        ],
+        "reference_area_px": 163045,
+        "model_area_px": 173596
+      }
+    },
+    "thresholds": {
+      "front_iou_min": 0.9,
+      "left_iou_min": 0.85,
+      "right_iou_min": 0.85
+    },
+    "current_blend_render_manifest": {
+      "front": {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
+        "sha256": "eb5c886d595436913e1cb137af707c5f2d4aa919568d94a8eb5bc48cfde41f4c",
+        "camera": "CameraV3_Front",
+        "visible_objects": [
+          "Cheek_L",
+          "Cheek_R",
+          "Chin",
+          "CrownFront",
+          "CrownRear",
+          "CrownSpine_01",
+          "CrownSpine_02",
+          "CrownSpine_03",
+          "CrownSpine_04",
+          "CrownSpine_Cap",
+          "EarCover_L",
+          "EarCover_R",
+          "EarEmitter_L",
+          "EarEmitter_R",
+          "EarRing_L_Inner",
+          "EarRing_L_Outer",
+          "EarRing_R_Inner",
+          "EarRing_R_Outer",
+          "EyeHousing_L",
+          "EyeHousing_R",
+          "EyeLens_L",
+          "EyeLens_R",
+          "Faceplate",
+          "FaceplateBezel",
+          "InnerShell",
+          "JawTrim_L",
+          "JawTrim_R",
+          "Jaw_L",
+          "Jaw_R",
+          "LowerUTrim",
+          "NeckRingFront",
+          "NeckRingRear",
+          "RearLayer_L_Lower",
+          "RearLayer_L_Upper",
+          "RearLayer_R_Lower",
+          "RearLayer_R_Upper",
+          "RearShell_L",
+          "RearShell_R",
+          "RearSpine_01",
+          "RearSpine_02",
+          "RearSpine_03",
+          "RearSpine_04",
+          "RearSpine_05",
+          "RearSpine_06",
+          "RearSpine_07",
+          "RearSpine_08",
+          "RearVent_L_Lower",
+          "RearVent_L_Upper",
+          "RearVent_R_Lower",
+          "RearVent_R_Upper",
+          "SideGroove_L",
+          "SideGroove_R",
+          "Temple_L",
+          "Temple_R"
+        ],
+        "foreground_pixel_count": 119426,
+        "resolution_px": [
+          512,
+          512
+        ]
+      },
+      "left": {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
+        "sha256": "7f4e26fba14c40d7ad2d1c34c6de11d1b1a56746c699d584972ed6674bf6e090",
+        "camera": "CameraV3_Left",
+        "visible_objects": [
+          "Cheek_L",
+          "Cheek_R",
+          "Chin",
+          "CrownFront",
+          "CrownRear",
+          "CrownSpine_01",
+          "CrownSpine_02",
+          "CrownSpine_03",
+          "CrownSpine_04",
+          "CrownSpine_Cap",
+          "EarCover_L",
+          "EarCover_R",
+          "EarEmitter_L",
+          "EarEmitter_R",
+          "EarRing_L_Inner",
+          "EarRing_L_Outer",
+          "EarRing_R_Inner",
+          "EarRing_R_Outer",
+          "EyeHousing_L",
+          "EyeHousing_R",
+          "EyeLens_L",
+          "EyeLens_R",
+          "Faceplate",
+          "FaceplateBezel",
+          "InnerShell",
+          "JawTrim_L",
+          "JawTrim_R",
+          "Jaw_L",
+          "Jaw_R",
+          "LowerUTrim",
+          "NeckRingFront",
+          "NeckRingRear",
+          "RearLayer_L_Lower",
+          "RearLayer_L_Upper",
+          "RearLayer_R_Lower",
+          "RearLayer_R_Upper",
+          "RearShell_L",
+          "RearShell_R",
+          "RearSpine_01",
+          "RearSpine_02",
+          "RearSpine_03",
+          "RearSpine_04",
+          "RearSpine_05",
+          "RearSpine_06",
+          "RearSpine_07",
+          "RearSpine_08",
+          "RearVent_L_Lower",
+          "RearVent_L_Upper",
+          "RearVent_R_Lower",
+          "RearVent_R_Upper",
+          "SideGroove_L",
+          "SideGroove_R",
+          "Temple_L",
+          "Temple_R"
+        ],
+        "foreground_pixel_count": 123195,
+        "resolution_px": [
+          512,
+          512
+        ]
+      },
+      "right": {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
+        "sha256": "17e80fff49fa879675677557df5ca989d431dbd487dfb0f596b17edf903ab08a",
+        "camera": "CameraV3_Right",
+        "visible_objects": [
+          "Cheek_L",
+          "Cheek_R",
+          "Chin",
+          "CrownFront",
+          "CrownRear",
+          "CrownSpine_01",
+          "CrownSpine_02",
+          "CrownSpine_03",
+          "CrownSpine_04",
+          "CrownSpine_Cap",
+          "EarCover_L",
+          "EarCover_R",
+          "EarEmitter_L",
+          "EarEmitter_R",
+          "EarRing_L_Inner",
+          "EarRing_L_Outer",
+          "EarRing_R_Inner",
+          "EarRing_R_Outer",
+          "EyeHousing_L",
+          "EyeHousing_R",
+          "EyeLens_L",
+          "EyeLens_R",
+          "Faceplate",
+          "FaceplateBezel",
+          "InnerShell",
+          "JawTrim_L",
+          "JawTrim_R",
+          "Jaw_L",
+          "Jaw_R",
+          "LowerUTrim",
+          "NeckRingFront",
+          "NeckRingRear",
+          "RearLayer_L_Lower",
+          "RearLayer_L_Upper",
+          "RearLayer_R_Lower",
+          "RearLayer_R_Upper",
+          "RearShell_L",
+          "RearShell_R",
+          "RearSpine_01",
+          "RearSpine_02",
+          "RearSpine_03",
+          "RearSpine_04",
+          "RearSpine_05",
+          "RearSpine_06",
+          "RearSpine_07",
+          "RearSpine_08",
+          "RearVent_L_Lower",
+          "RearVent_L_Upper",
+          "RearVent_R_Lower",
+          "RearVent_R_Upper",
+          "SideGroove_L",
+          "SideGroove_R",
+          "Temple_L",
+          "Temple_R"
+        ],
+        "foreground_pixel_count": 123190,
+        "resolution_px": [
+          512,
+          512
+        ]
+      }
+    },
+    "overlays": [
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/overlay_front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/overlay_left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/overlay_right.png"
+    ],
+    "pass": true
+  },
+  "silhouette_material_check": {
+    "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette_material_check.json",
+    "pass": true,
+    "failed_views": []
+  }
+}

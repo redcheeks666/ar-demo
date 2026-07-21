@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "project": "AEGIS-R7 graybox v5 craft pass",
+  "inputs": {
+    "blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
+    "blend_sha256": "af5ff576cf9f39cff8f724d9b46108e4480529b99df242808be966a41a0b831b",
+    "scene_iteration": 17
+  },
+  "method": "flat material-ID render through final orthographic camera; foreground pixels adjacent to border-connected background define the exterior contour",
+  "gold_classification": {
+    "method": "preserve polygon.material_index and map each original material slot to gold or non-gold flat ID",
+    "object_property": "design_material contains Gold",
+    "fallback_stable_object": "Faceplate",
+    "gold_object_names": [
+      "Faceplate"
+    ]
+  },
+  "views": {
+    "left": {
+      "camera": "CameraV3_Left",
+      "id_render": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/silhouette_material_id_left.png",
+      "id_render_sha256": "b2846554664f99a82e0711f8e0bafe6a27a7d9a2d7c44decf64a2ebb9fc7f61d",
+      "image_size_px": [
+        512,
+        512
+      ],
+      "exterior_contour_pixel_count": 2416,
+      "gold_exterior_contour_pixel_count": 0,
+      "gold_exterior_contour_ratio": 0.0,
+      "unknown_exterior_contour_pixel_count": 0,
+      "required_ratio": 0.0,
+      "gold_pixel_coordinates_yx": [],
+      "gold_coordinate_list_truncated": false,
+      "pass": true
+    },
+    "right": {
+      "camera": "CameraV3_Right",
+      "id_render": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/silhouette_material_id_right.png",
+      "id_render_sha256": "725843195445be89edd863cf4ac59ad5cfa444b84e2e9b5f80aa21f56a78c369",
+      "image_size_px": [
+        512,
+        512
+      ],
+      "exterior_contour_pixel_count": 2407,
+      "gold_exterior_contour_pixel_count": 0,
+      "gold_exterior_contour_ratio": 0.0,
+      "unknown_exterior_contour_pixel_count": 0,
+      "required_ratio": 0.0,
+      "gold_pixel_coordinates_yx": [],
+      "gold_coordinate_list_truncated": false,
+      "pass": true
+    }
+  },
+  "summary": {
+    "required_views": [
+      "left",
+      "right"
+    ],
+    "failed_views": [],
+    "gold_outer_contour_ratio_must_equal": 0.0,
+    "pass": true
+  }
+}

@@ -1,0 +1,3021 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/export_helmet_graybox_v5.py",
+  "source_blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
+  "checks": {
+    "node_contract": true,
+    "protected_v4_source_contract": true,
+    "forbidden_source_objects": true,
+    "geometry": false,
+    "left_right_symmetry": true,
+    "headproxy_clearance": false,
+    "pivot_translations": true,
+    "review_and_iterations": false,
+    "feature_validation": false,
+    "silhouette_material_check": false,
+    "artifact_iteration_and_blend_binding": false
+  },
+  "failures": [
+    "geometry",
+    "headproxy_clearance",
+    "review_and_iterations",
+    "feature_validation",
+    "silhouette_material_check",
+    "artifact_iteration_and_blend_binding"
+  ],
+  "node_contract": {
+    "protected_v4_node_count": 55,
+    "protected_v4_node_names": [
+      "Cheek_L",
+      "Cheek_R",
+      "Chin",
+      "CrownFront",
+      "CrownRear",
+      "CrownSpine_01",
+      "CrownSpine_02",
+      "CrownSpine_03",
+      "CrownSpine_04",
+      "CrownSpine_Cap",
+      "EarCover_L",
+      "EarCover_R",
+      "EarEmitter_L",
+      "EarEmitter_R",
+      "EarRing_L_Inner",
+      "EarRing_L_Outer",
+      "EarRing_R_Inner",
+      "EarRing_R_Outer",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "Faceplate",
+      "FaceplateBezel",
+      "HelmetRoot",
+      "InnerShell",
+      "JawTrim_L",
+      "JawTrim_R",
+      "Jaw_L",
+      "Jaw_R",
+      "LowerUTrim",
+      "NeckRingFront",
+      "NeckRingRear",
+      "RearLayer_L_Lower",
+      "RearLayer_L_Upper",
+      "RearLayer_R_Lower",
+      "RearLayer_R_Upper",
+      "RearShell_L",
+      "RearShell_R",
+      "RearSpine_01",
+      "RearSpine_02",
+      "RearSpine_03",
+      "RearSpine_04",
+      "RearSpine_05",
+      "RearSpine_06",
+      "RearSpine_07",
+      "RearSpine_08",
+      "RearVent_L_Lower",
+      "RearVent_L_Upper",
+      "RearVent_R_Lower",
+      "RearVent_R_Upper",
+      "SideGroove_L",
+      "SideGroove_R",
+      "Temple_L",
+      "Temple_R"
+    ],
+    "source_node_count": 55,
+    "source_node_names": [
+      "Cheek_L",
+      "Cheek_R",
+      "Chin",
+      "CrownFront",
+      "CrownRear",
+      "CrownSpine_01",
+      "CrownSpine_02",
+      "CrownSpine_03",
+      "CrownSpine_04",
+      "CrownSpine_Cap",
+      "EarCover_L",
+      "EarCover_R",
+      "EarEmitter_L",
+      "EarEmitter_R",
+      "EarRing_L_Inner",
+      "EarRing_L_Outer",
+      "EarRing_R_Inner",
+      "EarRing_R_Outer",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "Faceplate",
+      "FaceplateBezel",
+      "HelmetRoot",
+      "InnerShell",
+      "JawTrim_L",
+      "JawTrim_R",
+      "Jaw_L",
+      "Jaw_R",
+      "LowerUTrim",
+      "NeckRingFront",
+      "NeckRingRear",
+      "RearLayer_L_Lower",
+      "RearLayer_L_Upper",
+      "RearLayer_R_Lower",
+      "RearLayer_R_Upper",
+      "RearShell_L",
+      "RearShell_R",
+      "RearSpine_01",
+      "RearSpine_02",
+      "RearSpine_03",
+      "RearSpine_04",
+      "RearSpine_05",
+      "RearSpine_06",
+      "RearSpine_07",
+      "RearSpine_08",
+      "RearVent_L_Lower",
+      "RearVent_L_Upper",
+      "RearVent_R_Lower",
+      "RearVent_R_Upper",
+      "SideGroove_L",
+      "SideGroove_R",
+      "Temple_L",
+      "Temple_R"
+    ],
+    "missing_protected_nodes": [],
+    "v5_added_nodes": [],
+    "unclear_added_node_names": [],
+    "exact_55_required_when_no_added_nodes": true,
+    "exact_55_when_no_additions_pass": true,
+    "pass": true
+  },
+  "protected_v4_source_contract": {
+    "method": "protected v4 export source_records compared to final v5 source before GLB export",
+    "transform_tolerance": 1e-05,
+    "missing_v4_records": [],
+    "missing_v5_records": [],
+    "type_mismatches": [],
+    "parent_mismatches": [],
+    "material_assignment_mismatches": [],
+    "feature_owner_mismatches": [],
+    "maximum_local_matrix_error": 0.0,
+    "local_matrix_max_error_by_node": {
+      "Cheek_L": 0.0,
+      "Cheek_R": 0.0,
+      "Chin": 0.0,
+      "CrownFront": 0.0,
+      "CrownRear": 0.0,
+      "CrownSpine_01": 0.0,
+      "CrownSpine_02": 0.0,
+      "CrownSpine_03": 0.0,
+      "CrownSpine_04": 0.0,
+      "CrownSpine_Cap": 0.0,
+      "EarCover_L": 0.0,
+      "EarCover_R": 0.0,
+      "EarEmitter_L": 0.0,
+      "EarEmitter_R": 0.0,
+      "EarRing_L_Inner": 0.0,
+      "EarRing_L_Outer": 0.0,
+      "EarRing_R_Inner": 0.0,
+      "EarRing_R_Outer": 0.0,
+      "EyeHousing_L": 0.0,
+      "EyeHousing_R": 0.0,
+      "EyeLens_L": 0.0,
+      "EyeLens_R": 0.0,
+      "Faceplate": 0.0,
+      "FaceplateBezel": 0.0,
+      "HelmetRoot": 0.0,
+      "InnerShell": 0.0,
+      "JawTrim_L": 0.0,
+      "JawTrim_R": 0.0,
+      "Jaw_L": 0.0,
+      "Jaw_R": 0.0,
+      "LowerUTrim": 0.0,
+      "NeckRingFront": 0.0,
+      "NeckRingRear": 0.0,
+      "RearLayer_L_Lower": 0.0,
+      "RearLayer_L_Upper": 0.0,
+      "RearLayer_R_Lower": 0.0,
+      "RearLayer_R_Upper": 0.0,
+      "RearShell_L": 0.0,
+      "RearShell_R": 0.0,
+      "RearSpine_01": 0.0,
+      "RearSpine_02": 0.0,
+      "RearSpine_03": 0.0,
+      "RearSpine_04": 0.0,
+      "RearSpine_05": 0.0,
+      "RearSpine_06": 0.0,
+      "RearSpine_07": 0.0,
+      "RearSpine_08": 0.0,
+      "RearVent_L_Lower": 0.0,
+      "RearVent_L_Upper": 0.0,
+      "RearVent_R_Lower": 0.0,
+      "RearVent_R_Upper": 0.0,
+      "SideGroove_L": 0.0,
+      "SideGroove_R": 0.0,
+      "Temple_L": 0.0,
+      "Temple_R": 0.0
+    },
+    "pass": true
+  },
+  "forbidden_source_objects": [],
+  "excluded_nonexport_helpers": [],
+  "geometry_gate": {
+    "triangle_limit_exclusive": 100000,
+    "evaluated_triangle_count": 65744,
+    "boundary_edges": 160,
+    "non_manifold_edges": 177,
+    "degenerate_faces": 2,
+    "zero_normal_faces": 0,
+    "reversed_closed_objects": [],
+    "failures": [
+      "boundary_edges",
+      "non_manifold_edges",
+      "degenerate_faces"
+    ],
+    "pass": false
+  },
+  "geometry": {
+    "overall_bounding_box_m": {
+      "minimum": [
+        -0.129139,
+        -0.148096,
+        -0.13424
+      ],
+      "maximum": [
+        0.129139,
+        0.132618,
+        0.15826
+      ],
+      "width_x": 0.258279,
+      "depth_y": 0.280714,
+      "height_z": 0.2925
+    },
+    "evaluated_triangle_count": 65744,
+    "under_100k_triangle_target": true,
+    "object_health": {
+      "InnerShell": {
+        "vertices": 11576,
+        "triangles": 23148,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.000592913,
+        "reversed_closed_volume": false
+      },
+      "CrownFront": {
+        "vertices": 2752,
+        "triangles": 5500,
+        "boundary_edges": 120,
+        "non_manifold_edges": 120,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": null,
+        "reversed_closed_volume": false
+      },
+      "CrownRear": {
+        "vertices": 2256,
+        "triangles": 4508,
+        "boundary_edges": 32,
+        "non_manifold_edges": 32,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": null,
+        "reversed_closed_volume": false
+      },
+      "RearShell_L": {
+        "vertices": 2250,
+        "triangles": 4496,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.00012169,
+        "reversed_closed_volume": false
+      },
+      "RearShell_R": {
+        "vertices": 2250,
+        "triangles": 4496,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.0001217037,
+        "reversed_closed_volume": false
+      },
+      "Temple_L": {
+        "vertices": 660,
+        "triangles": 1316,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.51615e-05,
+        "reversed_closed_volume": false
+      },
+      "Temple_R": {
+        "vertices": 660,
+        "triangles": 1316,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.5162e-05,
+        "reversed_closed_volume": false
+      },
+      "NeckRingFront": {
+        "vertices": 380,
+        "triangles": 756,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.44723e-05,
+        "reversed_closed_volume": false
+      },
+      "NeckRingRear": {
+        "vertices": 380,
+        "triangles": 756,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.44723e-05,
+        "reversed_closed_volume": false
+      },
+      "Cheek_L": {
+        "vertices": 416,
+        "triangles": 828,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 3.37484e-05,
+        "reversed_closed_volume": false
+      },
+      "JawTrim_L": {
+        "vertices": 236,
+        "triangles": 468,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 9.383e-07,
+        "reversed_closed_volume": false
+      },
+      "LowerUTrim": {
+        "vertices": 124,
+        "triangles": 244,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.53e-07,
+        "reversed_closed_volume": false
+      },
+      "SideGroove_L": {
+        "vertices": 208,
+        "triangles": 412,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 6.84e-07,
+        "reversed_closed_volume": false
+      },
+      "EarCover_L": {
+        "vertices": 896,
+        "triangles": 1788,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.0001470889,
+        "reversed_closed_volume": false
+      },
+      "EarRing_L_Outer": {
+        "vertices": 384,
+        "triangles": 768,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 7.9262e-06,
+        "reversed_closed_volume": false
+      },
+      "EarRing_L_Inner": {
+        "vertices": 96,
+        "triangles": 188,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 8.2619e-06,
+        "reversed_closed_volume": false
+      },
+      "EarEmitter_L": {
+        "vertices": 8,
+        "triangles": 12,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.2167e-06,
+        "reversed_closed_volume": false
+      },
+      "EarCover_R": {
+        "vertices": 896,
+        "triangles": 1788,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 0.0001470889,
+        "reversed_closed_volume": false
+      },
+      "EarRing_R_Outer": {
+        "vertices": 384,
+        "triangles": 768,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 7.9262e-06,
+        "reversed_closed_volume": false
+      },
+      "EarRing_R_Inner": {
+        "vertices": 96,
+        "triangles": 188,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 8.2619e-06,
+        "reversed_closed_volume": false
+      },
+      "EarEmitter_R": {
+        "vertices": 8,
+        "triangles": 12,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.2167e-06,
+        "reversed_closed_volume": false
+      },
+      "CrownSpine_01": {
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.4853e-06,
+        "reversed_closed_volume": false
+      },
+      "CrownSpine_02": {
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.1332e-06,
+        "reversed_closed_volume": false
+      },
+      "CrownSpine_03": {
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 8.813e-07,
+        "reversed_closed_volume": false
+      },
+      "CrownSpine_04": {
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 7.543e-07,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_01": {
+        "vertices": 82,
+        "triangles": 160,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 3.373e-06,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_02": {
+        "vertices": 68,
+        "triangles": 132,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.9896e-06,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_03": {
+        "vertices": 60,
+        "triangles": 116,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.8394e-06,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_04": {
+        "vertices": 60,
+        "triangles": 116,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.7258e-06,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_05": {
+        "vertices": 60,
+        "triangles": 116,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.6881e-06,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_06": {
+        "vertices": 60,
+        "triangles": 116,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.721e-06,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_07": {
+        "vertices": 60,
+        "triangles": 116,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.7338e-06,
+        "reversed_closed_volume": false
+      },
+      "CrownSpine_Cap": {
+        "vertices": 488,
+        "triangles": 972,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 9.1418e-06,
+        "reversed_closed_volume": false
+      },
+      "RearVent_L_Upper": {
+        "vertices": 8,
+        "triangles": 12,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.569e-07,
+        "reversed_closed_volume": false
+      },
+      "RearVent_L_Lower": {
+        "vertices": 8,
+        "triangles": 12,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.769e-07,
+        "reversed_closed_volume": false
+      },
+      "RearLayer_L_Upper": {
+        "vertices": 146,
+        "triangles": 288,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 4.692e-07,
+        "reversed_closed_volume": false
+      },
+      "RearLayer_L_Lower": {
+        "vertices": 162,
+        "triangles": 320,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 4.782e-07,
+        "reversed_closed_volume": false
+      },
+      "Faceplate": {
+        "vertices": 1404,
+        "triangles": 2804,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 3,
+        "signed_volume_m3": 7.93587e-05,
+        "reversed_closed_volume": false
+      },
+      "EyeHousing_L": {
+        "vertices": 188,
+        "triangles": 372,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 7.817e-07,
+        "reversed_closed_volume": false
+      },
+      "EyeLens_L": {
+        "vertices": 188,
+        "triangles": 372,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.452e-07,
+        "reversed_closed_volume": false
+      },
+      "EyeHousing_R": {
+        "vertices": 188,
+        "triangles": 372,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 5.969e-07,
+        "reversed_closed_volume": false
+      },
+      "EyeLens_R": {
+        "vertices": 188,
+        "triangles": 372,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 1.994e-07,
+        "reversed_closed_volume": false
+      },
+      "FaceplateBezel": {
+        "vertices": 784,
+        "triangles": 1568,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 5.4271e-06,
+        "reversed_closed_volume": false
+      },
+      "Jaw_L": {
+        "vertices": 118,
+        "triangles": 232,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 5.1623e-06,
+        "reversed_closed_volume": false
+      },
+      "Jaw_R": {
+        "vertices": 118,
+        "triangles": 232,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 5.1593e-06,
+        "reversed_closed_volume": false
+      },
+      "Chin": {
+        "vertices": 148,
+        "triangles": 308,
+        "boundary_edges": 8,
+        "non_manifold_edges": 25,
+        "degenerate_faces": 2,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": null,
+        "reversed_closed_volume": false
+      },
+      "Cheek_R": {
+        "vertices": 416,
+        "triangles": 828,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 3.37547e-05,
+        "reversed_closed_volume": false
+      },
+      "JawTrim_R": {
+        "vertices": 236,
+        "triangles": 468,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 9.404e-07,
+        "reversed_closed_volume": false
+      },
+      "SideGroove_R": {
+        "vertices": 208,
+        "triangles": 412,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 6.847e-07,
+        "reversed_closed_volume": false
+      },
+      "RearLayer_R_Upper": {
+        "vertices": 146,
+        "triangles": 288,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 4.686e-07,
+        "reversed_closed_volume": false
+      },
+      "RearLayer_R_Lower": {
+        "vertices": 162,
+        "triangles": 320,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 4.791e-07,
+        "reversed_closed_volume": false
+      },
+      "RearVent_R_Upper": {
+        "vertices": 8,
+        "triangles": 12,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.567e-07,
+        "reversed_closed_volume": false
+      },
+      "RearVent_R_Lower": {
+        "vertices": 8,
+        "triangles": 12,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 2.764e-07,
+        "reversed_closed_volume": false
+      },
+      "RearSpine_08": {
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0,
+        "zero_normal_faces": 0,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 4.5919e-06,
+        "reversed_closed_volume": false
+      }
+    },
+    "totals": {
+      "non_manifold_edges": 177,
+      "degenerate_faces": 2,
+      "zero_normal_faces": 0,
+      "reversed_closed_objects": []
+    }
+  },
+  "left_right_symmetry_gate": {
+    "gate_mode": "hard_gate for all named left/right mesh pairs",
+    "threshold_m": 0.0005,
+    "pairs": {
+      "Cheek_L__Cheek_R": {
+        "mean_bidirectional_mirror_error_m": 5.5e-06,
+        "maximum_mirror_error_m": 0.00027284,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "EarCover_L__EarCover_R": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 1e-08,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "EarEmitter_L__EarEmitter_R": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 0.0,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "EarRing_L_Inner__EarRing_R_Inner": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 0.0,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "EarRing_L_Outer__EarRing_R_Outer": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 0.0,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "EyeHousing_L__EyeHousing_R": {
+        "mean_bidirectional_mirror_error_m": 2.84e-06,
+        "maximum_mirror_error_m": 6.1e-06,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "EyeLens_L__EyeLens_R": {
+        "mean_bidirectional_mirror_error_m": 2.43e-06,
+        "maximum_mirror_error_m": 4.55e-06,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "JawTrim_L__JawTrim_R": {
+        "mean_bidirectional_mirror_error_m": 2.41e-06,
+        "maximum_mirror_error_m": 3.198e-05,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "Jaw_L__Jaw_R": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 4e-08,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "RearLayer_L_Lower__RearLayer_R_Lower": {
+        "mean_bidirectional_mirror_error_m": 2.61e-06,
+        "maximum_mirror_error_m": 6.03e-05,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "RearLayer_L_Upper__RearLayer_R_Upper": {
+        "mean_bidirectional_mirror_error_m": 1.43e-06,
+        "maximum_mirror_error_m": 3.143e-05,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "RearShell_L__RearShell_R": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 1e-06,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "RearVent_L_Lower__RearVent_R_Lower": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 0.0,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "RearVent_L_Upper__RearVent_R_Upper": {
+        "mean_bidirectional_mirror_error_m": 0.0,
+        "maximum_mirror_error_m": 0.0,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "SideGroove_L__SideGroove_R": {
+        "mean_bidirectional_mirror_error_m": 8.92e-06,
+        "maximum_mirror_error_m": 0.00036031,
+        "passes_0_5_mm_mean_and_maximum": true
+      },
+      "Temple_L__Temple_R": {
+        "mean_bidirectional_mirror_error_m": 1.6e-07,
+        "maximum_mirror_error_m": 1.328e-05,
+        "passes_0_5_mm_mean_and_maximum": true
+      }
+    },
+    "failed_pairs": [],
+    "pass": true
+  },
+  "rigid_panel_bvh_diagnostic": {
+    "method": "evaluated rigid-panel seam BVH overlap and bidirectional nearest-surface sampling",
+    "gate_mode": "diagnostic_only; protected v4 overlay panels intentionally nest across several owner seams",
+    "pairs": {
+      "CrownFront__Faceplate": {
+        "minimum_surface_distance_m": 0.001875,
+        "minimum_surface_distance_mm": 1.875,
+        "intersecting_triangle_pair_count": 68,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "CrownFront__CrownRear": {
+        "minimum_surface_distance_m": 0.000469,
+        "minimum_surface_distance_mm": 0.469,
+        "intersecting_triangle_pair_count": 553,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "Faceplate__Temple_L": {
+        "minimum_surface_distance_m": 0.002346,
+        "minimum_surface_distance_mm": 2.346,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "nominal_2_to_5_mm"
+      },
+      "Faceplate__Temple_R": {
+        "minimum_surface_distance_m": 0.002345,
+        "minimum_surface_distance_mm": 2.345,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "nominal_2_to_5_mm"
+      },
+      "Faceplate__Cheek_L": {
+        "minimum_surface_distance_m": 0.003464,
+        "minimum_surface_distance_mm": 3.464,
+        "intersecting_triangle_pair_count": 46,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "Faceplate__Cheek_R": {
+        "minimum_surface_distance_m": 0.003466,
+        "minimum_surface_distance_mm": 3.466,
+        "intersecting_triangle_pair_count": 46,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "Cheek_L__Jaw_L": {
+        "minimum_surface_distance_m": 0.0,
+        "minimum_surface_distance_mm": 0.0,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "tight_contact_under_1_5_mm"
+      },
+      "Cheek_R__Jaw_R": {
+        "minimum_surface_distance_m": 0.0,
+        "minimum_surface_distance_mm": 0.0,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "tight_contact_under_1_5_mm"
+      },
+      "Jaw_L__Chin": {
+        "minimum_surface_distance_m": 0.006876,
+        "minimum_surface_distance_mm": 6.876,
+        "intersecting_triangle_pair_count": 46,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "Jaw_R__Chin": {
+        "minimum_surface_distance_m": 0.006573,
+        "minimum_surface_distance_mm": 6.573,
+        "intersecting_triangle_pair_count": 43,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "Temple_L__RearShell_L": {
+        "minimum_surface_distance_m": 0.001738,
+        "minimum_surface_distance_mm": 1.738,
+        "intersecting_triangle_pair_count": 112,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "Temple_R__RearShell_R": {
+        "minimum_surface_distance_m": 0.001738,
+        "minimum_surface_distance_mm": 1.738,
+        "intersecting_triangle_pair_count": 112,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
+      },
+      "RearShell_L__CrownRear": {
+        "minimum_surface_distance_m": 0.006261,
+        "minimum_surface_distance_mm": 6.261,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "mechanical_slot_5_to_8_mm"
+      },
+      "RearShell_R__CrownRear": {
+        "minimum_surface_distance_m": 0.006261,
+        "minimum_surface_distance_mm": 6.261,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "mechanical_slot_5_to_8_mm"
+      }
+    },
+    "intersecting_pairs": [
+      "CrownFront__Faceplate",
+      "CrownFront__CrownRear",
+      "Faceplate__Cheek_L",
+      "Faceplate__Cheek_R",
+      "Jaw_L__Chin",
+      "Jaw_R__Chin",
+      "Temple_L__RearShell_L",
+      "Temple_R__RearShell_R"
+    ],
+    "pass": false
+  },
+  "clearance": {
+    "gate_method": "v5 builder named-surface HeadProxy samples retained from the accepted v4 clearance contract",
+    "bvh_diagnostic_method": "evaluated HeadProxy construction meshes queried bidirectionally against evaluated InnerShell BVH",
+    "inner_shell": "InnerShell",
+    "proxy_objects": [
+      "HeadProxyV3_Chin",
+      "HeadProxyV3_Cranium",
+      "HeadProxyV3_Ear_L",
+      "HeadProxyV3_Ear_R",
+      "HeadProxyV3_Face",
+      "HeadProxyV3_Jaw",
+      "HeadProxyV3_Neck",
+      "HeadProxyV3_NoseClearance"
+    ],
+    "threshold_m": 0.004,
+    "minimum_surface_distance_m": null,
+    "penetration_detected": null,
+    "design_clearance_samples": {},
+    "canonical_named_sample_gate": {
+      "required_sample_names": [
+        "top",
+        "temple_side",
+        "rear",
+        "nose",
+        "ear"
+      ],
+      "missing_sample_names": [
+        "top",
+        "temple_side",
+        "rear",
+        "nose",
+        "ear"
+      ],
+      "invalid_sample_names": [],
+      "valid_samples_m": {},
+      "computed_minimum_sample_m": null,
+      "reported_minimum_matches_named_samples": false,
+      "all_named_samples_at_least_4mm": false,
+      "faceplate_nose_clearance_m": null,
+      "faceplate_nose_source_field": "faceplate_nose_clearance_m",
+      "faceplate_nose_at_least_4mm": false,
+      "pass": false
+    },
+    "evaluated_inner_shell_bvh_diagnostic": {
+      "minimum_surface_distance_m": 0.0,
+      "intersecting_triangle_pair_count": 342,
+      "construction_proxy_surface_intersection_detected": true,
+      "not_used_as_clearance_gate": true,
+      "objects": {
+        "HeadProxyV3_Cranium": {
+          "evaluated_sample_count": 982,
+          "minimum_surface_distance_m": 0.0079557,
+          "p05_vertex_and_face_center_distance_m": 0.0120816,
+          "intersecting_triangle_pair_count": 0,
+          "surface_intersection_detected": false
+        },
+        "HeadProxyV3_Face": {
+          "evaluated_sample_count": 746,
+          "minimum_surface_distance_m": 0.0008599,
+          "p05_vertex_and_face_center_distance_m": 0.0100451,
+          "intersecting_triangle_pair_count": 0,
+          "surface_intersection_detected": false
+        },
+        "HeadProxyV3_Jaw": {
+          "evaluated_sample_count": 650,
+          "minimum_surface_distance_m": 3.99e-05,
+          "p05_vertex_and_face_center_distance_m": 0.002,
+          "intersecting_triangle_pair_count": 16,
+          "surface_intersection_detected": true
+        },
+        "HeadProxyV3_Chin": {
+          "evaluated_sample_count": 462,
+          "minimum_surface_distance_m": 2.95e-05,
+          "p05_vertex_and_face_center_distance_m": 0.0003568,
+          "intersecting_triangle_pair_count": 80,
+          "surface_intersection_detected": true
+        },
+        "HeadProxyV3_NoseClearance": {
+          "evaluated_sample_count": 416,
+          "minimum_surface_distance_m": 3.3e-06,
+          "p05_vertex_and_face_center_distance_m": 0.0003788,
+          "intersecting_triangle_pair_count": 70,
+          "surface_intersection_detected": true
+        },
+        "HeadProxyV3_Ear_L": {
+          "evaluated_sample_count": 416,
+          "minimum_surface_distance_m": 0.0089045,
+          "p05_vertex_and_face_center_distance_m": 0.009705,
+          "intersecting_triangle_pair_count": 0,
+          "surface_intersection_detected": false
+        },
+        "HeadProxyV3_Ear_R": {
+          "evaluated_sample_count": 416,
+          "minimum_surface_distance_m": 0.0089046,
+          "p05_vertex_and_face_center_distance_m": 0.0097051,
+          "intersecting_triangle_pair_count": 0,
+          "surface_intersection_detected": false
+        },
+        "HeadProxyV3_Neck": {
+          "evaluated_sample_count": 422,
+          "minimum_surface_distance_m": 0.0,
+          "p05_vertex_and_face_center_distance_m": 0.0010335,
+          "intersecting_triangle_pair_count": 176,
+          "surface_intersection_detected": true
+        }
+      }
+    },
+    "pass": false
+  },
+  "pivots": {
+    "object_transforms": {
+      "HelmetRoot": {
+        "translation_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": false
+      },
+      "InnerShell": {
+        "translation_m": [
+          0.0,
+          0.0,
+          0.01
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownFront": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownRear": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearShell_L": {
+        "translation_m": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearShell_R": {
+        "translation_m": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Temple_L": {
+        "translation_m": [
+          -0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Temple_R": {
+        "translation_m": [
+          0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "NeckRingFront": {
+        "translation_m": [
+          0.0,
+          -0.0364,
+          -0.124
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "NeckRingRear": {
+        "translation_m": [
+          0.0,
+          0.0364,
+          -0.124
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Cheek_L": {
+        "translation_m": [
+          -0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "JawTrim_L": {
+        "translation_m": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "LowerUTrim": {
+        "translation_m": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "SideGroove_L": {
+        "translation_m": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarCover_L": {
+        "translation_m": [
+          -0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarRing_L_Outer": {
+        "translation_m": [
+          -0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarRing_L_Inner": {
+        "translation_m": [
+          -0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarEmitter_L": {
+        "translation_m": [
+          -0.125497,
+          -0.006949,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarCover_R": {
+        "translation_m": [
+          0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarRing_R_Outer": {
+        "translation_m": [
+          0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarRing_R_Inner": {
+        "translation_m": [
+          0.112297,
+          -0.006449,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EarEmitter_R": {
+        "translation_m": [
+          0.125497,
+          -0.006949,
+          0.009
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownSpine_01": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownSpine_02": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownSpine_03": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownSpine_04": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_01": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_02": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_03": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_04": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_05": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_06": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_07": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "CrownSpine_Cap": {
+        "translation_m": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearVent_L_Upper": {
+        "translation_m": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearVent_L_Lower": {
+        "translation_m": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearLayer_L_Upper": {
+        "translation_m": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearLayer_L_Lower": {
+        "translation_m": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Faceplate": {
+        "translation_m": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeHousing_L": {
+        "translation_m": [
+          -0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeLens_L": {
+        "translation_m": [
+          -0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeHousing_R": {
+        "translation_m": [
+          0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "EyeLens_R": {
+        "translation_m": [
+          0.06952,
+          -0.128838,
+          0.028859
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "FaceplateBezel": {
+        "translation_m": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Jaw_L": {
+        "translation_m": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Jaw_R": {
+        "translation_m": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Chin": {
+        "translation_m": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "Cheek_R": {
+        "translation_m": [
+          0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "JawTrim_R": {
+        "translation_m": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "SideGroove_R": {
+        "translation_m": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearLayer_R_Upper": {
+        "translation_m": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearLayer_R_Lower": {
+        "translation_m": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearVent_R_Upper": {
+        "translation_m": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearVent_R_Lower": {
+        "translation_m": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      },
+      "RearSpine_08": {
+        "translation_m": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler_rad": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "translation_is_nonzero": true
+      }
+    },
+    "movable_mesh_count": 53,
+    "movable_meshes_with_nonzero_translation": 53,
+    "all_movable_meshes_have_nonzero_translation": true,
+    "nonzero_translation_nodes": [
+      "CrownFront",
+      "CrownRear",
+      "RearShell_L",
+      "RearShell_R",
+      "Temple_L",
+      "Temple_R",
+      "NeckRingFront",
+      "NeckRingRear",
+      "Cheek_L",
+      "JawTrim_L",
+      "LowerUTrim",
+      "SideGroove_L",
+      "EarCover_L",
+      "EarRing_L_Outer",
+      "EarRing_L_Inner",
+      "EarEmitter_L",
+      "EarCover_R",
+      "EarRing_R_Outer",
+      "EarRing_R_Inner",
+      "EarEmitter_R",
+      "CrownSpine_01",
+      "CrownSpine_02",
+      "CrownSpine_03",
+      "CrownSpine_04",
+      "RearSpine_01",
+      "RearSpine_02",
+      "RearSpine_03",
+      "RearSpine_04",
+      "RearSpine_05",
+      "RearSpine_06",
+      "RearSpine_07",
+      "CrownSpine_Cap",
+      "RearVent_L_Upper",
+      "RearVent_L_Lower",
+      "RearLayer_L_Upper",
+      "RearLayer_L_Lower",
+      "Faceplate",
+      "EyeHousing_L",
+      "EyeLens_L",
+      "EyeHousing_R",
+      "EyeLens_R",
+      "FaceplateBezel",
+      "Jaw_L",
+      "Jaw_R",
+      "Chin",
+      "Cheek_R",
+      "JawTrim_R",
+      "SideGroove_R",
+      "RearLayer_R_Upper",
+      "RearLayer_R_Lower",
+      "RearVent_R_Upper",
+      "RearVent_R_Lower",
+      "RearSpine_08"
+    ],
+    "negative_scale_nodes": [],
+    "non_unit_scale_nodes": []
+  },
+  "review_outputs": {
+    "clay": {
+      "expected_count": 8,
+      "actual_count": 0,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/back.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/left.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/right.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/top.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/bottom.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/rear_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "design_preview": {
+      "expected_count": 8,
+      "actual_count": 0,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/right.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/bottom.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/rear_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "zebra": {
+      "expected_count": 3,
+      "actual_count": 0,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/left.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "with_head_proxy": {
+      "expected_count": 8,
+      "actual_count": 0,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/back.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/left.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/right.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/top.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/bottom.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/rear_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "exploded_sanity": {
+      "expected_count": 1,
+      "actual_count": 0,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/exploded_sanity/front_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "silhouette": {
+      "expected_count": 5,
+      "actual_count": 3,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
+          "exists": true,
+          "size_bytes": 118025,
+          "mtime_ns": 1784652433362733474,
+          "sha256": "cc8f5c732ef64d7b13606d6853545dd07e2ee74a8d5fe36967c68a7355fce38f"
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
+          "exists": true,
+          "size_bytes": 124911,
+          "mtime_ns": 1784652433692749951,
+          "sha256": "59d9747220b4a1948676a151f93e88df9ac40bcba2fa63fec80431eb4a0e552c"
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
+          "exists": true,
+          "size_bytes": 125157,
+          "mtime_ns": 1784652434049367689,
+          "sha256": "d8d76a367445b4a1f6e62b7ec6613769c4a1a8377ea35d4bc0b41d4dbad788ed"
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/back.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/top.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "silhouette_material_id": {
+      "expected_count": 2,
+      "actual_count": 0,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/left.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/right.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "comparisons": {
+      "expected_count": 6,
+      "actual_count": 0,
+      "complete": false,
+      "files": [
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_left.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_right.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_back.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front_3q.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        },
+        {
+          "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/comparison_contact_sheet_v5.png",
+          "exists": false,
+          "size_bytes": 0,
+          "mtime_ns": null,
+          "sha256": null
+        }
+      ]
+    },
+    "feature_validation": {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/feature_validation_v5.json",
+      "complete": false,
+      "failed_metrics": [
+        "missing_validation"
+      ]
+    },
+    "silhouette_material_check": {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette_material_check.json",
+      "complete": false,
+      "failed_views": [
+        "left",
+        "right"
+      ]
+    },
+    "final_render_log": {
+      "file": {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_render.json",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      "declared_render_count": null,
+      "complete": false
+    },
+    "visual_iterations": {
+      "minimum_required": 3,
+      "actual_count": 0,
+      "iteration_numbers": [],
+      "per_iteration_outputs": [],
+      "final_iteration": null,
+      "final_iteration_self_check_pass": false,
+      "complete": false,
+      "log": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/visual_iteration_log_v5.json"
+    },
+    "final_visual_self_check": {
+      "required_criteria": [
+        "faceplate_highlight_continuity",
+        "faceplate_upper_edge_clean",
+        "eye_slots_embedded",
+        "crown_seam_narrow",
+        "mouth_chin_clean",
+        "no_gold_side_outline",
+        "no_base_foot",
+        "rear_spine_shape",
+        "feature_regression"
+      ],
+      "present_criteria": [],
+      "records": [],
+      "complete": false
+    },
+    "complete": false
+  },
+  "artifact_binding": {
+    "blend": {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
+      "exists": true,
+      "size_bytes": 509080,
+      "mtime_ns": 1784652486574093030,
+      "sha256": "63ec7ce6945394a747a31fe1fdd9d3504ffd529f924a6280b772230b148fc76d"
+    },
+    "blend_sha256": "63ec7ce6945394a747a31fe1fdd9d3504ffd529f924a6280b772230b148fc76d",
+    "scene_iteration": 2,
+    "visual_final_iteration": null,
+    "build_log_path": null,
+    "bound_artifacts": [
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/back.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/left.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/right.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/top.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/bottom.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/rear_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/right.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/bottom.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/rear_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/left.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/back.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/left.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/right.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/top.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/bottom.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/rear_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/exploded_sanity/front_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
+        "exists": true,
+        "size_bytes": 118025,
+        "mtime_ns": 1784652433362733474,
+        "sha256": "cc8f5c732ef64d7b13606d6853545dd07e2ee74a8d5fe36967c68a7355fce38f"
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
+        "exists": true,
+        "size_bytes": 124911,
+        "mtime_ns": 1784652433692749951,
+        "sha256": "59d9747220b4a1948676a151f93e88df9ac40bcba2fa63fec80431eb4a0e552c"
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
+        "exists": true,
+        "size_bytes": 125157,
+        "mtime_ns": 1784652434049367689,
+        "sha256": "d8d76a367445b4a1f6e62b7ec6613769c4a1a8377ea35d4bc0b41d4dbad788ed"
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/back.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/top.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/left.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/right.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_left.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_right.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_back.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front_3q.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/comparison_contact_sheet_v5.png",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/feature_validation_v5.json",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette_material_check.json",
+        "exists": true,
+        "size_bytes": 27439,
+        "mtime_ns": 1784652471381214617,
+        "sha256": "3a3cf94a297064e8c563c3ce38fefe64b15ebc4390ce45bda3f0869471486595"
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_compare_v5.json",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_render.json",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/visual_iteration_log_v5.json",
+        "exists": false,
+        "size_bytes": 0,
+        "mtime_ns": null,
+        "sha256": null
+      }
+    ],
+    "stale_or_missing_artifacts": [
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/top.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/bottom.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/rear_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/bottom.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/rear_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/top.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/bottom.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/rear_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/exploded_sanity/front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/top.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/comparison_contact_sheet_v5.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/feature_validation_v5.json",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette_material_check.json",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_compare_v5.json",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_render.json",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/visual_iteration_log_v5.json"
+    ],
+    "checks": {
+      "opened_expected_blend": true,
+      "scene_iteration_is_integer": true,
+      "scene_matches_visual_final_iteration": false,
+      "exact_final_build_log_selected": false,
+      "build_log_iteration_matches_scene": false,
+      "feature_json_matches_blend_sha256": false,
+      "feature_json_matches_scene_iteration": false,
+      "material_json_matches_blend_sha256": false,
+      "material_json_matches_scene_iteration": false,
+      "compare_log_matches_blend_sha256": false,
+      "compare_log_matches_scene_iteration": false,
+      "all_final_artifacts_newer_than_blend": false
+    },
+    "pass": false
+  },
+  "pass": false
+}
