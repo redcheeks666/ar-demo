@@ -1,0 +1,137 @@
+{
+  "project": "AEGIS-R7 graybox v1",
+  "operating_system": {
+    "system": "Darwin",
+    "release": "25.2.0",
+    "machine": "arm64",
+    "platform": "macOS-26.2-arm64-arm-64bit-Mach-O"
+  },
+  "blender": {
+    "executable": "/Applications/Blender.app/Contents/MacOS/Blender",
+    "version": "5.2.0 LTS",
+    "version_tuple": [
+      5,
+      2,
+      0
+    ],
+    "build_hash": "fbe6228777e7",
+    "build_branch": "blender-v5.2-release"
+  },
+  "reference_image_dimensions_px": {
+    "helmet_turnaround.png": [
+      1536,
+      1024
+    ],
+    "helmet_assembly_reference.png": [
+      1536,
+      1024
+    ]
+  },
+  "helmet_overall_bounding_box_m": {
+    "width_x": 0.264,
+    "depth_y": 0.280728,
+    "height_z": 0.285
+  },
+  "main_body_dimensions_m": {
+    "height": 0.262,
+    "width_excluding_ear_covers": 0.222,
+    "height_to_width_ratio": 1.18018
+  },
+  "scene_object_count": 43,
+  "export_object_count": 24,
+  "export_node_names": [
+    "Cheek_L",
+    "Cheek_R",
+    "Chin",
+    "CrownFront",
+    "CrownRear",
+    "EarCore_L",
+    "EarCore_R",
+    "EarCover_L",
+    "EarCover_R",
+    "EyeHousing_L",
+    "EyeHousing_R",
+    "EyeLens_L",
+    "EyeLens_R",
+    "Faceplate",
+    "HelmetRoot",
+    "InnerShell",
+    "Jaw_L",
+    "Jaw_R",
+    "NeckRingFront",
+    "NeckRingRear",
+    "RearShell_L",
+    "RearShell_R",
+    "Temple_L",
+    "Temple_R"
+  ],
+  "evaluated_triangle_count": 18640,
+  "material_count": 6,
+  "material_names": [
+    "ArmorGray",
+    "EyeHousingDark",
+    "EyeLensBlueGray",
+    "FaceplateGray",
+    "InnerShell",
+    "NeckRingDark"
+  ],
+  "negative_scale": {
+    "exists": false,
+    "objects": []
+  },
+  "duplicate_node_names": {
+    "exists": false,
+    "exact_duplicates": [],
+    "automatic_suffix_names": []
+  },
+  "missing_material": {
+    "exists": false,
+    "objects": []
+  },
+  "abnormal_export_transforms": {
+    "exists": false,
+    "objects": [],
+    "criterion": "non-unit object scale on exported mesh"
+  },
+  "files": {
+    "glb": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_graybox.glb",
+    "glb_size_bytes": 404912,
+    "blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox.blend",
+    "blend_size_bytes": 204579
+  },
+  "review": {
+    "expected_image_count": 16,
+    "actual_image_count": 16,
+    "all_expected_images_present": true,
+    "images": [
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/top.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/bottom.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_only/rear_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/top.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/bottom.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/front_3q.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/with_head_proxy/rear_3q.png"
+    ]
+  },
+  "script_execution_seconds": {
+    "build": 0.0578,
+    "render": 12.6142,
+    "export_and_report": 0.1223,
+    "total": 12.7943
+  },
+  "known_issues": [
+    "Low-poly anatomical head proxy is for clearance review only.",
+    "Panel seams and mechanical pivots are first-pass placeholders.",
+    "Eye recesses use nested graybox solids rather than production boolean topology.",
+    "No production materials, micro-details, animation, or rigging are included."
+  ]
+}
