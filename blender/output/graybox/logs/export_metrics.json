@@ -1,6 +1,6 @@
 {
   "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/export_helmet_graybox.py",
-  "elapsed_seconds": 0.1223,
+  "elapsed_seconds": 0.0973,
   "glb_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_graybox.glb",
   "report_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox/helmet_graybox_report.json"
 }

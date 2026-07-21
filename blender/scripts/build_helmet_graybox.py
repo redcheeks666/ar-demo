@@ -34,6 +34,14 @@ def remove_managed_collections() -> None:
         collection = bpy.data.collections.get(collection_name)
         if collection is None:
             continue
+        # Preserve any hand-created object that a user may have linked into a
+        # managed collection: move it to the scene root before removing only
+        # the generated objects and collection container.
+        for obj in list(collection.all_objects):
+            if not obj.get("aegis_managed") and not obj.users_collection:
+                bpy.context.scene.collection.objects.link(obj)
+            elif not obj.get("aegis_managed") and len(obj.users_collection) == 1:
+                bpy.context.scene.collection.objects.link(obj)
         for obj in list(collection.all_objects):
             if obj.get("aegis_managed"):
                 bpy.data.objects.remove(obj, do_unlink=True)
@@ -314,25 +322,23 @@ def create_ellipsoid_patch(
 def create_faceplate(
     material: bpy.types.Material, collection: bpy.types.Collection
 ) -> bpy.types.Object:
-    rows = (
-        (0.095, 0.077, -0.106),
-        (0.068, 0.091, -0.119),
-        (0.034, 0.086, -0.131),
-        (0.002, 0.061, -0.134),
-        (-0.036, 0.049, -0.129),
-        (-0.075, 0.034, -0.121),
-    )
-    columns = 7
+    rows = cfg.HELMET["faceplate_rows"]
+    columns = cfg.HELMET["faceplate_columns"]
     vertices = []
-    for z, half_width, base_y in rows:
+    for row_index, (z, half_width, base_y) in enumerate(rows):
         for column in range(columns):
             normalized_x = -1.0 + 2.0 * column / (columns - 1)
             x = normalized_x * half_width
             curvature = 1.0 - abs(normalized_x) ** 1.7
-            y = base_y - 0.005 * curvature
+            y = base_y - cfg.HELMET["faceplate_bow"] * curvature
             if z < 0.01:
-                y -= 0.006 * (1.0 - abs(normalized_x))
-            vertices.append((x, y, z))
+                y -= cfg.HELMET["faceplate_lower_bow"] * (
+                    1.0 - abs(normalized_x)
+                )
+            vertex_z = z
+            if row_index == 0:
+                vertex_z += cfg.HELMET["faceplate_top_peak"] * curvature
+            vertices.append((x, y, vertex_z))
     faces = []
     for row in range(len(rows) - 1):
         for column in range(columns - 1):
@@ -353,6 +359,120 @@ def create_faceplate(
     return obj
 
 
+def eye_slot_polygon(
+    side_sign: float,
+    width: float,
+    height: float,
+) -> list[tuple[float, float]]:
+    """Return a chamfered eye slot in X/Z with its outer corner raised."""
+    half_width = width * 0.5
+    half_height = height * 0.5
+    bevel = min(cfg.HELMET["eye_corner_bevel"], half_width * 0.35, half_height * 0.7)
+    local_points = (
+        (-half_width + bevel, -half_height),
+        (half_width - bevel, -half_height),
+        (half_width, -half_height + bevel),
+        (half_width, half_height - bevel),
+        (half_width - bevel, half_height),
+        (-half_width + bevel, half_height),
+        (-half_width, half_height - bevel),
+        (-half_width, -half_height + bevel),
+    )
+    slope = math.tan(math.radians(cfg.HELMET["eye_angle_degrees"]))
+    center_x = cfg.HELMET["eye_center_x"]
+    center_z = cfg.HELMET["eye_center_z"]
+    return [
+        (
+            side_sign * (center_x + outward),
+            center_z + vertical + slope * outward,
+        )
+        for outward, vertical in local_points
+    ]
+
+
+def create_extruded_polygon(
+    name: str,
+    polygon_xz: list[tuple[float, float]],
+    y_front: float,
+    y_back: float,
+    material: bpy.types.Material,
+    collection: bpy.types.Collection,
+    bevel: float = 0.0006,
+) -> bpy.types.Object:
+    obj = create_prism(
+        name,
+        polygon_xz,
+        y_front,
+        y_back,
+        material,
+        collection,
+        bevel,
+    )
+    return obj
+
+
+def create_extruded_ring(
+    name: str,
+    outer_xz: list[tuple[float, float]],
+    inner_xz: list[tuple[float, float]],
+    y_front: float,
+    y_back: float,
+    material: bpy.types.Material,
+    collection: bpy.types.Collection,
+) -> bpy.types.Object:
+    if len(outer_xz) != len(inner_xz):
+        raise ValueError("Eye housing loops must have matching vertex counts")
+    count = len(outer_xz)
+    vertices = [(x, y_front, z) for x, z in outer_xz]
+    vertices += [(x, y_back, z) for x, z in outer_xz]
+    vertices += [(x, y_front, z) for x, z in inner_xz]
+    vertices += [(x, y_back, z) for x, z in inner_xz]
+    outer_front = 0
+    outer_back = count
+    inner_front = count * 2
+    inner_back = count * 3
+    faces = []
+    for index in range(count):
+        following = (index + 1) % count
+        faces.extend(
+            (
+                (
+                    outer_front + index,
+                    outer_front + following,
+                    inner_front + following,
+                    inner_front + index,
+                ),
+                (
+                    outer_back + following,
+                    outer_back + index,
+                    inner_back + index,
+                    inner_back + following,
+                ),
+                (
+                    outer_front + index,
+                    outer_back + index,
+                    outer_back + following,
+                    outer_front + following,
+                ),
+                (
+                    inner_front + following,
+                    inner_back + following,
+                    inner_back + index,
+                    inner_front + index,
+                ),
+            )
+        )
+    mesh = bpy.data.meshes.new(f"{name}_Mesh")
+    mesh.from_pydata(vertices, [], faces)
+    mesh.update()
+    obj = bpy.data.objects.new(name, mesh)
+    collection.objects.link(obj)
+    obj["aegis_managed"] = True
+    assign_material(obj, material)
+    add_bevel(obj, 0.00055, 2)
+    return obj
+
+
 def create_torus_segment(
     name: str,
     angle_start: float,
@@ -360,7 +480,8 @@ def create_torus_segment(
     material: bpy.types.Material,
     collection: bpy.types.Collection,
 ) -> bpy.types.Object:
-    major_radius = cfg.HELMET["neck_ring_radius"]
+    major_radius_x = cfg.HELMET["neck_ring_radius_x"]
+    major_radius_y = cfg.HELMET["neck_ring_radius_y"]
     minor_radius = cfg.HELMET["neck_ring_tube"]
     center_z = cfg.HELMET["neck_ring_z"]
     major_segments = 24
@@ -370,11 +491,11 @@ def create_torus_segment(
         angle = angle_start + (angle_end - angle_start) * major_index / major_segments
         for minor_index in range(minor_segments):
             tube_angle = 2.0 * math.pi * minor_index / minor_segments
-            radial = major_radius + minor_radius * math.cos(tube_angle)
+            tube_offset = minor_radius * math.cos(tube_angle)
             vertices.append(
                 (
-                    radial * math.cos(angle),
-                    radial * math.sin(angle),
+                    (major_radius_x + tube_offset) * math.cos(angle),
+                    (major_radius_y + tube_offset) * math.sin(angle),
                     center_z + minor_radius * math.sin(tube_angle),
                 )
             )
@@ -456,14 +577,14 @@ def build_head_proxy(
     objects = [
         add_uv_ellipsoid("HeadProxy_Cranium", head["cranium_center"], head["cranium_radii"], material, collection),
         add_uv_ellipsoid("HeadProxy_Face", head["face_center"], head["face_radii"], material, collection, 24, 16),
-        add_uv_ellipsoid("HeadProxy_Jaw", (0.0, -0.014, -0.072), (0.059, 0.071, 0.042), material, collection, 24, 14),
-        add_uv_ellipsoid("HeadProxy_Chin", (0.0, -0.054, -0.092), (0.036, 0.036, 0.021), material, collection, 20, 12),
+        add_uv_ellipsoid("HeadProxy_Jaw", head["jaw_center"], head["jaw_radii"], material, collection, 24, 14),
+        add_uv_ellipsoid("HeadProxy_Chin", head["chin_center"], head["chin_radii"], material, collection, 20, 12),
     ]
     for side, sign in (("L", -1.0), ("R", 1.0)):
         objects.append(
             add_uv_ellipsoid(
                 f"HeadProxy_Ear_{side}",
-                (sign * 0.082, head["ear_center_y"], head["ear_center_z"]),
+                (sign * head["ear_center_x"], head["ear_center_y"], head["ear_center_z"]),
                 head["ear_radii"],
                 material,
                 collection,
@@ -474,7 +595,7 @@ def build_head_proxy(
     objects.append(
         add_cylinder(
             "HeadProxy_Neck",
-            (0.0, 0.010, head["neck_center_z"]),
+            head["neck_center"],
             head["neck_diameter"] * 0.5,
             head["neck_depth"],
             material,
@@ -515,17 +636,8 @@ def build_helmet(
         )
     )
 
-    patch_specs = (
-        ("CrownFront", (0.12, 0.88), (-2.80, -0.34), outer),
-        ("CrownRear", (0.12, 0.94), (0.34, 2.80), outer),
-        ("RearShell_R", (0.82, 2.25), (0.18, 1.47), outer),
-        ("RearShell_L", (0.82, 2.25), (1.67, 2.96), outer),
-        ("Temple_R", (0.76, 1.36), (-1.48, -0.10), outer),
-        ("Temple_L", (0.76, 1.36), (-3.04, -1.66), outer),
-        ("Cheek_R", (1.40, 2.18), (-1.48, -0.18), (0.113, 0.133, 0.141)),
-        ("Cheek_L", (1.40, 2.18), (-2.96, -1.66), (0.113, 0.133, 0.141)),
-    )
-    for name, theta_range, phi_range, radii in patch_specs:
+    for name, (theta_range, phi_range, radii_override) in helmet["patches"].items():
+        radii = radii_override or outer
         parts.append(
             create_ellipsoid_patch(
                 name,
@@ -542,36 +654,69 @@ def build_helmet(
 
     parts.append(create_faceplate(materials["FaceplateGray"], collection))
 
-    jaw_right = [(0.029, -0.072), (0.076, -0.055), (0.103, -0.083), (0.073, -0.126), (0.029, -0.132)]
+    jaw_right = list(helmet["jaw_polygon_r"])
     jaw_left = [(-x, z) for x, z in reversed(jaw_right)]
-    parts.append(create_prism("Jaw_R", jaw_right, -0.127, -0.105, armor, collection, 0.0028))
-    parts.append(create_prism("Jaw_L", jaw_left, -0.127, -0.105, armor, collection, 0.0028))
-    chin_polygon = [(-0.035, -0.073), (0.035, -0.073), (0.045, -0.105), (0.026, -0.138), (-0.026, -0.138), (-0.045, -0.105)]
-    parts.append(create_prism("Chin", chin_polygon, -0.135, -0.105, armor, collection, 0.0030))
+    parts.append(
+        create_prism(
+            "Jaw_R",
+            jaw_right,
+            helmet["jaw_y_front"],
+            helmet["jaw_y_back"],
+            armor,
+            collection,
+            0.0023,
+        )
+    )
+    parts.append(
+        create_prism(
+            "Jaw_L",
+            jaw_left,
+            helmet["jaw_y_front"],
+            helmet["jaw_y_back"],
+            armor,
+            collection,
+            0.0023,
+        )
+    )
+    parts.append(
+        create_prism(
+            "Chin",
+            list(helmet["chin_polygon"]),
+            helmet["chin_y_front"],
+            helmet["chin_y_back"],
+            armor,
+            collection,
+            0.0025,
+        )
+    )
 
-    angle = math.radians(helmet["eye_angle_degrees"])
     for side, sign in (("L", -1.0), ("R", 1.0)):
-        rotation_y = angle if side == "L" else -angle
+        outer_eye = eye_slot_polygon(sign, helmet["eye_width"], helmet["eye_height"])
+        inner_eye = eye_slot_polygon(
+            sign,
+            helmet["eye_width"] * helmet["eye_inner_scale"],
+            helmet["eye_height"] * helmet["eye_inner_scale"],
+        )
         parts.append(
-            add_beveled_box(
+            create_extruded_ring(
                 f"EyeHousing_{side}",
-                (sign * helmet["eye_center_x"], -0.141, helmet["eye_center_z"]),
-                (helmet["eye_width"], 0.012, helmet["eye_height"]),
+                outer_eye,
+                inner_eye,
+                helmet["eye_housing_y_front"],
+                helmet["eye_housing_y_back"],
                 materials["EyeHousingDark"],
                 collection,
-                rotation=(0.0, rotation_y, 0.0),
-                bevel=0.0025,
             )
         )
         parts.append(
-            add_beveled_box(
+            create_extruded_polygon(
                 f"EyeLens_{side}",
-                (sign * helmet["eye_center_x"], -0.148, helmet["eye_center_z"]),
-                (0.044, 0.0035, 0.008),
+                inner_eye,
+                helmet["eye_lens_y_front"],
+                helmet["eye_lens_y_back"],
                 materials["EyeLensBlueGray"],
                 collection,
-                rotation=(0.0, rotation_y, 0.0),
-                bevel=0.0018,
+                bevel=0.00045,
             )
         )
 
@@ -592,9 +737,13 @@ def build_helmet(
         parts.append(
             add_cylinder(
                 f"EarCore_{side}",
-                (sign * (helmet["ear_center_x"] + 0.009), helmet["ear_center_y"], helmet["ear_center_z"]),
-                0.023,
-                0.008,
+                (
+                    sign * (helmet["ear_center_x"] + helmet["ear_depth"] * 0.48),
+                    helmet["ear_center_y"],
+                    helmet["ear_center_z"],
+                ),
+                helmet["ear_core_radius"],
+                helmet["ear_core_depth"],
                 materials["EyeHousingDark"],
                 collection,
                 axis="X",
@@ -619,10 +768,8 @@ def build_render_rig(collection: bpy.types.Collection) -> None:
             camera_spec["type"],
             collection,
         )
-    add_area_light("Key_Light", (0.44, -0.52, 0.52), 90.0, 0.42, collection)
-    add_area_light("Fill_Light", (-0.48, -0.28, 0.20), 48.0, 0.48, collection)
-    add_area_light("Rim_Light", (0.34, 0.52, 0.42), 72.0, 0.38, collection)
-    add_area_light("Rear_Fill_Light", (-0.38, 0.48, 0.02), 42.0, 0.42, collection)
+    for name, location, energy, size in cfg.RENDER["lights"]:
+        add_area_light(name, location, energy, size, collection)
 
 
 def validate_scene(root: bpy.types.Object) -> None:

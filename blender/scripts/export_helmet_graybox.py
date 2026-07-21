@@ -58,6 +58,12 @@ def evaluated_statistics(objects: list[bpy.types.Object]) -> tuple[list[float], 
     return [round(float(value), 6) for value in dimensions], triangle_count
 
 
+def evaluated_dimensions(objects: list[bpy.types.Object]) -> list[float]:
+    """Evaluate bounds without using object transforms or unapplied modifiers heuristically."""
+    dimensions, _ = evaluated_statistics(objects)
+    return dimensions
+
+
 def collect_review_images() -> list[Path]:
     paths = []
     for directory in (cfg.HELMET_ONLY_DIR, cfg.WITH_HEAD_DIR):
@@ -128,6 +134,15 @@ def main() -> None:
 
     export_glb(export_objects, root)
     bbox_dimensions, triangle_count = evaluated_statistics(export_objects)
+    main_body_objects = [
+        obj
+        for obj in export_objects
+        if obj.type == "MESH"
+        and not obj.name.startswith("EarCover_")
+        and not obj.name.startswith("EarCore_")
+    ]
+    main_body_dimensions = evaluated_dimensions(main_body_objects)
+    evaluated_body_ratio = round(main_body_dimensions[2] / main_body_dimensions[0], 6)
     unique_materials = sorted(
         {
             slot.material.name
@@ -169,11 +184,17 @@ def main() -> None:
             "height_z": bbox_dimensions[2],
         },
         "main_body_dimensions_m": {
-            "height": cfg.HELMET["body_height"],
-            "width_excluding_ear_covers": cfg.HELMET["body_width"],
-            "height_to_width_ratio": round(
+            "evaluated_height": main_body_dimensions[2],
+            "evaluated_width_excluding_ear_covers": main_body_dimensions[0],
+            "evaluated_depth": main_body_dimensions[1],
+            "evaluated_height_to_width_ratio": evaluated_body_ratio,
+            "configured_nominal_height": cfg.HELMET["body_height"],
+            "configured_nominal_width": cfg.HELMET["body_width"],
+            "configured_height_to_width_ratio": round(
                 cfg.HELMET["body_height"] / cfg.HELMET["body_width"], 6
             ),
+            "target_height_to_width_ratio": cfg.HELMET["body_ratio_target"],
+            "ear_covers_excluded": True,
         },
         "scene_object_count": len(bpy.data.objects),
         "export_object_count": len(export_objects),
@@ -214,7 +235,7 @@ def main() -> None:
         "known_issues": [
             "Low-poly anatomical head proxy is for clearance review only.",
             "Panel seams and mechanical pivots are first-pass placeholders.",
-            "Eye recesses use nested graybox solids rather than production boolean topology.",
+            "Eye recesses use ring-and-inset graybox topology rather than production boolean/support-loop topology.",
             "No production materials, micro-details, animation, or rigging are included.",
         ],
     }

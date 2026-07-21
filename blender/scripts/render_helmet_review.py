@@ -84,15 +84,7 @@ def set_material_alpha(material_name: str, alpha: float) -> None:
 
 def configure_fit_review_transparency() -> None:
     """Reveal the proxy for fit review without saving changes to the Blend file."""
-    for name, alpha in {
-        "InnerShell": 0.16,
-        "ArmorGray": 0.30,
-        "FaceplateGray": 0.24,
-        "EyeHousingDark": 0.55,
-        "EyeLensBlueGray": 0.72,
-        "NeckRingDark": 0.34,
-        "HeadProxyGray": 0.70,
-    }.items():
+    for name, alpha in cfg.RENDER["fit_review_alpha"].items():
         set_material_alpha(name, alpha)
 
 

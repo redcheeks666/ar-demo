@@ -1,6 +1,6 @@
 {
   "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/render_helmet_review.py",
-  "elapsed_seconds": 12.6142,
+  "elapsed_seconds": 9.2715,
   "engine": "BLENDER_EEVEE",
   "resolution": [
     1024,
