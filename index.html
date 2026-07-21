@@ -23,6 +23,13 @@
         ></video>
 
         <canvas
+          id="helmet-canvas"
+          class="helmet-canvas"
+          aria-label="Face Landmarker 3D 科幻头盔叠加层"
+          hidden
+        ></canvas>
+
+        <canvas
           id="overlay-canvas"
           class="landmark-canvas"
           aria-label="模型捕捉关键点叠加层"
@@ -72,11 +79,11 @@
           </section>
 
           <div id="hud-left" class="hud-left" hidden>
-            <p id="model-hud-tag" class="model-hud-tag" aria-hidden="true">
+            <p id="model-hud-tag" class="model-hud-tag hud-hideable" aria-hidden="true">
               MEDIAPIPE VISION // HAND LANDMARKER
             </p>
 
-            <aside id="info-panel" class="info-panel" aria-live="polite">
+            <aside id="info-panel" class="info-panel hud-hideable" aria-live="polite">
               <p class="info-panel-heading">
                 <span id="info-name-en" class="info-panel-title">Hand Landmarker</span>
                 <span id="info-name-cn" class="info-panel-subtitle">手部关键点</span>
@@ -86,28 +93,104 @@
               <p id="info-principle" class="info-panel-line"></p>
             </aside>
 
-            <aside id="data-panel" class="data-panel" aria-label="实时数据面板">
-              <p class="data-panel-tag">LIVE DATA</p>
-              <div class="data-panel-grid">
-                <span class="data-panel-label">MODEL</span>
-                <span id="data-model" class="data-panel-value">—</span>
-                <span class="data-panel-label">DELEGATE</span>
-                <span id="data-delegate" class="data-panel-value">—</span>
-                <span class="data-panel-label">INFER</span>
-                <span id="data-infer" class="data-panel-value">—</span>
-                <span class="data-panel-label">TRACK</span>
-                <span id="data-track" class="data-panel-value">—</span>
-                <span class="data-panel-label">COUNT</span>
-                <span id="data-count" class="data-panel-value">—</span>
-                <span class="data-panel-label">TOP</span>
-                <span id="data-top" class="data-panel-value">—</span>
-              </div>
-            </aside>
+            <p class="model-rail-tag model-rail-tag-secondary hud-hideable" aria-hidden="true">
+              OVERLAY // LANDMARKS
+            </p>
+
+            <button
+              id="landmarks-toggle"
+              class="planet-focus-action-card model-card landmarks-toggle hud-hideable"
+              type="button"
+              aria-label="长按隐藏捕捉关键点"
+              aria-pressed="true"
+              tabindex="-1"
+            >
+              <span class="planet-focus-action-card-corners" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-edge" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-fill" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-scan" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-reactor" aria-hidden="true">
+                <span class="planet-focus-action-card-ring"></span>
+                <span class="planet-focus-action-card-ring-progress"></span>
+                <svg class="planet-focus-action-card-icon" viewBox="0 0 32 32" focusable="false">
+                  <path d="M5.5 16S9.5 9.5 16 9.5 26.5 16 26.5 16 22.5 22.5 16 22.5 5.5 16 5.5 16z"></path>
+                  <circle cx="16" cy="16" r="3.2"></circle>
+                </svg>
+              </span>
+              <span class="planet-focus-action-card-copy">
+                <span id="landmarks-toggle-label" class="planet-focus-action-card-label">
+                  长按隐藏捕捉关键点
+                </span>
+                <span id="landmarks-toggle-hint" class="planet-focus-action-card-hint">
+                  LANDMARKS · ON
+                </span>
+              </span>
+              <span class="planet-focus-action-card-readout" aria-hidden="true">
+                <span class="planet-focus-action-card-duration">T-0.5s</span>
+                <span class="planet-focus-action-card-state">
+                  <span class="planet-focus-action-card-state-ready">READY</span>
+                  <span class="planet-focus-action-card-state-charging">CHARGING</span>
+                </span>
+              </span>
+            </button>
+
+            <div id="helmet-control" class="helmet-control hud-hideable" hidden>
+              <span class="helmet-control-tag" aria-hidden="true">FACE AR // PHASE 01</span>
+              <button
+                id="helmet-toggle"
+                class="helmet-toggle"
+                type="button"
+                aria-label="装备科幻头盔原型"
+                aria-pressed="false"
+              >
+                <span id="helmet-toggle-label" class="helmet-toggle-label">装备头盔</span>
+                <span id="helmet-toggle-status" class="helmet-toggle-status">
+                  HELMET SYSTEM · STANDBY
+                </span>
+              </button>
+            </div>
+
+            <button
+              id="ui-toggle"
+              class="planet-focus-action-card model-card ui-toggle"
+              type="button"
+              aria-label="长按隐藏界面"
+              aria-pressed="false"
+              tabindex="-1"
+            >
+              <span class="planet-focus-action-card-corners" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-edge" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-fill" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-scan" aria-hidden="true"></span>
+              <span class="planet-focus-action-card-reactor" aria-hidden="true">
+                <span class="planet-focus-action-card-ring"></span>
+                <span class="planet-focus-action-card-ring-progress"></span>
+                <svg class="planet-focus-action-card-icon" viewBox="0 0 32 32" focusable="false">
+                  <rect x="6" y="8" width="20" height="16" rx="2"></rect>
+                  <path d="M13 8v16"></path>
+                </svg>
+              </span>
+              <span class="planet-focus-action-card-copy">
+                <span id="ui-toggle-label" class="planet-focus-action-card-label">
+                  长按隐藏界面
+                </span>
+                <span id="ui-toggle-hint" class="planet-focus-action-card-hint">
+                  INTERFACE · ON
+                </span>
+              </span>
+              <span class="planet-focus-action-card-readout" aria-hidden="true">
+                <span class="planet-focus-action-card-duration">T-0.5s</span>
+                <span class="planet-focus-action-card-state">
+                  <span class="planet-focus-action-card-state-ready">READY</span>
+                  <span class="planet-focus-action-card-state-charging">CHARGING</span>
+                </span>
+              </span>
+            </button>
           </div>
 
           <section
             id="model-rail"
-            class="model-rail"
+            class="model-rail hud-hideable"
             aria-label="模型切换卡组"
             hidden
           >
@@ -300,46 +383,6 @@
               </span>
             </button>
 
-            <p class="model-rail-tag model-rail-tag-secondary" aria-hidden="true">
-              OVERLAY // LANDMARKS
-            </p>
-
-            <button
-              id="landmarks-toggle"
-              class="planet-focus-action-card model-card landmarks-toggle"
-              type="button"
-              aria-label="长按隐藏捕捉关键点"
-              aria-pressed="true"
-              tabindex="-1"
-            >
-              <span class="planet-focus-action-card-corners" aria-hidden="true"></span>
-              <span class="planet-focus-action-card-edge" aria-hidden="true"></span>
-              <span class="planet-focus-action-card-fill" aria-hidden="true"></span>
-              <span class="planet-focus-action-card-scan" aria-hidden="true"></span>
-              <span class="planet-focus-action-card-reactor" aria-hidden="true">
-                <span class="planet-focus-action-card-ring"></span>
-                <span class="planet-focus-action-card-ring-progress"></span>
-                <svg class="planet-focus-action-card-icon" viewBox="0 0 32 32" focusable="false">
-                  <path d="M5.5 16S9.5 9.5 16 9.5 26.5 16 26.5 16 22.5 22.5 16 22.5 5.5 16 5.5 16z"></path>
-                  <circle cx="16" cy="16" r="3.2"></circle>
-                </svg>
-              </span>
-              <span class="planet-focus-action-card-copy">
-                <span id="landmarks-toggle-label" class="planet-focus-action-card-label">
-                  长按隐藏捕捉关键点
-                </span>
-                <span id="landmarks-toggle-hint" class="planet-focus-action-card-hint">
-                  LANDMARKS · ON
-                </span>
-              </span>
-              <span class="planet-focus-action-card-readout" aria-hidden="true">
-                <span class="planet-focus-action-card-duration">T-0.5s</span>
-                <span class="planet-focus-action-card-state">
-                  <span class="planet-focus-action-card-state-ready">READY</span>
-                  <span class="planet-focus-action-card-state-charging">CHARGING</span>
-                </span>
-              </span>
-            </button>
           </section>
 
           <div id="error-banner" class="error-banner" role="alert" hidden>

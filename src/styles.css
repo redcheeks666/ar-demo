@@ -49,6 +49,7 @@ button {
 }
 
 .camera-video,
+.helmet-canvas,
 .landmark-canvas,
 .preview-overlay {
   position: absolute;
@@ -62,6 +63,12 @@ button {
   object-fit: contain;
   transform: scaleX(-1);
   background: #050607;
+}
+
+.helmet-canvas {
+  z-index: 1;
+  background: transparent;
+  pointer-events: none;
 }
 
 .landmark-canvas {
@@ -348,47 +355,89 @@ button {
   line-height: 1.6;
 }
 
-.data-panel {
-  padding: 11px 15px 13px;
-  border: 1px solid rgba(var(--hud-accent), 0.26);
-  border-radius: 3px;
-  background: rgba(8, 14, 20, 0.7);
-  box-shadow: inset 0 0 20px rgba(var(--hud-accent), 0.05);
-  backdrop-filter: blur(10px);
+/* 左栏内的关键点开关卡：与介绍卡同宽，卡片本体样式复用 .model-card。 */
+.hud-left .landmarks-toggle {
+  width: 100%;
+}
+
+/* Face Landmarker 专属的显式 3D 控制；使用原生 button 保留键盘/触摸点击语义。 */
+.helmet-control {
+  display: grid;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.helmet-control-tag {
+  color: rgba(94, 228, 255, 0.58);
   font-family:
     "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
     monospace;
-}
-
-.data-panel-tag {
-  margin: 0 0 8px;
-  color: rgba(94, 228, 255, 0.55);
   font-size: 10px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.24em;
 }
 
-.data-panel-grid {
+.helmet-toggle {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 5px 16px;
-}
-
-.data-panel-label {
-  color: rgba(var(--hud-accent), 0.55);
-  font-size: 10.5px;
-  letter-spacing: 0.2em;
-  line-height: 1.5;
-}
-
-.data-panel-value {
-  overflow: hidden;
+  gap: 3px;
+  min-height: 54px;
+  padding: 9px 14px;
+  border: 1px solid rgba(94, 228, 255, 0.58);
+  border-radius: 3px;
   color: #ecf7ff;
-  font-size: 11.5px;
-  line-height: 1.5;
-  text-align: right;
-  text-overflow: ellipsis;
-  text-shadow: 0 0 10px rgba(var(--hud-accent), 0.4);
-  white-space: nowrap;
+  background:
+    linear-gradient(105deg, rgba(94, 228, 255, 0.14), transparent 48%),
+    rgba(8, 18, 25, 0.86);
+  box-shadow:
+    0 0 18px rgba(94, 228, 255, 0.2),
+    inset 0 0 18px rgba(94, 228, 255, 0.07);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.helmet-toggle:hover,
+.helmet-toggle:focus-visible {
+  border-color: #f6c177;
+  box-shadow:
+    0 0 24px rgba(246, 193, 119, 0.32),
+    inset 0 0 18px rgba(246, 193, 119, 0.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.helmet-toggle[aria-pressed="true"] {
+  border-color: rgba(246, 193, 119, 0.86);
+  background:
+    linear-gradient(105deg, rgba(246, 193, 119, 0.19), transparent 52%),
+    rgba(18, 19, 22, 0.9);
+}
+
+.helmet-toggle:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.helmet-toggle-label {
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.helmet-toggle-status {
+  color: rgba(94, 228, 255, 0.68);
+  font-family:
+    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
+    monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+}
+
+.helmet-toggle[aria-pressed="true"] .helmet-toggle-status {
+  color: rgba(246, 193, 119, 0.82);
 }
 
 /* ---- 右侧：模型卡列 ---- */
@@ -853,6 +902,68 @@ button {
   display: inline;
 }
 
+/* ---- 界面折叠（长按“隐藏界面”卡）：可隐藏元素滑出，ui-toggle 常驻 ---- */
+
+.hud-hideable {
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
+}
+
+/* 左栏可隐藏项直接移除，让界面开关卡升到左上角。 */
+#preview-overlay.ui-collapsed .hud-left .hud-hideable {
+  display: none;
+}
+
+/* 右栏模型卡列滑出右侧（独立绝对定位列，不影响左栏布局）。 */
+#preview-overlay.ui-collapsed #model-rail {
+  opacity: 0;
+  transform: translateX(135%);
+  pointer-events: none;
+}
+
+/* 卡片本体默认 pointer-events:auto，折叠后需一并屏蔽鼠标命中。 */
+#preview-overlay.ui-collapsed #model-rail .planet-focus-action-card {
+  pointer-events: none;
+}
+
+/* 折叠后：界面开关卡收成左上角图标——只留反应堆圈+图标，仍保持易点尺寸。 */
+#preview-overlay.ui-collapsed .ui-toggle {
+  grid-template-areas: "reactor";
+  grid-template-columns: auto;
+  width: auto;
+  padding: 10px;
+  align-self: flex-start;
+  animation: ui-toggle-collapse-pop 240ms ease;
+}
+
+#preview-overlay.ui-collapsed .ui-toggle .planet-focus-action-card-copy,
+#preview-overlay.ui-collapsed .ui-toggle .planet-focus-action-card-readout,
+#preview-overlay.ui-collapsed .ui-toggle .planet-focus-action-card-edge {
+  display: none;
+}
+
+#preview-overlay.ui-collapsed .ui-toggle .planet-focus-action-card-reactor {
+  width: 56px;
+  height: 56px;
+}
+
+#preview-overlay.ui-collapsed .ui-toggle .planet-focus-action-card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes ui-toggle-collapse-pop {
+  from {
+    opacity: 0.35;
+    transform: scale(0.82);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* ---- 错误提示条 ---- */
 
 .error-banner {
@@ -923,7 +1034,9 @@ button {
 }
 
 @media (max-width: 680px) {
-  .hud-left {
+  /* 窄屏隐藏文字介绍卡，但保留关键点开关卡（现常驻左栏）。 */
+  #model-hud-tag,
+  #info-panel {
     display: none;
   }
 }
@@ -939,6 +1052,18 @@ button {
   }
 
   .planet-focus-action-card.is-charging .planet-focus-action-card-scan::before {
+    animation: none;
+  }
+
+  .hud-hideable {
+    transition: opacity 200ms ease;
+  }
+
+  #preview-overlay.ui-collapsed #model-rail {
+    transform: none;
+  }
+
+  #preview-overlay.ui-collapsed .ui-toggle {
     animation: none;
   }
 

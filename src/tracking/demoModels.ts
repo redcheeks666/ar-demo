@@ -102,6 +102,7 @@ export class DemoModelController {
             runningMode: 'VIDEO',
             numFaces: 1,
             outputFaceBlendshapes: true,
+            outputFacialTransformationMatrixes: true,
           }),
         };
       }

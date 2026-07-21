@@ -2,6 +2,7 @@ import { startCamera, stopCamera } from './camera/camera';
 import { UiHoldSfx } from './audio/sfx';
 import { UiHoldButton } from './interaction/uiHoldButton';
 import type { PreviewLayout } from './interaction/coordinateMapping';
+import { HelmetRenderer } from './rendering/helmetRenderer';
 import { OverlayRenderer, type OverlayContent } from './rendering/overlayRenderer';
 import {
   DemoModelController,
@@ -10,10 +11,9 @@ import {
 } from './tracking/demoModels';
 import { HandTrackingResultProcessor } from './tracking/handTracker';
 import { InteractionEngine, type EngineSnapshot } from './tracking/interactionEngine';
+import { FacePoseAdapter } from './tracking/facePoseAdapter';
 import { MODEL_INFO, MODEL_ORDER } from './demo/modelInfo';
 import type { DemoModelId } from './utils/types';
-
-const DATA_PANEL_INTERVAL_MS = 250;
 
 type Phase = 'intro' | 'starting' | 'loading' | 'running';
 
@@ -24,6 +24,7 @@ export function bootstrapApp(): void {
 class DemoApp {
   // DOM
   private readonly video = requireElement<HTMLVideoElement>('camera-video');
+  private readonly helmetCanvas = requireElement<HTMLCanvasElement>('helmet-canvas');
   private readonly overlayCanvas = requireElement<HTMLCanvasElement>('overlay-canvas');
   private readonly stageOverlay = requireElement<HTMLDivElement>('preview-overlay');
   private readonly introPanel = requireElement<HTMLElement>('intro-panel');
@@ -39,16 +40,17 @@ class DemoApp {
   private readonly infoPurpose = requireElement<HTMLParagraphElement>('info-purpose');
   private readonly infoOutput = requireElement<HTMLParagraphElement>('info-output');
   private readonly infoPrinciple = requireElement<HTMLParagraphElement>('info-principle');
-  private readonly dataModel = requireElement<HTMLSpanElement>('data-model');
-  private readonly dataDelegate = requireElement<HTMLSpanElement>('data-delegate');
-  private readonly dataInfer = requireElement<HTMLSpanElement>('data-infer');
-  private readonly dataTrack = requireElement<HTMLSpanElement>('data-track');
-  private readonly dataCount = requireElement<HTMLSpanElement>('data-count');
-  private readonly dataTop = requireElement<HTMLSpanElement>('data-top');
   private readonly modelRail = requireElement<HTMLElement>('model-rail');
   private readonly landmarksToggle = requireElement<HTMLButtonElement>('landmarks-toggle');
   private readonly landmarksLabel = requireElement<HTMLSpanElement>('landmarks-toggle-label');
   private readonly landmarksHint = requireElement<HTMLSpanElement>('landmarks-toggle-hint');
+  private readonly helmetControl = requireElement<HTMLDivElement>('helmet-control');
+  private readonly helmetToggle = requireElement<HTMLButtonElement>('helmet-toggle');
+  private readonly helmetToggleLabel = requireElement<HTMLSpanElement>('helmet-toggle-label');
+  private readonly helmetToggleStatus = requireElement<HTMLSpanElement>('helmet-toggle-status');
+  private readonly uiToggle = requireElement<HTMLButtonElement>('ui-toggle');
+  private readonly uiToggleLabel = requireElement<HTMLSpanElement>('ui-toggle-label');
+  private readonly uiToggleHint = requireElement<HTMLSpanElement>('ui-toggle-hint');
   private readonly errorBanner = requireElement<HTMLDivElement>('error-banner');
   private readonly errorBannerText = requireElement<HTMLParagraphElement>('error-banner-text');
   private readonly errorBannerRetry = requireElement<HTMLButtonElement>('error-banner-retry');
@@ -58,19 +60,29 @@ class DemoApp {
   private readonly engine = new InteractionEngine();
   private readonly demoModels = new DemoModelController();
   private readonly overlay = new OverlayRenderer(this.overlayCanvas, this.video);
+  private readonly facePoseAdapter = new FacePoseAdapter();
   private readonly gestureProcessor = new HandTrackingResultProcessor();
   private readonly modelCards = new Map<DemoModelId, HTMLButtonElement>();
+  /** 可随“隐藏界面”折叠的卡片（模型卡 + 关键点开关）。 */
   private readonly holdButtons: UiHoldButton[] = [];
+  /** 界面折叠开关本身，永远常驻可用。 */
+  private uiToggleHoldButton!: UiHoldButton;
+  private helmetRenderer: HelmetRenderer | null = null;
 
   private phase: Phase = 'intro';
   private stream: MediaStream | null = null;
   private activeModel: DemoModelId = 'hand_landmarker';
   private pendingModel: DemoModelId | null = null;
   private overlayVisible = true;
+  private uiCollapsed = false;
+  private helmetFaceModeActive = false;
+  private helmetEquipped = false;
+  private displayedHelmetState = '';
   private lastInjectedSeq = 0;
-  private lastDataPanelAt = 0;
   private engineErrorShown = false;
   private retryAction: (() => void) | null = null;
+  private animationFrameId = 0;
+  private disposed = false;
 
   constructor() {
     for (const id of MODEL_ORDER) {
@@ -89,17 +101,38 @@ class DemoApp {
       }),
     );
 
+    this.uiToggleHoldButton = new UiHoldButton(
+      this.uiToggle,
+      this.stageOverlay,
+      this.sfx,
+      { onTrigger: () => this.toggleUiCollapsed() },
+    );
+
     this.startButton.addEventListener('click', () => {
       void this.start();
     });
+    this.helmetToggle.addEventListener('click', () => this.toggleHelmet());
     this.errorBannerRetry.addEventListener('click', () => {
       this.hideError();
       this.retryAction?.();
     });
     window.addEventListener('beforeunload', () => this.dispose());
 
+    try {
+      this.helmetRenderer = new HelmetRenderer(this.helmetCanvas);
+    } catch (error) {
+      this.helmetCanvas.hidden = true;
+      this.helmetToggle.disabled = true;
+      this.helmetToggleLabel.textContent = '浏览器不支持 WebGL';
+      this.helmetToggleStatus.textContent = 'HELMET SYSTEM · UNAVAILABLE';
+      this.showError(
+        `3D 头盔初始化失败（${toMessage(error)}）。其他 MediaPipe 演示仍可继续使用。`,
+        null,
+      );
+    }
+
     this.applyModelUi();
-    requestAnimationFrame(this.loop);
+    this.animationFrameId = requestAnimationFrame(this.loop);
   }
 
   private async start(): Promise<void> {
@@ -147,11 +180,15 @@ class DemoApp {
   }
 
   private readonly loop = (timestamp: number): void => {
+    if (this.disposed) {
+      return;
+    }
+
     if (this.phase === 'running') {
       this.tick(timestamp);
     }
 
-    requestAnimationFrame(this.loop);
+    this.animationFrameId = requestAnimationFrame(this.loop);
   };
 
   private tick(timestamp: number): void {
@@ -182,15 +219,19 @@ class DemoApp {
 
     const hands = snapshot.hands.hands;
 
+    // 折叠时可隐藏卡停用（避免指尖扫过隐藏卡误触发）；界面开关卡永远可用。
     for (const holdButton of this.holdButtons) {
-      holdButton.update({ hands, layout, timestamp, active: true });
+      holdButton.update({ hands, layout, timestamp, active: !this.uiCollapsed });
     }
+    this.uiToggleHoldButton.update({ hands, layout, timestamp, active: true });
 
     this.overlay.draw(this.buildOverlayContent(demo, snapshot));
 
-    if (timestamp - this.lastDataPanelAt >= DATA_PANEL_INTERVAL_MS) {
-      this.lastDataPanelAt = timestamp;
-      this.updateDataPanel(demo, snapshot);
+    if (this.activeModel === 'face_landmarker' && this.helmetRenderer) {
+      const faceResult = demo?.kind === 'face_landmarker' ? demo.result : null;
+      const facePose = this.facePoseAdapter.update(faceResult, layout, timestamp);
+      this.helmetRenderer.update(facePose, layout, timestamp);
+      this.syncHelmetStatus();
     }
   }
 
@@ -264,7 +305,18 @@ class DemoApp {
     this.infoPurpose.textContent = activeInfo.purpose;
     this.infoOutput.textContent = activeInfo.output;
     this.infoPrinciple.textContent = activeInfo.principle;
-    this.dataModel.textContent = activeInfo.code;
+
+    const faceMode = this.activeModel === 'face_landmarker';
+    this.helmetControl.hidden = !faceMode;
+
+    if (faceMode !== this.helmetFaceModeActive) {
+      this.helmetFaceModeActive = faceMode;
+      this.helmetEquipped = false;
+      this.facePoseAdapter.reset();
+      this.helmetRenderer?.setFaceMode(faceMode);
+      this.helmetRenderer?.setEquipped(false);
+      this.updateHelmetUi();
+    }
   }
 
   private setCardHint(id: DemoModelId, prefix: 'MODEL' | 'ACTIVE' | 'LOADING'): void {
@@ -287,6 +339,63 @@ class DemoApp {
     this.landmarksHint.textContent = `LANDMARKS · ${this.overlayVisible ? 'ON' : 'OFF'}`;
     this.landmarksToggle.setAttribute('aria-label', `长按${action}捕捉关键点`);
     this.landmarksToggle.setAttribute('aria-pressed', this.overlayVisible ? 'true' : 'false');
+  }
+
+  // ---- Face Landmarker 3D 头盔 ----
+
+  private toggleHelmet(): void {
+    if (!this.helmetRenderer || !this.helmetFaceModeActive) {
+      return;
+    }
+
+    this.helmetEquipped = !this.helmetEquipped;
+    this.helmetRenderer.setEquipped(this.helmetEquipped);
+    this.updateHelmetUi();
+  }
+
+  private updateHelmetUi(): void {
+    if (!this.helmetRenderer) {
+      return;
+    }
+
+    this.helmetToggleLabel.textContent = this.helmetEquipped ? '卸下头盔' : '装备头盔';
+    this.helmetToggle.setAttribute('aria-pressed', this.helmetEquipped ? 'true' : 'false');
+    this.helmetToggle.setAttribute(
+      'aria-label',
+      this.helmetEquipped ? '卸下科幻头盔原型' : '装备科幻头盔原型',
+    );
+    this.displayedHelmetState = '';
+    this.syncHelmetStatus();
+  }
+
+  private syncHelmetStatus(): void {
+    const state = this.helmetRenderer?.getState();
+
+    if (!state || state === this.displayedHelmetState) {
+      return;
+    }
+
+    this.displayedHelmetState = state;
+    const labels = {
+      hidden: 'HELMET SYSTEM · STANDBY',
+      assembling: 'HELMET SYSTEM · ASSEMBLING',
+      equipped: 'HELMET SYSTEM · EQUIPPED',
+      disassembling: 'HELMET SYSTEM · DISASSEMBLING',
+    } as const;
+    this.helmetToggleStatus.textContent = labels[state];
+  }
+
+  // ---- 界面折叠开关 ----
+
+  private toggleUiCollapsed(): void {
+    this.uiCollapsed = !this.uiCollapsed;
+    this.stageOverlay.classList.toggle('ui-collapsed', this.uiCollapsed);
+
+    const action = this.uiCollapsed ? '展示' : '隐藏';
+    this.uiToggleLabel.textContent = `长按${action}界面`;
+    this.uiToggleHint.textContent = `INTERFACE · ${this.uiCollapsed ? 'OFF' : 'ON'}`;
+    this.uiToggle.setAttribute('aria-label', `长按${action}界面`);
+    this.uiToggle.setAttribute('aria-pressed', this.uiCollapsed ? 'true' : 'false');
   }
 
   // ---- 叠加内容 ----
@@ -315,130 +424,6 @@ class DemoApp {
           ? { kind: 'pose_landmarker', result: demo.result }
           : null;
     }
-  }
-
-  // ---- 数据面板 ----
-
-  private updateDataPanel(demo: DemoDetection | null, snapshot: EngineSnapshot): void {
-    const enginePerf = this.engine.getPerformanceSnapshot();
-    const demoPerf = this.demoModels.getPerformance();
-    const handMode = this.activeModel === 'hand_landmarker';
-    const gestureMode = this.activeModel === 'gesture_recognizer';
-
-    this.dataDelegate.textContent = handMode
-      ? enginePerf.delegate ?? '—'
-      : gestureMode
-        ? demoPerf.delegate ?? '—'
-        : `${demoPerf.delegate ?? '—'} + ${enginePerf.delegate ?? '—'}`;
-
-    const inferMs = handMode ? enginePerf.inferenceMs : demoPerf.inferenceMs;
-    this.dataInfer.textContent = inferMs === null ? '—' : `${inferMs.toFixed(1)} ms`;
-    this.dataTrack.textContent =
-      !gestureMode && enginePerf.trackingHz !== null
-        ? `${enginePerf.trackingHz.toFixed(0)} Hz`
-        : '—';
-
-    this.dataCount.textContent = this.formatCount(demo, snapshot);
-    this.dataTop.textContent = this.formatTop(demo, snapshot);
-  }
-
-  private formatCount(demo: DemoDetection | null, snapshot: EngineSnapshot): string {
-    switch (this.activeModel) {
-      case 'hand_landmarker':
-        return `${snapshot.hands.detectedHands} HANDS`;
-      case 'gesture_recognizer':
-        return demo?.kind === 'gesture_recognizer'
-          ? `${demo.result.landmarks.length} HANDS`
-          : '—';
-      case 'face_detector':
-        return demo?.kind === 'face_detector'
-          ? `${demo.result.detections.length} FACES`
-          : '—';
-      case 'face_landmarker':
-        return demo?.kind === 'face_landmarker'
-          ? `${demo.result.faceLandmarks.length} FACES`
-          : '—';
-      case 'pose_landmarker':
-        return demo?.kind === 'pose_landmarker'
-          ? `${demo.result.landmarks.length} POSES`
-          : '—';
-    }
-  }
-
-  private formatTop(demo: DemoDetection | null, snapshot: EngineSnapshot): string {
-    if (this.activeModel === 'hand_landmarker') {
-      const best = [...snapshot.hands.hands].sort(
-        (a, b) => b.handednessScore - a.handednessScore,
-      )[0];
-
-      return best
-        ? `${best.side.toUpperCase()} ${best.handednessScore.toFixed(2)}`
-        : '—';
-    }
-
-    if (this.activeModel === 'gesture_recognizer') {
-      if (demo?.kind !== 'gesture_recognizer') {
-        return '—';
-      }
-
-      const top = demo.result.gestures
-        .map((categories) => categories[0])
-        .filter((category) => category && category.categoryName !== 'None')
-        .sort((a, b) => b.score - a.score)[0];
-
-      return top ? `${top.categoryName.toUpperCase()} ${top.score.toFixed(2)}` : '—';
-    }
-
-    if (this.activeModel === 'face_detector') {
-      if (demo?.kind !== 'face_detector') {
-        return '—';
-      }
-
-      const top = demo.result.detections
-        .map((detection) => detection.categories[0]?.score ?? 0)
-        .sort((a, b) => b - a)[0];
-
-      return top === undefined ? '—' : `FACE ${top.toFixed(2)}`;
-    }
-
-    if (this.activeModel === 'pose_landmarker') {
-      if (demo?.kind !== 'pose_landmarker') {
-        return '—';
-      }
-
-      const pose = demo.result.landmarks[0];
-
-      if (!pose || pose.length === 0) {
-        return '—';
-      }
-
-      const avgVisibility =
-        pose.reduce((sum, landmark) => sum + (landmark.visibility ?? 0), 0) /
-        pose.length;
-
-      return `VIS ${avgVisibility.toFixed(2)}`;
-    }
-
-    if (demo?.kind !== 'face_landmarker') {
-      return '—';
-    }
-
-    const categories = demo.result.faceBlendshapes[0]?.categories ?? [];
-    let topName = '';
-    let topScore = 0;
-
-    for (const category of categories) {
-      if (category.categoryName === '_neutral') {
-        continue;
-      }
-
-      if (category.score > topScore) {
-        topScore = category.score;
-        topName = category.categoryName;
-      }
-    }
-
-    return topName ? `${topName.toUpperCase()} ${topScore.toFixed(2)}` : '—';
   }
 
   // ---- 错误处理 ----
@@ -481,8 +466,16 @@ class DemoApp {
   }
 
   private dispose(): void {
+    if (this.disposed) {
+      return;
+    }
+
+    this.disposed = true;
+    cancelAnimationFrame(this.animationFrameId);
     this.engine.dispose();
     this.demoModels.dispose();
+    this.helmetRenderer?.dispose();
+    this.helmetRenderer = null;
     stopCamera(this.stream);
     this.stream = null;
   }
