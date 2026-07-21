@@ -1,0 +1,3478 @@
+{
+  "schema_version": "1.0",
+  "project": "AEGIS-R7 graybox v4 feature projection",
+  "coordinate_convention": {
+    "pixel_origin": "top_left",
+    "normalizer": "per-view reference helmet silhouette height",
+    "formula": "u=(x-bbox_center_x)/helmet_height_px; v=(y-bbox_top)/helmet_height_px"
+  },
+  "source": {
+    "derived_reference_dir": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3",
+    "measurements": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/reference_measurements.json"
+  },
+  "views": {
+    "front": {
+      "crop_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3/front_crop.png",
+      "crop_size_px": [
+        512,
+        512
+      ],
+      "helmet_silhouette_bbox_px": [
+        62,
+        31,
+        474,
+        483
+      ],
+      "helmet_height_px": 452,
+      "features": {
+        "faceplate_outer_boundary": {
+          "points": [
+            {
+              "id": "front.faceplate_outer_boundary.p00",
+              "source_px": [
+                196,
+                119
+              ],
+              "normalized_head_height": [
+                -0.159292,
+                0.19469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p01",
+              "source_px": [
+                226,
+                149
+              ],
+              "normalized_head_height": [
+                -0.09292,
+                0.261062
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p02",
+              "source_px": [
+                287,
+                149
+              ],
+              "normalized_head_height": [
+                0.042035,
+                0.261062
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p03",
+              "source_px": [
+                317,
+                119
+              ],
+              "normalized_head_height": [
+                0.108407,
+                0.19469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p04",
+              "source_px": [
+                347,
+                125
+              ],
+              "normalized_head_height": [
+                0.174779,
+                0.207965
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p05",
+              "source_px": [
+                410,
+                132
+              ],
+              "normalized_head_height": [
+                0.314159,
+                0.223451
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p06",
+              "source_px": [
+                421,
+                165
+              ],
+              "normalized_head_height": [
+                0.338496,
+                0.29646
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p07",
+              "source_px": [
+                427,
+                216
+              ],
+              "normalized_head_height": [
+                0.35177,
+                0.409292
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p08",
+              "source_px": [
+                411,
+                229
+              ],
+              "normalized_head_height": [
+                0.316372,
+                0.438053
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p09",
+              "source_px": [
+                384,
+                240
+              ],
+              "normalized_head_height": [
+                0.256637,
+                0.462389
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p10",
+              "source_px": [
+                369,
+                268
+              ],
+              "normalized_head_height": [
+                0.223451,
+                0.524336
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p11",
+              "source_px": [
+                354,
+                307
+              ],
+              "normalized_head_height": [
+                0.190265,
+                0.610619
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p12",
+              "source_px": [
+                339,
+                348
+              ],
+              "normalized_head_height": [
+                0.15708,
+                0.701327
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p13",
+              "source_px": [
+                320,
+                389
+              ],
+              "normalized_head_height": [
+                0.115044,
+                0.792035
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p14",
+              "source_px": [
+                294,
+                390
+              ],
+              "normalized_head_height": [
+                0.057522,
+                0.794248
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p15",
+              "source_px": [
+                282,
+                376
+              ],
+              "normalized_head_height": [
+                0.030973,
+                0.763274
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p16",
+              "source_px": [
+                230,
+                376
+              ],
+              "normalized_head_height": [
+                -0.084071,
+                0.763274
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p17",
+              "source_px": [
+                218,
+                390
+              ],
+              "normalized_head_height": [
+                -0.110619,
+                0.794248
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p18",
+              "source_px": [
+                191,
+                389
+              ],
+              "normalized_head_height": [
+                -0.170354,
+                0.792035
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p19",
+              "source_px": [
+                173,
+                349
+              ],
+              "normalized_head_height": [
+                -0.210177,
+                0.70354
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p20",
+              "source_px": [
+                157,
+                307
+              ],
+              "normalized_head_height": [
+                -0.245575,
+                0.610619
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p21",
+              "source_px": [
+                142,
+                268
+              ],
+              "normalized_head_height": [
+                -0.278761,
+                0.524336
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p22",
+              "source_px": [
+                126,
+                240
+              ],
+              "normalized_head_height": [
+                -0.314159,
+                0.462389
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p23",
+              "source_px": [
+                101,
+                229
+              ],
+              "normalized_head_height": [
+                -0.369469,
+                0.438053
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p24",
+              "source_px": [
+                91,
+                216
+              ],
+              "normalized_head_height": [
+                -0.391593,
+                0.409292
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p25",
+              "source_px": [
+                101,
+                166
+              ],
+              "normalized_head_height": [
+                -0.369469,
+                0.298673
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p26",
+              "source_px": [
+                122,
+                132
+              ],
+              "normalized_head_height": [
+                -0.323009,
+                0.223451
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.faceplate_outer_boundary.p27",
+              "source_px": [
+                166,
+                125
+              ],
+              "normalized_head_height": [
+                -0.225664,
+                0.207965
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "eye_left_outer": {
+          "points": [
+            {
+              "id": "front.eye_left_outer.p00",
+              "source_px": [
+                121,
+                193
+              ],
+              "normalized_head_height": [
+                -0.325221,
+                0.358407
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_outer.p01",
+              "source_px": [
+                202,
+                195
+              ],
+              "normalized_head_height": [
+                -0.146018,
+                0.362832
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_outer.p02",
+              "source_px": [
+                213,
+                201
+              ],
+              "normalized_head_height": [
+                -0.121681,
+                0.376106
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_outer.p03",
+              "source_px": [
+                211,
+                212
+              ],
+              "normalized_head_height": [
+                -0.126106,
+                0.400442
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_outer.p04",
+              "source_px": [
+                204,
+                218
+              ],
+              "normalized_head_height": [
+                -0.141593,
+                0.413717
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_outer.p05",
+              "source_px": [
+                130,
+                215
+              ],
+              "normalized_head_height": [
+                -0.30531,
+                0.40708
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_outer.p06",
+              "source_px": [
+                120,
+                208
+              ],
+              "normalized_head_height": [
+                -0.327434,
+                0.391593
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "eye_left_lens": {
+          "points": [
+            {
+              "id": "front.eye_left_lens.p00",
+              "source_px": [
+                128,
+                198
+              ],
+              "normalized_head_height": [
+                -0.309735,
+                0.369469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_lens.p01",
+              "source_px": [
+                200,
+                199
+              ],
+              "normalized_head_height": [
+                -0.150442,
+                0.371681
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_lens.p02",
+              "source_px": [
+                207,
+                203
+              ],
+              "normalized_head_height": [
+                -0.134956,
+                0.380531
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_lens.p03",
+              "source_px": [
+                205,
+                211
+              ],
+              "normalized_head_height": [
+                -0.139381,
+                0.39823
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_lens.p04",
+              "source_px": [
+                132,
+                210
+              ],
+              "normalized_head_height": [
+                -0.300885,
+                0.396018
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_left_lens.p05",
+              "source_px": [
+                126,
+                206
+              ],
+              "normalized_head_height": [
+                -0.314159,
+                0.387168
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "eye_right_outer": {
+          "points": [
+            {
+              "id": "front.eye_right_outer.p00",
+              "source_px": [
+                334,
+                198
+              ],
+              "normalized_head_height": [
+                0.146018,
+                0.369469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_outer.p01",
+              "source_px": [
+                341,
+                193
+              ],
+              "normalized_head_height": [
+                0.161504,
+                0.358407
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_outer.p02",
+              "source_px": [
+                415,
+                190
+              ],
+              "normalized_head_height": [
+                0.325221,
+                0.35177
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_outer.p03",
+              "source_px": [
+                424,
+                197
+              ],
+              "normalized_head_height": [
+                0.345133,
+                0.367257
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_outer.p04",
+              "source_px": [
+                424,
+                206
+              ],
+              "normalized_head_height": [
+                0.345133,
+                0.387168
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_outer.p05",
+              "source_px": [
+                416,
+                212
+              ],
+              "normalized_head_height": [
+                0.327434,
+                0.400442
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_outer.p06",
+              "source_px": [
+                342,
+                216
+              ],
+              "normalized_head_height": [
+                0.163717,
+                0.409292
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_outer.p07",
+              "source_px": [
+                333,
+                210
+              ],
+              "normalized_head_height": [
+                0.143805,
+                0.396018
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "eye_right_lens": {
+          "points": [
+            {
+              "id": "front.eye_right_lens.p00",
+              "source_px": [
+                340,
+                201
+              ],
+              "normalized_head_height": [
+                0.159292,
+                0.376106
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_lens.p01",
+              "source_px": [
+                414,
+                195
+              ],
+              "normalized_head_height": [
+                0.323009,
+                0.362832
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_lens.p02",
+              "source_px": [
+                419,
+                199
+              ],
+              "normalized_head_height": [
+                0.334071,
+                0.371681
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_lens.p03",
+              "source_px": [
+                418,
+                206
+              ],
+              "normalized_head_height": [
+                0.331858,
+                0.387168
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_lens.p04",
+              "source_px": [
+                343,
+                211
+              ],
+              "normalized_head_height": [
+                0.165929,
+                0.39823
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.eye_right_lens.p05",
+              "source_px": [
+                338,
+                208
+              ],
+              "normalized_head_height": [
+                0.154867,
+                0.391593
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "jaw_u_left": {
+          "points": [
+            {
+              "id": "front.jaw_u_left.p00",
+              "source_px": [
+                105,
+                232
+              ],
+              "normalized_head_height": [
+                -0.360619,
+                0.44469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_left.p01",
+              "source_px": [
+                130,
+                246
+              ],
+              "normalized_head_height": [
+                -0.30531,
+                0.475664
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_left.p02",
+              "source_px": [
+                151,
+                276
+              ],
+              "normalized_head_height": [
+                -0.25885,
+                0.542035
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_left.p03",
+              "source_px": [
+                168,
+                318
+              ],
+              "normalized_head_height": [
+                -0.221239,
+                0.634956
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_left.p04",
+              "source_px": [
+                186,
+                367
+              ],
+              "normalized_head_height": [
+                -0.181416,
+                0.743363
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_left.p05",
+              "source_px": [
+                205,
+                404
+              ],
+              "normalized_head_height": [
+                -0.139381,
+                0.825221
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_left.p06",
+              "source_px": [
+                229,
+                414
+              ],
+              "normalized_head_height": [
+                -0.086283,
+                0.847345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "jaw_u_right": {
+          "points": [
+            {
+              "id": "front.jaw_u_right.p00",
+              "source_px": [
+                430,
+                231
+              ],
+              "normalized_head_height": [
+                0.358407,
+                0.442478
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_right.p01",
+              "source_px": [
+                405,
+                245
+              ],
+              "normalized_head_height": [
+                0.303097,
+                0.473451
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_right.p02",
+              "source_px": [
+                384,
+                276
+              ],
+              "normalized_head_height": [
+                0.256637,
+                0.542035
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_right.p03",
+              "source_px": [
+                367,
+                319
+              ],
+              "normalized_head_height": [
+                0.219027,
+                0.637168
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_right.p04",
+              "source_px": [
+                350,
+                367
+              ],
+              "normalized_head_height": [
+                0.181416,
+                0.743363
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_right.p05",
+              "source_px": [
+                331,
+                403
+              ],
+              "normalized_head_height": [
+                0.139381,
+                0.823009
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.jaw_u_right.p06",
+              "source_px": [
+                303,
+                414
+              ],
+              "normalized_head_height": [
+                0.077434,
+                0.847345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "lower_u": {
+          "points": [
+            {
+              "id": "front.lower_u.p00",
+              "source_px": [
+                205,
+                404
+              ],
+              "normalized_head_height": [
+                -0.139381,
+                0.825221
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.lower_u.p01",
+              "source_px": [
+                229,
+                414
+              ],
+              "normalized_head_height": [
+                -0.086283,
+                0.847345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.lower_u.p02",
+              "source_px": [
+                282,
+                414
+              ],
+              "normalized_head_height": [
+                0.030973,
+                0.847345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.lower_u.p03",
+              "source_px": [
+                303,
+                414
+              ],
+              "normalized_head_height": [
+                0.077434,
+                0.847345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.lower_u.p04",
+              "source_px": [
+                331,
+                403
+              ],
+              "normalized_head_height": [
+                0.139381,
+                0.823009
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "bezel_width_samples": {
+          "point_pairs": [
+            {
+              "id": "front.bezel_width_samples.p00",
+              "source_px": [
+                196,
+                119
+              ],
+              "normalized_head_height": [
+                -0.159292,
+                0.19469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p01",
+              "source_px": [
+                191,
+                111
+              ],
+              "normalized_head_height": [
+                -0.170354,
+                0.176991
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p02",
+              "source_px": [
+                101,
+                229
+              ],
+              "normalized_head_height": [
+                -0.369469,
+                0.438053
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p03",
+              "source_px": [
+                91,
+                220
+              ],
+              "normalized_head_height": [
+                -0.391593,
+                0.418142
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p04",
+              "source_px": [
+                191,
+                389
+              ],
+              "normalized_head_height": [
+                -0.170354,
+                0.792035
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p05",
+              "source_px": [
+                181,
+                397
+              ],
+              "normalized_head_height": [
+                -0.192478,
+                0.809735
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p06",
+              "source_px": [
+                320,
+                389
+              ],
+              "normalized_head_height": [
+                0.115044,
+                0.792035
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p07",
+              "source_px": [
+                330,
+                398
+              ],
+              "normalized_head_height": [
+                0.137168,
+                0.811947
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p08",
+              "source_px": [
+                427,
+                216
+              ],
+              "normalized_head_height": [
+                0.35177,
+                0.409292
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "front.bezel_width_samples.p09",
+              "source_px": [
+                438,
+                216
+              ],
+              "normalized_head_height": [
+                0.376106,
+                0.409292
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ],
+          "mean_width_px": 12.0295,
+          "mean_width_head_height": 0.026614
+        },
+        "eye_left_metrics": {
+          "center_px": [
+            166.3333,
+            204.5
+          ],
+          "center_normalized_head_height": [
+            -0.224926,
+            0.38385
+          ],
+          "length_px": 81.0,
+          "length_head_height": 0.179204
+        },
+        "eye_right_metrics": {
+          "center_px": [
+            378.6667,
+            203.3333
+          ],
+          "center_normalized_head_height": [
+            0.244838,
+            0.381268
+          ],
+          "length_px": 81.0,
+          "length_head_height": 0.179204
+        },
+        "faceplate_metrics": {
+          "max_width_px": 336,
+          "max_width_head_height": 0.743363,
+          "chin_tip_y_px": 390,
+          "chin_tip_from_helmet_top_head_height": 0.794248
+        }
+      }
+    },
+    "right": {
+      "crop_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3/right_crop.png",
+      "crop_size_px": [
+        512,
+        512
+      ],
+      "helmet_silhouette_bbox_px": [
+        25,
+        32,
+        467,
+        484
+      ],
+      "helmet_height_px": 452,
+      "features": {
+        "ear_circle_samples": {
+          "points": [
+            {
+              "id": "right.ear_circle_samples.p00",
+              "source_px": [
+                267,
+                171
+              ],
+              "normalized_head_height": [
+                0.04646,
+                0.307522
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_circle_samples.p01",
+              "source_px": [
+                358,
+                262
+              ],
+              "normalized_head_height": [
+                0.247788,
+                0.50885
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_circle_samples.p02",
+              "source_px": [
+                267,
+                353
+              ],
+              "normalized_head_height": [
+                0.04646,
+                0.710177
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_circle_samples.p03",
+              "source_px": [
+                176,
+                262
+              ],
+              "normalized_head_height": [
+                -0.154867,
+                0.50885
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_circle_samples.p04",
+              "source_px": [
+                331,
+                198
+              ],
+              "normalized_head_height": [
+                0.188053,
+                0.367257
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_circle_samples.p05",
+              "source_px": [
+                331,
+                326
+              ],
+              "normalized_head_height": [
+                0.188053,
+                0.650442
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_circle_samples.p06",
+              "source_px": [
+                203,
+                326
+              ],
+              "normalized_head_height": [
+                -0.095133,
+                0.650442
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_circle_samples.p07",
+              "source_px": [
+                203,
+                198
+              ],
+              "normalized_head_height": [
+                -0.095133,
+                0.367257
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ],
+          "fit_center_px": [
+            267.0,
+            262.0
+          ],
+          "fit_radius_px": 90.7552,
+          "fit_center_normalized_head_height": [
+            0.04646,
+            0.50885
+          ],
+          "fit_radius_head_height": 0.200786
+        },
+        "ear_emitter": {
+          "points": [
+            {
+              "id": "right.ear_emitter.p00",
+              "source_px": [
+                267,
+                222
+              ],
+              "normalized_head_height": [
+                0.04646,
+                0.420354
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.ear_emitter.p01",
+              "source_px": [
+                267,
+                302
+              ],
+              "normalized_head_height": [
+                0.04646,
+                0.597345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "faceplate_side_edge": {
+          "points": [
+            {
+              "id": "right.faceplate_side_edge.p00",
+              "source_px": [
+                68,
+                137
+              ],
+              "normalized_head_height": [
+                -0.393805,
+                0.232301
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p01",
+              "source_px": [
+                51,
+                150
+              ],
+              "normalized_head_height": [
+                -0.431416,
+                0.261062
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p02",
+              "source_px": [
+                40,
+                170
+              ],
+              "normalized_head_height": [
+                -0.455752,
+                0.30531
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p03",
+              "source_px": [
+                33,
+                190
+              ],
+              "normalized_head_height": [
+                -0.471239,
+                0.349558
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p04",
+              "source_px": [
+                28,
+                212
+              ],
+              "normalized_head_height": [
+                -0.482301,
+                0.39823
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p05",
+              "source_px": [
+                27,
+                233
+              ],
+              "normalized_head_height": [
+                -0.484513,
+                0.44469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p06",
+              "source_px": [
+                28,
+                254
+              ],
+              "normalized_head_height": [
+                -0.482301,
+                0.49115
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p07",
+              "source_px": [
+                31,
+                276
+              ],
+              "normalized_head_height": [
+                -0.475664,
+                0.539823
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p08",
+              "source_px": [
+                35,
+                298
+              ],
+              "normalized_head_height": [
+                -0.466814,
+                0.588496
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p09",
+              "source_px": [
+                40,
+                320
+              ],
+              "normalized_head_height": [
+                -0.455752,
+                0.637168
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p10",
+              "source_px": [
+                45,
+                343
+              ],
+              "normalized_head_height": [
+                -0.44469,
+                0.688053
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p11",
+              "source_px": [
+                50,
+                366
+              ],
+              "normalized_head_height": [
+                -0.433628,
+                0.738938
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.faceplate_side_edge.p12",
+              "source_px": [
+                52,
+                389
+              ],
+              "normalized_head_height": [
+                -0.429204,
+                0.789823
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "jaw_diagonal": {
+          "points": [
+            {
+              "id": "right.jaw_diagonal.p00",
+              "source_px": [
+                145,
+                249
+              ],
+              "normalized_head_height": [
+                -0.223451,
+                0.480088
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.jaw_diagonal.p01",
+              "source_px": [
+                119,
+                282
+              ],
+              "normalized_head_height": [
+                -0.280973,
+                0.553097
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.jaw_diagonal.p02",
+              "source_px": [
+                104,
+                326
+              ],
+              "normalized_head_height": [
+                -0.314159,
+                0.650442
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.jaw_diagonal.p03",
+              "source_px": [
+                82,
+                371
+              ],
+              "normalized_head_height": [
+                -0.362832,
+                0.75
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.jaw_diagonal.p04",
+              "source_px": [
+                58,
+                410
+              ],
+              "normalized_head_height": [
+                -0.415929,
+                0.836283
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.jaw_diagonal.p05",
+              "source_px": [
+                86,
+                451
+              ],
+              "normalized_head_height": [
+                -0.353982,
+                0.926991
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.jaw_diagonal.p06",
+              "source_px": [
+                183,
+                398
+              ],
+              "normalized_head_height": [
+                -0.139381,
+                0.809735
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "cheek_top_groove": {
+          "points": [
+            {
+              "id": "right.cheek_top_groove.p00",
+              "source_px": [
+                170,
+                215
+              ],
+              "normalized_head_height": [
+                -0.168142,
+                0.404867
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_top_groove.p01",
+              "source_px": [
+                160,
+                225
+              ],
+              "normalized_head_height": [
+                -0.190265,
+                0.426991
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_top_groove.p02",
+              "source_px": [
+                150,
+                235
+              ],
+              "normalized_head_height": [
+                -0.212389,
+                0.449115
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_top_groove.p03",
+              "source_px": [
+                138,
+                245
+              ],
+              "normalized_head_height": [
+                -0.238938,
+                0.471239
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_top_groove.p04",
+              "source_px": [
+                122,
+                255
+              ],
+              "normalized_head_height": [
+                -0.274336,
+                0.493363
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_top_groove.p05",
+              "source_px": [
+                99,
+                265
+              ],
+              "normalized_head_height": [
+                -0.325221,
+                0.515487
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "cheek_to_jaw_diagonal": {
+          "points": [
+            {
+              "id": "right.cheek_to_jaw_diagonal.p00",
+              "source_px": [
+                180,
+                325
+              ],
+              "normalized_head_height": [
+                -0.146018,
+                0.64823
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p01",
+              "source_px": [
+                175,
+                335
+              ],
+              "normalized_head_height": [
+                -0.15708,
+                0.670354
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p02",
+              "source_px": [
+                155,
+                345
+              ],
+              "normalized_head_height": [
+                -0.201327,
+                0.692478
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p03",
+              "source_px": [
+                144,
+                355
+              ],
+              "normalized_head_height": [
+                -0.225664,
+                0.714602
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p04",
+              "source_px": [
+                136,
+                365
+              ],
+              "normalized_head_height": [
+                -0.243363,
+                0.736726
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p05",
+              "source_px": [
+                126,
+                375
+              ],
+              "normalized_head_height": [
+                -0.265487,
+                0.75885
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p06",
+              "source_px": [
+                115,
+                385
+              ],
+              "normalized_head_height": [
+                -0.289823,
+                0.780973
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p07",
+              "source_px": [
+                104,
+                395
+              ],
+              "normalized_head_height": [
+                -0.314159,
+                0.803097
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p08",
+              "source_px": [
+                93,
+                405
+              ],
+              "normalized_head_height": [
+                -0.338496,
+                0.825221
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.cheek_to_jaw_diagonal.p09",
+              "source_px": [
+                81,
+                415
+              ],
+              "normalized_head_height": [
+                -0.365044,
+                0.847345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "lower_structural_u": {
+          "points": [
+            {
+              "id": "right.lower_structural_u.p00",
+              "source_px": [
+                230,
+                323
+              ],
+              "normalized_head_height": [
+                -0.035398,
+                0.643805
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p01",
+              "source_px": [
+                226,
+                335
+              ],
+              "normalized_head_height": [
+                -0.044248,
+                0.670354
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p02",
+              "source_px": [
+                223,
+                345
+              ],
+              "normalized_head_height": [
+                -0.050885,
+                0.692478
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p03",
+              "source_px": [
+                232,
+                355
+              ],
+              "normalized_head_height": [
+                -0.030973,
+                0.714602
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p04",
+              "source_px": [
+                233,
+                365
+              ],
+              "normalized_head_height": [
+                -0.028761,
+                0.736726
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p05",
+              "source_px": [
+                216,
+                375
+              ],
+              "normalized_head_height": [
+                -0.066372,
+                0.75885
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p06",
+              "source_px": [
+                229,
+                385
+              ],
+              "normalized_head_height": [
+                -0.037611,
+                0.780973
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p07",
+              "source_px": [
+                239,
+                395
+              ],
+              "normalized_head_height": [
+                -0.015487,
+                0.803097
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p08",
+              "source_px": [
+                233,
+                405
+              ],
+              "normalized_head_height": [
+                -0.028761,
+                0.825221
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p09",
+              "source_px": [
+                218,
+                415
+              ],
+              "normalized_head_height": [
+                -0.061947,
+                0.847345
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "right.lower_structural_u.p10",
+              "source_px": [
+                210,
+                425
+              ],
+              "normalized_head_height": [
+                -0.079646,
+                0.869469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        }
+      }
+    },
+    "left": {
+      "crop_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3/left_crop.png",
+      "crop_size_px": [
+        512,
+        512
+      ],
+      "helmet_silhouette_bbox_px": [
+        57,
+        20,
+        465,
+        441
+      ],
+      "helmet_height_px": 421,
+      "features": {
+        "ear_circle_samples": {
+          "points": [
+            {
+              "id": "left.ear_circle_samples.p00",
+              "source_px": [
+                243,
+                140
+              ],
+              "normalized_head_height": [
+                -0.042755,
+                0.285036
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_circle_samples.p01",
+              "source_px": [
+                334,
+                231
+              ],
+              "normalized_head_height": [
+                0.173397,
+                0.501188
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_circle_samples.p02",
+              "source_px": [
+                243,
+                322
+              ],
+              "normalized_head_height": [
+                -0.042755,
+                0.71734
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_circle_samples.p03",
+              "source_px": [
+                152,
+                231
+              ],
+              "normalized_head_height": [
+                -0.258907,
+                0.501188
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_circle_samples.p04",
+              "source_px": [
+                307,
+                167
+              ],
+              "normalized_head_height": [
+                0.109264,
+                0.349169
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_circle_samples.p05",
+              "source_px": [
+                307,
+                295
+              ],
+              "normalized_head_height": [
+                0.109264,
+                0.653207
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_circle_samples.p06",
+              "source_px": [
+                179,
+                295
+              ],
+              "normalized_head_height": [
+                -0.194774,
+                0.653207
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_circle_samples.p07",
+              "source_px": [
+                179,
+                167
+              ],
+              "normalized_head_height": [
+                -0.194774,
+                0.349169
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ],
+          "fit_center_px": [
+            243.0,
+            231.0
+          ],
+          "fit_radius_px": 90.7552,
+          "fit_center_normalized_head_height": [
+            -0.042755,
+            0.501188
+          ],
+          "fit_radius_head_height": 0.21557
+        },
+        "ear_emitter": {
+          "points": [
+            {
+              "id": "left.ear_emitter.p00",
+              "source_px": [
+                243,
+                193
+              ],
+              "normalized_head_height": [
+                -0.042755,
+                0.410926
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.ear_emitter.p01",
+              "source_px": [
+                243,
+                268
+              ],
+              "normalized_head_height": [
+                -0.042755,
+                0.589074
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "faceplate_side_edge": {
+          "points": [
+            {
+              "id": "left.faceplate_side_edge.p00",
+              "source_px": [
+                384,
+                130
+              ],
+              "normalized_head_height": [
+                0.292162,
+                0.261283
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p01",
+              "source_px": [
+                407,
+                146
+              ],
+              "normalized_head_height": [
+                0.346793,
+                0.299287
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p02",
+              "source_px": [
+                424,
+                164
+              ],
+              "normalized_head_height": [
+                0.387173,
+                0.342043
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p03",
+              "source_px": [
+                437,
+                184
+              ],
+              "normalized_head_height": [
+                0.418052,
+                0.389549
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p04",
+              "source_px": [
+                446,
+                205
+              ],
+              "normalized_head_height": [
+                0.43943,
+                0.43943
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p05",
+              "source_px": [
+                451,
+                226
+              ],
+              "normalized_head_height": [
+                0.451306,
+                0.489311
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p06",
+              "source_px": [
+                452,
+                248
+              ],
+              "normalized_head_height": [
+                0.453682,
+                0.541568
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p07",
+              "source_px": [
+                450,
+                269
+              ],
+              "normalized_head_height": [
+                0.448931,
+                0.591449
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p08",
+              "source_px": [
+                448,
+                291
+              ],
+              "normalized_head_height": [
+                0.444181,
+                0.643705
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p09",
+              "source_px": [
+                445,
+                313
+              ],
+              "normalized_head_height": [
+                0.437055,
+                0.695962
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p10",
+              "source_px": [
+                442,
+                335
+              ],
+              "normalized_head_height": [
+                0.429929,
+                0.748219
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p11",
+              "source_px": [
+                439,
+                357
+              ],
+              "normalized_head_height": [
+                0.422803,
+                0.800475
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.faceplate_side_edge.p12",
+              "source_px": [
+                437,
+                380
+              ],
+              "normalized_head_height": [
+                0.418052,
+                0.855107
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "jaw_diagonal": {
+          "points": [
+            {
+              "id": "left.jaw_diagonal.p00",
+              "source_px": [
+                357,
+                247
+              ],
+              "normalized_head_height": [
+                0.228029,
+                0.539192
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.jaw_diagonal.p01",
+              "source_px": [
+                381,
+                278
+              ],
+              "normalized_head_height": [
+                0.285036,
+                0.612827
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.jaw_diagonal.p02",
+              "source_px": [
+                397,
+                321
+              ],
+              "normalized_head_height": [
+                0.32304,
+                0.714964
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.jaw_diagonal.p03",
+              "source_px": [
+                419,
+                362
+              ],
+              "normalized_head_height": [
+                0.375297,
+                0.812352
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.jaw_diagonal.p04",
+              "source_px": [
+                441,
+                399
+              ],
+              "normalized_head_height": [
+                0.427553,
+                0.900238
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.jaw_diagonal.p05",
+              "source_px": [
+                419,
+                435
+              ],
+              "normalized_head_height": [
+                0.375297,
+                0.985748
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.jaw_diagonal.p06",
+              "source_px": [
+                329,
+                385
+              ],
+              "normalized_head_height": [
+                0.16152,
+                0.866983
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "cheek_top_groove": {
+          "points": [
+            {
+              "id": "left.cheek_top_groove.p00",
+              "source_px": [
+                337,
+                202
+              ],
+              "normalized_head_height": [
+                0.180523,
+                0.432304
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_top_groove.p01",
+              "source_px": [
+                347,
+                212
+              ],
+              "normalized_head_height": [
+                0.204276,
+                0.456057
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_top_groove.p02",
+              "source_px": [
+                358,
+                222
+              ],
+              "normalized_head_height": [
+                0.230404,
+                0.47981
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_top_groove.p03",
+              "source_px": [
+                377,
+                235
+              ],
+              "normalized_head_height": [
+                0.275534,
+                0.510689
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_top_groove.p04",
+              "source_px": [
+                397,
+                247
+              ],
+              "normalized_head_height": [
+                0.32304,
+                0.539192
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_top_groove.p05",
+              "source_px": [
+                420,
+                258
+              ],
+              "normalized_head_height": [
+                0.377672,
+                0.565321
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_top_groove.p06",
+              "source_px": [
+                431,
+                270
+              ],
+              "normalized_head_height": [
+                0.4038,
+                0.593824
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "cheek_to_jaw_diagonal": {
+          "points": [
+            {
+              "id": "left.cheek_to_jaw_diagonal.p00",
+              "source_px": [
+                313,
+                290
+              ],
+              "normalized_head_height": [
+                0.123515,
+                0.64133
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p01",
+              "source_px": [
+                335,
+                300
+              ],
+              "normalized_head_height": [
+                0.175772,
+                0.665083
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p02",
+              "source_px": [
+                350,
+                310
+              ],
+              "normalized_head_height": [
+                0.211401,
+                0.688836
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p03",
+              "source_px": [
+                360,
+                320
+              ],
+              "normalized_head_height": [
+                0.235154,
+                0.712589
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p04",
+              "source_px": [
+                366,
+                330
+              ],
+              "normalized_head_height": [
+                0.249406,
+                0.736342
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p05",
+              "source_px": [
+                376,
+                340
+              ],
+              "normalized_head_height": [
+                0.273159,
+                0.760095
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p06",
+              "source_px": [
+                386,
+                350
+              ],
+              "normalized_head_height": [
+                0.296912,
+                0.783848
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p07",
+              "source_px": [
+                398,
+                360
+              ],
+              "normalized_head_height": [
+                0.325416,
+                0.807601
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p08",
+              "source_px": [
+                407,
+                370
+              ],
+              "normalized_head_height": [
+                0.346793,
+                0.831354
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.cheek_to_jaw_diagonal.p09",
+              "source_px": [
+                414,
+                380
+              ],
+              "normalized_head_height": [
+                0.36342,
+                0.855107
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "lower_structural_u": {
+          "points": [
+            {
+              "id": "left.lower_structural_u.p00",
+              "source_px": [
+                282,
+                318
+              ],
+              "normalized_head_height": [
+                0.049881,
+                0.707838
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p01",
+              "source_px": [
+                279,
+                330
+              ],
+              "normalized_head_height": [
+                0.042755,
+                0.736342
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p02",
+              "source_px": [
+                291,
+                340
+              ],
+              "normalized_head_height": [
+                0.071259,
+                0.760095
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p03",
+              "source_px": [
+                290,
+                350
+              ],
+              "normalized_head_height": [
+                0.068884,
+                0.783848
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p04",
+              "source_px": [
+                292,
+                360
+              ],
+              "normalized_head_height": [
+                0.073634,
+                0.807601
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p05",
+              "source_px": [
+                297,
+                370
+              ],
+              "normalized_head_height": [
+                0.085511,
+                0.831354
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p06",
+              "source_px": [
+                302,
+                380
+              ],
+              "normalized_head_height": [
+                0.097387,
+                0.855107
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p07",
+              "source_px": [
+                307,
+                390
+              ],
+              "normalized_head_height": [
+                0.109264,
+                0.87886
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p08",
+              "source_px": [
+                329,
+                400
+              ],
+              "normalized_head_height": [
+                0.16152,
+                0.902613
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p09",
+              "source_px": [
+                362,
+                410
+              ],
+              "normalized_head_height": [
+                0.239905,
+                0.926366
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "left.lower_structural_u.p10",
+              "source_px": [
+                383,
+                420
+              ],
+              "normalized_head_height": [
+                0.289786,
+                0.950119
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        }
+      }
+    },
+    "back": {
+      "crop_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3/back_crop.png",
+      "crop_size_px": [
+        512,
+        512
+      ],
+      "helmet_silhouette_bbox_px": [
+        56,
+        35,
+        449,
+        483
+      ],
+      "helmet_height_px": 448,
+      "features": {
+        "spine_left_edge": {
+          "points": [
+            {
+              "id": "back.spine_left_edge.p00",
+              "source_px": [
+                230,
+                37
+              ],
+              "normalized_head_height": [
+                -0.050223,
+                0.004464
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_left_edge.p01",
+              "source_px": [
+                221,
+                92
+              ],
+              "normalized_head_height": [
+                -0.070312,
+                0.127232
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_left_edge.p02",
+              "source_px": [
+                219,
+                130
+              ],
+              "normalized_head_height": [
+                -0.074777,
+                0.212054
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_left_edge.p03",
+              "source_px": [
+                216,
+                168
+              ],
+              "normalized_head_height": [
+                -0.081473,
+                0.296875
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_left_edge.p04",
+              "source_px": [
+                216,
+                221
+              ],
+              "normalized_head_height": [
+                -0.081473,
+                0.415179
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_left_edge.p05",
+              "source_px": [
+                220,
+                275
+              ],
+              "normalized_head_height": [
+                -0.072545,
+                0.535714
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_left_edge.p06",
+              "source_px": [
+                220,
+                327
+              ],
+              "normalized_head_height": [
+                -0.072545,
+                0.651786
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_left_edge.p07",
+              "source_px": [
+                219,
+                378
+              ],
+              "normalized_head_height": [
+                -0.074777,
+                0.765625
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "spine_right_edge": {
+          "points": [
+            {
+              "id": "back.spine_right_edge.p00",
+              "source_px": [
+                279,
+                37
+              ],
+              "normalized_head_height": [
+                0.059152,
+                0.004464
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_right_edge.p01",
+              "source_px": [
+                290,
+                92
+              ],
+              "normalized_head_height": [
+                0.083705,
+                0.127232
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_right_edge.p02",
+              "source_px": [
+                293,
+                130
+              ],
+              "normalized_head_height": [
+                0.090402,
+                0.212054
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_right_edge.p03",
+              "source_px": [
+                294,
+                168
+              ],
+              "normalized_head_height": [
+                0.092634,
+                0.296875
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_right_edge.p04",
+              "source_px": [
+                294,
+                221
+              ],
+              "normalized_head_height": [
+                0.092634,
+                0.415179
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_right_edge.p05",
+              "source_px": [
+                291,
+                275
+              ],
+              "normalized_head_height": [
+                0.085938,
+                0.535714
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_right_edge.p06",
+              "source_px": [
+                291,
+                327
+              ],
+              "normalized_head_height": [
+                0.085938,
+                0.651786
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_right_edge.p07",
+              "source_px": [
+                292,
+                378
+              ],
+              "normalized_head_height": [
+                0.08817,
+                0.765625
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "spine_segment_centers": {
+          "points": [
+            {
+              "id": "back.spine_segment_centers.p00",
+              "source_px": [
+                255,
+                61
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.058036
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_segment_centers.p01",
+              "source_px": [
+                255,
+                105
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.15625
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_segment_centers.p02",
+              "source_px": [
+                255,
+                151
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.258929
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_segment_centers.p03",
+              "source_px": [
+                255,
+                205
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.379464
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_segment_centers.p04",
+              "source_px": [
+                255,
+                263
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.508929
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_segment_centers.p05",
+              "source_px": [
+                255,
+                307
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.607143
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_segment_centers.p06",
+              "source_px": [
+                255,
+                349
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.700893
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.spine_segment_centers.p07",
+              "source_px": [
+                255,
+                382
+              ],
+              "normalized_head_height": [
+                0.00558,
+                0.774554
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "vent_left": {
+          "points": [
+            {
+              "id": "back.vent_left.p00",
+              "source_px": [
+                149,
+                241
+              ],
+              "normalized_head_height": [
+                -0.231027,
+                0.459821
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.vent_left.p01",
+              "source_px": [
+                188,
+                241
+              ],
+              "normalized_head_height": [
+                -0.143973,
+                0.459821
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.vent_left.p02",
+              "source_px": [
+                190,
+                255
+              ],
+              "normalized_head_height": [
+                -0.139509,
+                0.491071
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.vent_left.p03",
+              "source_px": [
+                151,
+                255
+              ],
+              "normalized_head_height": [
+                -0.226562,
+                0.491071
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "vent_right": {
+          "points": [
+            {
+              "id": "back.vent_right.p00",
+              "source_px": [
+                318,
+                241
+              ],
+              "normalized_head_height": [
+                0.146205,
+                0.459821
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.vent_right.p01",
+              "source_px": [
+                359,
+                241
+              ],
+              "normalized_head_height": [
+                0.237723,
+                0.459821
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.vent_right.p02",
+              "source_px": [
+                361,
+                255
+              ],
+              "normalized_head_height": [
+                0.242188,
+                0.491071
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.vent_right.p03",
+              "source_px": [
+                318,
+                255
+              ],
+              "normalized_head_height": [
+                0.146205,
+                0.491071
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "rear_layer_left": {
+          "points": [
+            {
+              "id": "back.rear_layer_left.p00",
+              "source_px": [
+                109,
+                335
+              ],
+              "normalized_head_height": [
+                -0.320312,
+                0.669643
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_left.p01",
+              "source_px": [
+                129,
+                318
+              ],
+              "normalized_head_height": [
+                -0.27567,
+                0.631696
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_left.p02",
+              "source_px": [
+                151,
+                306
+              ],
+              "normalized_head_height": [
+                -0.226562,
+                0.604911
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_left.p03",
+              "source_px": [
+                177,
+                299
+              ],
+              "normalized_head_height": [
+                -0.168527,
+                0.589286
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_left.p04",
+              "source_px": [
+                205,
+                292
+              ],
+              "normalized_head_height": [
+                -0.106027,
+                0.573661
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "rear_layer_right": {
+          "points": [
+            {
+              "id": "back.rear_layer_right.p00",
+              "source_px": [
+                402,
+                335
+              ],
+              "normalized_head_height": [
+                0.333705,
+                0.669643
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_right.p01",
+              "source_px": [
+                382,
+                318
+              ],
+              "normalized_head_height": [
+                0.289062,
+                0.631696
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_right.p02",
+              "source_px": [
+                359,
+                306
+              ],
+              "normalized_head_height": [
+                0.237723,
+                0.604911
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_right.p03",
+              "source_px": [
+                333,
+                299
+              ],
+              "normalized_head_height": [
+                0.179688,
+                0.589286
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "back.rear_layer_right.p04",
+              "source_px": [
+                305,
+                292
+              ],
+              "normalized_head_height": [
+                0.117188,
+                0.573661
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "spine_metrics": {
+          "segment_count": 8,
+          "median_width_px": 72.0,
+          "median_width_head_height": 0.160714
+        }
+      }
+    },
+    "top": {
+      "crop_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/references/derived_v3/top_crop.png",
+      "crop_size_px": [
+        512,
+        512
+      ],
+      "helmet_silhouette_bbox_px": [
+        55,
+        9,
+        446,
+        480
+      ],
+      "helmet_height_px": 471,
+      "features": {
+        "spine_centerline": {
+          "points": [
+            {
+              "id": "top.spine_centerline.p00",
+              "source_px": [
+                255,
+                12
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.006369
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_centerline.p01",
+              "source_px": [
+                255,
+                65
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.118896
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_centerline.p02",
+              "source_px": [
+                255,
+                118
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.231423
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_centerline.p03",
+              "source_px": [
+                255,
+                171
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.343949
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_centerline.p04",
+              "source_px": [
+                255,
+                224
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.456476
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_centerline.p05",
+              "source_px": [
+                255,
+                277
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.569002
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_centerline.p06",
+              "source_px": [
+                255,
+                329
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.679406
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_centerline.p07",
+              "source_px": [
+                255,
+                362
+              ],
+              "normalized_head_height": [
+                0.009554,
+                0.749469
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "spine_left_edge": {
+          "points": [
+            {
+              "id": "top.spine_left_edge.p00",
+              "source_px": [
+                231,
+                12
+              ],
+              "normalized_head_height": [
+                -0.041401,
+                0.006369
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_left_edge.p01",
+              "source_px": [
+                231,
+                65
+              ],
+              "normalized_head_height": [
+                -0.041401,
+                0.118896
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_left_edge.p02",
+              "source_px": [
+                231,
+                118
+              ],
+              "normalized_head_height": [
+                -0.041401,
+                0.231423
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_left_edge.p03",
+              "source_px": [
+                232,
+                171
+              ],
+              "normalized_head_height": [
+                -0.039278,
+                0.343949
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_left_edge.p04",
+              "source_px": [
+                232,
+                224
+              ],
+              "normalized_head_height": [
+                -0.039278,
+                0.456476
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_left_edge.p05",
+              "source_px": [
+                232,
+                277
+              ],
+              "normalized_head_height": [
+                -0.039278,
+                0.569002
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_left_edge.p06",
+              "source_px": [
+                234,
+                329
+              ],
+              "normalized_head_height": [
+                -0.035032,
+                0.679406
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_left_edge.p07",
+              "source_px": [
+                239,
+                361
+              ],
+              "normalized_head_height": [
+                -0.024416,
+                0.747346
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        },
+        "spine_right_edge": {
+          "points": [
+            {
+              "id": "top.spine_right_edge.p00",
+              "source_px": [
+                279,
+                12
+              ],
+              "normalized_head_height": [
+                0.06051,
+                0.006369
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_right_edge.p01",
+              "source_px": [
+                279,
+                65
+              ],
+              "normalized_head_height": [
+                0.06051,
+                0.118896
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_right_edge.p02",
+              "source_px": [
+                279,
+                118
+              ],
+              "normalized_head_height": [
+                0.06051,
+                0.231423
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_right_edge.p03",
+              "source_px": [
+                278,
+                171
+              ],
+              "normalized_head_height": [
+                0.058386,
+                0.343949
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_right_edge.p04",
+              "source_px": [
+                278,
+                224
+              ],
+              "normalized_head_height": [
+                0.058386,
+                0.456476
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_right_edge.p05",
+              "source_px": [
+                278,
+                277
+              ],
+              "normalized_head_height": [
+                0.058386,
+                0.569002
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_right_edge.p06",
+              "source_px": [
+                276,
+                329
+              ],
+              "normalized_head_height": [
+                0.05414,
+                0.679406
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            },
+            {
+              "id": "top.spine_right_edge.p07",
+              "source_px": [
+                271,
+                361
+              ],
+              "normalized_head_height": [
+                0.043524,
+                0.747346
+              ],
+              "method": "manual_sample_from_visible_crop_feature"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "sampling_summary": {
+    "all_control_points_are_raw_crop_pixels": true,
+    "side_depth_samples": {
+      "left": 13,
+      "right": 13
+    },
+    "annotation_files": [
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_front.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_right.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_left.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_back.png",
+      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_top.png"
+    ]
+  }
+}

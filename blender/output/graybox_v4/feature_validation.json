@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0",
+  "project": "AEGIS-R7 graybox v4",
+  "inputs": {
+    "feature_curves": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_curves.json",
+    "blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v4.blend",
+    "reference_measurements": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v3/reference_measurements.json"
+  },
+  "measurement_method": {
+    "reference": "raw sampled crop pixels",
+    "actual": "evaluated mesh vertices projected through final Blender review cameras",
+    "uses_build_parameters_as_actual": false
+  },
+  "registration": {
+    "method": "single per-view helmet bbox height and center, no per-feature fit",
+    "helmet_bboxes_px": {
+      "front": [
+        69.74814,
+        35.62387,
+        442.25186,
+        458.26202
+      ],
+      "left": [
+        61.65312,
+        35.62372,
+        476.2207,
+        458.26185
+      ],
+      "right": [
+        35.7922,
+        35.62372,
+        450.34689,
+        458.26185
+      ],
+      "back": [
+        69.74792,
+        35.62387,
+        442.25165,
+        458.26205
+      ],
+      "top": [
+        69.74814,
+        35.67184,
+        442.25186,
+        450.20803
+      ]
+    }
+  },
+  "metrics": {
+    "eye_slit_center": {
+      "reference": {
+        "left": [
+          -0.224926,
+          0.38385
+        ],
+        "right": [
+          0.244838,
+          0.381268
+        ]
+      },
+      "actual": {
+        "left": [
+          -0.23505791787093472,
+          0.393109267689734
+        ],
+        "right": [
+          0.2559881008075164,
+          0.3910231614439938
+        ]
+      },
+      "error": 0.014815,
+      "error_percent": 1.4815,
+      "threshold_percent": 3.0,
+      "unit": "percent_reference_helmet_height_worst_side",
+      "pass": true,
+      "relative_to_feature": false,
+      "per_side": {
+        "left": {
+          "reference": {
+            "center_px": [
+              166.3333,
+              204.5
+            ],
+            "center_normalized_head_height": [
+              -0.224926,
+              0.38385
+            ],
+            "length_px": 81.0,
+            "length_head_height": 0.179204
+          },
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              115.02959,
+              196.65656,
+              198.28152,
+              206.87714
+            ],
+            "center_normalized_head_height": [
+              -0.23505791787093472,
+              0.393109267689734
+            ],
+            "width_normalized_head_height": 0.19698159586459882,
+            "height_normalized_head_height": 0.024182816861887644
+          },
+          "center_error": 0.013725516306992524,
+          "length_relative_error": 0.09920311971049092
+        },
+        "right": {
+          "reference": {
+            "center_px": [
+              378.6667,
+              203.3333
+            ],
+            "center_normalized_head_height": [
+              0.244838,
+              0.381268
+            ],
+            "length_px": 81.0,
+            "length_head_height": 0.179204
+          },
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              322.27411,
+              195.74185,
+              406.10657,
+              206.0285
+            ],
+            "center_normalized_head_height": [
+              0.2559881008075164,
+              0.3910231614439938
+            ],
+            "width_normalized_head_height": 0.19835516004865908,
+            "height_normalized_head_height": 0.024339145759692375
+          },
+          "center_error": 0.014815124799209782,
+          "length_relative_error": 0.10686792732672863
+        }
+      }
+    },
+    "eye_slit_length": {
+      "reference": {
+        "left": 0.179204,
+        "right": 0.179204
+      },
+      "actual": {
+        "left": 0.19698159586459882,
+        "right": 0.19835516004865908
+      },
+      "error": 0.106868,
+      "error_percent": 10.6868,
+      "threshold_percent": 15.0,
+      "unit": "percent_feature_length_worst_side",
+      "pass": true,
+      "relative_to_feature": true
+    },
+    "ear_disc_center": {
+      "reference": {
+        "left": [
+          -0.042755,
+          0.501188
+        ],
+        "right": [
+          0.04646,
+          0.50885
+        ]
+      },
+      "actual": {
+        "left": [
+          -0.014498021162186086,
+          0.5160385739226003
+        ],
+        "right": [
+          0.014482726743636147,
+          0.5160385739226003
+        ]
+      },
+      "error": 0.032775,
+      "error_percent": 3.2775,
+      "threshold_percent": 4.0,
+      "unit": "percent_reference_helmet_height_worst_side",
+      "pass": true,
+      "relative_to_feature": false,
+      "per_side": {
+        "left": {
+          "reference_center": [
+            -0.042755,
+            0.501188
+          ],
+          "reference_radius": 0.21557,
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              178.81284,
+              169.72446,
+              346.80615,
+              337.71814
+            ],
+            "center_normalized_head_height": [
+              -0.014498021162186086,
+              0.5160385739226003
+            ],
+            "width_normalized_head_height": 0.39748736125482503,
+            "height_normalized_head_height": 0.3974882277429813
+          },
+          "actual_radius": 0.19874411387149066,
+          "center_error": 0.03192172299346139,
+          "radius_relative_error": 0.07805300426084034
+        },
+        "right": {
+          "reference_center": [
+            0.04646,
+            0.50885
+          ],
+          "reference_radius": 0.200786,
+          "actual_from_evaluated_geometry": {
+            "bbox_px": [
+              165.19383,
+              169.72446,
+              333.18716,
+              337.71814
+            ],
+            "center_normalized_head_height": [
+              0.014482726743636147,
+              0.5160385739226003
+            ],
+            "width_normalized_head_height": 0.3974873973584982,
+            "height_normalized_head_height": 0.3974882277429813
+          },
+          "actual_radius": 0.19874411387149066,
+          "center_error": 0.03277531998246321,
+          "radius_relative_error": 0.010169464646485984
+        }
+      }
+    },
+    "ear_disc_radius": {
+      "reference": {
+        "left": 0.21557,
+        "right": 0.200786
+      },
+      "actual": {
+        "left": 0.19874411387149066,
+        "right": 0.19874411387149066
+      },
+      "error": 0.078053,
+      "error_percent": 7.8053,
+      "threshold_percent": 15.0,
+      "unit": "percent_feature_radius_worst_side",
+      "pass": true,
+      "relative_to_feature": true
+    },
+    "faceplate_max_width": {
+      "reference": 0.743363,
+      "actual": 0.7458870516853663,
+      "error": 0.002524,
+      "error_percent": 0.2524,
+      "threshold_percent": 4.0,
+      "unit": "percent_reference_helmet_height",
+      "pass": true,
+      "relative_to_feature": false
+    },
+    "faceplate_chin_tip_height": {
+      "reference": 0.794248,
+      "actual": 0.8089041338602833,
+      "error": 0.014656,
+      "error_percent": 1.4656,
+      "threshold_percent": 3.0,
+      "unit": "percent_reference_helmet_height",
+      "pass": true,
+      "relative_to_feature": false
+    },
+    "crown_rear_spine_width": {
+      "reference": 0.160714,
+      "actual": 0.14206909516676383,
+      "error": 0.116013,
+      "error_percent": 11.6013,
+      "threshold_percent": 30.0,
+      "unit": "percent_feature_width",
+      "pass": true,
+      "relative_to_feature": true
+    }
+  },
+  "structural_checks": {
+    "eye_lens_inside_faceplate_boundary": {
+      "pass": true,
+      "details": {
+        "L": {
+          "lens_bbox": [
+            115.02958679199219,
+            196.65655517578125,
+            198.28152465820312,
+            206.87713623046875
+          ],
+          "inside_faceplate_bbox": true
+        },
+        "R": {
+          "lens_bbox": [
+            322.27410888671875,
+            195.74185180664062,
+            406.1065673828125,
+            206.02850341796875
+          ],
+          "inside_faceplate_bbox": true
+        }
+      }
+    },
+    "side_depth_profiles_at_least_12_samples": {
+      "pass": true,
+      "counts": {
+        "left": 13,
+        "right": 13
+      }
+    },
+    "projection_hit_ratio": {
+      "pass": true,
+      "value": 1.0,
+      "surface_hits": 1001
+    },
+    "top_center_closed": {
+      "pass": true,
+      "closure_object": "CrownSpine_Cap"
+    },
+    "minimum_headproxy_clearance": {
+      "pass": true,
+      "actual_m": 0.004705,
+      "threshold_m": 0.004,
+      "penetration_detected": false
+    }
+  },
+  "summary": {
+    "required_metrics": 7,
+    "passed_metrics": 7,
+    "failed_metrics": [],
+    "structural_failures": [],
+    "passes_all_required_gates": true
+  },
+  "silhouette_regression": {
+    "metrics": {
+      "front": {
+        "iou": 0.949915,
+        "mean_contour_distance_px": 5.0036,
+        "mean_contour_distance_percent_height": 1.0691,
+        "maximum_contour_error_px": 23.3238,
+        "maximum_error_location_yx": [
+          483,
+          142
+        ],
+        "reference_area_px": 154873,
+        "model_area_px": 152026
+      },
+      "left": {
+        "iou": 0.864637,
+        "mean_contour_distance_px": 14.3027,
+        "mean_contour_distance_percent_height": 3.0561,
+        "maximum_contour_error_px": 69.5701,
+        "maximum_error_location_yx": [
+          483,
+          150
+        ],
+        "reference_area_px": 160511,
+        "model_area_px": 162612
+      },
+      "right": {
+        "iou": 0.866044,
+        "mean_contour_distance_px": 14.0751,
+        "mean_contour_distance_percent_height": 3.0075,
+        "maximum_contour_error_px": 65.2533,
+        "maximum_error_location_yx": [
+          483,
+          361
+        ],
+        "reference_area_px": 163045,
+        "model_area_px": 162617
+      }
+    },
+    "thresholds": {
+      "front_iou_min": 0.9,
+      "left_iou_min": 0.85,
+      "right_iou_min": 0.85
+    },
+    "pass": true
+  }
+}

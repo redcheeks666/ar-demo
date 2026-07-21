@@ -1,0 +1,184 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/render_helmet_review_v4.py",
+  "mode": "iteration",
+  "iteration": 5,
+  "engine": "BLENDER_EEVEE",
+  "elapsed_seconds": 2.3644,
+  "render_count": 6,
+  "renders": [
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/review_iterations/iteration_05/design/front.png",
+      "view": "front",
+      "camera": "CameraV3_Front",
+      "size_bytes": 597098,
+      "sha256": "b213253f75c246a44f20ad5e626698bd6908fdba82cee926b65b174145d43492",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -2e-07,
+        -1.0,
+        -1.0,
+        0.0,
+        1.0,
+        -2e-07,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/review_iterations/iteration_05/design/back.png",
+      "view": "back",
+      "camera": "CameraV3_Back",
+      "size_bytes": 550353,
+      "sha256": "ae373b31d6265ac80a5a3a77684b9766e73b7e3fae749a9cc03b5bc275821651",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -1.0,
+        2e-07,
+        2e-07,
+        0.0,
+        2e-07,
+        2e-07,
+        1.0,
+        1.0,
+        2e-07,
+        1.0,
+        -2e-07,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/review_iterations/iteration_05/design/left.png",
+      "view": "left",
+      "camera": "CameraV3_Left",
+      "size_bytes": 597638,
+      "sha256": "4d01970b66156719e264897c9a0d311970fce85462a8a7ef4f84862d5cfcddd5",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -0.002,
+        -0.0,
+        -0.999998,
+        -1.0,
+        -0.999998,
+        -1e-07,
+        0.002,
+        0.0,
+        -1e-07,
+        1.0,
+        -0.0,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/review_iterations/iteration_05/design/right.png",
+      "view": "right",
+      "camera": "CameraV3_Right",
+      "size_bytes": 610418,
+      "sha256": "f5db0570d48e9afe4d308baf912d966862dad15bdd842c4f9502523e36eb4576",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -0.002,
+        0.0,
+        0.999998,
+        1.0,
+        0.999998,
+        -1e-07,
+        0.002,
+        0.0,
+        1e-07,
+        1.0,
+        -0.0,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/review_iterations/iteration_05/design/front_3q.png",
+      "view": "front_3q",
+      "camera": "CameraV3_Front3Q",
+      "size_bytes": 609184,
+      "sha256": "b635d8b86f1395e90e487239877128a9a2da26986112c6458aa36236eaee3e82",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        0.8146231,
+        -0.1775837,
+        0.5521351,
+        0.44,
+        0.5799906,
+        0.2494243,
+        -0.7754988,
+        -0.62,
+        0.0,
+        0.9519724,
+        0.3061837,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/review_iterations/iteration_05/design/top.png",
+      "view": "top",
+      "camera": "CameraV3_Top",
+      "size_bytes": 574337,
+      "sha256": "1b483a9682eec6204ce6bcb8dd118c27e34cae5531dd35c25bfde45b639870a6",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -1.0,
+        2e-07,
+        0.0,
+        0.0,
+        -2e-07,
+        -0.999998,
+        0.0020109,
+        0.0,
+        0.0,
+        0.0020109,
+        0.999998,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ]
+}

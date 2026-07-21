@@ -1,0 +1,4809 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/export_helmet_graybox_v4.py",
+  "source_blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v4.blend",
+  "glb": {
+    "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/helmet_graybox_v4.glb",
+    "size_bytes": 966048,
+    "sha256": "fc88ac302f595736499ddc14564fa77e449957b32574c96054f209cffffacfaf"
+  },
+  "expected_v3_baseline_nodes": [
+    "HelmetRoot",
+    "InnerShell",
+    "CrownFront",
+    "CrownRear",
+    "RearShell_L",
+    "RearShell_R",
+    "Temple_L",
+    "Temple_R",
+    "EarCover_L",
+    "EarCover_R",
+    "Cheek_L",
+    "Cheek_R",
+    "Jaw_L",
+    "Jaw_R",
+    "Chin",
+    "Faceplate",
+    "EyeHousing_L",
+    "EyeHousing_R",
+    "EyeLens_L",
+    "EyeLens_R",
+    "NeckRingFront",
+    "NeckRingRear",
+    "EarEmitter_L",
+    "EarEmitter_R"
+  ],
+  "allowed_v4_added_nodes": [
+    "CrownSpine_01",
+    "CrownSpine_02",
+    "CrownSpine_03",
+    "CrownSpine_04",
+    "CrownSpine_Cap",
+    "EarRing_L_Inner",
+    "EarRing_L_Outer",
+    "EarRing_R_Inner",
+    "EarRing_R_Outer",
+    "FaceplateBezel",
+    "JawTrim_L",
+    "JawTrim_R",
+    "LowerUTrim",
+    "RearLayer_L_Lower",
+    "RearLayer_L_Upper",
+    "RearLayer_R_Lower",
+    "RearLayer_R_Upper",
+    "RearSpine_01",
+    "RearSpine_02",
+    "RearSpine_03",
+    "RearSpine_04",
+    "RearSpine_05",
+    "RearSpine_06",
+    "RearSpine_07",
+    "RearSpine_08",
+    "RearVent_L_Lower",
+    "RearVent_L_Upper",
+    "RearVent_R_Lower",
+    "RearVent_R_Upper",
+    "SideGroove_L",
+    "SideGroove_R"
+  ],
+  "source": {
+    "node_names": [
+      "Cheek_L",
+      "Cheek_R",
+      "Chin",
+      "CrownFront",
+      "CrownRear",
+      "CrownSpine_01",
+      "CrownSpine_02",
+      "CrownSpine_03",
+      "CrownSpine_04",
+      "CrownSpine_Cap",
+      "EarCover_L",
+      "EarCover_R",
+      "EarEmitter_L",
+      "EarEmitter_R",
+      "EarRing_L_Inner",
+      "EarRing_L_Outer",
+      "EarRing_R_Inner",
+      "EarRing_R_Outer",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "Faceplate",
+      "FaceplateBezel",
+      "HelmetRoot",
+      "InnerShell",
+      "JawTrim_L",
+      "JawTrim_R",
+      "Jaw_L",
+      "Jaw_R",
+      "LowerUTrim",
+      "NeckRingFront",
+      "NeckRingRear",
+      "RearLayer_L_Lower",
+      "RearLayer_L_Upper",
+      "RearLayer_R_Lower",
+      "RearLayer_R_Upper",
+      "RearShell_L",
+      "RearShell_R",
+      "RearSpine_01",
+      "RearSpine_02",
+      "RearSpine_03",
+      "RearSpine_04",
+      "RearSpine_05",
+      "RearSpine_06",
+      "RearSpine_07",
+      "RearSpine_08",
+      "RearVent_L_Lower",
+      "RearVent_L_Upper",
+      "RearVent_R_Lower",
+      "RearVent_R_Upper",
+      "SideGroove_L",
+      "SideGroove_R",
+      "Temple_L",
+      "Temple_R"
+    ],
+    "records": {
+      "HelmetRoot": {
+        "type": "EMPTY",
+        "parent": null,
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [],
+        "feature_owner": null
+      },
+      "InnerShell": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.01,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.0,
+          0.01
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayInner"
+        ],
+        "feature_owner": null
+      },
+      "CrownFront": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "CrownRear": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "RearShell_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "RearShell_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "Temple_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.093,
+          0.0,
+          1.0,
+          0.0,
+          -0.02,
+          0.0,
+          0.0,
+          1.0,
+          0.045,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "Temple_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.093,
+          0.0,
+          1.0,
+          0.0,
+          -0.02,
+          0.0,
+          0.0,
+          1.0,
+          0.045,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "NeckRingFront": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.0364,
+          0.0,
+          0.0,
+          1.0,
+          -0.124,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.0364,
+          -0.124
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayInner"
+        ],
+        "feature_owner": null
+      },
+      "NeckRingRear": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0364,
+          0.0,
+          0.0,
+          1.0,
+          -0.124,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.0364,
+          -0.124
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayInner"
+        ],
+        "feature_owner": null
+      },
+      "Faceplate": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.108,
+          0.0,
+          0.0,
+          1.0,
+          0.082,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayFaceplate"
+        ],
+        "feature_owner": null
+      },
+      "FaceplateBezel": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.108,
+          0.0,
+          0.0,
+          1.0,
+          0.082,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "Faceplate"
+      },
+      "EyeHousing_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayHousing"
+        ],
+        "feature_owner": null
+      },
+      "EyeLens_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": null
+      },
+      "EyeHousing_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayHousing"
+        ],
+        "feature_owner": null
+      },
+      "EyeLens_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": null
+      },
+      "Cheek_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.086,
+          0.0,
+          1.0,
+          0.0,
+          -0.055,
+          0.0,
+          0.0,
+          1.0,
+          -0.042,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "Cheek_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.086,
+          0.0,
+          1.0,
+          0.0,
+          -0.055,
+          0.0,
+          0.0,
+          1.0,
+          -0.042,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "Jaw_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "Jaw_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "Chin": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.105,
+          0.0,
+          0.0,
+          1.0,
+          -0.105,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "JawTrim_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "Jaw_L"
+      },
+      "JawTrim_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "Jaw_R"
+      },
+      "LowerUTrim": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.105,
+          0.0,
+          0.0,
+          1.0,
+          -0.105,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "Chin"
+      },
+      "SideGroove_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "Jaw_L"
+      },
+      "SideGroove_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "Jaw_R"
+      },
+      "EarCover_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "EarRing_L_Outer": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "EarCover_L"
+      },
+      "EarRing_L_Inner": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "EarCover_L"
+      },
+      "EarEmitter_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1254968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0069491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1254968,
+          -0.0069491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": "EarCover_L"
+      },
+      "EarCover_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "EarRing_R_Outer": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "EarCover_R"
+      },
+      "EarRing_R_Inner": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "EarCover_R"
+      },
+      "EarEmitter_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1254968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0069491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1254968,
+          -0.0069491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": "EarCover_R"
+      },
+      "CrownSpine_01": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownFront"
+      },
+      "CrownSpine_02": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownFront"
+      },
+      "CrownSpine_03": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownFront"
+      },
+      "CrownSpine_04": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownFront"
+      },
+      "RearSpine_01": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "RearSpine_02": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "RearSpine_03": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "RearSpine_04": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "RearSpine_05": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "RearSpine_06": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "RearSpine_07": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "RearSpine_08": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownRear"
+      },
+      "CrownSpine_Cap": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "CrownFront"
+      },
+      "RearVent_L_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_L"
+      },
+      "RearVent_L_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_L"
+      },
+      "RearLayer_L_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_L"
+      },
+      "RearLayer_L_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_L"
+      },
+      "RearVent_R_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_R"
+      },
+      "RearVent_R_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_R"
+      },
+      "RearLayer_R_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_R"
+      },
+      "RearLayer_R_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": "RearShell_R"
+      }
+    },
+    "materials": [
+      "ClayAccent",
+      "ClayArmorA",
+      "ClayArmorB",
+      "ClayFaceplate",
+      "ClayHousing",
+      "ClayInner",
+      "ClayLens"
+    ],
+    "triangle_count": 51504
+  },
+  "reimport": {
+    "success": true,
+    "imported_object_count": 55,
+    "imported_node_names": [
+      "Cheek_L",
+      "Cheek_R",
+      "Chin",
+      "CrownFront",
+      "CrownRear",
+      "CrownSpine_01",
+      "CrownSpine_02",
+      "CrownSpine_03",
+      "CrownSpine_04",
+      "CrownSpine_Cap",
+      "EarCover_L",
+      "EarCover_R",
+      "EarEmitter_L",
+      "EarEmitter_R",
+      "EarRing_L_Inner",
+      "EarRing_L_Outer",
+      "EarRing_R_Inner",
+      "EarRing_R_Outer",
+      "EyeHousing_L",
+      "EyeHousing_R",
+      "EyeLens_L",
+      "EyeLens_R",
+      "Faceplate",
+      "FaceplateBezel",
+      "HelmetRoot",
+      "InnerShell",
+      "JawTrim_L",
+      "JawTrim_R",
+      "Jaw_L",
+      "Jaw_R",
+      "LowerUTrim",
+      "NeckRingFront",
+      "NeckRingRear",
+      "RearLayer_L_Lower",
+      "RearLayer_L_Upper",
+      "RearLayer_R_Lower",
+      "RearLayer_R_Upper",
+      "RearShell_L",
+      "RearShell_R",
+      "RearSpine_01",
+      "RearSpine_02",
+      "RearSpine_03",
+      "RearSpine_04",
+      "RearSpine_05",
+      "RearSpine_06",
+      "RearSpine_07",
+      "RearSpine_08",
+      "RearVent_L_Lower",
+      "RearVent_L_Upper",
+      "RearVent_R_Lower",
+      "RearVent_R_Upper",
+      "SideGroove_L",
+      "SideGroove_R",
+      "Temple_L",
+      "Temple_R"
+    ],
+    "records": {
+      "HelmetRoot": {
+        "type": "EMPTY",
+        "parent": null,
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [],
+        "feature_owner": null
+      },
+      "Cheek_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.086,
+          0.0,
+          1.0,
+          0.0,
+          -0.055,
+          0.0,
+          0.0,
+          1.0,
+          -0.042,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "Cheek_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.086,
+          0.0,
+          1.0,
+          0.0,
+          -0.055,
+          0.0,
+          0.0,
+          1.0,
+          -0.042,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.086,
+          -0.055,
+          -0.042
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "Chin": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.105,
+          0.0,
+          0.0,
+          1.0,
+          -0.105,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "CrownFront": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "CrownRear": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "CrownSpine_01": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "CrownSpine_02": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "CrownSpine_03": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "CrownSpine_04": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "CrownSpine_Cap": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.035,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.035,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "EarCover_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "EarCover_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "EarEmitter_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1254968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0069491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1254968,
+          -0.0069491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": null
+      },
+      "EarEmitter_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1254968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0069491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1254968,
+          -0.0069491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": null
+      },
+      "EarRing_L_Inner": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "EarRing_L_Outer": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "EarRing_R_Inner": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "EarRing_R_Outer": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.1122968,
+          0.0,
+          1.0,
+          0.0,
+          -0.0064491,
+          0.0,
+          0.0,
+          1.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.1122968,
+          -0.0064491,
+          0.009
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "EyeHousing_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayHousing"
+        ],
+        "feature_owner": null
+      },
+      "EyeHousing_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayHousing"
+        ],
+        "feature_owner": null
+      },
+      "EyeLens_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": null
+      },
+      "EyeLens_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0695201,
+          0.0,
+          1.0,
+          0.0,
+          -0.128838,
+          0.0,
+          0.0,
+          1.0,
+          0.0288591,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0695201,
+          -0.128838,
+          0.0288591
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayLens"
+        ],
+        "feature_owner": null
+      },
+      "Faceplate": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.108,
+          0.0,
+          0.0,
+          1.0,
+          0.082,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayFaceplate"
+        ],
+        "feature_owner": null
+      },
+      "FaceplateBezel": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.108,
+          0.0,
+          0.0,
+          1.0,
+          0.082,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.108,
+          0.082
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "InnerShell": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.01,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.0,
+          0.01
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayInner"
+        ],
+        "feature_owner": null
+      },
+      "Jaw_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "Jaw_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "JawTrim_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "JawTrim_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "LowerUTrim": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.105,
+          0.0,
+          0.0,
+          1.0,
+          -0.105,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.105,
+          -0.105
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "NeckRingFront": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          -0.0364,
+          0.0,
+          0.0,
+          1.0,
+          -0.124,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          -0.0364,
+          -0.124
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayInner"
+        ],
+        "feature_owner": null
+      },
+      "NeckRingRear": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0364,
+          0.0,
+          0.0,
+          1.0,
+          -0.124,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.0364,
+          -0.124
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayInner"
+        ],
+        "feature_owner": null
+      },
+      "RearLayer_L_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearLayer_L_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearLayer_R_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearLayer_R_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearShell_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "RearShell_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorA"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_01": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_02": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_03": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_04": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_05": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_06": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_07": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearSpine_08": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.045,
+          0.0,
+          0.0,
+          1.0,
+          0.112,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.0,
+          0.045,
+          0.112
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearVent_L_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearVent_L_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearVent_R_Lower": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "RearVent_R_Upper": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.085,
+          0.0,
+          1.0,
+          0.0,
+          0.055,
+          0.0,
+          0.0,
+          1.0,
+          0.025,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.085,
+          0.055,
+          0.025
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "SideGroove_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "SideGroove_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.077,
+          0.0,
+          1.0,
+          0.0,
+          -0.04,
+          0.0,
+          0.0,
+          1.0,
+          -0.086,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.077,
+          -0.04,
+          -0.086
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayAccent"
+        ],
+        "feature_owner": null
+      },
+      "Temple_L": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          -0.093,
+          0.0,
+          1.0,
+          0.0,
+          -0.02,
+          0.0,
+          0.0,
+          1.0,
+          0.045,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          -0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      },
+      "Temple_R": {
+        "type": "MESH",
+        "parent": "HelmetRoot",
+        "matrix_local": [
+          1.0,
+          0.0,
+          0.0,
+          0.093,
+          0.0,
+          1.0,
+          0.0,
+          -0.02,
+          0.0,
+          0.0,
+          1.0,
+          0.045,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "translation": [
+          0.093,
+          -0.02,
+          0.045
+        ],
+        "rotation_euler": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "materials": [
+          "ClayArmorB"
+        ],
+        "feature_owner": null
+      }
+    },
+    "triangle_count": 51504,
+    "materials": [
+      "ClayAccent",
+      "ClayArmorA",
+      "ClayArmorB",
+      "ClayFaceplate",
+      "ClayHousing",
+      "ClayInner",
+      "ClayLens"
+    ],
+    "diff": {
+      "missing_nodes": [],
+      "unexpected_nodes": [],
+      "forbidden_nodes": [],
+      "hierarchy_mismatches": [],
+      "maximum_local_matrix_error": 0.0,
+      "transform_matrix_max_error_by_node": {
+        "Cheek_L": 0.0,
+        "Cheek_R": 0.0,
+        "Chin": 0.0,
+        "CrownFront": 0.0,
+        "CrownRear": 0.0,
+        "CrownSpine_01": 0.0,
+        "CrownSpine_02": 0.0,
+        "CrownSpine_03": 0.0,
+        "CrownSpine_04": 0.0,
+        "CrownSpine_Cap": 0.0,
+        "EarCover_L": 0.0,
+        "EarCover_R": 0.0,
+        "EarEmitter_L": 0.0,
+        "EarEmitter_R": 0.0,
+        "EarRing_L_Inner": 0.0,
+        "EarRing_L_Outer": 0.0,
+        "EarRing_R_Inner": 0.0,
+        "EarRing_R_Outer": 0.0,
+        "EyeHousing_L": 0.0,
+        "EyeHousing_R": 0.0,
+        "EyeLens_L": 0.0,
+        "EyeLens_R": 0.0,
+        "Faceplate": 0.0,
+        "FaceplateBezel": 0.0,
+        "HelmetRoot": 0.0,
+        "InnerShell": 0.0,
+        "JawTrim_L": 0.0,
+        "JawTrim_R": 0.0,
+        "Jaw_L": 0.0,
+        "Jaw_R": 0.0,
+        "LowerUTrim": 0.0,
+        "NeckRingFront": 0.0,
+        "NeckRingRear": 0.0,
+        "RearLayer_L_Lower": 0.0,
+        "RearLayer_L_Upper": 0.0,
+        "RearLayer_R_Lower": 0.0,
+        "RearLayer_R_Upper": 0.0,
+        "RearShell_L": 0.0,
+        "RearShell_R": 0.0,
+        "RearSpine_01": 0.0,
+        "RearSpine_02": 0.0,
+        "RearSpine_03": 0.0,
+        "RearSpine_04": 0.0,
+        "RearSpine_05": 0.0,
+        "RearSpine_06": 0.0,
+        "RearSpine_07": 0.0,
+        "RearSpine_08": 0.0,
+        "RearVent_L_Lower": 0.0,
+        "RearVent_L_Upper": 0.0,
+        "RearVent_R_Lower": 0.0,
+        "RearVent_R_Upper": 0.0,
+        "SideGroove_L": 0.0,
+        "SideGroove_R": 0.0,
+        "Temple_L": 0.0,
+        "Temple_R": 0.0
+      },
+      "transform_tolerance": 1e-05,
+      "material_count_match": true,
+      "source_material_count": 7,
+      "reimport_material_count": 7,
+      "source_materials": [
+        "ClayAccent",
+        "ClayArmorA",
+        "ClayArmorB",
+        "ClayFaceplate",
+        "ClayHousing",
+        "ClayInner",
+        "ClayLens"
+      ],
+      "reimport_materials": [
+        "ClayAccent",
+        "ClayArmorA",
+        "ClayArmorB",
+        "ClayFaceplate",
+        "ClayHousing",
+        "ClayInner",
+        "ClayLens"
+      ],
+      "material_assignment_mismatches": [],
+      "triangle_count_under_100k": true,
+      "triangle_count_match": true
+    }
+  },
+  "pass": true,
+  "elapsed_seconds": 0.2997
+}

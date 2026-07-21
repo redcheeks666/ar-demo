@@ -1,0 +1,191 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/build_helmet_graybox_v4.py",
+  "iteration": 2,
+  "source_v3_blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v3.blend",
+  "v4_blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v4.blend",
+  "tuning": {
+    "relief": 1.12,
+    "ear": 0.97,
+    "trim": 0.96,
+    "label": "eye topology, depth, ridge and groove correction"
+  },
+  "master_contract": {
+    "hash_before": "d191a7da3fe2b3e86f55695361b397ca8507d86819b85e660079232f777b5cb0",
+    "hash_after": "d191a7da3fe2b3e86f55695361b397ca8507d86819b85e660079232f777b5cb0",
+    "unchanged": true
+  },
+  "projection": {
+    "surface_hits": 1017,
+    "ray_misses": [],
+    "edge_clamps": [
+      {
+        "view": "front",
+        "requested_x": -0.11121238923072817,
+        "clamped_x": -0.10992042045318624,
+        "v": 0.4092920422554016
+      },
+      {
+        "view": "front",
+        "requested_x": -0.11121238938053099,
+        "clamped_x": -0.10992042050989802,
+        "v": 0.4092920353982301
+      },
+      {
+        "view": "front",
+        "requested_x": -0.11046174645423891,
+        "clamped_x": -0.10972439812592287,
+        "v": 0.4358440339565277
+      },
+      {
+        "view": "front",
+        "requested_x": -0.11668769383430483,
+        "clamped_x": -0.10994988444191105,
+        "v": 0.4057294726371765
+      },
+      {
+        "view": "front",
+        "requested_x": -0.10987591195106508,
+        "clamped_x": -0.10802200858487734,
+        "v": 0.2896728515625
+      },
+      {
+        "view": "front",
+        "requested_x": -0.10681416153907777,
+        "clamped_x": -0.10219406441439753,
+        "v": 0.7146017551422119
+      },
+      {
+        "view": "front",
+        "requested_x": -0.09299114692211152,
+        "clamped_x": -0.08712098910719408,
+        "v": 0.8451327681541443
+      },
+      {
+        "view": "front",
+        "requested_x": -0.09796743083000184,
+        "clamped_x": -0.09602824171777735,
+        "v": 0.7846017479896545
+      },
+      {
+        "view": "front",
+        "requested_x": 0.09361947000026703,
+        "clamped_x": 0.08712098910719408,
+        "v": 0.8451327681541443
+      },
+      {
+        "view": "front",
+        "requested_x": 0.10744247615337373,
+        "clamped_x": 0.10219406441439753,
+        "v": 0.7146017551422119
+      },
+      {
+        "view": "front",
+        "requested_x": 0.1002042511701584,
+        "clamped_x": 0.09976136933188426,
+        "v": 0.7446017861366272
+      },
+      {
+        "view": "front",
+        "requested_x": -0.05340708076953889,
+        "clamped_x": -0.046735297878801804,
+        "v": 0.9623894095420837
+      },
+      {
+        "view": "front",
+        "requested_x": -0.09299114692211152,
+        "clamped_x": -0.08712098910719408,
+        "v": 0.8451327681541443
+      },
+      {
+        "view": "front",
+        "requested_x": 0.09361947000026703,
+        "clamped_x": 0.08712098910719408,
+        "v": 0.8451327681541443
+      },
+      {
+        "view": "front",
+        "requested_x": 0.054035399615764625,
+        "clamped_x": 0.046735297878801804,
+        "v": 0.9623894095420837
+      },
+      {
+        "view": "front",
+        "requested_x": -0.05466371846199036,
+        "clamped_x": -0.051020256612941045,
+        "v": 0.9535398483276367
+      },
+      {
+        "view": "left",
+        "requested_y": -0.10181543147563936,
+        "clamped_y": -0.09842953497527775,
+        "v": 0.8585476875305176
+      },
+      {
+        "view": "left",
+        "requested_y": -0.10460737097263337,
+        "clamped_y": -0.10009567205277063,
+        "v": 0.8516660928726196
+      },
+      {
+        "view": "right",
+        "requested_y": -0.10476343607902527,
+        "clamped_y": -0.10213632289881788,
+        "v": 0.842735767364502
+      },
+      {
+        "view": "right",
+        "requested_y": -0.10258169007301332,
+        "clamped_y": -0.10002977782351018,
+        "v": 0.851954460144043
+      }
+    ],
+    "hit_ratio": 1.0
+  },
+  "stable_nodes_present": [
+    "HelmetRoot",
+    "InnerShell",
+    "CrownFront",
+    "CrownRear",
+    "RearShell_L",
+    "RearShell_R",
+    "Temple_L",
+    "Temple_R",
+    "EarCover_L",
+    "EarCover_R",
+    "Cheek_L",
+    "Cheek_R",
+    "Jaw_L",
+    "Jaw_R",
+    "Chin",
+    "Faceplate",
+    "EyeHousing_L",
+    "EyeHousing_R",
+    "EyeLens_L",
+    "EyeLens_R",
+    "NeckRingFront",
+    "NeckRingRear",
+    "EarEmitter_L",
+    "EarEmitter_R"
+  ],
+  "mesh_object_count": 54,
+  "clearance": {
+    "samples_m": {
+      "top": 0.017,
+      "temple_side": 0.017272,
+      "rear": 0.009576,
+      "nose": 0.004705,
+      "ear": 0.009772
+    },
+    "faceplate_nose_clearance_m": 0.009323,
+    "inner_nose_surface_y_m": -0.133705,
+    "faceplate_nose_surface_y_m": -0.138323,
+    "minimum_sample_m": 0.004705,
+    "penetration_detected": false,
+    "target_general_m": [
+      0.008,
+      0.018
+    ],
+    "target_local_minimum_m": 0.004
+  },
+  "elapsed_seconds": 0.5271
+}

@@ -1,0 +1,15 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/compare_helmet_v4.py",
+  "iteration": 7,
+  "elapsed_seconds": 0.6527,
+  "feature_validation": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_validation.json",
+  "passes_all_required_gates": true,
+  "comparisons": [
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/compare_front.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/compare_left.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/compare_right.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/compare_back.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/compare_front_3q.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/comparison_contact_sheet_v4.png"
+  ]
+}

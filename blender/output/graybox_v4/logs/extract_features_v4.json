@@ -1,0 +1,13 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/extract_features_v4.py",
+  "elapsed_seconds": 0.4498,
+  "feature_curves": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_curves.json",
+  "annotations": [
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_front.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_right.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_left.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_back.png",
+    "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_annotation_top.png"
+  ],
+  "side_depth_minimum_12_pass": true
+}

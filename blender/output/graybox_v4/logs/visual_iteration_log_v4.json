@@ -1,0 +1,165 @@
+{
+  "project": "AEGIS-R7 graybox v4 feature projection",
+  "minimum_required_iterations": 3,
+  "final_iteration": 7,
+  "iterations": [
+    {
+      "iteration": 1,
+      "scope": "first measured feature projection",
+      "render_files": {
+        "front": "review_iterations/iteration_01/design/front.png",
+        "back": "review_iterations/iteration_01/design/back.png",
+        "left": "review_iterations/iteration_01/design/left.png",
+        "right": "review_iterations/iteration_01/design/right.png",
+        "front_3q": "review_iterations/iteration_01/design/front_3q.png",
+        "top": "review_iterations/iteration_01/design/top.png"
+      },
+      "observed": [
+        "Eye inner and outer loops had unequal vertex counts, producing broken C-shaped fragments.",
+        "Rear ridge and vent geometry was occluded by the retained rear shell.",
+        "The old crown cap still produced a circular top highlight/opening artifact.",
+        "Side cheek overlay polygons intersected into blocky lower-shell fragments."
+      ],
+      "changes": [
+        "Replaced eye loops with equal-count measured rounded slots.",
+        "Raised ridge, vent, and rear-layer projection offsets.",
+        "Added an apex bridge and replaced side overlay blocks with measured diagonal grooves."
+      ],
+      "result": {"visual_self_check_pass": false, "failed_criteria": ["internal_eye_slit", "rear_structure", "top_closure", "diagonal_jaw"], "decision": "continue"}
+    },
+    {
+      "iteration": 2,
+      "scope": "eye topology and rear/crown visibility correction",
+      "render_files": {
+        "front": "review_iterations/iteration_02/design/front.png",
+        "back": "review_iterations/iteration_02/design/back.png",
+        "left": "review_iterations/iteration_02/design/left.png",
+        "right": "review_iterations/iteration_02/design/right.png",
+        "front_3q": "review_iterations/iteration_02/design/front_3q.png",
+        "top": "review_iterations/iteration_02/design/top.png"
+      },
+      "observed": [
+        "Ear disks reached the measured large concentric scale.",
+        "Back ridge, vents, and layer seams became readable.",
+        "Eyes were topologically complete but mostly buried by the faceplate surface.",
+        "Apex bridge was over-thick."
+      ],
+      "changes": [
+        "Changed eye housing to a full black backing patch with a cyan lens layer.",
+        "Added vertical boundary fade to faceplate relief.",
+        "Reduced apex bridge size and darkened ridge material."
+      ],
+      "result": {"visual_self_check_pass": false, "failed_criteria": ["internal_eye_slit", "top_closure_continuity"], "decision": "continue"}
+    },
+    {
+      "iteration": 3,
+      "scope": "complete eye slit and reduced crown bridge",
+      "render_files": {
+        "front": "review_iterations/iteration_03/design/front.png",
+        "back": "review_iterations/iteration_03/design/back.png",
+        "left": "review_iterations/iteration_03/design/left.png",
+        "right": "review_iterations/iteration_03/design/right.png",
+        "front_3q": "review_iterations/iteration_03/design/front_3q.png",
+        "top": "review_iterations/iteration_03/design/top.png"
+      },
+      "observed": [
+        "Both cyan eye slits were complete and horizontal.",
+        "The slits projected too far and the old Temple boundaries visually cut their outer ends.",
+        "A circular crown depression remained around the closed bridge."
+      ],
+      "changes": [
+        "Tested raising the measured faceplate ahead of Temple and seating the eye layers closer.",
+        "Tested a same-red crown center cover under a narrower black cap."
+      ],
+      "result": {"visual_self_check_pass": false, "failed_criteria": ["eyes_inside_faceplate", "faceplate_highlight_continuity"], "decision": "continue"}
+    },
+    {
+      "iteration": 4,
+      "scope": "raised faceplate and red crown cover test",
+      "render_files": {
+        "front": "review_iterations/iteration_04/design/front.png",
+        "back": "review_iterations/iteration_04/design/back.png",
+        "left": "review_iterations/iteration_04/design/left.png",
+        "right": "review_iterations/iteration_04/design/right.png",
+        "front_3q": "review_iterations/iteration_04/design/front_3q.png",
+        "top": "review_iterations/iteration_04/design/top.png"
+      },
+      "observed": [
+        "Raising the entire faceplate exposed the measured boundary but introduced strong surface folds.",
+        "The flat red crown cover read as a square plaque rather than a shell repair.",
+        "Eye pieces were still split by varying surface normals."
+      ],
+      "changes": [
+        "Rejected global faceplate lift and restored shallow projection.",
+        "Moved Temple vertices rearward instead of moving the faceplate.",
+        "Tested a shared fixed-forward eye plane and projected elliptical crown cover."
+      ],
+      "result": {"visual_self_check_pass": false, "failed_criteria": ["faceplate_vertical_sculpt", "top_closure_continuity", "internal_eye_slit"], "decision": "continue"}
+    },
+    {
+      "iteration": 5,
+      "scope": "rear-seated Temple and fixed eye plane",
+      "render_files": {
+        "front": "review_iterations/iteration_05/design/front.png",
+        "back": "review_iterations/iteration_05/design/back.png",
+        "left": "review_iterations/iteration_05/design/left.png",
+        "right": "review_iterations/iteration_05/design/right.png",
+        "front_3q": "review_iterations/iteration_05/design/front_3q.png",
+        "top": "review_iterations/iteration_05/design/top.png"
+      },
+      "observed": [
+        "Temple no longer occluded the measured gold boundary.",
+        "Eye slits were complete but visibly detached in top view.",
+        "The elliptical crown cover created a new ring highlight.",
+        "Smooth side-wall normals produced a false sawtooth highlight on the faceplate edge."
+      ],
+      "changes": [
+        "Returned eyes to the same analytic faceplate relief with controlled 4.5/6 mm layer offsets.",
+        "Split projected skin normals from explicit thickness walls.",
+        "Removed the red cover and retained the closed black crown cap."
+      ],
+      "result": {"visual_self_check_pass": false, "failed_criteria": ["eyes_inside_faceplate", "faceplate_highlight_continuity"], "decision": "continue"}
+    },
+    {
+      "iteration": 6,
+      "scope": "surface-following eyes and split boundary normals",
+      "render_files": {
+        "front": "review_iterations/iteration_06/design/front.png",
+        "back": "review_iterations/iteration_06/design/back.png",
+        "left": "review_iterations/iteration_06/design/left.png",
+        "right": "review_iterations/iteration_06/design/right.png",
+        "front_3q": "review_iterations/iteration_06/design/front_3q.png",
+        "top": "review_iterations/iteration_06/design/top.png"
+      },
+      "observed": [
+        "Eye slits were complete, surface-following, and inside the faceplate in front view.",
+        "The faceplate/CrownFront surfaces remained nearly coplanar at the upper edge, causing a local ragged intersection."
+      ],
+      "changes": [
+        "Seated CrownFront 4 mm rearward while leaving the v3 master silhouette and pivot unchanged."
+      ],
+      "result": {"visual_self_check_pass": false, "failed_criteria": ["faceplate_highlight_continuity"], "decision": "continue"}
+    },
+    {
+      "iteration": 7,
+      "scope": "final crown/faceplate separation",
+      "render_files": {
+        "front": "review_iterations/iteration_07/design/front.png",
+        "back": "review_iterations/iteration_07/design/back.png",
+        "left": "review_iterations/iteration_07/design/left.png",
+        "right": "review_iterations/iteration_07/design/right.png",
+        "front_3q": "review_iterations/iteration_07/design/front_3q.png",
+        "top": "review_iterations/iteration_07/design/top.png"
+      },
+      "observed": [
+        "Measured V boundary and black bezel are readable without a coplanar intersection.",
+        "Eyes, ear disks, diagonal U frame, segmented crown/rear ridge, vents, and rear layers are all readable in their required views.",
+        "The crown center is closed by a black ridge cap; no through-opening is visible.",
+        "Faceplate brow, nose, mouth recess, and chin relief produce continuous front-three-quarter highlights."
+      ],
+      "changes": ["No further geometry change; candidate frozen for final measured validation and export."],
+      "result": {"visual_self_check_pass": true, "failed_criteria": [], "decision": "accept"}
+    }
+  ],
+  "all_required_visual_checks_pass": true
+}

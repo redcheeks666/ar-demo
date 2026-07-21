@@ -1,0 +1,32 @@
+{
+  "project": "AEGIS-R7 graybox v4 feature projection",
+  "working_directory": "/Users/mashazhenta/CodeXProject/ar-demo",
+  "blender": "/Applications/Blender.app/Contents/MacOS/Blender 5.2.0 LTS",
+  "commands": [
+    "git status --short && git log -1 --oneline",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/extract_features_v4.py",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v4.py -- --iteration 1",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode iteration --iteration 1",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v4.py -- --iteration 2",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode iteration --iteration 2",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v4.py -- --iteration 3",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode iteration --iteration 3",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v4.py -- --iteration 4",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode iteration --iteration 4",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v4.py -- --iteration 5",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode iteration --iteration 5",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v4.py -- --iteration 6",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode iteration --iteration 6",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/build_helmet_graybox_v4.py -- --iteration 7",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode iteration --iteration 7",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --python-exit-code 1 --python blender/scripts/render_helmet_review_v4.py -- --mode all --iteration 7",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/compare_helmet_v4.py -- --iteration 7",
+    "/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python-exit-code 1 --python blender/scripts/export_helmet_graybox_v4.py",
+    "python3 -m py_compile blender/scripts/helmet_v4_config.py blender/scripts/extract_features_v4.py blender/scripts/build_helmet_graybox_v4.py blender/scripts/render_helmet_review_v4.py blender/scripts/compare_helmet_v4.py blender/scripts/export_helmet_graybox_v4.py"
+  ],
+  "notes": [
+    "Build/render commands were rerun after final normal and bevel cleanup.",
+    "All Blender runs used --python-exit-code 1.",
+    "No git push, PBR, UV, animation, or Web command was run."
+  ]
+}
