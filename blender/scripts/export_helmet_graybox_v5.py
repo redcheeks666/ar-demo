@@ -91,12 +91,21 @@ def git_state() -> dict:
         set(run("diff", "--name-only", "--", *protected_paths).splitlines())
         | set(run("diff", "--cached", "--name-only", "--", *protected_paths).splitlines())
     )
+    baseline_is_ancestor = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", BASELINE_COMMIT, "HEAD"],
+        cwd=REPO_ROOT,
+        check=False,
+        text=True,
+        capture_output=True,
+    ).returncode == 0
     return {
         "head": run("rev-parse", "HEAD"),
         "head_subject": run("log", "-1", "--pretty=%s"),
         "branch": run("branch", "--show-current"),
         "status_short": run("status", "--short"),
         "protected_tracked_changes": protected_changes,
+        "required_baseline_commit": BASELINE_COMMIT,
+        "baseline_is_ancestor": baseline_is_ancestor,
     }
 
 
@@ -1052,7 +1061,7 @@ def main() -> None:
     preflight_failures = []
     checks = {
         "node_contract": node_contract["pass"],
-        "baseline_commit": git_snapshot["head"].startswith(BASELINE_COMMIT),
+        "baseline_commit": git_snapshot["baseline_is_ancestor"],
         "protected_v3_v4_and_src_unchanged": not git_snapshot["protected_tracked_changes"],
         "protected_v4_source_contract": baseline_source_contract["pass"],
         "forbidden_source_objects": not forbidden_source,

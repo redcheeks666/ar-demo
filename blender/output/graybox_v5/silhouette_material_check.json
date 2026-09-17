@@ -3,8 +3,8 @@
   "project": "AEGIS-R7 graybox v5 craft pass",
   "inputs": {
     "blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
-    "blend_sha256": "af5ff576cf9f39cff8f724d9b46108e4480529b99df242808be966a41a0b831b",
-    "scene_iteration": 17
+    "blend_sha256": "0af1a485b96bbaf9ea6732da708507692ba5fa3975833eaaac9461d44cde3524",
+    "scene_iteration": 27
   },
   "method": "flat material-ID render through final orthographic camera; foreground pixels adjacent to border-connected background define the exterior contour",
   "gold_classification": {
@@ -19,12 +19,12 @@
     "left": {
       "camera": "CameraV3_Left",
       "id_render": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/silhouette_material_id_left.png",
-      "id_render_sha256": "b2846554664f99a82e0711f8e0bafe6a27a7d9a2d7c44decf64a2ebb9fc7f61d",
+      "id_render_sha256": "6cffa1ee16d4b834229c7d385428ad4a23535bdfa6b7eddc51dc97bf0e70d19e",
       "image_size_px": [
         512,
         512
       ],
-      "exterior_contour_pixel_count": 2416,
+      "exterior_contour_pixel_count": 2221,
       "gold_exterior_contour_pixel_count": 0,
       "gold_exterior_contour_ratio": 0.0,
       "unknown_exterior_contour_pixel_count": 0,
@@ -36,12 +36,12 @@
     "right": {
       "camera": "CameraV3_Right",
       "id_render": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/silhouette_material_id_right.png",
-      "id_render_sha256": "725843195445be89edd863cf4ac59ad5cfa444b84e2e9b5f80aa21f56a78c369",
+      "id_render_sha256": "9cf97affc5ccf4826a9989ff7e456c40f1de0f251977cc7461241043684bfca6",
       "image_size_px": [
         512,
         512
       ],
-      "exterior_contour_pixel_count": 2407,
+      "exterior_contour_pixel_count": 2221,
       "gold_exterior_contour_pixel_count": 0,
       "gold_exterior_contour_ratio": 0.0,
       "unknown_exterior_contour_pixel_count": 0,

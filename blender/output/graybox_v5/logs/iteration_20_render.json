@@ -1,0 +1,309 @@
+{
+  "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/render_helmet_review_v5.py",
+  "mode": "iteration",
+  "iteration": 20,
+  "engine": "BLENDER_EEVEE",
+  "elapsed_seconds": 4.3573,
+  "render_count": 9,
+  "zebra_contract": {
+    "views": [
+      "front",
+      "front_3q",
+      "left"
+    ],
+    "faceplate_material": "AEGIS_V5_ZebraReflective",
+    "material_metallic": 1.0,
+    "material_roughness": 0.075,
+    "procedural_world_bands": 4.0,
+    "specular_area_light_banks": [
+      "front",
+      "left"
+    ],
+    "stripe_source_is_reflection_not_base_color": true
+  },
+  "material_id_contract": {
+    "views": [
+      "left",
+      "right"
+    ],
+    "gold_rgba": [
+      1.0,
+      0.72,
+      0.0,
+      1.0
+    ],
+    "output_dir": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id"
+  },
+  "renders": [
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/design/front.png",
+      "pass": "iteration_design",
+      "view": "front",
+      "camera": "CameraV3_Front",
+      "size_bytes": 604684,
+      "sha256": "fbf0bdb4428b8ae70707b416cb1f0c45dd30e2534a25bc94d4eced2689213586",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -2e-07,
+        -1.0,
+        -1.0,
+        0.0,
+        1.0,
+        -2e-07,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/design/front_3q.png",
+      "pass": "iteration_design",
+      "view": "front_3q",
+      "camera": "CameraV3_Front3Q",
+      "size_bytes": 608078,
+      "sha256": "09131ee669343fd257d81fdc75647f1fa75d52bbaf37cfef344f56ff8d6622ef",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        0.8146231,
+        -0.1775837,
+        0.5521351,
+        0.44,
+        0.5799906,
+        0.2494243,
+        -0.7754988,
+        -0.62,
+        0.0,
+        0.9519724,
+        0.3061837,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/design/left.png",
+      "pass": "iteration_design",
+      "view": "left",
+      "camera": "CameraV3_Left",
+      "size_bytes": 577552,
+      "sha256": "3fb6b927e902a1b665bea5194af907758a378b9b4a11f30a0a75c54a1c2464e0",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -0.002,
+        -0.0,
+        -0.999998,
+        -1.0,
+        -0.999998,
+        -1e-07,
+        0.002,
+        0.0,
+        -1e-07,
+        1.0,
+        -0.0,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/design/right.png",
+      "pass": "iteration_design",
+      "view": "right",
+      "camera": "CameraV3_Right",
+      "size_bytes": 583910,
+      "sha256": "d99bb85ece0a7e6b8eb2d593cde387be2043eead737dbffcb9bdf1aad9f89013",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -0.002,
+        0.0,
+        0.999998,
+        1.0,
+        0.999998,
+        -1e-07,
+        0.002,
+        0.0,
+        1e-07,
+        1.0,
+        -0.0,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/design/back.png",
+      "pass": "iteration_design",
+      "view": "back",
+      "camera": "CameraV3_Back",
+      "size_bytes": 526467,
+      "sha256": "d6629652706611fbabedd8559235d4ac1e1ea0c8328dfafcd0df2dd97fcb6678",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -1.0,
+        2e-07,
+        2e-07,
+        0.0,
+        2e-07,
+        2e-07,
+        1.0,
+        1.0,
+        2e-07,
+        1.0,
+        -2e-07,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/design/top.png",
+      "pass": "iteration_design",
+      "view": "top",
+      "camera": "CameraV3_Top",
+      "size_bytes": 581242,
+      "sha256": "2325ff2669a1a79eb4f72539cfad7bc385afd1504520146d84c77ab2c06b8b7e",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -1.0,
+        2e-07,
+        0.0,
+        0.0,
+        -2e-07,
+        -0.999998,
+        0.0020109,
+        0.0,
+        0.0,
+        0.0020109,
+        0.999998,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/zebra/front.png",
+      "pass": "iteration_zebra",
+      "view": "front",
+      "camera": "CameraV3_Front",
+      "size_bytes": 494246,
+      "sha256": "be6982bcaa7d915eaada81193b7a83ecf8848897593ba7359d59c11098592d3a",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -2e-07,
+        -1.0,
+        -1.0,
+        0.0,
+        1.0,
+        -2e-07,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/zebra/front_3q.png",
+      "pass": "iteration_zebra",
+      "view": "front_3q",
+      "camera": "CameraV3_Front3Q",
+      "size_bytes": 500927,
+      "sha256": "57664ef12207462ae3a3d170257433e8dbeffdce9d5b7cd48083d8fa490b72d0",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        0.8146231,
+        -0.1775837,
+        0.5521351,
+        0.44,
+        0.5799906,
+        0.2494243,
+        -0.7754988,
+        -0.62,
+        0.0,
+        0.9519724,
+        0.3061837,
+        0.25,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_20/zebra/left.png",
+      "pass": "iteration_zebra",
+      "view": "left",
+      "camera": "CameraV3_Left",
+      "size_bytes": 459843,
+      "sha256": "430dffa3b206c56e3ef245d2f5cb281d8564516fd5c1b9d2fedad36b499402bf",
+      "resolution": [
+        768,
+        768
+      ],
+      "camera_matrix_world": [
+        -0.002,
+        -0.0,
+        -0.999998,
+        -1.0,
+        -0.999998,
+        -1e-07,
+        0.002,
+        0.0,
+        -1e-07,
+        1.0,
+        -0.0,
+        0.006,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ]
+}

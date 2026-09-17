@@ -1,0 +1,150 @@
+{
+  "schema": "aegis-r7-v5-visual-iteration-log/1.0",
+  "final_iteration": 27,
+  "iterations": [
+    {
+      "iteration": 21,
+      "result": {
+        "visual_self_check_pass": false,
+        "failed_criteria": [
+          "rear_spine_shape",
+          "mouth_chin_clean"
+        ],
+        "decision": "iterate",
+        "note": "Faceplate crease, crown seam, base removal and zebra continuity passed; rear spine proportions and jaw edge-on lines remained."
+      }
+    },
+    {
+      "iteration": 23,
+      "result": {
+        "visual_self_check_pass": false,
+        "failed_criteria": [
+          "mouth_chin_clean"
+        ],
+        "decision": "iterate",
+        "note": "RearSpine_08 and CrownSpine track passed; symmetric jaw/chin hanging lines remained in strict side views."
+      }
+    },
+    {
+      "iteration": 24,
+      "result": {
+        "visual_self_check_pass": false,
+        "failed_criteria": [
+          "mouth_chin_clean"
+        ],
+        "decision": "iterate",
+        "note": "Width compression removed one lower-plate line, but a second edge-on endpoint remained in design and zebra side views."
+      }
+    },
+    {
+      "iteration": 25,
+      "result": {
+        "visual_self_check_pass": false,
+        "failed_criteria": [
+          "mouth_chin_clean"
+        ],
+        "decision": "iterate",
+        "note": "Vertical Chin trimming shortened the line without eliminating it."
+      }
+    },
+    {
+      "iteration": 26,
+      "result": {
+        "visual_self_check_pass": false,
+        "failed_criteria": [
+          "mouth_chin_clean"
+        ],
+        "decision": "iterate",
+        "note": "Chin passed after low-profile rear seating; the remaining line was isolated to Jaw_L/Jaw_R."
+      }
+    },
+    {
+      "iteration": 27,
+      "result": {
+        "visual_self_check_pass": true,
+        "failed_criteria": [],
+        "decision": "accept",
+        "note": "Jaw and Chin endpoints are fully tucked; all nine visual gates passed in final design, zebra, silhouette and comparison renders."
+      }
+    }
+  ],
+  "all_required_visual_checks_pass": true,
+  "final_self_check": [
+    {
+      "criterion_id": "faceplate_highlight_continuity",
+      "pass": true,
+      "render_files": [
+        "zebra/front.png",
+        "zebra/front_3q.png",
+        "zebra/left.png"
+      ]
+    },
+    {
+      "criterion_id": "faceplate_upper_edge_clean",
+      "pass": true,
+      "render_files": [
+        "design_preview/helmet_only/front.png",
+        "design_preview/helmet_only/front_3q.png"
+      ]
+    },
+    {
+      "criterion_id": "eye_slots_embedded",
+      "pass": true,
+      "render_files": [
+        "design_preview/helmet_only/front.png",
+        "design_preview/helmet_only/top.png"
+      ]
+    },
+    {
+      "criterion_id": "crown_seam_narrow",
+      "pass": true,
+      "render_files": [
+        "design_preview/helmet_only/left.png",
+        "design_preview/helmet_only/back.png",
+        "design_preview/helmet_only/top.png"
+      ]
+    },
+    {
+      "criterion_id": "mouth_chin_clean",
+      "pass": true,
+      "render_files": [
+        "design_preview/helmet_only/front.png",
+        "design_preview/helmet_only/front_3q.png",
+        "design_preview/helmet_only/left.png",
+        "design_preview/helmet_only/right.png"
+      ]
+    },
+    {
+      "criterion_id": "no_gold_side_outline",
+      "pass": true,
+      "render_files": [
+        "silhouette/material_id/left.png",
+        "silhouette/material_id/right.png"
+      ]
+    },
+    {
+      "criterion_id": "no_base_foot",
+      "pass": true,
+      "render_files": [
+        "design_preview/helmet_only/front.png",
+        "design_preview/helmet_only/left.png",
+        "design_preview/helmet_only/bottom.png"
+      ]
+    },
+    {
+      "criterion_id": "rear_spine_shape",
+      "pass": true,
+      "render_files": [
+        "design_preview/helmet_only/back.png",
+        "design_preview/helmet_only/top.png"
+      ]
+    },
+    {
+      "criterion_id": "feature_regression",
+      "pass": true,
+      "render_files": [
+        "comparison_contact_sheet_v5.png"
+      ]
+    }
+  ]
+}

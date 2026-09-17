@@ -1,26 +1,32 @@
 {
   "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/export_helmet_graybox_v5.py",
   "source_blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
+  "git": {
+    "head": "4517a189e0e6f0abaa1e6101de785d20544114e0",
+    "head_subject": "feat: add helmet graybox v5 workflow",
+    "branch": "main",
+    "status_short": "M blender/output/graybox_v5/clay/helmet_only/back.png\n M blender/output/graybox_v5/clay/helmet_only/bottom.png\n M blender/output/graybox_v5/clay/helmet_only/front.png\n M blender/output/graybox_v5/clay/helmet_only/front_3q.png\n M blender/output/graybox_v5/clay/helmet_only/left.png\n M blender/output/graybox_v5/clay/helmet_only/rear_3q.png\n M blender/output/graybox_v5/clay/helmet_only/right.png\n M blender/output/graybox_v5/clay/helmet_only/top.png\n M blender/output/graybox_v5/compare_back.png\n M blender/output/graybox_v5/compare_front.png\n M blender/output/graybox_v5/compare_front_3q.png\n M blender/output/graybox_v5/compare_left.png\n M blender/output/graybox_v5/compare_right.png\n M blender/output/graybox_v5/comparison_contact_sheet_v5.png\n M blender/output/graybox_v5/design_preview/helmet_only/back.png\n M blender/output/graybox_v5/design_preview/helmet_only/bottom.png\n M blender/output/graybox_v5/design_preview/helmet_only/front.png\n M blender/output/graybox_v5/design_preview/helmet_only/front_3q.png\n M blender/output/graybox_v5/design_preview/helmet_only/left.png\n M blender/output/graybox_v5/design_preview/helmet_only/rear_3q.png\n M blender/output/graybox_v5/design_preview/helmet_only/right.png\n M blender/output/graybox_v5/design_preview/helmet_only/top.png\n M blender/output/graybox_v5/exploded_sanity/front_3q.png\n M blender/output/graybox_v5/feature_validation_v5.json\n M blender/output/graybox_v5/logs/eye_boundary_eye_L.png\n M blender/output/graybox_v5/logs/eye_boundary_eye_R.png\n M blender/output/graybox_v5/logs/eye_boundary_faceplate_mask.png\n M blender/output/graybox_v5/logs/final_compare_v5.json\n M blender/output/graybox_v5/logs/final_render.json\n M blender/output/graybox_v5/logs/silhouette_material_id_left.png\n M blender/output/graybox_v5/logs/silhouette_material_id_right.png\n M blender/output/graybox_v5/overlay_front.png\n M blender/output/graybox_v5/overlay_left.png\n M blender/output/graybox_v5/overlay_right.png\n M blender/output/graybox_v5/silhouette/back.png\n M blender/output/graybox_v5/silhouette/front.png\n M blender/output/graybox_v5/silhouette/left.png\n M blender/output/graybox_v5/silhouette/material_id/left.png\n M blender/output/graybox_v5/silhouette/material_id/right.png\n M blender/output/graybox_v5/silhouette/right.png\n M blender/output/graybox_v5/silhouette/top.png\n M blender/output/graybox_v5/silhouette_material_check.json\n M blender/output/graybox_v5/with_head_proxy/back.png\n M blender/output/graybox_v5/with_head_proxy/bottom.png\n M blender/output/graybox_v5/with_head_proxy/front.png\n M blender/output/graybox_v5/with_head_proxy/front_3q.png\n M blender/output/graybox_v5/with_head_proxy/left.png\n M blender/output/graybox_v5/with_head_proxy/rear_3q.png\n M blender/output/graybox_v5/with_head_proxy/right.png\n M blender/output/graybox_v5/with_head_proxy/top.png\n M blender/output/graybox_v5/zebra/front.png\n M blender/output/graybox_v5/zebra/front_3q.png\n M blender/output/graybox_v5/zebra/left.png\n M blender/scripts/__pycache__/build_helmet_graybox_v5.cpython-314.pyc\n M blender/scripts/__pycache__/helmet_v5_config.cpython-313.pyc\n M blender/scripts/__pycache__/helmet_v5_config.cpython-314.pyc\n M blender/scripts/build_helmet_graybox_v5.py\n M blender/scripts/helmet_v5_config.py\n M blender/work/helmet_graybox_v5.blend\n?? blender/output/graybox_v5/logs/iteration_19_build.json\n?? blender/output/graybox_v5/logs/iteration_19_render.json\n?? blender/output/graybox_v5/logs/iteration_20_build.json\n?? blender/output/graybox_v5/logs/iteration_20_render.json\n?? blender/output/graybox_v5/logs/iteration_21_build.json\n?? blender/output/graybox_v5/logs/iteration_21_render.json\n?? blender/output/graybox_v5/logs/iteration_22_build.json\n?? blender/output/graybox_v5/logs/iteration_22_render.json\n?? blender/output/graybox_v5/logs/iteration_23_build.json\n?? blender/output/graybox_v5/logs/iteration_23_render.json\n?? blender/output/graybox_v5/logs/iteration_24_build.json\n?? blender/output/graybox_v5/logs/iteration_24_render.json\n?? blender/output/graybox_v5/logs/iteration_25_build.json\n?? blender/output/graybox_v5/logs/iteration_25_render.json\n?? blender/output/graybox_v5/logs/iteration_26_build.json\n?? blender/output/graybox_v5/logs/iteration_26_render.json\n?? blender/output/graybox_v5/logs/iteration_27_build.json\n?? blender/output/graybox_v5/logs/iteration_27_render.json\n?? blender/output/graybox_v5/logs/visual_iteration_log_v5.json\n?? blender/output/graybox_v5/review_iterations/iteration_19/\n?? blender/output/graybox_v5/review_iterations/iteration_20/\n?? blender/output/graybox_v5/review_iterations/iteration_21/\n?? blender/output/graybox_v5/review_iterations/iteration_22/\n?? blender/output/graybox_v5/review_iterations/iteration_23/\n?? blender/output/graybox_v5/review_iterations/iteration_24/\n?? blender/output/graybox_v5/review_iterations/iteration_25/\n?? blender/output/graybox_v5/review_iterations/iteration_26/\n?? blender/output/graybox_v5/review_iterations/iteration_27/",
+    "protected_tracked_changes": []
+  },
   "checks": {
     "node_contract": true,
+    "baseline_commit": false,
+    "protected_v3_v4_and_src_unchanged": true,
     "protected_v4_source_contract": true,
     "forbidden_source_objects": true,
+    "no_stage_or_unclassified_scene_meshes": true,
     "geometry": false,
     "left_right_symmetry": true,
-    "headproxy_clearance": false,
+    "headproxy_clearance": true,
     "pivot_translations": true,
-    "review_and_iterations": false,
-    "feature_validation": false,
-    "silhouette_material_check": false,
-    "artifact_iteration_and_blend_binding": false
+    "review_and_iterations": true,
+    "feature_validation": true,
+    "silhouette_material_check": true,
+    "artifact_iteration_and_blend_binding": true
   },
   "failures": [
-    "geometry",
-    "headproxy_clearance",
-    "review_and_iterations",
-    "feature_validation",
-    "silhouette_material_check",
-    "artifact_iteration_and_blend_binding"
+    "baseline_commit",
+    "geometry"
   ],
   "node_contract": {
     "protected_v4_node_count": 55,
@@ -216,19 +222,19 @@
     "pass": true
   },
   "forbidden_source_objects": [],
+  "unexpected_scene_meshes": [],
   "excluded_nonexport_helpers": [],
   "geometry_gate": {
     "triangle_limit_exclusive": 100000,
-    "evaluated_triangle_count": 65744,
-    "boundary_edges": 160,
-    "non_manifold_edges": 177,
-    "degenerate_faces": 2,
-    "zero_normal_faces": 0,
+    "evaluated_triangle_count": 62368,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "degenerate_faces": 119,
+    "zero_normal_faces": 14,
     "reversed_closed_objects": [],
     "failures": [
-      "boundary_edges",
-      "non_manifold_edges",
-      "degenerate_faces"
+      "degenerate_faces",
+      "zero_normal_faces"
     ],
     "pass": false
   },
@@ -236,52 +242,52 @@
     "overall_bounding_box_m": {
       "minimum": [
         -0.129139,
-        -0.148096,
-        -0.13424
+        -0.141687,
+        -0.116151
       ],
       "maximum": [
         0.129139,
-        0.132618,
-        0.15826
+        0.132609,
+        0.15685
       ],
       "width_x": 0.258279,
-      "depth_y": 0.280714,
-      "height_z": 0.2925
+      "depth_y": 0.274296,
+      "height_z": 0.273001
     },
-    "evaluated_triangle_count": 65744,
+    "evaluated_triangle_count": 62368,
     "under_100k_triangle_target": true,
     "object_health": {
       "InnerShell": {
-        "vertices": 11576,
-        "triangles": 23148,
+        "vertices": 12068,
+        "triangles": 24132,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 0.000592913,
+        "signed_volume_m3": 0.0005853188,
         "reversed_closed_volume": false
       },
       "CrownFront": {
-        "vertices": 2752,
-        "triangles": 5500,
-        "boundary_edges": 120,
-        "non_manifold_edges": 120,
+        "vertices": 2060,
+        "triangles": 4116,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": null,
+        "signed_volume_m3": 8.59015e-05,
         "reversed_closed_volume": false
       },
       "CrownRear": {
-        "vertices": 2256,
-        "triangles": 4508,
-        "boundary_edges": 32,
-        "non_manifold_edges": 32,
+        "vertices": 1668,
+        "triangles": 3332,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": null,
+        "signed_volume_m3": 0.0001025643,
         "reversed_closed_volume": false
       },
       "RearShell_L": {
@@ -292,7 +298,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 0.00012169,
+        "signed_volume_m3": 0.0001286768,
         "reversed_closed_volume": false
       },
       "RearShell_R": {
@@ -303,29 +309,29 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 0.0001217037,
+        "signed_volume_m3": 0.0001286906,
         "reversed_closed_volume": false
       },
       "Temple_L": {
-        "vertices": 660,
-        "triangles": 1316,
+        "vertices": 746,
+        "triangles": 1488,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 2.51615e-05,
+        "signed_volume_m3": 3.2292e-05,
         "reversed_closed_volume": false
       },
       "Temple_R": {
-        "vertices": 660,
-        "triangles": 1316,
+        "vertices": 746,
+        "triangles": 1488,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 2.5162e-05,
+        "signed_volume_m3": 3.22914e-05,
         "reversed_closed_volume": false
       },
       "NeckRingFront": {
@@ -336,7 +342,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.44723e-05,
+        "signed_volume_m3": 1.3817e-06,
         "reversed_closed_volume": false
       },
       "NeckRingRear": {
@@ -347,29 +353,29 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.44723e-05,
+        "signed_volume_m3": 1.3817e-06,
         "reversed_closed_volume": false
       },
       "Cheek_L": {
-        "vertices": 416,
-        "triangles": 828,
+        "vertices": 477,
+        "triangles": 950,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 3.37484e-05,
+        "signed_volume_m3": 3.85144e-05,
         "reversed_closed_volume": false
       },
       "JawTrim_L": {
-        "vertices": 236,
-        "triangles": 468,
+        "vertices": 256,
+        "triangles": 508,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 9.383e-07,
+        "signed_volume_m3": 1.5917e-06,
         "reversed_closed_volume": false
       },
       "LowerUTrim": {
@@ -380,7 +386,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 2.53e-07,
+        "signed_volume_m3": 4.289e-07,
         "reversed_closed_volume": false
       },
       "SideGroove_L": {
@@ -391,7 +397,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 6.84e-07,
+        "signed_volume_m3": 7.101e-07,
         "reversed_closed_volume": false
       },
       "EarCover_L": {
@@ -402,7 +408,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 0.0001470889,
+        "signed_volume_m3": 0.000147148,
         "reversed_closed_volume": false
       },
       "EarRing_L_Outer": {
@@ -446,7 +452,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 0.0001470889,
+        "signed_volume_m3": 0.000147148,
         "reversed_closed_volume": false
       },
       "EarRing_R_Outer": {
@@ -490,7 +496,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.4853e-06,
+        "signed_volume_m3": 1.2278e-06,
         "reversed_closed_volume": false
       },
       "CrownSpine_02": {
@@ -501,7 +507,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.1332e-06,
+        "signed_volume_m3": 9.314e-07,
         "reversed_closed_volume": false
       },
       "CrownSpine_03": {
@@ -512,7 +518,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 8.813e-07,
+        "signed_volume_m3": 7.209e-07,
         "reversed_closed_volume": false
       },
       "CrownSpine_04": {
@@ -523,7 +529,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 7.543e-07,
+        "signed_volume_m3": 6.152e-07,
         "reversed_closed_volume": false
       },
       "RearSpine_01": {
@@ -534,7 +540,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 3.373e-06,
+        "signed_volume_m3": 3.5472e-06,
         "reversed_closed_volume": false
       },
       "RearSpine_02": {
@@ -545,7 +551,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.9896e-06,
+        "signed_volume_m3": 2.0849e-06,
         "reversed_closed_volume": false
       },
       "RearSpine_03": {
@@ -556,7 +562,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.8394e-06,
+        "signed_volume_m3": 1.9253e-06,
         "reversed_closed_volume": false
       },
       "RearSpine_04": {
@@ -567,7 +573,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.7258e-06,
+        "signed_volume_m3": 1.8054e-06,
         "reversed_closed_volume": false
       },
       "RearSpine_05": {
@@ -578,7 +584,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.6881e-06,
+        "signed_volume_m3": 1.7655e-06,
         "reversed_closed_volume": false
       },
       "RearSpine_06": {
@@ -589,7 +595,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.721e-06,
+        "signed_volume_m3": 1.8002e-06,
         "reversed_closed_volume": false
       },
       "RearSpine_07": {
@@ -600,18 +606,18 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.7338e-06,
+        "signed_volume_m3": 1.8139e-06,
         "reversed_closed_volume": false
       },
       "CrownSpine_Cap": {
-        "vertices": 488,
-        "triangles": 972,
+        "vertices": 56,
+        "triangles": 108,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 9.1418e-06,
+        "signed_volume_m3": 2.4886e-06,
         "reversed_closed_volume": false
       },
       "RearVent_L_Upper": {
@@ -644,7 +650,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 4.692e-07,
+        "signed_volume_m3": 4.79e-07,
         "reversed_closed_volume": false
       },
       "RearLayer_L_Lower": {
@@ -655,18 +661,18 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 4.782e-07,
+        "signed_volume_m3": 5.043e-07,
         "reversed_closed_volume": false
       },
       "Faceplate": {
-        "vertices": 1404,
-        "triangles": 2804,
+        "vertices": 300,
+        "triangles": 604,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
-        "connected_mesh_islands": 3,
-        "signed_volume_m3": 7.93587e-05,
+        "connected_mesh_islands": 1,
+        "signed_volume_m3": 8.35938e-05,
         "reversed_closed_volume": false
       },
       "EyeHousing_L": {
@@ -677,7 +683,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 7.817e-07,
+        "signed_volume_m3": 7.191e-07,
         "reversed_closed_volume": false
       },
       "EyeLens_L": {
@@ -688,7 +694,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 2.452e-07,
+        "signed_volume_m3": 2.264e-07,
         "reversed_closed_volume": false
       },
       "EyeHousing_R": {
@@ -699,7 +705,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 5.969e-07,
+        "signed_volume_m3": 5.257e-07,
         "reversed_closed_volume": false
       },
       "EyeLens_R": {
@@ -710,73 +716,73 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 1.994e-07,
+        "signed_volume_m3": 1.812e-07,
         "reversed_closed_volume": false
       },
       "FaceplateBezel": {
-        "vertices": 784,
-        "triangles": 1568,
+        "vertices": 1308,
+        "triangles": 2612,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
-        "degenerate_faces": 0,
+        "degenerate_faces": 89,
         "zero_normal_faces": 0,
-        "connected_mesh_islands": 1,
-        "signed_volume_m3": 5.4271e-06,
+        "connected_mesh_islands": 2,
+        "signed_volume_m3": 5.8549e-06,
         "reversed_closed_volume": false
       },
       "Jaw_L": {
-        "vertices": 118,
-        "triangles": 232,
+        "vertices": 56,
+        "triangles": 108,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
-        "degenerate_faces": 0,
-        "zero_normal_faces": 0,
+        "degenerate_faces": 9,
+        "zero_normal_faces": 2,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 5.1623e-06,
+        "signed_volume_m3": 3e-10,
         "reversed_closed_volume": false
       },
       "Jaw_R": {
-        "vertices": 118,
-        "triangles": 232,
+        "vertices": 56,
+        "triangles": 108,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
-        "degenerate_faces": 0,
-        "zero_normal_faces": 0,
+        "degenerate_faces": 9,
+        "zero_normal_faces": 2,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 5.1593e-06,
+        "signed_volume_m3": 3e-10,
         "reversed_closed_volume": false
       },
       "Chin": {
-        "vertices": 148,
-        "triangles": 308,
-        "boundary_edges": 8,
-        "non_manifold_edges": 25,
-        "degenerate_faces": 2,
-        "zero_normal_faces": 0,
+        "vertices": 56,
+        "triangles": 108,
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 12,
+        "zero_normal_faces": 10,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": null,
+        "signed_volume_m3": 6.86e-08,
         "reversed_closed_volume": false
       },
       "Cheek_R": {
-        "vertices": 416,
-        "triangles": 828,
+        "vertices": 477,
+        "triangles": 950,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 3.37547e-05,
+        "signed_volume_m3": 3.85909e-05,
         "reversed_closed_volume": false
       },
       "JawTrim_R": {
-        "vertices": 236,
-        "triangles": 468,
+        "vertices": 256,
+        "triangles": 508,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 9.404e-07,
+        "signed_volume_m3": 1.6041e-06,
         "reversed_closed_volume": false
       },
       "SideGroove_R": {
@@ -787,7 +793,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 6.847e-07,
+        "signed_volume_m3": 7.112e-07,
         "reversed_closed_volume": false
       },
       "RearLayer_R_Upper": {
@@ -798,7 +804,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 4.686e-07,
+        "signed_volume_m3": 4.781e-07,
         "reversed_closed_volume": false
       },
       "RearLayer_R_Lower": {
@@ -809,7 +815,7 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 4.791e-07,
+        "signed_volume_m3": 5.033e-07,
         "reversed_closed_volume": false
       },
       "RearVent_R_Upper": {
@@ -842,14 +848,14 @@
         "degenerate_faces": 0,
         "zero_normal_faces": 0,
         "connected_mesh_islands": 1,
-        "signed_volume_m3": 4.5919e-06,
+        "signed_volume_m3": 2.1071e-06,
         "reversed_closed_volume": false
       }
     },
     "totals": {
-      "non_manifold_edges": 177,
-      "degenerate_faces": 2,
-      "zero_normal_faces": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 119,
+      "zero_normal_faces": 14,
       "reversed_closed_objects": []
     }
   },
@@ -858,8 +864,8 @@
     "threshold_m": 0.0005,
     "pairs": {
       "Cheek_L__Cheek_R": {
-        "mean_bidirectional_mirror_error_m": 5.5e-06,
-        "maximum_mirror_error_m": 0.00027284,
+        "mean_bidirectional_mirror_error_m": 4.72e-06,
+        "maximum_mirror_error_m": 0.00020514,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "EarCover_L__EarCover_R": {
@@ -883,38 +889,38 @@
         "passes_0_5_mm_mean_and_maximum": true
       },
       "EyeHousing_L__EyeHousing_R": {
-        "mean_bidirectional_mirror_error_m": 2.84e-06,
-        "maximum_mirror_error_m": 6.1e-06,
+        "mean_bidirectional_mirror_error_m": 4.65e-06,
+        "maximum_mirror_error_m": 1.278e-05,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "EyeLens_L__EyeLens_R": {
-        "mean_bidirectional_mirror_error_m": 2.43e-06,
-        "maximum_mirror_error_m": 4.55e-06,
+        "mean_bidirectional_mirror_error_m": 4.28e-06,
+        "maximum_mirror_error_m": 1.049e-05,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "JawTrim_L__JawTrim_R": {
-        "mean_bidirectional_mirror_error_m": 2.41e-06,
-        "maximum_mirror_error_m": 3.198e-05,
+        "mean_bidirectional_mirror_error_m": 1.12e-06,
+        "maximum_mirror_error_m": 4.825e-05,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "Jaw_L__Jaw_R": {
         "mean_bidirectional_mirror_error_m": 0.0,
-        "maximum_mirror_error_m": 4e-08,
+        "maximum_mirror_error_m": 1e-08,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "RearLayer_L_Lower__RearLayer_R_Lower": {
-        "mean_bidirectional_mirror_error_m": 2.61e-06,
-        "maximum_mirror_error_m": 6.03e-05,
+        "mean_bidirectional_mirror_error_m": 1.6e-06,
+        "maximum_mirror_error_m": 3.696e-05,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "RearLayer_L_Upper__RearLayer_R_Upper": {
-        "mean_bidirectional_mirror_error_m": 1.43e-06,
-        "maximum_mirror_error_m": 3.143e-05,
+        "mean_bidirectional_mirror_error_m": 9.3e-07,
+        "maximum_mirror_error_m": 2.044e-05,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "RearShell_L__RearShell_R": {
         "mean_bidirectional_mirror_error_m": 0.0,
-        "maximum_mirror_error_m": 1e-06,
+        "maximum_mirror_error_m": 6.2e-07,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "RearVent_L_Lower__RearVent_R_Lower": {
@@ -928,13 +934,13 @@
         "passes_0_5_mm_mean_and_maximum": true
       },
       "SideGroove_L__SideGroove_R": {
-        "mean_bidirectional_mirror_error_m": 8.92e-06,
-        "maximum_mirror_error_m": 0.00036031,
+        "mean_bidirectional_mirror_error_m": 5.47e-06,
+        "maximum_mirror_error_m": 0.00022085,
         "passes_0_5_mm_mean_and_maximum": true
       },
       "Temple_L__Temple_R": {
-        "mean_bidirectional_mirror_error_m": 1.6e-07,
-        "maximum_mirror_error_m": 1.328e-05,
+        "mean_bidirectional_mirror_error_m": 5.7e-07,
+        "maximum_mirror_error_m": 3.512e-05,
         "passes_0_5_mm_mean_and_maximum": true
       }
     },
@@ -946,113 +952,114 @@
     "gate_mode": "diagnostic_only; protected v4 overlay panels intentionally nest across several owner seams",
     "pairs": {
       "CrownFront__Faceplate": {
-        "minimum_surface_distance_m": 0.001875,
-        "minimum_surface_distance_mm": 1.875,
-        "intersecting_triangle_pair_count": 68,
-        "geometry_intersection_detected": true,
-        "classification": "geometric_intersection"
+        "minimum_surface_distance_m": 0.002108,
+        "minimum_surface_distance_mm": 2.108,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "nominal_2_to_5_mm"
       },
       "CrownFront__CrownRear": {
-        "minimum_surface_distance_m": 0.000469,
-        "minimum_surface_distance_mm": 0.469,
-        "intersecting_triangle_pair_count": 553,
+        "minimum_surface_distance_m": 0.000941,
+        "minimum_surface_distance_mm": 0.941,
+        "intersecting_triangle_pair_count": 342,
         "geometry_intersection_detected": true,
         "classification": "geometric_intersection"
       },
       "Faceplate__Temple_L": {
-        "minimum_surface_distance_m": 0.002346,
-        "minimum_surface_distance_mm": 2.346,
-        "intersecting_triangle_pair_count": 0,
-        "geometry_intersection_detected": false,
-        "classification": "nominal_2_to_5_mm"
+        "minimum_surface_distance_m": 0.000764,
+        "minimum_surface_distance_mm": 0.764,
+        "intersecting_triangle_pair_count": 41,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
       },
       "Faceplate__Temple_R": {
-        "minimum_surface_distance_m": 0.002345,
-        "minimum_surface_distance_mm": 2.345,
-        "intersecting_triangle_pair_count": 0,
-        "geometry_intersection_detected": false,
-        "classification": "nominal_2_to_5_mm"
+        "minimum_surface_distance_m": 0.000765,
+        "minimum_surface_distance_mm": 0.765,
+        "intersecting_triangle_pair_count": 41,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
       },
       "Faceplate__Cheek_L": {
-        "minimum_surface_distance_m": 0.003464,
-        "minimum_surface_distance_mm": 3.464,
-        "intersecting_triangle_pair_count": 46,
+        "minimum_surface_distance_m": 0.001745,
+        "minimum_surface_distance_mm": 1.745,
+        "intersecting_triangle_pair_count": 21,
         "geometry_intersection_detected": true,
         "classification": "geometric_intersection"
       },
       "Faceplate__Cheek_R": {
-        "minimum_surface_distance_m": 0.003466,
-        "minimum_surface_distance_mm": 3.466,
-        "intersecting_triangle_pair_count": 46,
+        "minimum_surface_distance_m": 0.001745,
+        "minimum_surface_distance_mm": 1.745,
+        "intersecting_triangle_pair_count": 21,
         "geometry_intersection_detected": true,
         "classification": "geometric_intersection"
       },
       "Cheek_L__Jaw_L": {
-        "minimum_surface_distance_m": 0.0,
-        "minimum_surface_distance_mm": 0.0,
+        "minimum_surface_distance_m": 0.039196,
+        "minimum_surface_distance_mm": 39.196,
         "intersecting_triangle_pair_count": 0,
         "geometry_intersection_detected": false,
-        "classification": "tight_contact_under_1_5_mm"
+        "classification": "large_service_opening"
       },
       "Cheek_R__Jaw_R": {
-        "minimum_surface_distance_m": 0.0,
-        "minimum_surface_distance_mm": 0.0,
+        "minimum_surface_distance_m": 0.039196,
+        "minimum_surface_distance_mm": 39.196,
         "intersecting_triangle_pair_count": 0,
         "geometry_intersection_detected": false,
-        "classification": "tight_contact_under_1_5_mm"
+        "classification": "large_service_opening"
       },
       "Jaw_L__Chin": {
-        "minimum_surface_distance_m": 0.006876,
-        "minimum_surface_distance_mm": 6.876,
-        "intersecting_triangle_pair_count": 46,
-        "geometry_intersection_detected": true,
-        "classification": "geometric_intersection"
+        "minimum_surface_distance_m": 0.051411,
+        "minimum_surface_distance_mm": 51.411,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "large_service_opening"
       },
       "Jaw_R__Chin": {
-        "minimum_surface_distance_m": 0.006573,
-        "minimum_surface_distance_mm": 6.573,
-        "intersecting_triangle_pair_count": 43,
-        "geometry_intersection_detected": true,
-        "classification": "geometric_intersection"
+        "minimum_surface_distance_m": 0.051411,
+        "minimum_surface_distance_mm": 51.411,
+        "intersecting_triangle_pair_count": 0,
+        "geometry_intersection_detected": false,
+        "classification": "large_service_opening"
       },
       "Temple_L__RearShell_L": {
-        "minimum_surface_distance_m": 0.001738,
-        "minimum_surface_distance_mm": 1.738,
-        "intersecting_triangle_pair_count": 112,
+        "minimum_surface_distance_m": 0.002218,
+        "minimum_surface_distance_mm": 2.218,
+        "intersecting_triangle_pair_count": 109,
         "geometry_intersection_detected": true,
         "classification": "geometric_intersection"
       },
       "Temple_R__RearShell_R": {
-        "minimum_surface_distance_m": 0.001738,
-        "minimum_surface_distance_mm": 1.738,
-        "intersecting_triangle_pair_count": 112,
+        "minimum_surface_distance_m": 0.002218,
+        "minimum_surface_distance_mm": 2.218,
+        "intersecting_triangle_pair_count": 109,
         "geometry_intersection_detected": true,
         "classification": "geometric_intersection"
       },
       "RearShell_L__CrownRear": {
-        "minimum_surface_distance_m": 0.006261,
-        "minimum_surface_distance_mm": 6.261,
-        "intersecting_triangle_pair_count": 0,
-        "geometry_intersection_detected": false,
-        "classification": "mechanical_slot_5_to_8_mm"
+        "minimum_surface_distance_m": 0.000648,
+        "minimum_surface_distance_mm": 0.648,
+        "intersecting_triangle_pair_count": 4,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
       },
       "RearShell_R__CrownRear": {
-        "minimum_surface_distance_m": 0.006261,
-        "minimum_surface_distance_mm": 6.261,
-        "intersecting_triangle_pair_count": 0,
-        "geometry_intersection_detected": false,
-        "classification": "mechanical_slot_5_to_8_mm"
+        "minimum_surface_distance_m": 0.000648,
+        "minimum_surface_distance_mm": 0.648,
+        "intersecting_triangle_pair_count": 4,
+        "geometry_intersection_detected": true,
+        "classification": "geometric_intersection"
       }
     },
     "intersecting_pairs": [
-      "CrownFront__Faceplate",
       "CrownFront__CrownRear",
+      "Faceplate__Temple_L",
+      "Faceplate__Temple_R",
       "Faceplate__Cheek_L",
       "Faceplate__Cheek_R",
-      "Jaw_L__Chin",
-      "Jaw_R__Chin",
       "Temple_L__RearShell_L",
-      "Temple_R__RearShell_R"
+      "Temple_R__RearShell_R",
+      "RearShell_L__CrownRear",
+      "RearShell_R__CrownRear"
     ],
     "pass": false
   },
@@ -1071,9 +1078,34 @@
       "HeadProxyV3_NoseClearance"
     ],
     "threshold_m": 0.004,
-    "minimum_surface_distance_m": null,
-    "penetration_detected": null,
-    "design_clearance_samples": {},
+    "minimum_surface_distance_m": 0.004705,
+    "penetration_detected": false,
+    "design_clearance_samples": {
+      "samples_m": {
+        "top": 0.017,
+        "temple_side": 0.017272,
+        "rear": 0.009576,
+        "nose": 0.004705,
+        "ear": 0.009772
+      },
+      "faceplate_nose_clearance_m": 0.009323,
+      "inner_nose_surface_y_m": -0.133705,
+      "faceplate_nose_surface_y_m": -0.138323,
+      "minimum_sample_m": 0.004705,
+      "penetration_detected": false,
+      "target_general_m": [
+        0.008,
+        0.018
+      ],
+      "target_local_minimum_m": 0.004,
+      "v5_realized_faceplate_nose_surface_y_m": -0.137313,
+      "v5_realized_faceplate_nose_clearance_m": 0.008313,
+      "canonical_gate": {
+        "method": "protected v4 HeadProxy named samples against immutable InnerShell",
+        "minimum_required_m": 0.004,
+        "pass": true
+      }
+    },
     "canonical_named_sample_gate": {
       "required_sample_names": [
         "top",
@@ -1082,26 +1114,26 @@
         "nose",
         "ear"
       ],
-      "missing_sample_names": [
-        "top",
-        "temple_side",
-        "rear",
-        "nose",
-        "ear"
-      ],
+      "missing_sample_names": [],
       "invalid_sample_names": [],
-      "valid_samples_m": {},
-      "computed_minimum_sample_m": null,
-      "reported_minimum_matches_named_samples": false,
-      "all_named_samples_at_least_4mm": false,
-      "faceplate_nose_clearance_m": null,
-      "faceplate_nose_source_field": "faceplate_nose_clearance_m",
-      "faceplate_nose_at_least_4mm": false,
-      "pass": false
+      "valid_samples_m": {
+        "top": 0.017,
+        "temple_side": 0.017272,
+        "rear": 0.009576,
+        "nose": 0.004705,
+        "ear": 0.009772
+      },
+      "computed_minimum_sample_m": 0.004705,
+      "reported_minimum_matches_named_samples": true,
+      "all_named_samples_at_least_4mm": true,
+      "faceplate_nose_clearance_m": 0.008313,
+      "faceplate_nose_source_field": "v5_realized_faceplate_nose_clearance_m",
+      "faceplate_nose_at_least_4mm": true,
+      "pass": true
     },
     "evaluated_inner_shell_bvh_diagnostic": {
-      "minimum_surface_distance_m": 0.0,
-      "intersecting_triangle_pair_count": 342,
+      "minimum_surface_distance_m": 2.6e-06,
+      "intersecting_triangle_pair_count": 932,
       "construction_proxy_surface_intersection_detected": true,
       "not_used_as_clearance_gate": true,
       "objects": {
@@ -1114,23 +1146,23 @@
         },
         "HeadProxyV3_Face": {
           "evaluated_sample_count": 746,
-          "minimum_surface_distance_m": 0.0008599,
-          "p05_vertex_and_face_center_distance_m": 0.0100451,
-          "intersecting_triangle_pair_count": 0,
-          "surface_intersection_detected": false
+          "minimum_surface_distance_m": 2.6e-06,
+          "p05_vertex_and_face_center_distance_m": 0.0012299,
+          "intersecting_triangle_pair_count": 330,
+          "surface_intersection_detected": true
         },
         "HeadProxyV3_Jaw": {
           "evaluated_sample_count": 650,
-          "minimum_surface_distance_m": 3.99e-05,
-          "p05_vertex_and_face_center_distance_m": 0.002,
-          "intersecting_triangle_pair_count": 16,
+          "minimum_surface_distance_m": 4e-05,
+          "p05_vertex_and_face_center_distance_m": 0.0018073,
+          "intersecting_triangle_pair_count": 248,
           "surface_intersection_detected": true
         },
         "HeadProxyV3_Chin": {
           "evaluated_sample_count": 462,
-          "minimum_surface_distance_m": 2.95e-05,
-          "p05_vertex_and_face_center_distance_m": 0.0003568,
-          "intersecting_triangle_pair_count": 80,
+          "minimum_surface_distance_m": 1.45e-05,
+          "p05_vertex_and_face_center_distance_m": 0.0006917,
+          "intersecting_triangle_pair_count": 168,
           "surface_intersection_detected": true
         },
         "HeadProxyV3_NoseClearance": {
@@ -1156,14 +1188,14 @@
         },
         "HeadProxyV3_Neck": {
           "evaluated_sample_count": 422,
-          "minimum_surface_distance_m": 0.0,
-          "p05_vertex_and_face_center_distance_m": 0.0010335,
-          "intersecting_triangle_pair_count": 176,
+          "minimum_surface_distance_m": 2.32e-05,
+          "p05_vertex_and_face_center_distance_m": 0.0006162,
+          "intersecting_triangle_pair_count": 116,
           "surface_intersection_detected": true
         }
       }
     },
-    "pass": false
+    "pass": true
   },
   "pivots": {
     "object_transforms": {
@@ -2222,381 +2254,918 @@
   "review_outputs": {
     "clay": {
       "expected_count": 8,
-      "actual_count": 0,
-      "complete": false,
+      "actual_count": 8,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 562741,
+          "mtime_ns": 1784660581705150294,
+          "sha256": "b60361bc6f6dc71b3d4fcef2b13d0a8b10e838cd6e6b6b916fdca690407c9d6e"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/back.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 498632,
+          "mtime_ns": 1784660582101175511,
+          "sha256": "5e4e1fe41b6604833f19d4238ec1ad62df096204cfb642f04d791f408bfab0f2"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/left.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 537170,
+          "mtime_ns": 1784660582494526910,
+          "sha256": "1f0411afb4588b72c841e2375891941fe3d9927b187be7bd42d4c244d626cf94"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/right.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 549393,
+          "mtime_ns": 1784660582881354205,
+          "sha256": "b144591bafd5436980c6612d8ff3ec8fb8684c78551b39ac84993c276e43e676"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/top.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 540203,
+          "mtime_ns": 1784660584082791441,
+          "sha256": "3002dc5ee8c022d3c4058a0a867e333201ca95b7ea2f758062c1712d5fb73236"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/bottom.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 566183,
+          "mtime_ns": 1784660584481387682,
+          "sha256": "5d7a88c59957efb3c3557597460626346086ec68a09ae136ed78748cf4cb5df1"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 559452,
+          "mtime_ns": 1784660583276023284,
+          "sha256": "fd3e0c0c7fbc134fb0aba3fdc83f6d50b94fbf56e5f171e3aa2d589e3f1b8c7f"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/rear_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 521169,
+          "mtime_ns": 1784660583681178504,
+          "sha256": "a153cb0e3683ccb61bd9a607cb7f1cb58469bf5c4205909bcfcb98c60ace177e"
         }
       ]
     },
     "design_preview": {
       "expected_count": 8,
-      "actual_count": 0,
-      "complete": false,
+      "actual_count": 8,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 603501,
+          "mtime_ns": 1784660584812369733,
+          "sha256": "a8c674907b4642beefffc6dfd18c8b0f9986026812f6a929a2863bcd90699e60"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 527107,
+          "mtime_ns": 1784660585220924362,
+          "sha256": "21b4a2b6a962ea92c0ae1f56f97285dfed3382da03623dd435f5fd9920f38738"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 578204,
+          "mtime_ns": 1784660585611680778,
+          "sha256": "7aaa537d40a87163364ecd4e50e3554eac2ed6cce61f84377cc8e2b05ad3cb78"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/right.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 583938,
+          "mtime_ns": 1784660586019823860,
+          "sha256": "7457fe14c139822470027e0925e025d1936270d9eb680d22b008d132547ed283"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 586383,
+          "mtime_ns": 1784660587220094752,
+          "sha256": "cc6da388d6e263d6f70992d4e42499991aa7d333db75b0cb15cdf40db4ab9944"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/bottom.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 577830,
+          "mtime_ns": 1784660587612364016,
+          "sha256": "f580a6725e30ea7d5465f5a85aa1c8bd7303dfb2a397d62469c4058b8ce45bf5"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 606756,
+          "mtime_ns": 1784660586421521798,
+          "sha256": "aee87da4261ee517528a3854123777b8035ec1b3bbe5cef0f7904509db7eddf5"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/rear_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 561957,
+          "mtime_ns": 1784660586810191777,
+          "sha256": "a511e7d979339d2b1c43ba3f1b5466c50c164773904352caa500935a833506f0"
         }
       ]
     },
     "zebra": {
       "expected_count": 3,
-      "actual_count": 0,
-      "complete": false,
+      "actual_count": 3,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 451701,
+          "mtime_ns": 1784660593910719032,
+          "sha256": "9a1ddd33ae39ff9476228df9a8d2df706971b2360c73244df2529e176a259a2f"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 489132,
+          "mtime_ns": 1784660594541168540,
+          "sha256": "b3c1b9727ea3a9a267112a36a9acdfc3e24035efdd75eda31e3022cb688f59dd"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/left.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 388590,
+          "mtime_ns": 1784660595250563679,
+          "sha256": "3c2f0be33d46353f489019a955b306f341b9fd5ff43a9ff09c4f258975e1889a"
         }
       ]
     },
     "with_head_proxy": {
       "expected_count": 8,
-      "actual_count": 0,
-      "complete": false,
+      "actual_count": 8,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 567776,
+          "mtime_ns": 1784660588002014296,
+          "sha256": "a9d1e99d9dd54906dc146e0919c012178884301f80b429542f1687c14071d7f6"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/back.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 510428,
+          "mtime_ns": 1784660588400394035,
+          "sha256": "20783c281bc071de6c41cfcb993bb5973608749a793104e73d0e9c9ee8f4b9c7"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/left.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 561799,
+          "mtime_ns": 1784660588791751290,
+          "sha256": "ae425c6d01a4dba227b518a2e27baff24ea6e3b01150b1ef4940434c8cd1405f"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/right.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 566987,
+          "mtime_ns": 1784660589183902845,
+          "sha256": "0751e8f0d7061c7d6b0ee2307b2088900a5dfe68411bd36dadb0df2c795e4f60"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/top.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 541488,
+          "mtime_ns": 1784660590353140314,
+          "sha256": "3fbe2993e0ad66c1011606319aeb18b28409aade7026068e25026e4c350475f1"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/bottom.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 570070,
+          "mtime_ns": 1784660590750967256,
+          "sha256": "44be00f52b461de7aca4ce72ba3c666686ae7f49a540d15dde199e6532c73197"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 565240,
+          "mtime_ns": 1784660589577961209,
+          "sha256": "70365f4e37ddd20d0ffb238a71345816b1c1b3960c209cf04f9d4af29b7302e8"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/rear_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 524514,
+          "mtime_ns": 1784660589967849408,
+          "sha256": "4e75eac2705637761bc0d64bb86d3668b3408103bd850fbf82903a94da30f530"
         }
       ]
     },
     "exploded_sanity": {
       "expected_count": 1,
-      "actual_count": 0,
-      "complete": false,
+      "actual_count": 1,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/exploded_sanity/front_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 659665,
+          "mtime_ns": 1784660591205539451,
+          "sha256": "557665908e2fd11703c0752ec18ce536205ea7cb42267fb055b1f86495f8a0e4"
         }
       ]
     },
     "silhouette": {
       "expected_count": 5,
-      "actual_count": 3,
-      "complete": false,
+      "actual_count": 5,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
           "exists": true,
-          "size_bytes": 118025,
-          "mtime_ns": 1784652433362733474,
-          "sha256": "cc8f5c732ef64d7b13606d6853545dd07e2ee74a8d5fe36967c68a7355fce38f"
+          "size_bytes": 115098,
+          "mtime_ns": 1784660668464956381,
+          "sha256": "98ea9bb52c5d4a1f5149ab7d862122e481abb9027131c6362b3d9f46f0156dbf"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
           "exists": true,
-          "size_bytes": 124911,
-          "mtime_ns": 1784652433692749951,
-          "sha256": "59d9747220b4a1948676a151f93e88df9ac40bcba2fa63fec80431eb4a0e552c"
+          "size_bytes": 122952,
+          "mtime_ns": 1784660668756468011,
+          "sha256": "59917099ed87ba6fb654f658b1884e61aa9505fe68ae33265ac623f98b20a430"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
           "exists": true,
-          "size_bytes": 125157,
-          "mtime_ns": 1784652434049367689,
-          "sha256": "d8d76a367445b4a1f6e62b7ec6613769c4a1a8377ea35d4bc0b41d4dbad788ed"
+          "size_bytes": 123320,
+          "mtime_ns": 1784660669051831971,
+          "sha256": "6bc29826a1cc61d08f71ce489c00259671e1e8ed43c4a75193ce2facef21e4cb"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/back.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 180358,
+          "mtime_ns": 1784660592410886558,
+          "sha256": "cdce699951207ea0c7a6908ae3e2618736e43a548d67fc95b205c5dd3486fd57"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/top.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 204297,
+          "mtime_ns": 1784660592723423348,
+          "sha256": "b0ead08521825dad6021cdd715da4f7ddc55d4fed56315d26f6851490febe3f9"
         }
       ]
     },
     "silhouette_material_id": {
       "expected_count": 2,
-      "actual_count": 0,
-      "complete": false,
+      "actual_count": 2,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/left.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 185088,
+          "mtime_ns": 1784660592924732155,
+          "sha256": "dccf9b9c534b75fb25a01502a4440463b6646e418588c48e5d370f3d7258e22d"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/right.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 185283,
+          "mtime_ns": 1784660593228479944,
+          "sha256": "f86e96ebfa834436cb55595bc9b9b47a0b3f56f2a84bbf1622eeacd50c602e05"
         }
       ]
     },
     "comparisons": {
       "expected_count": 6,
-      "actual_count": 0,
-      "complete": false,
+      "actual_count": 6,
+      "complete": true,
       "files": [
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 564703,
+          "mtime_ns": 1784660670070319618,
+          "sha256": "3a443c24a5567080617a2547d1ccf74093ba04f5c2252b15ac40df53d898c2ac"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_left.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 554520,
+          "mtime_ns": 1784660670133264472,
+          "sha256": "81ce3f1c1f44e4ac9eb622a3f8a67b13e7be8b3b042f7087d023cb1037f988e9"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_right.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 568045,
+          "mtime_ns": 1784660670191081277,
+          "sha256": "b609d6d71fc49e89ce3ab70f6306ab6616937104786a589579426451c1f41724"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_back.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 495719,
+          "mtime_ns": 1784660670245074837,
+          "sha256": "68f0d1625959e9e3caea85370bbd4d3ce0afa52769ab012575067aad2d924ac3"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front_3q.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 547669,
+          "mtime_ns": 1784660670300930039,
+          "sha256": "e21b31a796f317f7376f24ab83db5e31655b2882588e6c64a1942a621570ce99"
         },
         {
           "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/comparison_contact_sheet_v5.png",
-          "exists": false,
-          "size_bytes": 0,
-          "mtime_ns": null,
-          "sha256": null
+          "exists": true,
+          "size_bytes": 2730264,
+          "mtime_ns": 1784660670401216668,
+          "sha256": "b856bcb627263bc7f4d35f6a925bceca4fff3de2bf4cbeaf05c73303cad3b823"
         }
       ]
     },
     "feature_validation": {
       "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/feature_validation_v5.json",
-      "complete": false,
-      "failed_metrics": [
-        "missing_validation"
-      ]
+      "complete": true,
+      "failed_metrics": []
     },
     "silhouette_material_check": {
       "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette_material_check.json",
-      "complete": false,
-      "failed_views": [
-        "left",
-        "right"
-      ]
+      "complete": true,
+      "failed_views": []
     },
     "final_render_log": {
       "file": {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_render.json",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 23703,
+        "mtime_ns": 1784660595255087723,
+        "sha256": "1468cc5cde5fd86e14c277aae39154ebaeeb37ae03acef318964ca34132d9f04"
       },
-      "declared_render_count": null,
-      "complete": false
+      "declared_render_count": 35,
+      "complete": true
     },
     "visual_iterations": {
       "minimum_required": 3,
-      "actual_count": 0,
-      "iteration_numbers": [],
-      "per_iteration_outputs": [],
-      "final_iteration": null,
-      "final_iteration_self_check_pass": false,
-      "complete": false,
+      "actual_count": 6,
+      "iteration_numbers": [
+        21,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "per_iteration_outputs": [
+        {
+          "iteration": 21,
+          "design": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/design/front.png",
+              "exists": true,
+              "size_bytes": 605403,
+              "mtime_ns": 1784658922829641583,
+              "sha256": "3d123ce9ba94b8fbaba43013973199fe574a7be23d2d4199e9b0e6e8395f1836"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/design/front_3q.png",
+              "exists": true,
+              "size_bytes": 608828,
+              "mtime_ns": 1784658923204857638,
+              "sha256": "10a0df7ba52e7678d1a80cca55a1ce8d34c1f2e17ba16e702b0888b81f83e4cb"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/design/left.png",
+              "exists": true,
+              "size_bytes": 577823,
+              "mtime_ns": 1784658923579487479,
+              "sha256": "a7aa8bdd61e40e0db43b1f8161ee20b42c36830239a1c8eec16fe4725d89cc0e"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/design/right.png",
+              "exists": true,
+              "size_bytes": 584796,
+              "mtime_ns": 1784658923962799945,
+              "sha256": "6427974813fe074908ce24d13a9d7559a5e59806e7579f1a938ad7b0dda1715c"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/design/back.png",
+              "exists": true,
+              "size_bytes": 526489,
+              "mtime_ns": 1784658924349450817,
+              "sha256": "624bce6d9e6566c186dfadae5d05c6f40224bf9e2db6170724c9a07c9f0e1ce3"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/design/top.png",
+              "exists": true,
+              "size_bytes": 581041,
+              "mtime_ns": 1784658924742474207,
+              "sha256": "30cb871c451f324849e49a94375f58543329157c376b799607c43ba199221e08"
+            }
+          ],
+          "zebra": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/zebra/front.png",
+              "exists": true,
+              "size_bytes": 494388,
+              "mtime_ns": 1784658925381364760,
+              "sha256": "5052c3366e103bbff45946acbf65c825a1d89dc2e15ebb7d31793bdc13e5b4f1"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/zebra/front_3q.png",
+              "exists": true,
+              "size_bytes": 500361,
+              "mtime_ns": 1784658925987690755,
+              "sha256": "33f7ea1d344a8e5a88d668b981cd71838167aa0793f998f8de0a2dad7a93daed"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_21/zebra/left.png",
+              "exists": true,
+              "size_bytes": 460458,
+              "mtime_ns": 1784658926671279482,
+              "sha256": "8769eb60b6117bb97173c9168258de0a76b841265ff8f6c584d0822b60285108"
+            }
+          ],
+          "render_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_21_render.json",
+            "exists": true,
+            "size_bytes": 6962,
+            "mtime_ns": 1784658926675748982,
+            "sha256": "49bed8c62673b7df74d6a1f79455d8a982c9df57dce808393726a35c881b6fe2"
+          },
+          "build_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_21_build.json",
+            "exists": true,
+            "size_bytes": 4832,
+            "mtime_ns": 1784658897576798805,
+            "sha256": "017dd3ed33d743e36f41c1784d0c11e2736bcb19753fdd1a76b0689c505c79e8"
+          },
+          "render_log_declared_count": 9,
+          "build_log_iteration": 21,
+          "render_log_iteration": 21,
+          "outputs_follow_build_mtime": true,
+          "complete": true
+        },
+        {
+          "iteration": 23,
+          "design": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/design/front.png",
+              "exists": true,
+              "size_bytes": 605495,
+              "mtime_ns": 1784659549664083042,
+              "sha256": "84417c0d1e1aa25ecbae92f208aaea97c8f08c3187fd822ddbcd9495b89bce17"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/design/front_3q.png",
+              "exists": true,
+              "size_bytes": 608823,
+              "mtime_ns": 1784659550078250673,
+              "sha256": "8866c74aa8a67de93e7f06deeed923c76d3bd20a493b0140529411ab5eeab996"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/design/left.png",
+              "exists": true,
+              "size_bytes": 578325,
+              "mtime_ns": 1784659550411145993,
+              "sha256": "a05719d8456d3f337e444f5a3f058462f29284350639975d8f127cb512fd042d"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/design/right.png",
+              "exists": true,
+              "size_bytes": 583941,
+              "mtime_ns": 1784659550830214838,
+              "sha256": "f9a23fc3fac3b78287f53edadce7ad29ec469c2d3d79fa7bd1d2718e109ceaf9"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/design/back.png",
+              "exists": true,
+              "size_bytes": 527198,
+              "mtime_ns": 1784659551212005537,
+              "sha256": "06ce593ba43dd33975a3d917679bc8a71c751e79e1f50cb63707873156251f4a"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/design/top.png",
+              "exists": true,
+              "size_bytes": 586520,
+              "mtime_ns": 1784659551634442163,
+              "sha256": "0e76637a7366e4efdf97f209678c940db087bb76e0df703be0fe3343d6939a34"
+            }
+          ],
+          "zebra": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/zebra/front.png",
+              "exists": true,
+              "size_bytes": 494714,
+              "mtime_ns": 1784659552311336408,
+              "sha256": "5e6c561e9a61e79f75a616af0cb3257f0dd9b5bb522dd8db35c2c14ed9b104ce"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/zebra/front_3q.png",
+              "exists": true,
+              "size_bytes": 499769,
+              "mtime_ns": 1784659552896836287,
+              "sha256": "bea4359cf21235662329068269f1a1c366455be40ddada52e24aa155c904c8cb"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_23/zebra/left.png",
+              "exists": true,
+              "size_bytes": 459016,
+              "mtime_ns": 1784659553567463222,
+              "sha256": "292fa4e9e919ac7315859c9bd7f88d0a8ba1923b7b9971b204002a95e833216f"
+            }
+          ],
+          "render_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_23_render.json",
+            "exists": true,
+            "size_bytes": 6962,
+            "mtime_ns": 1784659553571975390,
+            "sha256": "86ccd0da3368803f30e4b119815f8afdd56150058f5155138a68062cae89d0c2"
+          },
+          "build_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_23_build.json",
+            "exists": true,
+            "size_bytes": 5048,
+            "mtime_ns": 1784659512435031958,
+            "sha256": "9239ab2417d46163cd8d1f3a299449e50acf74a7435ecae0a5bd980a3cdcaaa1"
+          },
+          "render_log_declared_count": 9,
+          "build_log_iteration": 23,
+          "render_log_iteration": 23,
+          "outputs_follow_build_mtime": true,
+          "complete": true
+        },
+        {
+          "iteration": 24,
+          "design": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/design/front.png",
+              "exists": true,
+              "size_bytes": 605601,
+              "mtime_ns": 1784659957623201941,
+              "sha256": "83ee24a7f107105d600660195ecbf8a59723bd7331d762799e54052926e97f58"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/design/front_3q.png",
+              "exists": true,
+              "size_bytes": 609517,
+              "mtime_ns": 1784659958037085162,
+              "sha256": "1a31d0abbd36d0c5116c35da0e36c99364363678a56767804b6de02e812cb6ce"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/design/left.png",
+              "exists": true,
+              "size_bytes": 578391,
+              "mtime_ns": 1784659958372069793,
+              "sha256": "a1226f8bdbea0d816875f210ef70ca4f28303b7b5cf19d60eea8526c58ddadc6"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/design/right.png",
+              "exists": true,
+              "size_bytes": 583907,
+              "mtime_ns": 1784659958788396454,
+              "sha256": "d41195eefd083cf71b26e9399b1667175fa8ab9e368055d0b91048e548ae3a05"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/design/back.png",
+              "exists": true,
+              "size_bytes": 527185,
+              "mtime_ns": 1784659959184756299,
+              "sha256": "a17e8082f608ea6dbf140417c66fa4deb4953146bbd7410ed197f1593877f0e7"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/design/top.png",
+              "exists": true,
+              "size_bytes": 586514,
+              "mtime_ns": 1784659959601339712,
+              "sha256": "d984e0c08e445f78ccd9896e28a72147109465d74c5a3f8b4ea7bc16cd10ce36"
+            }
+          ],
+          "zebra": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/zebra/front.png",
+              "exists": true,
+              "size_bytes": 495139,
+              "mtime_ns": 1784659960271596268,
+              "sha256": "55a514ccbe72c59f1c4dbe335c3227f8ddd84a088786a19511a8e16b771d19bf"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/zebra/front_3q.png",
+              "exists": true,
+              "size_bytes": 500542,
+              "mtime_ns": 1784659960858506442,
+              "sha256": "e7f84be933804e96a69292d79a94c5ece892fa0b14c9a1b8567d22742040633c"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_24/zebra/left.png",
+              "exists": true,
+              "size_bytes": 459321,
+              "mtime_ns": 1784659961533428043,
+              "sha256": "dc0cde974257f72474f23b90cc4a69fe75054466e2de24cd0d212dfc9fc6f95c"
+            }
+          ],
+          "render_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_24_render.json",
+            "exists": true,
+            "size_bytes": 6962,
+            "mtime_ns": 1784659961537945211,
+            "sha256": "4780b467221b66f99ee9f6f1445a00128bbb68d913ea57c8a8bc02baeefa0d02"
+          },
+          "build_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_24_build.json",
+            "exists": true,
+            "size_bytes": 5125,
+            "mtime_ns": 1784659934025152308,
+            "sha256": "3c0d7dc1738e826b518a3e08000cb2f63dd190d98fe8e16d0f70b56925f783e2"
+          },
+          "render_log_declared_count": 9,
+          "build_log_iteration": 24,
+          "render_log_iteration": 24,
+          "outputs_follow_build_mtime": true,
+          "complete": true
+        },
+        {
+          "iteration": 25,
+          "design": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/design/front.png",
+              "exists": true,
+              "size_bytes": 604257,
+              "mtime_ns": 1784660248826959990,
+              "sha256": "a9961b74a4747c7c952718e230e6c4328d9d69d1b38baba0f5eb02f510df7d0d"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/design/front_3q.png",
+              "exists": true,
+              "size_bytes": 607361,
+              "mtime_ns": 1784660249222910789,
+              "sha256": "90103a7351db7ac06a737e8fca0fb0e14e85730f72c6bb7d90a204ded0a686f1"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/design/left.png",
+              "exists": true,
+              "size_bytes": 578390,
+              "mtime_ns": 1784660249612795488,
+              "sha256": "c014fe5160f957fa94ed5b170319d3c0571218b4f2c25f81b71f18e625314eea"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/design/right.png",
+              "exists": true,
+              "size_bytes": 583533,
+              "mtime_ns": 1784660250018158419,
+              "sha256": "05d9308dd3a6fb1941109647b0bb9ca312ad2afe48e70c91f8da3cf3773ee92a"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/design/back.png",
+              "exists": true,
+              "size_bytes": 526985,
+              "mtime_ns": 1784660250419754481,
+              "sha256": "60c8d251ba2a185aac718eea6b16955d5031020fde58698ab0deb575533ee807"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/design/top.png",
+              "exists": true,
+              "size_bytes": 586573,
+              "mtime_ns": 1784660250828940782,
+              "sha256": "dc18fbebececbd117fae40298ef1230c324d3023644d999df85dc3ab6760d288"
+            }
+          ],
+          "zebra": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/zebra/front.png",
+              "exists": true,
+              "size_bytes": 494750,
+              "mtime_ns": 1784660251512184130,
+              "sha256": "cbdda20648c4512d556ce9c254156550932bf7eb606d81c9e38560ff790bb5d5"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/zebra/front_3q.png",
+              "exists": true,
+              "size_bytes": 498323,
+              "mtime_ns": 1784660252123491287,
+              "sha256": "380b889ea7179d53c08c8bf3122cc5833600c1506771985ab175348a473c7d92"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_25/zebra/left.png",
+              "exists": true,
+              "size_bytes": 458443,
+              "mtime_ns": 1784660252820179221,
+              "sha256": "69eb4e2e0a40ad0cb7bab36063039c063582ae36d4b275996bfae453c612ce15"
+            }
+          ],
+          "render_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_25_render.json",
+            "exists": true,
+            "size_bytes": 6962,
+            "mtime_ns": 1784660252824802932,
+            "sha256": "501c56a3f1b74935f4f2be199a60b82181a3e1ad7846746d8c83956f887434b9"
+          },
+          "build_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_25_build.json",
+            "exists": true,
+            "size_bytes": 5153,
+            "mtime_ns": 1784660237034360799,
+            "sha256": "bac6e5a155224306bb97f716c740d94aba11cb593f37837a2baf3d0551d1c163"
+          },
+          "render_log_declared_count": 9,
+          "build_log_iteration": 25,
+          "render_log_iteration": 25,
+          "outputs_follow_build_mtime": true,
+          "complete": true
+        },
+        {
+          "iteration": 26,
+          "design": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/design/front.png",
+              "exists": true,
+              "size_bytes": 603638,
+              "mtime_ns": 1784660353824491359,
+              "sha256": "94b478681ac610cafa1c4b88ca0a609350938f49889428e18d28c70a2f1ed5b7"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/design/front_3q.png",
+              "exists": true,
+              "size_bytes": 606756,
+              "mtime_ns": 1784660354316050409,
+              "sha256": "3fe9d67fe44c9a621d5c2fab511cb5fed82779aae639e3229af897f6e9c2b84f"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/design/left.png",
+              "exists": true,
+              "size_bytes": 578307,
+              "mtime_ns": 1784660354741652493,
+              "sha256": "f3d8128e9cf7768ca3bd441f9828f2080fd583c6c463e497714f227f89a5194d"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/design/right.png",
+              "exists": true,
+              "size_bytes": 583755,
+              "mtime_ns": 1784660355146293292,
+              "sha256": "db667226d19d314ff64f82dfcdc2061e3587680787d6e7768062e6879adc0c56"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/design/back.png",
+              "exists": true,
+              "size_bytes": 526938,
+              "mtime_ns": 1784660355534607809,
+              "sha256": "e4ebc4db3cfe28743746506783ad00c2dadc908885aee38fb1a906eb3fa35e4f"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/design/top.png",
+              "exists": true,
+              "size_bytes": 586528,
+              "mtime_ns": 1784660355932560169,
+              "sha256": "513d4dbdbdd17a6c50d96a64c4b99cc8c9e7d391896a885eb9880e23eb0c73a4"
+            }
+          ],
+          "zebra": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/zebra/front.png",
+              "exists": true,
+              "size_bytes": 494886,
+              "mtime_ns": 1784660356618242790,
+              "sha256": "658b56745dcc22449002fa51614b78cab83e6c9a07c95c293a79db8479bdb55c"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/zebra/front_3q.png",
+              "exists": true,
+              "size_bytes": 497291,
+              "mtime_ns": 1784660357225848079,
+              "sha256": "5e3a7fc5632e575e74b121e3ce93e6b9ae3f942dd11df2d1e392c0782fbbf332"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_26/zebra/left.png",
+              "exists": true,
+              "size_bytes": 456802,
+              "mtime_ns": 1784660357916264078,
+              "sha256": "3b5f9c6c3b2cfa6446aca2e02384ce988e62903e8d1bc350c31edfd0f635fd62"
+            }
+          ],
+          "render_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_26_render.json",
+            "exists": true,
+            "size_bytes": 6961,
+            "mtime_ns": 1784660357920709454,
+            "sha256": "8bbbfc11004a5e9e713d82607bc70e7f652b964f700734b0f65de3fd4e2119e5"
+          },
+          "build_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_26_build.json",
+            "exists": true,
+            "size_bytes": 5159,
+            "mtime_ns": 1784660340308269129,
+            "sha256": "4445c6015b02378d62064da8997355c9e677bcf1394bd80fa47ff14a7c78c3e8"
+          },
+          "render_log_declared_count": 9,
+          "build_log_iteration": 26,
+          "render_log_iteration": 26,
+          "outputs_follow_build_mtime": true,
+          "complete": true
+        },
+        {
+          "iteration": 27,
+          "design": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/design/front.png",
+              "exists": true,
+              "size_bytes": 603421,
+              "mtime_ns": 1784660502833475019,
+              "sha256": "8c0e01f46a26eaa54d28c7b7da95bfe0a761a86537f22dcf08069ae1c9785be0"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/design/front_3q.png",
+              "exists": true,
+              "size_bytes": 606756,
+              "mtime_ns": 1784660503232850268,
+              "sha256": "b67c990aec55715eb33714415a72fc16d375449cf9007c4c6ac27cf26a558556"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/design/left.png",
+              "exists": true,
+              "size_bytes": 578005,
+              "mtime_ns": 1784660503617806878,
+              "sha256": "c8603f130781c24567b09586cdef32e0d6ecd897e22798feb102fcad9b2ffbd3"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/design/right.png",
+              "exists": true,
+              "size_bytes": 583736,
+              "mtime_ns": 1784660504028240858,
+              "sha256": "0530f6c105c2f56fa040005961561cf450fb251484d5817a95bb440583f38086"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/design/back.png",
+              "exists": true,
+              "size_bytes": 527112,
+              "mtime_ns": 1784660504423259440,
+              "sha256": "61c8f85248a6f897c6e365f2ba4d8bb34e527667d0a3d13c913e1cbde3d49af0"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/design/top.png",
+              "exists": true,
+              "size_bytes": 586460,
+              "mtime_ns": 1784660504822016558,
+              "sha256": "b6c548b3f387db993df3253bb47e756e08370aee2c11217f9e4a592a869c5417"
+            }
+          ],
+          "zebra": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/zebra/front.png",
+              "exists": true,
+              "size_bytes": 494735,
+              "mtime_ns": 1784660505488856623,
+              "sha256": "3bdaa36e739a1136b459c6c5223c97da3053c389e7f34b92d7a6cd46ffebbe51"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/zebra/front_3q.png",
+              "exists": true,
+              "size_bytes": 497291,
+              "mtime_ns": 1784660506118860168,
+              "sha256": "a707341c9769d67fde7d6b32e715009f1f7c99403bb37b3225f0a7aa3ae44f9b"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/review_iterations/iteration_27/zebra/left.png",
+              "exists": true,
+              "size_bytes": 456716,
+              "mtime_ns": 1784660506806588016,
+              "sha256": "fbd6e820747df3624a2c66c95f6d869b7664af086609116717d9f82c621a7e03"
+            }
+          ],
+          "render_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_27_render.json",
+            "exists": true,
+            "size_bytes": 6962,
+            "mtime_ns": 1784660506813446707,
+            "sha256": "07ed306fdf3abe60cf3085e82e69c58bfa6323c2c7602163deb48dad29250645"
+          },
+          "build_log": {
+            "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_27_build.json",
+            "exists": true,
+            "size_bytes": 5189,
+            "mtime_ns": 1784660478290764198,
+            "sha256": "621fb4fc337265775c4a6d031b62d5c4b02da1dcbb6b1914d4384cac117c5dda"
+          },
+          "render_log_declared_count": 9,
+          "build_log_iteration": 27,
+          "render_log_iteration": 27,
+          "outputs_follow_build_mtime": true,
+          "complete": true
+        }
+      ],
+      "final_iteration": 27,
+      "final_iteration_self_check_pass": true,
+      "complete": true,
       "log": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/visual_iteration_log_v5.json"
     },
     "final_visual_self_check": {
@@ -2611,411 +3180,599 @@
         "rear_spine_shape",
         "feature_regression"
       ],
-      "present_criteria": [],
-      "records": [],
-      "complete": false
+      "present_criteria": [
+        "faceplate_highlight_continuity",
+        "faceplate_upper_edge_clean",
+        "eye_slots_embedded",
+        "crown_seam_narrow",
+        "mouth_chin_clean",
+        "no_gold_side_outline",
+        "no_base_foot",
+        "rear_spine_shape",
+        "feature_regression"
+      ],
+      "records": [
+        {
+          "criterion_id": "faceplate_highlight_continuity",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front.png",
+              "exists": true,
+              "size_bytes": 451701,
+              "mtime_ns": 1784660593910719032,
+              "sha256": "9a1ddd33ae39ff9476228df9a8d2df706971b2360c73244df2529e176a259a2f"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front_3q.png",
+              "exists": true,
+              "size_bytes": 489132,
+              "mtime_ns": 1784660594541168540,
+              "sha256": "b3c1b9727ea3a9a267112a36a9acdfc3e24035efdd75eda31e3022cb688f59dd"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/left.png",
+              "exists": true,
+              "size_bytes": 388590,
+              "mtime_ns": 1784660595250563679,
+              "sha256": "3c2f0be33d46353f489019a955b306f341b9fd5ff43a9ff09c4f258975e1889a"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "faceplate_upper_edge_clean",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
+              "exists": true,
+              "size_bytes": 603501,
+              "mtime_ns": 1784660584812369733,
+              "sha256": "a8c674907b4642beefffc6dfd18c8b0f9986026812f6a929a2863bcd90699e60"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
+              "exists": true,
+              "size_bytes": 606756,
+              "mtime_ns": 1784660586421521798,
+              "sha256": "aee87da4261ee517528a3854123777b8035ec1b3bbe5cef0f7904509db7eddf5"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "eye_slots_embedded",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
+              "exists": true,
+              "size_bytes": 603501,
+              "mtime_ns": 1784660584812369733,
+              "sha256": "a8c674907b4642beefffc6dfd18c8b0f9986026812f6a929a2863bcd90699e60"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
+              "exists": true,
+              "size_bytes": 586383,
+              "mtime_ns": 1784660587220094752,
+              "sha256": "cc6da388d6e263d6f70992d4e42499991aa7d333db75b0cb15cdf40db4ab9944"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "crown_seam_narrow",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
+              "exists": true,
+              "size_bytes": 578204,
+              "mtime_ns": 1784660585611680778,
+              "sha256": "7aaa537d40a87163364ecd4e50e3554eac2ed6cce61f84377cc8e2b05ad3cb78"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
+              "exists": true,
+              "size_bytes": 527107,
+              "mtime_ns": 1784660585220924362,
+              "sha256": "21b4a2b6a962ea92c0ae1f56f97285dfed3382da03623dd435f5fd9920f38738"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
+              "exists": true,
+              "size_bytes": 586383,
+              "mtime_ns": 1784660587220094752,
+              "sha256": "cc6da388d6e263d6f70992d4e42499991aa7d333db75b0cb15cdf40db4ab9944"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "mouth_chin_clean",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
+              "exists": true,
+              "size_bytes": 603501,
+              "mtime_ns": 1784660584812369733,
+              "sha256": "a8c674907b4642beefffc6dfd18c8b0f9986026812f6a929a2863bcd90699e60"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
+              "exists": true,
+              "size_bytes": 606756,
+              "mtime_ns": 1784660586421521798,
+              "sha256": "aee87da4261ee517528a3854123777b8035ec1b3bbe5cef0f7904509db7eddf5"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
+              "exists": true,
+              "size_bytes": 578204,
+              "mtime_ns": 1784660585611680778,
+              "sha256": "7aaa537d40a87163364ecd4e50e3554eac2ed6cce61f84377cc8e2b05ad3cb78"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/right.png",
+              "exists": true,
+              "size_bytes": 583938,
+              "mtime_ns": 1784660586019823860,
+              "sha256": "7457fe14c139822470027e0925e025d1936270d9eb680d22b008d132547ed283"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "no_gold_side_outline",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/left.png",
+              "exists": true,
+              "size_bytes": 185088,
+              "mtime_ns": 1784660592924732155,
+              "sha256": "dccf9b9c534b75fb25a01502a4440463b6646e418588c48e5d370f3d7258e22d"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/right.png",
+              "exists": true,
+              "size_bytes": 185283,
+              "mtime_ns": 1784660593228479944,
+              "sha256": "f86e96ebfa834436cb55595bc9b9b47a0b3f56f2a84bbf1622eeacd50c602e05"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "no_base_foot",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
+              "exists": true,
+              "size_bytes": 603501,
+              "mtime_ns": 1784660584812369733,
+              "sha256": "a8c674907b4642beefffc6dfd18c8b0f9986026812f6a929a2863bcd90699e60"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
+              "exists": true,
+              "size_bytes": 578204,
+              "mtime_ns": 1784660585611680778,
+              "sha256": "7aaa537d40a87163364ecd4e50e3554eac2ed6cce61f84377cc8e2b05ad3cb78"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/bottom.png",
+              "exists": true,
+              "size_bytes": 577830,
+              "mtime_ns": 1784660587612364016,
+              "sha256": "f580a6725e30ea7d5465f5a85aa1c8bd7303dfb2a397d62469c4058b8ce45bf5"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "rear_spine_shape",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
+              "exists": true,
+              "size_bytes": 527107,
+              "mtime_ns": 1784660585220924362,
+              "sha256": "21b4a2b6a962ea92c0ae1f56f97285dfed3382da03623dd435f5fd9920f38738"
+            },
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
+              "exists": true,
+              "size_bytes": 586383,
+              "mtime_ns": 1784660587220094752,
+              "sha256": "cc6da388d6e263d6f70992d4e42499991aa7d333db75b0cb15cdf40db4ab9944"
+            }
+          ],
+          "valid": true
+        },
+        {
+          "criterion_id": "feature_regression",
+          "pass": true,
+          "render_files": [
+            {
+              "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/comparison_contact_sheet_v5.png",
+              "exists": true,
+              "size_bytes": 2730264,
+              "mtime_ns": 1784660670401216668,
+              "sha256": "b856bcb627263bc7f4d35f6a925bceca4fff3de2bf4cbeaf05c73303cad3b823"
+            }
+          ],
+          "valid": true
+        }
+      ],
+      "complete": true
     },
-    "complete": false
+    "complete": true
   },
   "artifact_binding": {
     "blend": {
       "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
       "exists": true,
-      "size_bytes": 509080,
-      "mtime_ns": 1784652486574093030,
-      "sha256": "63ec7ce6945394a747a31fe1fdd9d3504ffd529f924a6280b772230b148fc76d"
+      "size_bytes": 512493,
+      "mtime_ns": 1784660478269705580,
+      "sha256": "0af1a485b96bbaf9ea6732da708507692ba5fa3975833eaaac9461d44cde3524"
     },
-    "blend_sha256": "63ec7ce6945394a747a31fe1fdd9d3504ffd529f924a6280b772230b148fc76d",
-    "scene_iteration": 2,
-    "visual_final_iteration": null,
-    "build_log_path": null,
+    "blend_sha256": "0af1a485b96bbaf9ea6732da708507692ba5fa3975833eaaac9461d44cde3524",
+    "scene_iteration": 27,
+    "visual_final_iteration": 27,
+    "build_log_path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_27_build.json",
     "bound_artifacts": [
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 562741,
+        "mtime_ns": 1784660581705150294,
+        "sha256": "b60361bc6f6dc71b3d4fcef2b13d0a8b10e838cd6e6b6b916fdca690407c9d6e"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/back.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 498632,
+        "mtime_ns": 1784660582101175511,
+        "sha256": "5e4e1fe41b6604833f19d4238ec1ad62df096204cfb642f04d791f408bfab0f2"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/left.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 537170,
+        "mtime_ns": 1784660582494526910,
+        "sha256": "1f0411afb4588b72c841e2375891941fe3d9927b187be7bd42d4c244d626cf94"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/right.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 549393,
+        "mtime_ns": 1784660582881354205,
+        "sha256": "b144591bafd5436980c6612d8ff3ec8fb8684c78551b39ac84993c276e43e676"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/top.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 540203,
+        "mtime_ns": 1784660584082791441,
+        "sha256": "3002dc5ee8c022d3c4058a0a867e333201ca95b7ea2f758062c1712d5fb73236"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/bottom.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 566183,
+        "mtime_ns": 1784660584481387682,
+        "sha256": "5d7a88c59957efb3c3557597460626346086ec68a09ae136ed78748cf4cb5df1"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 559452,
+        "mtime_ns": 1784660583276023284,
+        "sha256": "fd3e0c0c7fbc134fb0aba3fdc83f6d50b94fbf56e5f171e3aa2d589e3f1b8c7f"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/rear_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 521169,
+        "mtime_ns": 1784660583681178504,
+        "sha256": "a153cb0e3683ccb61bd9a607cb7f1cb58469bf5c4205909bcfcb98c60ace177e"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 603501,
+        "mtime_ns": 1784660584812369733,
+        "sha256": "a8c674907b4642beefffc6dfd18c8b0f9986026812f6a929a2863bcd90699e60"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 527107,
+        "mtime_ns": 1784660585220924362,
+        "sha256": "21b4a2b6a962ea92c0ae1f56f97285dfed3382da03623dd435f5fd9920f38738"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 578204,
+        "mtime_ns": 1784660585611680778,
+        "sha256": "7aaa537d40a87163364ecd4e50e3554eac2ed6cce61f84377cc8e2b05ad3cb78"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/right.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 583938,
+        "mtime_ns": 1784660586019823860,
+        "sha256": "7457fe14c139822470027e0925e025d1936270d9eb680d22b008d132547ed283"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 586383,
+        "mtime_ns": 1784660587220094752,
+        "sha256": "cc6da388d6e263d6f70992d4e42499991aa7d333db75b0cb15cdf40db4ab9944"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/bottom.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 577830,
+        "mtime_ns": 1784660587612364016,
+        "sha256": "f580a6725e30ea7d5465f5a85aa1c8bd7303dfb2a397d62469c4058b8ce45bf5"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 606756,
+        "mtime_ns": 1784660586421521798,
+        "sha256": "aee87da4261ee517528a3854123777b8035ec1b3bbe5cef0f7904509db7eddf5"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/rear_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 561957,
+        "mtime_ns": 1784660586810191777,
+        "sha256": "a511e7d979339d2b1c43ba3f1b5466c50c164773904352caa500935a833506f0"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 451701,
+        "mtime_ns": 1784660593910719032,
+        "sha256": "9a1ddd33ae39ff9476228df9a8d2df706971b2360c73244df2529e176a259a2f"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 489132,
+        "mtime_ns": 1784660594541168540,
+        "sha256": "b3c1b9727ea3a9a267112a36a9acdfc3e24035efdd75eda31e3022cb688f59dd"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/left.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 388590,
+        "mtime_ns": 1784660595250563679,
+        "sha256": "3c2f0be33d46353f489019a955b306f341b9fd5ff43a9ff09c4f258975e1889a"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 567776,
+        "mtime_ns": 1784660588002014296,
+        "sha256": "a9d1e99d9dd54906dc146e0919c012178884301f80b429542f1687c14071d7f6"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/back.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 510428,
+        "mtime_ns": 1784660588400394035,
+        "sha256": "20783c281bc071de6c41cfcb993bb5973608749a793104e73d0e9c9ee8f4b9c7"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/left.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 561799,
+        "mtime_ns": 1784660588791751290,
+        "sha256": "ae425c6d01a4dba227b518a2e27baff24ea6e3b01150b1ef4940434c8cd1405f"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/right.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 566987,
+        "mtime_ns": 1784660589183902845,
+        "sha256": "0751e8f0d7061c7d6b0ee2307b2088900a5dfe68411bd36dadb0df2c795e4f60"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/top.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 541488,
+        "mtime_ns": 1784660590353140314,
+        "sha256": "3fbe2993e0ad66c1011606319aeb18b28409aade7026068e25026e4c350475f1"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/bottom.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 570070,
+        "mtime_ns": 1784660590750967256,
+        "sha256": "44be00f52b461de7aca4ce72ba3c666686ae7f49a540d15dde199e6532c73197"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 565240,
+        "mtime_ns": 1784660589577961209,
+        "sha256": "70365f4e37ddd20d0ffb238a71345816b1c1b3960c209cf04f9d4af29b7302e8"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/rear_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 524514,
+        "mtime_ns": 1784660589967849408,
+        "sha256": "4e75eac2705637761bc0d64bb86d3668b3408103bd850fbf82903a94da30f530"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/exploded_sanity/front_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 659665,
+        "mtime_ns": 1784660591205539451,
+        "sha256": "557665908e2fd11703c0752ec18ce536205ea7cb42267fb055b1f86495f8a0e4"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
         "exists": true,
-        "size_bytes": 118025,
-        "mtime_ns": 1784652433362733474,
-        "sha256": "cc8f5c732ef64d7b13606d6853545dd07e2ee74a8d5fe36967c68a7355fce38f"
+        "size_bytes": 115098,
+        "mtime_ns": 1784660668464956381,
+        "sha256": "98ea9bb52c5d4a1f5149ab7d862122e481abb9027131c6362b3d9f46f0156dbf"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
         "exists": true,
-        "size_bytes": 124911,
-        "mtime_ns": 1784652433692749951,
-        "sha256": "59d9747220b4a1948676a151f93e88df9ac40bcba2fa63fec80431eb4a0e552c"
+        "size_bytes": 122952,
+        "mtime_ns": 1784660668756468011,
+        "sha256": "59917099ed87ba6fb654f658b1884e61aa9505fe68ae33265ac623f98b20a430"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
         "exists": true,
-        "size_bytes": 125157,
-        "mtime_ns": 1784652434049367689,
-        "sha256": "d8d76a367445b4a1f6e62b7ec6613769c4a1a8377ea35d4bc0b41d4dbad788ed"
+        "size_bytes": 123320,
+        "mtime_ns": 1784660669051831971,
+        "sha256": "6bc29826a1cc61d08f71ce489c00259671e1e8ed43c4a75193ce2facef21e4cb"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/back.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 180358,
+        "mtime_ns": 1784660592410886558,
+        "sha256": "cdce699951207ea0c7a6908ae3e2618736e43a548d67fc95b205c5dd3486fd57"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/top.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 204297,
+        "mtime_ns": 1784660592723423348,
+        "sha256": "b0ead08521825dad6021cdd715da4f7ddc55d4fed56315d26f6851490febe3f9"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/left.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 185088,
+        "mtime_ns": 1784660592924732155,
+        "sha256": "dccf9b9c534b75fb25a01502a4440463b6646e418588c48e5d370f3d7258e22d"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/right.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 185283,
+        "mtime_ns": 1784660593228479944,
+        "sha256": "f86e96ebfa834436cb55595bc9b9b47a0b3f56f2a84bbf1622eeacd50c602e05"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 564703,
+        "mtime_ns": 1784660670070319618,
+        "sha256": "3a443c24a5567080617a2547d1ccf74093ba04f5c2252b15ac40df53d898c2ac"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_left.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 554520,
+        "mtime_ns": 1784660670133264472,
+        "sha256": "81ce3f1c1f44e4ac9eb622a3f8a67b13e7be8b3b042f7087d023cb1037f988e9"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_right.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 568045,
+        "mtime_ns": 1784660670191081277,
+        "sha256": "b609d6d71fc49e89ce3ab70f6306ab6616937104786a589579426451c1f41724"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_back.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 495719,
+        "mtime_ns": 1784660670245074837,
+        "sha256": "68f0d1625959e9e3caea85370bbd4d3ce0afa52769ab012575067aad2d924ac3"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front_3q.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 547669,
+        "mtime_ns": 1784660670300930039,
+        "sha256": "e21b31a796f317f7376f24ab83db5e31655b2882588e6c64a1942a621570ce99"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/comparison_contact_sheet_v5.png",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 2730264,
+        "mtime_ns": 1784660670401216668,
+        "sha256": "b856bcb627263bc7f4d35f6a925bceca4fff3de2bf4cbeaf05c73303cad3b823"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/feature_validation_v5.json",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 26758,
+        "mtime_ns": 1784660670012537230,
+        "sha256": "c5e4052962870b3bfc0837fee192649ab7b070195291cf4979c0ba9b52f8605d"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette_material_check.json",
         "exists": true,
-        "size_bytes": 27439,
-        "mtime_ns": 1784652471381214617,
-        "sha256": "3a3cf94a297064e8c563c3ce38fefe64b15ebc4390ce45bda3f0869471486595"
+        "size_bytes": 2239,
+        "mtime_ns": 1784660670012280061,
+        "sha256": "2eb1dbdd1ec41b4cb9895b81bedc8eb25c08414818eaf6d220786e74a2277d49"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_compare_v5.json",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 1124,
+        "mtime_ns": 1784660670404650534,
+        "sha256": "3a332cbea70a3bf9db2807f006d9813b43369d51efc3193f173b7c116f0dae4e"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_render.json",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 23703,
+        "mtime_ns": 1784660595255087723,
+        "sha256": "1468cc5cde5fd86e14c277aae39154ebaeeb37ae03acef318964ca34132d9f04"
       },
       {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/visual_iteration_log_v5.json",
-        "exists": false,
-        "size_bytes": 0,
-        "mtime_ns": null,
-        "sha256": null
+        "exists": true,
+        "size_bytes": 4088,
+        "mtime_ns": 1784660733037500872,
+        "sha256": "1966b8efd9a7fc0d79ff2b4639251d0f96ae90c5004d05af2db0f3fa37cba23e"
+      },
+      {
+        "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/iteration_27_build.json",
+        "exists": true,
+        "size_bytes": 5189,
+        "mtime_ns": 1784660478290764198,
+        "sha256": "621fb4fc337265775c4a6d031b62d5c4b02da1dcbb6b1914d4384cac117c5dda"
       }
     ],
-    "stale_or_missing_artifacts": [
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/back.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/left.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/right.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/top.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/bottom.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/front_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/clay/helmet_only/rear_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/back.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/left.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/right.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/top.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/bottom.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/front_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/design_preview/helmet_only/rear_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/front_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/zebra/left.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/back.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/left.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/right.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/top.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/bottom.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/front_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/with_head_proxy/rear_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/exploded_sanity/front_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/back.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/top.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/left.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/material_id/right.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_left.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_right.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_back.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/compare_front_3q.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/comparison_contact_sheet_v5.png",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/feature_validation_v5.json",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette_material_check.json",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_compare_v5.json",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/final_render.json",
-      "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/visual_iteration_log_v5.json"
-    ],
+    "stale_or_missing_artifacts": [],
     "checks": {
       "opened_expected_blend": true,
       "scene_iteration_is_integer": true,
-      "scene_matches_visual_final_iteration": false,
-      "exact_final_build_log_selected": false,
-      "build_log_iteration_matches_scene": false,
-      "feature_json_matches_blend_sha256": false,
-      "feature_json_matches_scene_iteration": false,
-      "material_json_matches_blend_sha256": false,
-      "material_json_matches_scene_iteration": false,
-      "compare_log_matches_blend_sha256": false,
-      "compare_log_matches_scene_iteration": false,
-      "all_final_artifacts_newer_than_blend": false
+      "scene_matches_visual_final_iteration": true,
+      "exact_final_build_log_selected": true,
+      "build_log_iteration_matches_scene": true,
+      "feature_json_matches_blend_sha256": true,
+      "feature_json_matches_scene_iteration": true,
+      "material_json_matches_blend_sha256": true,
+      "material_json_matches_scene_iteration": true,
+      "compare_log_matches_blend_sha256": true,
+      "compare_log_matches_scene_iteration": true,
+      "all_final_artifacts_newer_than_blend": true
     },
-    "pass": false
+    "pass": true
   },
   "pass": false
 }

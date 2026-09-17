@@ -1,7 +1,10 @@
 import { startCamera, stopCamera } from './camera/camera';
 import { UiHoldSfx } from './audio/sfx';
+import { EffectsLayer3d } from './effects/effectsLayer3d';
+import { GestureEffectsController } from './effects/gestureEffectsController';
 import { UiHoldButton } from './interaction/uiHoldButton';
 import type { PreviewLayout } from './interaction/coordinateMapping';
+import { FaceReactionController } from './reactions/faceReactionController';
 import { HelmetRenderer } from './rendering/helmetRenderer';
 import { OverlayRenderer, type OverlayContent } from './rendering/overlayRenderer';
 import {
@@ -26,6 +29,8 @@ class DemoApp {
   private readonly video = requireElement<HTMLVideoElement>('camera-video');
   private readonly helmetCanvas = requireElement<HTMLCanvasElement>('helmet-canvas');
   private readonly overlayCanvas = requireElement<HTMLCanvasElement>('overlay-canvas');
+  private readonly effectsCanvas = requireElement<HTMLCanvasElement>('effects-canvas');
+  private readonly faceReactionElement = requireElement<HTMLDivElement>('face-reaction');
   private readonly stageOverlay = requireElement<HTMLDivElement>('preview-overlay');
   private readonly introPanel = requireElement<HTMLElement>('intro-panel');
   private readonly statusText = requireElement<HTMLParagraphElement>('status-text');
@@ -44,10 +49,12 @@ class DemoApp {
   private readonly landmarksToggle = requireElement<HTMLButtonElement>('landmarks-toggle');
   private readonly landmarksLabel = requireElement<HTMLSpanElement>('landmarks-toggle-label');
   private readonly landmarksHint = requireElement<HTMLSpanElement>('landmarks-toggle-hint');
-  private readonly helmetControl = requireElement<HTMLDivElement>('helmet-control');
-  private readonly helmetToggle = requireElement<HTMLButtonElement>('helmet-toggle');
-  private readonly helmetToggleLabel = requireElement<HTMLSpanElement>('helmet-toggle-label');
-  private readonly helmetToggleStatus = requireElement<HTMLSpanElement>('helmet-toggle-status');
+  private readonly reactionDemoToggle =
+    requireElement<HTMLButtonElement>('reaction-demo-toggle');
+  private readonly reactionDemoToggleLabel =
+    requireElement<HTMLSpanElement>('reaction-demo-toggle-label');
+  private readonly reactionDemoToggleHint =
+    requireElement<HTMLSpanElement>('reaction-demo-toggle-hint');
   private readonly uiToggle = requireElement<HTMLButtonElement>('ui-toggle');
   private readonly uiToggleLabel = requireElement<HTMLSpanElement>('ui-toggle-label');
   private readonly uiToggleHint = requireElement<HTMLSpanElement>('ui-toggle-hint');
@@ -61,9 +68,12 @@ class DemoApp {
   private readonly demoModels = new DemoModelController();
   private readonly overlay = new OverlayRenderer(this.overlayCanvas, this.video);
   private readonly facePoseAdapter = new FacePoseAdapter();
+  private readonly faceReaction = new FaceReactionController(this.faceReactionElement);
   private readonly gestureProcessor = new HandTrackingResultProcessor();
+  private readonly effects: EffectsLayer3d | null;
+  private readonly gestureEffects: GestureEffectsController | null;
   private readonly modelCards = new Map<DemoModelId, HTMLButtonElement>();
-  /** 可随“隐藏界面”折叠的卡片（模型卡 + 关键点开关）。 */
+  /** 可随“隐藏界面”折叠的卡片（模型卡 + 关键点/表情演示开关）。 */
   private readonly holdButtons: UiHoldButton[] = [];
   /** 界面折叠开关本身，永远常驻可用。 */
   private uiToggleHoldButton!: UiHoldButton;
@@ -75,9 +85,8 @@ class DemoApp {
   private pendingModel: DemoModelId | null = null;
   private overlayVisible = true;
   private uiCollapsed = false;
+  private reactionDemoEnabled = false;
   private helmetFaceModeActive = false;
-  private helmetEquipped = false;
-  private displayedHelmetState = '';
   private lastInjectedSeq = 0;
   private engineErrorShown = false;
   private retryAction: (() => void) | null = null;
@@ -99,6 +108,9 @@ class DemoApp {
       new UiHoldButton(this.landmarksToggle, this.stageOverlay, this.sfx, {
         onTrigger: () => this.toggleLandmarks(),
       }),
+      new UiHoldButton(this.reactionDemoToggle, this.stageOverlay, this.sfx, {
+        onTrigger: () => this.toggleReactionDemo(),
+      }),
     );
 
     this.uiToggleHoldButton = new UiHoldButton(
@@ -111,7 +123,6 @@ class DemoApp {
     this.startButton.addEventListener('click', () => {
       void this.start();
     });
-    this.helmetToggle.addEventListener('click', () => this.toggleHelmet());
     this.errorBannerRetry.addEventListener('click', () => {
       this.hideError();
       this.retryAction?.();
@@ -119,12 +130,22 @@ class DemoApp {
     window.addEventListener('beforeunload', () => this.dispose());
 
     try {
+      this.effects = new EffectsLayer3d(this.effectsCanvas);
+      this.gestureEffects = new GestureEffectsController(this.effects);
+    } catch (error) {
+      this.effects = null;
+      this.gestureEffects = null;
+      this.effectsCanvas.hidden = true;
+      this.showError(
+        `three.js 手势特效初始化失败（${toMessage(error)}）。手势识别与其他演示仍可继续使用。`,
+        null,
+      );
+    }
+
+    try {
       this.helmetRenderer = new HelmetRenderer(this.helmetCanvas);
     } catch (error) {
       this.helmetCanvas.hidden = true;
-      this.helmetToggle.disabled = true;
-      this.helmetToggleLabel.textContent = '浏览器不支持 WebGL';
-      this.helmetToggleStatus.textContent = 'HELMET SYSTEM · UNAVAILABLE';
       this.showError(
         `3D 头盔初始化失败（${toMessage(error)}）。其他 MediaPipe 演示仍可继续使用。`,
         null,
@@ -227,11 +248,40 @@ class DemoApp {
 
     this.overlay.draw(this.buildOverlayContent(demo, snapshot));
 
-    if (this.activeModel === 'face_landmarker' && this.helmetRenderer) {
+    const effectsEnabled = gestureMode && this.pendingModel === null;
+    this.effects?.setActive(effectsEnabled);
+
+    if (effectsEnabled && demo?.kind === 'gesture_recognizer') {
+      this.gestureEffects?.update(
+        demo.result,
+        layout,
+        timestamp,
+        this.demoModels.getDetectionSeq(),
+      );
+    } else {
+      this.gestureEffects?.reset();
+    }
+    this.effects?.step(timestamp);
+
+    const faceReactionEnabled =
+      this.activeModel === 'face_landmarker'
+      && this.pendingModel === null
+      && this.reactionDemoEnabled;
+    this.faceReaction.setActive(faceReactionEnabled);
+
+    if (this.activeModel === 'face_landmarker') {
       const faceResult = demo?.kind === 'face_landmarker' ? demo.result : null;
-      const facePose = this.facePoseAdapter.update(faceResult, layout, timestamp);
-      this.helmetRenderer.update(facePose, layout, timestamp);
-      this.syncHelmetStatus();
+      this.faceReaction.update(
+        faceResult,
+        layout,
+        timestamp,
+        this.demoModels.getDetectionSeq(),
+      );
+
+      if (this.helmetRenderer) {
+        const facePose = this.facePoseAdapter.update(faceResult, layout, timestamp);
+        this.helmetRenderer.update(facePose, layout, timestamp);
+      }
     }
   }
 
@@ -240,6 +290,18 @@ class DemoApp {
   private requestModelSwitch(id: DemoModelId): void {
     if (id === this.activeModel || this.pendingModel !== null) {
       return;
+    }
+
+    if (this.activeModel === 'gesture_recognizer') {
+      this.gestureEffects?.reset();
+      this.effects?.setActive(false);
+    }
+
+    if (this.activeModel === 'face_landmarker') {
+      this.reactionDemoEnabled = false;
+      this.reactionDemoToggle.hidden = true;
+      this.faceReaction.setActive(false);
+      this.updateReactionDemoUi();
     }
 
     this.pendingModel = id;
@@ -307,16 +369,30 @@ class DemoApp {
     this.infoPrinciple.textContent = activeInfo.principle;
 
     const faceMode = this.activeModel === 'face_landmarker';
-    this.helmetControl.hidden = !faceMode;
+
+    const effectsActive =
+      this.phase === 'running'
+      && this.activeModel === 'gesture_recognizer'
+      && this.pendingModel === null;
+    this.effects?.setActive(effectsActive);
+
+    if (!effectsActive) {
+      this.gestureEffects?.reset();
+    }
 
     if (faceMode !== this.helmetFaceModeActive) {
       this.helmetFaceModeActive = faceMode;
-      this.helmetEquipped = false;
+      this.reactionDemoEnabled = false;
       this.facePoseAdapter.reset();
       this.helmetRenderer?.setFaceMode(faceMode);
       this.helmetRenderer?.setEquipped(false);
-      this.updateHelmetUi();
     }
+
+    this.reactionDemoToggle.hidden = !faceMode;
+    this.updateReactionDemoUi();
+    this.faceReaction.setActive(
+      faceMode && this.pendingModel === null && this.reactionDemoEnabled,
+    );
   }
 
   private setCardHint(id: DemoModelId, prefix: 'MODEL' | 'ACTIVE' | 'LOADING'): void {
@@ -326,6 +402,31 @@ class DemoApp {
     if (hint) {
       hint.textContent = `${prefix} · ${MODEL_INFO[id].code}`;
     }
+  }
+
+  // ---- 表情演示开关 ----
+
+  private toggleReactionDemo(): void {
+    if (this.activeModel !== 'face_landmarker' || this.pendingModel !== null) {
+      return;
+    }
+
+    this.reactionDemoEnabled = !this.reactionDemoEnabled;
+    this.faceReaction.setActive(this.reactionDemoEnabled);
+    this.updateReactionDemoUi();
+  }
+
+  private updateReactionDemoUi(): void {
+    const action = this.reactionDemoEnabled ? '关闭' : '开启';
+    this.reactionDemoToggleLabel.textContent = `长按${action}表情演示`;
+    this.reactionDemoToggleHint.textContent =
+      `REACTIONS · ${this.reactionDemoEnabled ? 'ON' : 'OFF'}`;
+    this.reactionDemoToggle.setAttribute('aria-label', `长按${action}表情演示`);
+    this.reactionDemoToggle.setAttribute(
+      'aria-pressed',
+      this.reactionDemoEnabled ? 'true' : 'false',
+    );
+    this.reactionDemoToggle.classList.toggle('is-active', this.reactionDemoEnabled);
   }
 
   // ---- 关键点叠加开关 ----
@@ -339,50 +440,6 @@ class DemoApp {
     this.landmarksHint.textContent = `LANDMARKS · ${this.overlayVisible ? 'ON' : 'OFF'}`;
     this.landmarksToggle.setAttribute('aria-label', `长按${action}捕捉关键点`);
     this.landmarksToggle.setAttribute('aria-pressed', this.overlayVisible ? 'true' : 'false');
-  }
-
-  // ---- Face Landmarker 3D 头盔 ----
-
-  private toggleHelmet(): void {
-    if (!this.helmetRenderer || !this.helmetFaceModeActive) {
-      return;
-    }
-
-    this.helmetEquipped = !this.helmetEquipped;
-    this.helmetRenderer.setEquipped(this.helmetEquipped);
-    this.updateHelmetUi();
-  }
-
-  private updateHelmetUi(): void {
-    if (!this.helmetRenderer) {
-      return;
-    }
-
-    this.helmetToggleLabel.textContent = this.helmetEquipped ? '卸下头盔' : '装备头盔';
-    this.helmetToggle.setAttribute('aria-pressed', this.helmetEquipped ? 'true' : 'false');
-    this.helmetToggle.setAttribute(
-      'aria-label',
-      this.helmetEquipped ? '卸下科幻头盔原型' : '装备科幻头盔原型',
-    );
-    this.displayedHelmetState = '';
-    this.syncHelmetStatus();
-  }
-
-  private syncHelmetStatus(): void {
-    const state = this.helmetRenderer?.getState();
-
-    if (!state || state === this.displayedHelmetState) {
-      return;
-    }
-
-    this.displayedHelmetState = state;
-    const labels = {
-      hidden: 'HELMET SYSTEM · STANDBY',
-      assembling: 'HELMET SYSTEM · ASSEMBLING',
-      equipped: 'HELMET SYSTEM · EQUIPPED',
-      disassembling: 'HELMET SYSTEM · DISASSEMBLING',
-    } as const;
-    this.helmetToggleStatus.textContent = labels[state];
   }
 
   // ---- 界面折叠开关 ----
@@ -418,10 +475,6 @@ class DemoApp {
       case 'face_landmarker':
         return demo?.kind === 'face_landmarker'
           ? { kind: 'face_landmarker', result: demo.result }
-          : null;
-      case 'pose_landmarker':
-        return demo?.kind === 'pose_landmarker'
-          ? { kind: 'pose_landmarker', result: demo.result }
           : null;
     }
   }
@@ -474,6 +527,9 @@ class DemoApp {
     cancelAnimationFrame(this.animationFrameId);
     this.engine.dispose();
     this.demoModels.dispose();
+    this.gestureEffects?.reset();
+    this.effects?.dispose();
+    this.faceReaction.dispose();
     this.helmetRenderer?.dispose();
     this.helmetRenderer = null;
     stopCamera(this.stream);

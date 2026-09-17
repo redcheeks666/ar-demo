@@ -5,8 +5,8 @@
     "feature_curves": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_curves.json",
     "feature_curves_sha256": "96a7388417b346abad232ed3e2ea16a0d81adf3d961d2484747aa3315f8b0303",
     "blend": "/Users/mashazhenta/CodeXProject/ar-demo/blender/work/helmet_graybox_v5.blend",
-    "blend_sha256": "af5ff576cf9f39cff8f724d9b46108e4480529b99df242808be966a41a0b831b",
-    "scene_iteration": 17,
+    "blend_sha256": "0af1a485b96bbaf9ea6732da708507692ba5fa3975833eaaac9461d44cde3524",
+    "scene_iteration": 27,
     "v4_validation": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v4/feature_validation.json"
   },
   "measurement_method": {
@@ -23,33 +23,33 @@
     "current_v5_helmet_bboxes_px_diagnostic": {
       "front": [
         69.74814,
-        38.0036,
+        38.43628,
         442.25186,
         432.17281
       ],
       "left": [
-        61.78404,
-        38.00345,
-        456.9975,
+        61.80751,
+        38.43613,
+        457.46381,
         432.17263
       ],
       "right": [
-        55.00325,
-        38.00345,
-        450.21619,
+        54.5362,
+        38.43613,
+        450.19302,
         432.17263
       ],
       "back": [
         69.74792,
-        38.0036,
+        38.43628,
         442.25165,
         432.17281
       ],
       "top": [
         69.74814,
-        55.22922,
+        54.49661,
         442.25186,
-        450.08553
+        450.06154
       ]
     },
     "protected_v4_registration_bboxes_px": {
@@ -450,9 +450,9 @@
     },
     "crown_rear_spine_width": {
       "reference": 0.160714,
-      "actual": 0.13616235300279117,
-      "error": 0.152766,
-      "error_percent": 15.2766,
+      "actual": 0.13632593872815602,
+      "error": 0.151748,
+      "error_percent": 15.1748,
       "threshold_percent": 30.0,
       "unit": "percent_feature_width",
       "pass": true,
@@ -515,7 +515,7 @@
         "render_manifest": {
           "faceplate": {
             "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_faceplate_mask.png",
-            "sha256": "da481dfe1fd1fe34f70325c3accfc4a114dbc4b8544e95efa206a1f5a3053531",
+            "sha256": "5e3b5531bc53a79716320fa7606daeed18fef5e91e0788adea807c855bb7fb32",
             "camera": "CameraV3_Front",
             "visible_objects": [
               "Faceplate"
@@ -528,7 +528,7 @@
           },
           "eye_L": {
             "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_eye_L.png",
-            "sha256": "f7e2f52a1f794d905d12b8f2b242f95429d9ce53d5b353b59cc0813eb5284b96",
+            "sha256": "17d63c29ef875829112a2beed4e7dadd5c6049f44e424b2f41363c3771d8fe91",
             "camera": "CameraV3_Front",
             "visible_objects": [
               "EyeHousing_L",
@@ -542,7 +542,7 @@
           },
           "eye_R": {
             "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/logs/eye_boundary_eye_R.png",
-            "sha256": "cf57331e7afb04e25c2d4c8926199cf08c4909ed78d12957dcc294044ce7296e",
+            "sha256": "d791ce70d5bf91bde3a2f85c4bcd5b264deedf91f066ab4100f35ca11d425e25",
             "camera": "CameraV3_Front",
             "visible_objects": [
               "EyeHousing_R",
@@ -594,7 +594,7 @@
         "hide_render": false,
         "boundary_edges": 0,
         "non_manifold_edges": 0,
-        "signed_volume_m3": 6.259586354348588e-06,
+        "signed_volume_m3": 2.4886436414844457e-06,
         "pass": true
       }
     },
@@ -706,40 +706,40 @@
   "silhouette_regression": {
     "metrics": {
       "front": {
-        "iou": 0.908604,
-        "mean_contour_distance_px": 10.4693,
-        "mean_contour_distance_percent_height": 2.237,
-        "maximum_contour_error_px": 38.2099,
+        "iou": 0.90814,
+        "mean_contour_distance_px": 10.5346,
+        "mean_contour_distance_percent_height": 2.251,
+        "maximum_contour_error_px": 38.8973,
         "maximum_error_location_yx": [
           356,
-          471
+          40
         ],
         "reference_area_px": 154873,
-        "model_area_px": 167912
+        "model_area_px": 168635
       },
       "left": {
-        "iou": 0.880414,
-        "mean_contour_distance_px": 13.0584,
-        "mean_contour_distance_percent_height": 2.7902,
-        "maximum_contour_error_px": 67.1863,
+        "iou": 0.880324,
+        "mean_contour_distance_px": 12.3111,
+        "mean_contour_distance_percent_height": 2.6306,
+        "maximum_contour_error_px": 50.9215,
         "maximum_error_location_yx": [
-          480,
-          148
+          483,
+          209
         ],
         "reference_area_px": 160511,
-        "model_area_px": 173616
+        "model_area_px": 173726
       },
       "right": {
-        "iou": 0.881706,
-        "mean_contour_distance_px": 13.0462,
-        "mean_contour_distance_percent_height": 2.7876,
-        "maximum_contour_error_px": 63.2456,
+        "iou": 0.881931,
+        "mean_contour_distance_px": 12.3833,
+        "mean_contour_distance_percent_height": 2.646,
+        "maximum_contour_error_px": 47.7598,
         "maximum_error_location_yx": [
-          480,
-          364
+          487,
+          291
         ],
         "reference_area_px": 163045,
-        "model_area_px": 173596
+        "model_area_px": 173766
       }
     },
     "thresholds": {
@@ -750,7 +750,7 @@
     "current_blend_render_manifest": {
       "front": {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/front.png",
-        "sha256": "eb5c886d595436913e1cb137af707c5f2d4aa919568d94a8eb5bc48cfde41f4c",
+        "sha256": "98ea9bb52c5d4a1f5149ab7d862122e481abb9027131c6362b3d9f46f0156dbf",
         "camera": "CameraV3_Front",
         "visible_objects": [
           "Cheek_L",
@@ -808,7 +808,7 @@
           "Temple_L",
           "Temple_R"
         ],
-        "foreground_pixel_count": 119426,
+        "foreground_pixel_count": 119387,
         "resolution_px": [
           512,
           512
@@ -816,7 +816,7 @@
       },
       "left": {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/left.png",
-        "sha256": "7f4e26fba14c40d7ad2d1c34c6de11d1b1a56746c699d584972ed6674bf6e090",
+        "sha256": "59917099ed87ba6fb654f658b1884e61aa9505fe68ae33265ac623f98b20a430",
         "camera": "CameraV3_Left",
         "visible_objects": [
           "Cheek_L",
@@ -874,7 +874,7 @@
           "Temple_L",
           "Temple_R"
         ],
-        "foreground_pixel_count": 123195,
+        "foreground_pixel_count": 123963,
         "resolution_px": [
           512,
           512
@@ -882,7 +882,7 @@
       },
       "right": {
         "path": "/Users/mashazhenta/CodeXProject/ar-demo/blender/output/graybox_v5/silhouette/right.png",
-        "sha256": "17e80fff49fa879675677557df5ca989d431dbd487dfb0f596b17edf903ab08a",
+        "sha256": "6bc29826a1cc61d08f71ce489c00259671e1e8ed43c4a75193ce2facef21e4cb",
         "camera": "CameraV3_Right",
         "visible_objects": [
           "Cheek_L",
@@ -940,7 +940,7 @@
           "Temple_L",
           "Temple_R"
         ],
-        "foreground_pixel_count": 123190,
+        "foreground_pixel_count": 123964,
         "resolution_px": [
           512,
           512

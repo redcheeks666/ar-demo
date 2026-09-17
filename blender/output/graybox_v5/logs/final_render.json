@@ -1,9 +1,9 @@
 {
   "script": "/Users/mashazhenta/CodeXProject/ar-demo/blender/scripts/render_helmet_review_v5.py",
   "mode": "all",
-  "iteration": 14,
+  "iteration": 27,
   "engine": "BLENDER_EEVEE",
-  "elapsed_seconds": 15.2699,
+  "elapsed_seconds": 14.1014,
   "render_count": 35,
   "zebra_contract": {
     "views": [
@@ -40,8 +40,8 @@
       "pass": "clay",
       "view": "front",
       "camera": "CameraV3_Front",
-      "size_bytes": 560834,
-      "sha256": "bd80a61a6596cd2601e4dfc0fc677c11a990833c19279635a53d00e6dc059f09",
+      "size_bytes": 562741,
+      "sha256": "b60361bc6f6dc71b3d4fcef2b13d0a8b10e838cd6e6b6b916fdca690407c9d6e",
       "resolution": [
         768,
         768
@@ -70,8 +70,8 @@
       "pass": "clay",
       "view": "back",
       "camera": "CameraV3_Back",
-      "size_bytes": 499672,
-      "sha256": "9716c5209f37e8c086f61478f000f6e826c8de50dec57f7e8fc096783773c2f2",
+      "size_bytes": 498632,
+      "sha256": "5e4e1fe41b6604833f19d4238ec1ad62df096204cfb642f04d791f408bfab0f2",
       "resolution": [
         768,
         768
@@ -100,8 +100,8 @@
       "pass": "clay",
       "view": "left",
       "camera": "CameraV3_Left",
-      "size_bytes": 541934,
-      "sha256": "4d1ab3a232c6dceb855928b44aaf70f12694d171c2a953acbe960059339429ca",
+      "size_bytes": 537170,
+      "sha256": "1f0411afb4588b72c841e2375891941fe3d9927b187be7bd42d4c244d626cf94",
       "resolution": [
         768,
         768
@@ -130,8 +130,8 @@
       "pass": "clay",
       "view": "right",
       "camera": "CameraV3_Right",
-      "size_bytes": 551929,
-      "sha256": "5e015595cf3372a6f064962760889bc08a2533237900c8952bc45e21d21f0ad9",
+      "size_bytes": 549393,
+      "sha256": "b144591bafd5436980c6612d8ff3ec8fb8684c78551b39ac84993c276e43e676",
       "resolution": [
         768,
         768
@@ -160,8 +160,8 @@
       "pass": "clay",
       "view": "front_3q",
       "camera": "CameraV3_Front3Q",
-      "size_bytes": 565036,
-      "sha256": "911e68951e0acaf7a3d19c73dab51dea278c56df7e5dd33751cf4c9856e0654a",
+      "size_bytes": 559452,
+      "sha256": "fd3e0c0c7fbc134fb0aba3fdc83f6d50b94fbf56e5f171e3aa2d589e3f1b8c7f",
       "resolution": [
         768,
         768
@@ -190,8 +190,8 @@
       "pass": "clay",
       "view": "rear_3q",
       "camera": "CameraV3_Rear3Q",
-      "size_bytes": 522873,
-      "sha256": "c6e5810f5650624b8064fdc858249cdd605103df6e4131e7cf7cf4f0547a5a02",
+      "size_bytes": 521169,
+      "sha256": "a153cb0e3683ccb61bd9a607cb7f1cb58469bf5c4205909bcfcb98c60ace177e",
       "resolution": [
         768,
         768
@@ -220,8 +220,8 @@
       "pass": "clay",
       "view": "top",
       "camera": "CameraV3_Top",
-      "size_bytes": 538480,
-      "sha256": "a1b8fac6b807f7bfcd03b81ca6e6ec3854c798c041f1086d16e4991f66e389b6",
+      "size_bytes": 540203,
+      "sha256": "3002dc5ee8c022d3c4058a0a867e333201ca95b7ea2f758062c1712d5fb73236",
       "resolution": [
         768,
         768
@@ -250,8 +250,8 @@
       "pass": "clay",
       "view": "bottom",
       "camera": "CameraV3_Bottom",
-      "size_bytes": 575912,
-      "sha256": "444cf754c353d1064593d347136e8da85a2cbc528a56b2834f928be2c95142ef",
+      "size_bytes": 566183,
+      "sha256": "5d7a88c59957efb3c3557597460626346086ec68a09ae136ed78748cf4cb5df1",
       "resolution": [
         768,
         768
@@ -280,8 +280,8 @@
       "pass": "design",
       "view": "front",
       "camera": "CameraV3_Front",
-      "size_bytes": 603984,
-      "sha256": "59c4d263064ff0d66476fa352c5664a0d14a8ce0eeb93091a43b472e00fd078b",
+      "size_bytes": 603501,
+      "sha256": "a8c674907b4642beefffc6dfd18c8b0f9986026812f6a929a2863bcd90699e60",
       "resolution": [
         768,
         768
@@ -310,8 +310,8 @@
       "pass": "design",
       "view": "back",
       "camera": "CameraV3_Back",
-      "size_bytes": 529368,
-      "sha256": "3a3402de44b28ede1dd7b0785da9773479c94a0a95dabf03d0b2996b3ba050b2",
+      "size_bytes": 527107,
+      "sha256": "21b4a2b6a962ea92c0ae1f56f97285dfed3382da03623dd435f5fd9920f38738",
       "resolution": [
         768,
         768
@@ -340,8 +340,8 @@
       "pass": "design",
       "view": "left",
       "camera": "CameraV3_Left",
-      "size_bytes": 581684,
-      "sha256": "a4c6887fd3fecfc8fcf073af797fb26bd41c94dd07ad03f83422f4e694673495",
+      "size_bytes": 578204,
+      "sha256": "7aaa537d40a87163364ecd4e50e3554eac2ed6cce61f84377cc8e2b05ad3cb78",
       "resolution": [
         768,
         768
@@ -370,8 +370,8 @@
       "pass": "design",
       "view": "right",
       "camera": "CameraV3_Right",
-      "size_bytes": 586647,
-      "sha256": "f142cd0bb7d509145cfbdc8d3c5b37d019cc6e1f2f2534d69505301fa98ad281",
+      "size_bytes": 583938,
+      "sha256": "7457fe14c139822470027e0925e025d1936270d9eb680d22b008d132547ed283",
       "resolution": [
         768,
         768
@@ -400,8 +400,8 @@
       "pass": "design",
       "view": "front_3q",
       "camera": "CameraV3_Front3Q",
-      "size_bytes": 614735,
-      "sha256": "e49d5aae56e5d178d3aa18567f7dce8d9afaca75ddb9d3748f909a820f3403ed",
+      "size_bytes": 606756,
+      "sha256": "aee87da4261ee517528a3854123777b8035ec1b3bbe5cef0f7904509db7eddf5",
       "resolution": [
         768,
         768
@@ -430,8 +430,8 @@
       "pass": "design",
       "view": "rear_3q",
       "camera": "CameraV3_Rear3Q",
-      "size_bytes": 561477,
-      "sha256": "9576006b9af31188a5297e79f702f592bf751d2c6e7cc52f434f79f25864b819",
+      "size_bytes": 561957,
+      "sha256": "a511e7d979339d2b1c43ba3f1b5466c50c164773904352caa500935a833506f0",
       "resolution": [
         768,
         768
@@ -460,8 +460,8 @@
       "pass": "design",
       "view": "top",
       "camera": "CameraV3_Top",
-      "size_bytes": 581595,
-      "sha256": "d6d5478ba7a08f79a9149ffafbe102481bad94c25faefb75beb38323b40b62ba",
+      "size_bytes": 586383,
+      "sha256": "cc6da388d6e263d6f70992d4e42499991aa7d333db75b0cb15cdf40db4ab9944",
       "resolution": [
         768,
         768
@@ -490,8 +490,8 @@
       "pass": "design",
       "view": "bottom",
       "camera": "CameraV3_Bottom",
-      "size_bytes": 585637,
-      "sha256": "7fc582e9a858d57c78dc9fe1c58c9077f402e8b0e03ba98d74019dfd93a3240a",
+      "size_bytes": 577830,
+      "sha256": "f580a6725e30ea7d5465f5a85aa1c8bd7303dfb2a397d62469c4058b8ce45bf5",
       "resolution": [
         768,
         768
@@ -520,8 +520,8 @@
       "pass": "with_head_proxy",
       "view": "front",
       "camera": "CameraV3_Front",
-      "size_bytes": 565740,
-      "sha256": "7ed7ce998b21fb9716a97996461a9ae504f2c63cb438d8526e5b182726b2056f",
+      "size_bytes": 567776,
+      "sha256": "a9d1e99d9dd54906dc146e0919c012178884301f80b429542f1687c14071d7f6",
       "resolution": [
         768,
         768
@@ -550,8 +550,8 @@
       "pass": "with_head_proxy",
       "view": "back",
       "camera": "CameraV3_Back",
-      "size_bytes": 512456,
-      "sha256": "f9ba17c1fdcdef7d65a0fee337c3b34a8af84fcc0b210e56c31bb44b71a259fa",
+      "size_bytes": 510428,
+      "sha256": "20783c281bc071de6c41cfcb993bb5973608749a793104e73d0e9c9ee8f4b9c7",
       "resolution": [
         768,
         768
@@ -580,8 +580,8 @@
       "pass": "with_head_proxy",
       "view": "left",
       "camera": "CameraV3_Left",
-      "size_bytes": 563668,
-      "sha256": "6a13345ff147a93467aa43f7aba5348b4fe8b80c5bed5ec555f9e5ceb9fab37d",
+      "size_bytes": 561799,
+      "sha256": "ae425c6d01a4dba227b518a2e27baff24ea6e3b01150b1ef4940434c8cd1405f",
       "resolution": [
         768,
         768
@@ -610,8 +610,8 @@
       "pass": "with_head_proxy",
       "view": "right",
       "camera": "CameraV3_Right",
-      "size_bytes": 569289,
-      "sha256": "d62f77d71d70808acfbd139d9c5f1100ce1d58a9594b7fddd1ccd32ede435afc",
+      "size_bytes": 566987,
+      "sha256": "0751e8f0d7061c7d6b0ee2307b2088900a5dfe68411bd36dadb0df2c795e4f60",
       "resolution": [
         768,
         768
@@ -640,8 +640,8 @@
       "pass": "with_head_proxy",
       "view": "front_3q",
       "camera": "CameraV3_Front3Q",
-      "size_bytes": 568384,
-      "sha256": "a2aa0ef0a0eed4898665df3bfa6288a1c34f828b243ba55eee73f98552a32f03",
+      "size_bytes": 565240,
+      "sha256": "70365f4e37ddd20d0ffb238a71345816b1c1b3960c209cf04f9d4af29b7302e8",
       "resolution": [
         768,
         768
@@ -670,8 +670,8 @@
       "pass": "with_head_proxy",
       "view": "rear_3q",
       "camera": "CameraV3_Rear3Q",
-      "size_bytes": 526658,
-      "sha256": "999b989d8f0846407a058c86a2b4296e3b3908ec1026120c2bbb6a49fcc1d7d3",
+      "size_bytes": 524514,
+      "sha256": "4e75eac2705637761bc0d64bb86d3668b3408103bd850fbf82903a94da30f530",
       "resolution": [
         768,
         768
@@ -700,8 +700,8 @@
       "pass": "with_head_proxy",
       "view": "top",
       "camera": "CameraV3_Top",
-      "size_bytes": 541842,
-      "sha256": "8311c5a9300cc86e82807a77c9c9e402661105234ba69e1f8ba051ee22ceb5c3",
+      "size_bytes": 541488,
+      "sha256": "3fbe2993e0ad66c1011606319aeb18b28409aade7026068e25026e4c350475f1",
       "resolution": [
         768,
         768
@@ -730,8 +730,8 @@
       "pass": "with_head_proxy",
       "view": "bottom",
       "camera": "CameraV3_Bottom",
-      "size_bytes": 571010,
-      "sha256": "6dfec451adcbf95ec635ec126518765987555f2887973298f82e133e05726de0",
+      "size_bytes": 570070,
+      "sha256": "44be00f52b461de7aca4ce72ba3c666686ae7f49a540d15dde199e6532c73197",
       "resolution": [
         768,
         768
@@ -760,8 +760,8 @@
       "pass": "exploded_sanity",
       "view": "front_3q",
       "camera": "CameraV3_Front3Q",
-      "size_bytes": 665674,
-      "sha256": "69ffbadf49f8f73605104c5cfc13db78ca030dda75cdbbf381d763df43b24c45",
+      "size_bytes": 659665,
+      "sha256": "557665908e2fd11703c0752ec18ce536205ea7cb42267fb055b1f86495f8a0e4",
       "resolution": [
         768,
         768
@@ -790,8 +790,8 @@
       "pass": "silhouette",
       "view": "front",
       "camera": "CameraV3_Front",
-      "size_bytes": 201622,
-      "sha256": "631d23bb80d4daea4e80067d89522314397e01795f41e05f47643dc40e5ffb7f",
+      "size_bytes": 202529,
+      "sha256": "d3fba9bdfcfedb600e7b02537760c58f77659ee5af268c2435bd52ad3e418662",
       "resolution": [
         512,
         512
@@ -820,8 +820,8 @@
       "pass": "silhouette",
       "view": "left",
       "camera": "CameraV3_Left",
-      "size_bytes": 204931,
-      "sha256": "76848548bbe0b34b0538a38f7c104374bb78a9674ff2307cd8e00bcc49b33813",
+      "size_bytes": 201730,
+      "sha256": "c70e7c05d3d847cd4b201a6f9f79a942164692bd55a13338b761bde88eaf2ebb",
       "resolution": [
         512,
         512
@@ -850,8 +850,8 @@
       "pass": "silhouette",
       "view": "right",
       "camera": "CameraV3_Right",
-      "size_bytes": 211238,
-      "sha256": "1a6be162ddde885c2a96d9686efe58793e049b4f59ac628a2406c6489d76b4aa",
+      "size_bytes": 207338,
+      "sha256": "8814bcbfd3ea9166e6b983c4f12704ffc2d8f095dbda22aa3ab0a3c269e79050",
       "resolution": [
         512,
         512
@@ -880,8 +880,8 @@
       "pass": "silhouette",
       "view": "back",
       "camera": "CameraV3_Back",
-      "size_bytes": 181383,
-      "sha256": "be2d3009005d630b21ce7759a007e17dca9e14f3e579bb7204fc6589f8d0cc4e",
+      "size_bytes": 180358,
+      "sha256": "cdce699951207ea0c7a6908ae3e2618736e43a548d67fc95b205c5dd3486fd57",
       "resolution": [
         512,
         512
@@ -910,8 +910,8 @@
       "pass": "silhouette",
       "view": "top",
       "camera": "CameraV3_Top",
-      "size_bytes": 201934,
-      "sha256": "8e52257bfb262b4d7c785e4cbe7f87bf720319438bd5fe092b97d9a134a0da56",
+      "size_bytes": 204297,
+      "sha256": "b0ead08521825dad6021cdd715da4f7ddc55d4fed56315d26f6851490febe3f9",
       "resolution": [
         512,
         512
@@ -940,8 +940,8 @@
       "pass": "silhouette_material_id",
       "view": "left",
       "camera": "CameraV3_Left",
-      "size_bytes": 187139,
-      "sha256": "82dd504287a32c4a03d53d7e41614c783338b3a94fb2181b75476b2c31ba55be",
+      "size_bytes": 185088,
+      "sha256": "dccf9b9c534b75fb25a01502a4440463b6646e418588c48e5d370f3d7258e22d",
       "resolution": [
         512,
         512
@@ -970,8 +970,8 @@
       "pass": "silhouette_material_id",
       "view": "right",
       "camera": "CameraV3_Right",
-      "size_bytes": 187654,
-      "sha256": "26f2018350d66e1f00cfa39b68484ce879907956ed99c6dea046d07cfb48255f",
+      "size_bytes": 185283,
+      "sha256": "f86e96ebfa834436cb55595bc9b9b47a0b3f56f2a84bbf1622eeacd50c602e05",
       "resolution": [
         512,
         512
@@ -1000,8 +1000,8 @@
       "pass": "zebra",
       "view": "front",
       "camera": "CameraV3_Front",
-      "size_bytes": 434942,
-      "sha256": "f7d396142936d722729bd44d7ad0f4c4c935b77f13301e6557ad525b8c001954",
+      "size_bytes": 451701,
+      "sha256": "9a1ddd33ae39ff9476228df9a8d2df706971b2360c73244df2529e176a259a2f",
       "resolution": [
         768,
         768
@@ -1030,8 +1030,8 @@
       "pass": "zebra",
       "view": "front_3q",
       "camera": "CameraV3_Front3Q",
-      "size_bytes": 494082,
-      "sha256": "f3e379df0611623dd3c39d6e5ec245003aa9302a72d11a0d9177fd601ea57044",
+      "size_bytes": 489132,
+      "sha256": "b3c1b9727ea3a9a267112a36a9acdfc3e24035efdd75eda31e3022cb688f59dd",
       "resolution": [
         768,
         768
@@ -1060,8 +1060,8 @@
       "pass": "zebra",
       "view": "left",
       "camera": "CameraV3_Left",
-      "size_bytes": 398788,
-      "sha256": "9b785230f8259d8f0c8b4e61b19463a83e33065e59b2d7341d0c429e0c3830de",
+      "size_bytes": 388590,
+      "sha256": "3c2f0be33d46353f489019a955b306f341b9fd5ff43a9ff09c4f258975e1889a",
       "resolution": [
         768,
         768

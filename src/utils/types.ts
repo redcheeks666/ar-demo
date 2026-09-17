@@ -44,5 +44,4 @@ export type DemoModelId =
   | 'face_detector'
   | 'face_landmarker'
   | 'gesture_recognizer'
-  | 'hand_landmarker'
-  | 'pose_landmarker';
+  | 'hand_landmarker';

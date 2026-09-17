@@ -909,12 +909,16 @@ def create_bezel_ring(
             point, _ = projector.front(
                 0.0,
                 v_value,
-                faceplate_offset(0.0, v_value) + 0.00055,
+                faceplate_offset(0.0, v_value) + tuning.get("center_spine_offset_m", 0.00055),
             )
             point.x = 0.0
             point.z = model.top_z - v_value * model.height
             center_points.append(point)
-        append_rail(center_points, width=0.0020, depth=0.0012)
+        append_rail(
+            center_points,
+            width=tuning.get("center_spine_width_m", 0.0020),
+            depth=tuning.get("center_spine_depth_m", 0.0012),
+        )
 
     obj = base.create_mesh_object("FaceplateBezel", vertices, faces, collection)
     for polygon in obj.data.polygons:
@@ -972,9 +976,17 @@ def create_straight_rear_spine(
     collection: bpy.types.Collection,
     projector: v4.MasterSurfaceProjector,
     model: base.EnvelopeModel,
+    tuning: dict,
 ) -> bpy.types.Object:
     half_width = (cfg.FIT["spine_width"] * 0.55) / model.height
-    polygon = [(-half_width, 0.715), (half_width, 0.715), (half_width, 0.865), (-half_width, 0.865)]
+    center_v = tuning.get("rear_spine_08_center_v", 0.790)
+    half_span = tuning.get("rear_spine_08_v_span", 0.150) * 0.5
+    polygon = [
+        (-half_width, center_v - half_span),
+        (half_width, center_v - half_span),
+        (half_width, center_v + half_span),
+        (-half_width, center_v + half_span),
+    ]
     return create_projected_shell(
         "RearSpine_08",
         polygon,
@@ -1121,12 +1133,20 @@ def refine_spines(
     for index in range(1, 8):
         obj = bpy.data.objects[f"RearSpine_{index:02d}"]
         scale_about_world_bbox(obj, (0.96, 0.96, scale))
-        replace_bevel(obj, tuning["panel_bevel_m"] * 0.78, 10.0)
+        replace_bevel(
+            obj,
+            tuning.get("rear_spine_bevel_m", tuning["panel_bevel_m"] * 0.78),
+            10.0,
+        )
 
     delete_object("RearSpine_08")
-    last = create_straight_rear_spine(collection, projector, model)
+    last = create_straight_rear_spine(collection, projector, model, tuning)
     assign_and_parent(last, "RearSpine_08", materials, root, pivots["RearSpine_08"], "CrownRear")
-    replace_bevel(last, tuning["panel_bevel_m"] * 0.78, 10.0)
+    replace_bevel(
+        last,
+        tuning.get("rear_spine_bevel_m", tuning["panel_bevel_m"] * 0.78),
+        10.0,
+    )
     last["v5_straight_lower_spine"] = True
 
     cap = bpy.data.objects["CrownSpine_Cap"]
@@ -1163,6 +1183,7 @@ def main() -> None:
         raise FileNotFoundError("v4 feature curves and v3 measurements are required")
 
     tuning = cfg.craft_tuning(args.iteration)
+    skip_micro_bevel_objects = set(tuning.get("skip_micro_bevel_objects", ()))
     bpy.ops.wm.open_mainfile(filepath=str(cfg.V4_BLEND_SOURCE))
     scene = bpy.context.scene
     scene.name = "AEGIS-R7 Graybox v5"
@@ -1278,14 +1299,23 @@ def main() -> None:
         faceplate_offset,
     )
     assign_and_parent(bezel, "FaceplateBezel", materials, root, pivots["FaceplateBezel"], "Faceplate")
-    add_micro_bevel(bezel, min(0.00045, tuning["panel_bevel_m"] * 0.70), 12.0)
+    if "FaceplateBezel" not in skip_micro_bevel_objects:
+        add_micro_bevel(bezel, min(0.00045, tuning["panel_bevel_m"] * 0.70), 12.0)
 
     # --- Clean lower U/chin and exact bilateral craft symmetry --------------------------
     front_bbox = feature_data["views"]["front"]["helmet_silhouette_bbox_px"]
     # Replace the intersecting v4 lower shards with shared, clean polygon
     # boundaries.  These points remain inside the accepted front feature
     # layout but remove the crossed red fragments around the mouth/chin.
-    jaw_left_pixels = [(120, 413), (204, 410), (214, 444), (170, 442)]
+    bottom_raise_px = tuning.get("lower_plate_bottom_raise_px", 0.0)
+    jaw_bottom_raise_px = tuning.get("jaw_plate_bottom_raise_px", bottom_raise_px)
+    chin_bottom_raise_px = tuning.get("chin_plate_bottom_raise_px", bottom_raise_px)
+    jaw_left_pixels = [
+        (120, 413),
+        (204, 410),
+        (214, 444 - jaw_bottom_raise_px),
+        (170, 442 - jaw_bottom_raise_px),
+    ]
     jaw_left_uv = [v4.front_normalized(point, front_bbox) for point in jaw_left_pixels]
     raise_v = tuning["mouth_cover_raise_m"] / model.height
     jaw_left_uv[1] = (jaw_left_uv[1][0], jaw_left_uv[1][1] - raise_v)
@@ -1297,17 +1327,44 @@ def main() -> None:
         helmet_collection,
         projector,
         0.0028,
-        tuning.get("lower_plate_thickness_m", cfg.FIT["panel_thickness"]),
-        tuning.get("lower_plate_seat_fraction", 0.0),
+        tuning.get(
+            "jaw_plate_thickness_m",
+            tuning.get("lower_plate_thickness_m", cfg.FIT["panel_thickness"]),
+        ),
+        tuning.get(
+            "jaw_plate_seat_fraction",
+            tuning.get("lower_plate_seat_fraction", 0.0),
+        ),
     )
     assign_and_parent(jaw_left, "Jaw_L", materials, root, pivots["Jaw_L"])
-    add_micro_bevel(jaw_left, tuning["panel_bevel_m"], 14.0)
+    jaw_rear_shift = tuning.get("jaw_plate_rear_shift_m", 0.0)
+    if jaw_rear_shift:
+        transform_world_vertices(
+            jaw_left,
+            lambda point: Vector((point.x, point.y + jaw_rear_shift, point.z)),
+        )
+    jaw_width_scale = tuning.get("jaw_plate_width_scale_from_inner", 1.0)
+    if jaw_width_scale != 1.0:
+        inner_x = max(point.x for point in world_vertices(jaw_left))
+        transform_world_vertices(
+            jaw_left,
+            lambda point: Vector(
+                (inner_x + (point.x - inner_x) * jaw_width_scale, point.y, point.z)
+            ),
+        )
+    if "Jaw_L" not in skip_micro_bevel_objects:
+        add_micro_bevel(jaw_left, tuning["panel_bevel_m"], 14.0)
     jaw_right = mirror_left_to_right(
         "Jaw_L", "Jaw_R", helmet_collection, materials, root, pivots["Jaw_R"], None
     )
     jaw_right["v5_exact_mirror_of"] = "Jaw_L"
 
-    chin_pixels = [(204, 410), (308, 410), (298, 444), (214, 444)]
+    chin_pixels = [
+        (204, 410),
+        (308, 410),
+        (298, 444 - chin_bottom_raise_px),
+        (214, 444 - chin_bottom_raise_px),
+    ]
     chin_uv = [v4.front_normalized(point, front_bbox) for point in chin_pixels]
     for left_index, right_index in ((0, 1), (3, 2)):
         magnitude = 0.5 * (abs(chin_uv[left_index][0]) + abs(chin_uv[right_index][0]))
@@ -1323,11 +1380,27 @@ def main() -> None:
         helmet_collection,
         projector,
         0.0028,
-        tuning.get("lower_plate_thickness_m", cfg.FIT["panel_thickness"]),
-        tuning.get("lower_plate_seat_fraction", 0.0),
+        tuning.get(
+            "chin_plate_thickness_m",
+            tuning.get("lower_plate_thickness_m", cfg.FIT["panel_thickness"]),
+        ),
+        tuning.get(
+            "chin_plate_seat_fraction",
+            tuning.get("lower_plate_seat_fraction", 0.0),
+        ),
     )
     assign_and_parent(chin, "Chin", materials, root, pivots["Chin"])
-    add_micro_bevel(chin, min(0.00030, tuning["panel_bevel_m"]), 14.0)
+    chin_rear_shift = tuning.get("chin_plate_rear_shift_m", 0.0)
+    if chin_rear_shift:
+        transform_world_vertices(
+            chin,
+            lambda point: Vector((point.x, point.y + chin_rear_shift, point.z)),
+        )
+    chin_width_scale = tuning.get("chin_plate_width_scale", 1.0)
+    if chin_width_scale != 1.0:
+        scale_about_world_bbox(chin, (chin_width_scale, 1.0, 1.0))
+    if "Chin" not in skip_micro_bevel_objects:
+        add_micro_bevel(chin, min(0.00030, tuning["panel_bevel_m"]), 14.0)
 
     mirror_pairs = (
         ("Cheek_L", "Cheek_R", None),
@@ -1362,6 +1435,11 @@ def main() -> None:
     )
     for name in armor_names:
         obj = bpy.data.objects[name]
+        if name in skip_micro_bevel_objects:
+            for modifier in list(obj.modifiers):
+                if modifier.type == "BEVEL":
+                    obj.modifiers.remove(modifier)
+            continue
         existing_bevels = [modifier for modifier in obj.modifiers if modifier.type == "BEVEL"]
         if existing_bevels:
             for modifier in existing_bevels:

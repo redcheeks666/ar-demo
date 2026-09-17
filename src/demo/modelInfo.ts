@@ -19,7 +19,6 @@ export const MODEL_ORDER: readonly DemoModelId[] = [
   'face_landmarker',
   'gesture_recognizer',
   'hand_landmarker',
-  'pose_landmarker',
 ];
 
 export const MODEL_INFO: Record<DemoModelId, ModelInfo> = {
@@ -74,18 +73,5 @@ export const MODEL_INFO: Record<DemoModelId, ModelInfo> = {
       '输出：每只手 21 个关键点（图像坐标 + 世界坐标）+ 左右手 + 置信度。左手青色 / 右手金色。',
     principle:
       '原理：手掌检测 + 关键点回归两级流水线；视频模式下跨帧跟踪，省去逐帧重新检测。',
-  },
-  pose_landmarker: {
-    id: 'pose_landmarker',
-    nameEn: 'Pose Landmarker',
-    nameCn: '人体姿态',
-    cardLabel: '人体姿态',
-    code: 'POSE LANDMARKER',
-    purpose:
-      '用途：全身姿态估计，用于健身动作分析、体感交互、动作捕捉与人机姿势对齐。',
-    output:
-      '输出：33 个全身三维关键点（含逐点可见度 visibility）+ 世界坐标；可视化按可见度过滤。',
-    principle:
-      '原理：BlazePose 两级流水线——先检测人体位置，再在裁剪区域回归 33 点骨架。本演示用 lite 版实时运行。',
   },
 };

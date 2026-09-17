@@ -2,7 +2,6 @@ import type {
   FaceDetectorResult,
   FaceLandmarkerResult,
   GestureRecognizerResult,
-  PoseLandmarkerResult,
 } from '@mediapipe/tasks-vision';
 import {
   computeContainRect,
@@ -15,8 +14,6 @@ import type { NormalizedPoint, TrackedHand } from '../utils/types';
 const LEFT_COLOR = '#7dd3fc';
 const RIGHT_COLOR = '#f6c177';
 const UNKNOWN_COLOR = '#a9f3df';
-const POSE_COLOR = '#a9f3df';
-const POSE_MIN_VISIBILITY = 0.5;
 const FACE_LINE_COLOR = 'rgba(125, 211, 252, 0.85)';
 const FACE_MESH_COLOR = 'rgba(125, 211, 252, 0.16)';
 const FACE_POINT_COLOR = 'rgba(236, 247, 255, 0.8)';
@@ -37,22 +34,6 @@ const HAND_CONNECTIONS: ReadonlyArray<readonly [number, number]> = [
   [0, 17],
 ];
 
-/**
- * MediaPipe Pose Landmarker 33 点骨架连线（BlazePose，模型固定）。
- * 内联以避免为几十条连线再走一次异步常量加载。
- */
-const POSE_CONNECTIONS: ReadonlyArray<readonly [number, number]> = [
-  [0, 1], [1, 2], [2, 3], [3, 7],
-  [0, 4], [4, 5], [5, 6], [6, 8],
-  [9, 10],
-  [11, 12],
-  [11, 13], [13, 15], [15, 17], [15, 19], [15, 21], [17, 19],
-  [12, 14], [14, 16], [16, 18], [16, 20], [16, 22], [18, 20],
-  [11, 23], [12, 24], [23, 24],
-  [23, 25], [25, 27], [27, 29], [29, 31], [27, 31],
-  [24, 26], [26, 28], [28, 30], [30, 32], [28, 32],
-];
-
 interface FaceConnection {
   start: number;
   end: number;
@@ -62,8 +43,7 @@ export type OverlayContent =
   | { kind: 'hands'; hands: readonly TrackedHand[] }
   | { kind: 'face_detector'; result: FaceDetectorResult }
   | { kind: 'face_landmarker'; result: FaceLandmarkerResult }
-  | { kind: 'gesture_recognizer'; result: GestureRecognizerResult }
-  | { kind: 'pose_landmarker'; result: PoseLandmarkerResult };
+  | { kind: 'gesture_recognizer'; result: GestureRecognizerResult };
 
 /**
  * 单画布 2D 叠加层，镜像 + object-fit: contain 坐标映射与参考项目 LandmarkOverlay 一致。
@@ -140,9 +120,6 @@ export class OverlayRenderer {
         break;
       case 'gesture_recognizer':
         this.drawGestureResult(content.result);
-        break;
-      case 'pose_landmarker':
-        this.drawPoseResult(content.result);
         break;
     }
   }
@@ -372,52 +349,6 @@ export class OverlayRenderer {
         this.drawLabel(label, anchor.x, anchor.y + 26, handColor(hand));
       }
     });
-  }
-
-  // ---- Pose Landmarker: 33 点全身骨架（按可见度过滤） ----
-
-  private drawPoseResult(result: PoseLandmarkerResult): void {
-    const ctx = this.context;
-
-    for (const landmarks of result.landmarks) {
-      const mapped = landmarks.map((landmark) => ({
-        point: this.mapPoint({ x: landmark.x, y: landmark.y, z: landmark.z }),
-        visible: (landmark.visibility ?? 1) >= POSE_MIN_VISIBILITY,
-      }));
-
-      ctx.save();
-      ctx.strokeStyle = POSE_COLOR;
-      ctx.lineWidth = 3;
-      ctx.lineCap = 'round';
-      ctx.shadowColor = POSE_COLOR;
-      ctx.shadowBlur = 6;
-
-      for (const [start, end] of POSE_CONNECTIONS) {
-        const from = mapped[start];
-        const to = mapped[end];
-
-        if (from && to && from.visible && to.visible) {
-          ctx.beginPath();
-          ctx.moveTo(from.point.x, from.point.y);
-          ctx.lineTo(to.point.x, to.point.y);
-          ctx.stroke();
-        }
-      }
-
-      ctx.fillStyle = '#ecf7ff';
-
-      for (const node of mapped) {
-        if (!node.visible) {
-          continue;
-        }
-
-        ctx.beginPath();
-        ctx.arc(node.point.x, node.point.y, 3.4, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      ctx.restore();
-    }
   }
 
   // ---- primitives ----

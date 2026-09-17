@@ -16,9 +16,6 @@ export const FACE_LANDMARKER_MODEL_URL = withPublicBasePath(
 export const GESTURE_RECOGNIZER_MODEL_URL = withPublicBasePath(
   '/mediapipe/models/gesture_recognizer.task',
 );
-export const POSE_LANDMARKER_MODEL_URL = withPublicBasePath(
-  '/mediapipe/models/pose_landmarker_lite.task',
-);
 
 // Hand tracking thresholds are identical to ar-solar-system-demo so the
 // interaction feel carries over unchanged.

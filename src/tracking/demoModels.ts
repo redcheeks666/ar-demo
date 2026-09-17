@@ -5,8 +5,6 @@ import type {
   FaceLandmarkerResult,
   GestureRecognizer,
   GestureRecognizerResult,
-  PoseLandmarker,
-  PoseLandmarkerResult,
 } from '@mediapipe/tasks-vision';
 import type { DemoModelId, NormalizedPoint, TrackedHandSide } from '../utils/types';
 import type { RawWorkerHand } from './handLandmarkerWorkerProtocol';
@@ -16,28 +14,25 @@ import {
   FACE_LANDMARKER_MODEL_URL,
   GESTURE_RECOGNIZER_MODEL_URL,
   MEDIAPIPE_WASM_URL,
-  POSE_LANDMARKER_MODEL_URL,
 } from './config';
 
 /**
- * 演示模型控制器：负责 Face Detector / Face Landmarker / Gesture Recognizer /
- * Pose Landmarker 的创建、切换、推理与销毁（主线程 VIDEO 模式）。
+ * 演示模型控制器：负责 Face Detector / Face Landmarker / Gesture Recognizer
+ * 的创建、切换、推理与销毁（主线程 VIDEO 模式）。
  *
  * hand_landmarker 模式不在这里建实例——它复用常驻交互引擎的 Worker 输出。
  */
 export type DemoDetection =
   | { kind: 'face_detector'; result: FaceDetectorResult }
   | { kind: 'face_landmarker'; result: FaceLandmarkerResult }
-  | { kind: 'gesture_recognizer'; result: GestureRecognizerResult }
-  | { kind: 'pose_landmarker'; result: PoseLandmarkerResult };
+  | { kind: 'gesture_recognizer'; result: GestureRecognizerResult };
 
 type DemoDelegate = 'GPU' | 'CPU';
 
 type DemoInstance =
   | { kind: 'face_detector'; model: FaceDetector }
   | { kind: 'face_landmarker'; model: FaceLandmarker }
-  | { kind: 'gesture_recognizer'; model: GestureRecognizer }
-  | { kind: 'pose_landmarker'; model: PoseLandmarker };
+  | { kind: 'gesture_recognizer'; model: GestureRecognizer };
 
 export interface DemoModelPerformance {
   inferenceMs: number | null;
@@ -75,7 +70,6 @@ export class DemoModelController {
       FaceDetector,
       FaceLandmarker,
       GestureRecognizer,
-      PoseLandmarker,
     } = await import('@mediapipe/tasks-vision');
 
     if (!this.fileset) {
@@ -103,17 +97,6 @@ export class DemoModelController {
             numFaces: 1,
             outputFaceBlendshapes: true,
             outputFacialTransformationMatrixes: true,
-          }),
-        };
-      }
-
-      if (id === 'pose_landmarker') {
-        return {
-          kind: 'pose_landmarker',
-          model: await PoseLandmarker.createFromOptions(fileset, {
-            baseOptions: { modelAssetPath: POSE_LANDMARKER_MODEL_URL, delegate },
-            runningMode: 'VIDEO',
-            numPoses: 1,
           }),
         };
       }
@@ -174,11 +157,6 @@ export class DemoModelController {
       } else if (this.active.kind === 'face_landmarker') {
         this.latest = {
           kind: 'face_landmarker',
-          result: this.active.model.detectForVideo(video, timestamp),
-        };
-      } else if (this.active.kind === 'pose_landmarker') {
-        this.latest = {
-          kind: 'pose_landmarker',
           result: this.active.model.detectForVideo(video, timestamp),
         };
       } else {

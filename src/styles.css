@@ -51,6 +51,7 @@ button {
 .camera-video,
 .helmet-canvas,
 .landmark-canvas,
+.effects-canvas,
 .preview-overlay {
   position: absolute;
   inset: 0;
@@ -74,6 +75,146 @@ button {
 .landmark-canvas {
   z-index: 2;
   pointer-events: none;
+}
+
+.effects-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Face Landmarker 表情反应贴纸：跟随脸部边缘，但不覆盖或变形真人脸。 */
+.face-reaction {
+  --reaction-x: 50%;
+  --reaction-y: 35%;
+  --reaction-size: 128px;
+  --reaction-accent: 246, 193, 119;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: var(--reaction-size);
+  height: var(--reaction-size);
+  opacity: 0;
+  transform: translate3d(var(--reaction-x), var(--reaction-y), 0)
+    translate(-50%, -50%);
+  transition: opacity 150ms ease;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.face-reaction.is-visible {
+  opacity: 1;
+}
+
+.face-reaction-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.34));
+  transform-origin: 50% 70%;
+}
+
+.face-reaction-halo {
+  position: absolute;
+  inset: 7%;
+  border: 1px solid rgba(var(--reaction-accent), 0.26);
+  border-radius: 44%;
+  background: radial-gradient(
+    circle at 50% 52%,
+    rgba(var(--reaction-accent), 0.2),
+    rgba(5, 8, 11, 0.08) 58%,
+    transparent 76%
+  );
+  box-shadow: 0 0 32px rgba(var(--reaction-accent), 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.face-reaction-emoji {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.9);
+  font-family:
+    "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: calc(var(--reaction-size) * 0.7);
+  font-variant-emoji: emoji;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 7px 18px rgba(0, 0, 0, 0.24);
+  transition:
+    opacity 120ms ease,
+    transform 160ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  user-select: none;
+}
+
+.face-reaction-emoji.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.face-reaction-caption {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: -1px;
+  max-width: 88%;
+  overflow: hidden;
+  transform: translateX(-50%);
+  padding: 4px 9px;
+  border: 1px solid rgba(var(--reaction-accent), 0.48);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(7, 11, 15, 0.82);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.28);
+  font-size: clamp(9px, calc(var(--reaction-size) * 0.075), 12px);
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.face-reaction[data-expression="smile"] {
+  --reaction-accent: 246, 193, 119;
+}
+
+.face-reaction[data-expression="grin"] {
+  --reaction-accent: 255, 145, 89;
+}
+
+.face-reaction[data-expression="surprise"] {
+  --reaction-accent: 94, 228, 255;
+}
+
+.face-reaction[data-expression="winkRight"],
+.face-reaction[data-expression="winkLeft"] {
+  --reaction-accent: 247, 168, 196;
+}
+
+.face-reaction.is-popping .face-reaction-card {
+  animation: face-reaction-pop 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes face-reaction-pop {
+  0% {
+    transform: translateY(10px) scale(0.58) rotate(-7deg);
+  }
+
+  62% {
+    transform: translateY(-5px) scale(1.08) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(0);
+  }
 }
 
 .preview-overlay {
@@ -356,88 +497,9 @@ button {
 }
 
 /* 左栏内的关键点开关卡：与介绍卡同宽，卡片本体样式复用 .model-card。 */
-.hud-left .landmarks-toggle {
+.hud-left .landmarks-toggle,
+.hud-left .reaction-demo-toggle {
   width: 100%;
-}
-
-/* Face Landmarker 专属的显式 3D 控制；使用原生 button 保留键盘/触摸点击语义。 */
-.helmet-control {
-  display: grid;
-  gap: 6px;
-  pointer-events: auto;
-}
-
-.helmet-control-tag {
-  color: rgba(94, 228, 255, 0.58);
-  font-family:
-    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
-    monospace;
-  font-size: 10px;
-  letter-spacing: 0.24em;
-}
-
-.helmet-toggle {
-  display: grid;
-  gap: 3px;
-  min-height: 54px;
-  padding: 9px 14px;
-  border: 1px solid rgba(94, 228, 255, 0.58);
-  border-radius: 3px;
-  color: #ecf7ff;
-  background:
-    linear-gradient(105deg, rgba(94, 228, 255, 0.14), transparent 48%),
-    rgba(8, 18, 25, 0.86);
-  box-shadow:
-    0 0 18px rgba(94, 228, 255, 0.2),
-    inset 0 0 18px rgba(94, 228, 255, 0.07);
-  cursor: pointer;
-  text-align: left;
-  transition:
-    border-color 160ms ease,
-    box-shadow 160ms ease,
-    transform 160ms ease;
-}
-
-.helmet-toggle:hover,
-.helmet-toggle:focus-visible {
-  border-color: #f6c177;
-  box-shadow:
-    0 0 24px rgba(246, 193, 119, 0.32),
-    inset 0 0 18px rgba(246, 193, 119, 0.08);
-  outline: none;
-  transform: translateY(-1px);
-}
-
-.helmet-toggle[aria-pressed="true"] {
-  border-color: rgba(246, 193, 119, 0.86);
-  background:
-    linear-gradient(105deg, rgba(246, 193, 119, 0.19), transparent 52%),
-    rgba(18, 19, 22, 0.9);
-}
-
-.helmet-toggle:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.helmet-toggle-label {
-  font-size: 15px;
-  font-weight: 650;
-  letter-spacing: 0.08em;
-}
-
-.helmet-toggle-status {
-  color: rgba(94, 228, 255, 0.68);
-  font-family:
-    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, ui-monospace,
-    monospace;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-}
-
-.helmet-toggle[aria-pressed="true"] .helmet-toggle-status {
-  color: rgba(246, 193, 119, 0.82);
 }
 
 /* ---- 右侧：模型卡列 ---- */
